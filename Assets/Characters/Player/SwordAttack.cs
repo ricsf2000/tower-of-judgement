@@ -5,44 +5,33 @@ public class SwordAttack : MonoBehaviour
 {
     public Collider2D swordCollider;
     public float damage = 3;
-    Vector2 rightAttackOffset;
 
-    private void Start()
-    {
-        swordCollider = GetComponent<Collider2D>();
-        rightAttackOffset = transform.position;
-    }
+    public Vector3 faceRight = new Vector3(.107f, 0.085f, 0);
+    public Vector3 faceLeft = new Vector3(-.107f, 0.085f, 0);
 
-    public void AttackRight()
+    void Start()
     {
-        print("Attack Right");
-        swordCollider.enabled = true;
-        transform.localPosition = rightAttackOffset;
-    }
-
-    public void AttackLeft()
-    {
-        print("Attack Left");
-        swordCollider.enabled = true;
-        transform.localPosition = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
-    }
-
-    public void StopAttack()
-    {
-        swordCollider.enabled = false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Enemy")
+        if (swordCollider != null)
         {
-            // Deal damage to enemy
-            Enemy enemy = other.GetComponent<Enemy>();
-
-            if (enemy != null)
-            {
-                enemy.Health -= damage;
-            }
+            Debug.LogWarning("Sword collider not set");
         }
+    }
+
+    void IsFacingRight(bool isFacingRight)
+    {
+        if (isFacingRight)
+        {
+            gameObject.transform.localPosition = faceRight;
+        }
+        else
+        {
+            gameObject.transform.localPosition = faceLeft;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        other.SendMessage("OnHit", damage);
+        Debug.Log("Hit for " + damage + " points");
     }
 }
