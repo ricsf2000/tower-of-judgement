@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2317168903849533456}
   - component: {fileID: 6502041772668158073}
   - component: {fileID: 1004545791155724565}
+  - component: {fileID: 2590652599050109497}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -107,7 +108,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 50
+  m_LinearDamping: 70
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -155,9 +156,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00083835423, y: 0.0622932}
-  m_Size: {x: 0.14587337, y: 0.14587337}
-  m_Direction: 0
+  m_Offset: {x: -0.0008383541, y: 0.064474784}
+  m_Size: {x: 0.14587341, y: 0.1264069}
+  m_Direction: 1
 --- !u!114 &6502041772668158073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3415906898d191340905bcf958b49515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  health: 10
+  damage: 1
+  knockbackForce: 10
 --- !u!95 &1004545791155724565
 Animator:
   serializedVersion: 7
@@ -193,3 +195,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2590652599050109497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811083502597671236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc016b1ac113824e9f875407d82398f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageableChar
+  disableSimulation: 0
+  _health: 10
+  _targetable: 1

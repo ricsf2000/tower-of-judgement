@@ -2,43 +2,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float health = 10.0f;
-    Animator animator;
-    bool isAlive = true;
-
-    public void Start()
-    {
-        animator = GetComponent<Animator>();
-        animator.SetBool("isAlive", isAlive);
-    }
+    public float damage = 1.0f;
+    public float knockbackForce = 800.0f;
     
-    public void OnHit(float damage)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Slime hit for " + damage);
-
-        health -= damage;
-
-        if (health > 0)
+        Collider2D collider = col.collider;
+        IDamageable damageable = collider.gameObject.GetComponent<IDamageable>();
+        if (damageable != null)
         {
-            // Play "hit" reaction if still alive
-            animator.SetTrigger("hit");
+            //Calculate distance between character and enemy
+            Vector2 direction = (Vector2) (collider.gameObject.transform.position - transform.position).normalized;
+            Vector2 knockback = direction * knockbackForce;
+            damageable.OnHit(damage, knockback);
         }
-        else if (health <= 0)
-        {
-            // Trigger death animation
-            Defeated();
-        }
-    }
-    public void Defeated()
-    {
-        Debug.Log($"{gameObject.name} calling Defeated() with isAlive = {isAlive}, health = {health}");
-        Debug.Log($"{gameObject.name} defeated!");
-        animator.SetBool("isAlive", false);
-    }
 
-    public void RemoveEnemy()
-    {
-        Destroy(gameObject);
     }
-
 }

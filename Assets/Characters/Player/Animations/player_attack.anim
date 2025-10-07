@@ -60,7 +60,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsTrigger
+    attribute: m_Enabled
     path: SwordHitbox
     classID: 61
     script: {fileID: 0}
@@ -88,7 +88,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 3900972952
-      attribute: 2693561734
+      attribute: 3305885265
       script: {fileID: 0}
       typeID: 61
       customType: 0
@@ -172,7 +172,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_IsTrigger
+    attribute: m_Enabled
     path: SwordHitbox
     classID: 61
     script: {fileID: 0}
@@ -181,13 +181,6 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
-    functionName: SwordAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.2
     functionName: LockMovement
     data: 
@@ -196,7 +189,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.3
-    functionName: EndSwordAttack
+    functionName: UnlockMovement
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
