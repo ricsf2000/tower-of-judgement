@@ -5328,10 +5328,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2223413776258832341, guid: aa552328f21eef2498402628bebae73c, type: 3}
-      propertyPath: moveSpeed
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 2722846361326438754, guid: aa552328f21eef2498402628bebae73c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5389,6 +5385,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1521937507871406167, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2009505547910470057, guid: 33485975778da4247b58f1801101cc8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.531
@@ -5429,9 +5429,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2317168903849533456, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.14587341
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317168903849533456, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1264069
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317168903849533456, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0008383541
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317168903849533456, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.064474784
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317168903849533456, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317168903849533456, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2811083502597671236, guid: 33485975778da4247b58f1801101cc8d, type: 3}
       propertyPath: m_Name
       value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502041772668158073, guid: 33485975778da4247b58f1801101cc8d, type: 3}
+      propertyPath: knockbackForce
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
