@@ -22,16 +22,18 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     private Vector2 facingDirection = Vector2.right; // default right
-    private bool isAttacking = false;
+    // private bool isAttacking = false;
     private bool holdAttackFacing = false;
     private float holdAttackTimer = 0f;
     [SerializeField] private float holdAttackDuration = 0.50f;
     private float lastMoveX = 0f;
     private float lastMoveY = -1f; // default facing down
     private Vector2 attackDirection = Vector2.zero;
-    [SerializeField] private float unlockDelay = 0.1f; // 100 ms delay
+
+    private Shoot shoot;
 
     bool canMove = true;
+    bool canShoot = true;
     private bool isMoving = false;
     public bool IsMoving
     {
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         swordCollider = swordHitbox.GetComponent<Collider2D>();
+        shoot = GetComponent<Shoot>();
     }
 
     private void FixedUpdate()
@@ -146,10 +149,26 @@ public class PlayerController : MonoBehaviour
         HoldAttackFacing();
     }
 
+    void OnShoot(InputValue value)
+    {
+        Debug.Log($"OnShoot triggered: {value.isPressed}");
+        if (!canShoot) return;
+
+        if (value.isPressed)
+        {
+            shoot.OnShootPressed();  // begin charging
+        }
+        else
+        {
+            shoot.OnShootReleased();  // release and fire
+        }
+    }
+
     public void LockMovement()
     {
         // Debug.Log("LockMovement fired");
         canMove = false;
+        canShoot = false;
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(attackDirection * 5.0f, ForceMode2D.Impulse);
     }
@@ -158,6 +177,7 @@ public class PlayerController : MonoBehaviour
     {
         // Debug.Log("UnlockMovement fired");
         canMove = true;
+        canShoot = true;
         rb.linearVelocity = Vector2.zero;
     }
     

@@ -32,6 +32,11 @@ public class Enemy : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Collider2D collider = col.collider;
+
+        // Only deal damage if the collided object is the player
+        if (!col.collider.CompareTag("Player"))
+            return;
+            
         IDamageable damageable = collider.gameObject.GetComponent<IDamageable>();
         if (damageable != null)
         {

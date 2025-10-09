@@ -110,7 +110,8 @@ GameObject:
   - component: {fileID: 4259486664418817136}
   - component: {fileID: 872722973001470607}
   - component: {fileID: 6504374567446156351}
-  m_Layer: 0
+  - component: {fileID: 1906188922575641396}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -131,6 +132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3501388676797870286}
+  - {fileID: 8724599291083183641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4944128680177801756
@@ -180,12 +182,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4334783836991956000, guid: de9f04257a2986347ae92d52933ca586, type: 3}
+  m_Sprite: {fileID: 5666041778152302455, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.48}
+  m_Size: {x: 0.18, y: 0.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -252,7 +254,6 @@ MonoBehaviour:
     maxNormalAngle: 0
   swordHitbox: {fileID: 1621657096867689966}
   holdAttackDuration: 0.5
-  unlockDelay: 0.1
 --- !u!50 &1932589114486792951
 Rigidbody2D:
   serializedVersion: 5
@@ -317,9 +318,9 @@ BoxCollider2D:
   m_Offset: {x: 0.0034226328, y: 0.027784508}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.15}
+    pivot: {x: 0.5, y: 0.2}
     oldSize: {x: 0.48, y: 0.48}
-    newSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.18, y: 0.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -365,3 +366,56 @@ MonoBehaviour:
   canTurnInvincible: 1
   invincibilityTime: 1
   _invincible: 0
+--- !u!114 &1906188922575641396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74edfb4f03471e43a6fa4e49095596b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  bulletPrefab: {fileID: 2271450034507838886, guid: 8e54304d1cb30614596c2b154268c884, type: 3}
+  bulletSpawnPos: {fileID: 8724599291083183641}
+  lineRenderer: {fileID: 0}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  maxLineLength: 8
+  chargeTime: 0.5
+  normalShotBounces: 0
+  chargedShotBounces: 3
+--- !u!1 &8868625500267147318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8724599291083183641}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8724599291083183641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868625500267147318}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 0.166, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2722846361326438754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
