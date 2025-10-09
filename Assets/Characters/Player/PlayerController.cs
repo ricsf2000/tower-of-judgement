@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 700.0f;
-    public float maxSpeed = 2.2f;
+    // public float maxSpeed = 2.2f;
     public float idleFriction = 0.9f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
@@ -26,7 +26,10 @@ public class PlayerController : MonoBehaviour
     private bool holdAttackFacing = false;
     private float holdAttackTimer = 0f;
     [SerializeField] private float holdAttackDuration = 0.50f;
-
+    private float lastMoveX = 0f;
+    private float lastMoveY = -1f; // default facing down
+    private Vector2 attackDirection = Vector2.zero;
+    [SerializeField] private float unlockDelay = 0.1f; // 100 ms delay
 
     bool canMove = true;
     private bool isMoving = false;
@@ -58,40 +61,29 @@ public class PlayerController : MonoBehaviour
             // BUT don't allow the player to run faster than max speed in any direction
             // rb.linearVelocity = movementInput.normalized * maxSpeed;
             // rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity + (movementInput * moveSpeed * Time.deltaTime), maxSpeed);
-            rb.AddForce(movementInput * moveSpeed * Time.deltaTime);
+            rb.AddForce(movementInput * moveSpeed * Time.deltaTime, ForceMode2D.Force);
 
-            if (rb.linearVelocity.magnitude > maxSpeed)
-            {
-                float limitedSpeed = Mathf.Lerp(rb.linearVelocity.magnitude, maxSpeed, idleFriction);
-                rb.linearVelocity = rb.linearVelocity.normalized * limitedSpeed;
-            }
+            // if (rb.linearVelocity.magnitude > maxSpeed)
+            // {
+            //     float limitedSpeed = Mathf.Lerp(rb.linearVelocity.magnitude, maxSpeed, idleFriction);
+            //     rb.linearVelocity = rb.linearVelocity.normalized * limitedSpeed;
+            // }
 
             // Track the facing direction
             facingDirection = movementInput.normalized;
 
-            // Control whether looking left or right
+            // Control whether looking left or right/up or down
             if (!holdAttackFacing)
             {
-                if (movementInput.x > 0)
-                {
-                    spriteRenderer.flipX = false;
-                    gameObject.BroadcastMessage("IsFacingRight", true);
-                    animator.SetFloat("moveX", 1);
-                }
-                else if (movementInput.x < 0)
-                {
-                    spriteRenderer.flipX = true;
-                    gameObject.BroadcastMessage("IsFacingRight", false);
-                    animator.SetFloat("moveX", -1);
-                }
-                else if (movementInput.y < 0)   // Down
-                {
-                    animator.SetFloat("moveY", -1);
-                }
-                else if (movementInput.y > 0)   // Up
-                {
-                    animator.SetFloat("moveY", 1);
-                }
+                Vector2 moveDir = movementInput.normalized;
+
+                // Update animator parameters directly
+                animator.SetFloat("moveX", moveDir.x);
+                animator.SetFloat("moveY", moveDir.y);
+
+                // Remember the last direction we moved
+                lastMoveX = moveDir.x;
+                lastMoveY = moveDir.y;
             }
             IsMoving = true;
         }
@@ -100,6 +92,10 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, idleFriction);
             // rb.linearVelocity = Vector2.zero;
             IsMoving = false;
+
+            // When not moving, keep the last direction in the animator
+            animator.SetFloat("lastMoveX", lastMoveX);
+            animator.SetFloat("lastMoveY", lastMoveY);
         }
     }
 
@@ -130,16 +126,21 @@ public class PlayerController : MonoBehaviour
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 dir = (mouseWorldPos - (Vector2)transform.position).normalized;
 
-        // Flip toward mouse
-        bool mouseRight = mouseWorldPos.x > transform.position.x;
-        spriteRenderer.flipX = !mouseRight;
-        gameObject.BroadcastMessage("IsFacingRight", mouseRight);
+        // Immediately update facing direction
+        lastMoveX = Mathf.Abs(dir.x) > Mathf.Abs(dir.y) ? Mathf.Sign(dir.x) : 0;
+        lastMoveY = Mathf.Abs(dir.y) > Mathf.Abs(dir.x) ? Mathf.Sign(dir.y) : 0;
+
+        animator.SetFloat("lastMoveX", lastMoveX);
+        animator.SetFloat("lastMoveY", lastMoveY);
 
         // (existing animator / hitbox setup)
         animator.SetFloat("attackX", dir.x);
         animator.SetFloat("attackY", dir.y);
         animator.SetTrigger("swordAttack");
-        swordHitbox.GetComponent<SwordAttack>().SetAttackDirection(dir);
+        // swordHitbox.GetComponent<SwordAttack>().SetAttackDirection(dir);
+
+        // Save direction for movement push
+        attackDirection = dir.normalized;
 
         // start facing-hold timer
         HoldAttackFacing();
@@ -147,11 +148,17 @@ public class PlayerController : MonoBehaviour
 
     public void LockMovement()
     {
+        // Debug.Log("LockMovement fired");
         canMove = false;
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(attackDirection * 5.0f, ForceMode2D.Impulse);
     }
 
     public void UnlockMovement()
     {
+        // Debug.Log("UnlockMovement fired");
         canMove = true;
+        rb.linearVelocity = Vector2.zero;
     }
+    
 }
