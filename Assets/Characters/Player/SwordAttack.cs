@@ -6,28 +6,16 @@ public class SwordAttack : MonoBehaviour
     public Collider2D swordCollider;
     public float damage = 3;
     public float knockbackForce = 5000f;
-    public Vector3 faceRight = new Vector3(.107f, 0.085f, 0);
-    public Vector3 faceLeft = new Vector3(-.107f, 0.085f, 0);
-    public Vector3 faceUp = new Vector3(0f, 0.179f, 0);
-    public Vector3 faceDown = new Vector3(0f, -0.041f, 0);
+    // public Vector3 faceRight = new Vector3(.107f, 0.085f, 0);
+    // public Vector3 faceLeft = new Vector3(-.107f, 0.085f, 0);
+    // public Vector3 faceUp = new Vector3(0f, 0.179f, 0);
+    // public Vector3 faceDown = new Vector3(0f, -0.041f, 0);
 
     void Start()
     {
         if (swordCollider == null)
         {
             Debug.LogWarning("Sword collider not set");
-        }
-    }
-
-    void IsFacingRight(bool isFacingRight)
-    {
-        if (isFacingRight)
-        {
-            gameObject.transform.localPosition = faceRight;
-        }
-        else
-        {
-            gameObject.transform.localPosition = faceLeft;
         }
     }
 
@@ -47,22 +35,9 @@ public class SwordAttack : MonoBehaviour
             // Debug.Log("Hit for " + damage + " points");
             Debug.Log("Hit for " + damage + " points");
         }
-        else
-        {
-            Debug.Log("Collider does not implement IDamageable");
-        }
-    }
-
-    public void SetAttackDirection(Vector2 dir)
-    {
-        if (Mathf.Abs(dir.x) >= Mathf.Abs(dir.y))
-        {
-            transform.localPosition = dir.x > 0 ? faceRight : faceLeft;
-            transform.localEulerAngles = Vector3.zero;
-        }
     }
     
-
+    // Debug to show the hitbox in play mode
     #if UNITY_EDITOR
     void OnDrawGizmos()
     {

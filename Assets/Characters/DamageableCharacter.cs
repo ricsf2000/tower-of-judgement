@@ -1,15 +1,19 @@
+using TMPro;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
 // A base class for damageable characters (both players and enemies)
-public class DamageableChar : MonoBehaviour, IDamageable
+public class DamageableCharacter : MonoBehaviour, IDamageable
 {
+    public GameObject healthText;
     public bool disableSimulation = false;
-    public float _health = 10.0f;
+    public bool canTurnInvincible = false;
+    public float invincibilityTime = 0.25f;
     Animator animator;
     Rigidbody2D rb;
     Collider2D physicsCol;
     bool isAlive = true;
+    private float invincibleTimeElapsed = 0.0f;
 
     public float Health
     {
@@ -18,6 +22,14 @@ public class DamageableChar : MonoBehaviour, IDamageable
             if (value < _health)
             {
                 animator.SetTrigger("hit");
+                RectTransform textTransform = Instantiate(healthText).GetComponent<RectTransform>();
+                textTransform.transform.position = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+
+                Canvas canvas = GameObject.FindFirstObjectByType<Canvas>();
+                textTransform.SetParent(canvas.transform);
+
+                float damageDealt = _health - value;
+                textTransform.GetComponent<HealthText>().SetDamageText(damageDealt);
             }
 
             _health = value;
@@ -32,29 +44,6 @@ public class DamageableChar : MonoBehaviour, IDamageable
         {
             return _health;
         }
-    }
-
-    public void Start()
-    {
-        animator = GetComponent<Animator>();
-        animator.SetBool("isAlive", isAlive);
-        rb = GetComponent<Rigidbody2D>();
-        physicsCol = GetComponent<Collider2D>();
-    }
-
-    public void OnHit(float damage, Vector2 knockback)
-    {
-        Health -= damage;
-
-        // Apply knockback force
-        rb.AddForce(knockback, ForceMode2D.Impulse);
-        Debug.Log("Knockback applied: " + knockback);
-    }
-
-    public void OnHit(float damage)
-    {
-        Debug.Log("Slime hit for " + damage);
-        Health -= damage;
     }
 
     public bool Targetable
@@ -74,11 +63,85 @@ public class DamageableChar : MonoBehaviour, IDamageable
             physicsCol.enabled = value;
         }
     }
-    public bool _targetable = true;
 
+    public bool Invincible
+    {
+        get
+        {
+            return _invincible;
+        }
+        set
+        {
+            _invincible = value;
+
+            if (_invincible == true)
+            {
+                invincibleTimeElapsed = 0.0f;
+            }
+        }
+    }
+
+    float _health = 10.0f;
+    bool _targetable = true;
+
+    public bool _invincible = false;
+
+    public void Start()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetBool("isAlive", isAlive);
+        rb = GetComponent<Rigidbody2D>();
+        physicsCol = GetComponent<Collider2D>();
+    }
+
+    public void OnHit(float damage, Vector2 knockback)
+    {
+        if (!Invincible)
+        {
+            Health -= damage;
+
+            // Apply knockback force
+            rb.AddForce(knockback, ForceMode2D.Impulse);
+            Debug.Log("Knockback applied: " + knockback);
+
+            if (canTurnInvincible)
+            {
+                // Activate invincibility and timer
+                Invincible = true;
+            }
+        }
+    }
+
+    public void OnHit(float damage)
+    {
+        if (!Invincible)
+        {
+            Debug.Log("Slime hit for " + damage);
+            Health -= damage;
+
+            if (canTurnInvincible)
+            {
+                // Activate invincibility and timer
+                Invincible = true;
+            }
+        }
+    }
     public void RemoveEnemy()
     {
         Destroy(gameObject);
+    }
+
+    public void FixedUpdate()
+    {
+        if (Invincible)
+        {
+            invincibleTimeElapsed += Time.deltaTime;
+
+            if (invincibleTimeElapsed > invincibilityTime)
+            {
+                Invincible = false;
+            }
+        }
     }
 
 }

@@ -93,11 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   swordCollider: {fileID: 5856224209802872423}
   damage: 3
-  knockbackForce: 15
-  faceRight: {x: 0.107, y: 0.074, z: 0}
-  faceLeft: {x: -0.107, y: 0.074, z: 0}
-  faceUp: {x: 0, y: 0, z: 0}
-  faceDown: {x: 0, y: 0, z: 0}
+  knockbackForce: 10
 --- !u!1 &3585627279053337000
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +131,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3501388676797870286}
-  - {fileID: 5817191520057191648}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4944128680177801756
@@ -238,8 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e506b306f8106845885f2d6f691e3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 5
-  maxSpeed: 500
+  moveSpeed: 1050
   idleFriction: 0.4
   collisionOffset: 0.05
   movementFilter:
@@ -258,6 +252,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   swordHitbox: {fileID: 1621657096867689966}
   holdAttackDuration: 0.5
+  unlockDelay: 0.1
 --- !u!50 &1932589114486792951
 Rigidbody2D:
   serializedVersion: 5
@@ -271,7 +266,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 4
+  m_LinearDamping: 15
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -365,104 +360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc016b1ac113824e9f875407d82398f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageableChar
+  healthText: {fileID: 1942305737207634952, guid: 3739e3b2b143b9a489155107771a7125, type: 3}
   disableSimulation: 1
-  _health: 3
-  _targetable: 1
---- !u!1 &4542117375394227847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5817191520057191648}
-  - component: {fileID: 2783389404973083431}
-  - component: {fileID: 3835863613232171145}
-  m_Layer: 0
-  m_Name: SwordHitboxUpDown
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5817191520057191648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4542117375394227847}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.179, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2722846361326438754}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2783389404973083431
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4542117375394227847}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.3, y: 0.2}
-  m_EdgeRadius: 0
---- !u!114 &3835863613232171145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4542117375394227847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc9a5968c197093478301cb8aa8a4997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  swordCollider: {fileID: 2783389404973083431}
-  damage: 3
-  knockbackForce: 15
-  faceRight: {x: 0, y: 0, z: 0}
-  faceLeft: {x: 0, y: 0, z: 0}
-  faceUp: {x: 0, y: 0.179, z: 0}
-  faceDown: {x: 0, y: -0.041, z: 0}
+  canTurnInvincible: 1
+  invincibilityTime: 1
+  _invincible: 0
