@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     // public SwordAttack swordAttack;
     public GameObject swordHitbox;
-    Collider2D swordCollider;
 
+    Collider2D swordCollider;
 
     Vector2 movementInput = Vector2.zero;
     SpriteRenderer spriteRenderer;
@@ -44,6 +44,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    [Header("Dash Settings")]
+    public float dashSpeed = 15f;
+    public float dashDuration = 0.2f;
+    public int maxDashCount = 2;       // how many dashes allowed before cooldown
+    public float dashCooldown = 0.2f;  // delay to refill all dashes
+    public TrailRenderer tr;
+    private int currentDashCount;      // remaining dashes
+    private bool isDashing = false;
+    private bool canDash = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,10 +62,15 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         swordCollider = swordHitbox.GetComponent<Collider2D>();
         shoot = GetComponent<Shoot>();
+        currentDashCount = maxDashCount;
     }
 
     private void FixedUpdate()
     {
+        // Hard-lock movement during dash
+        if (isDashing)
+            return;
+            
         if (canMove == true && movementInput != Vector2.zero)
         {
             // Move animation and add velocity
@@ -180,5 +195,89 @@ public class PlayerController : MonoBehaviour
         canShoot = true;
         rb.linearVelocity = Vector2.zero;
     }
+
+    void OnDash()
+    {
+        var dmgChar = GetComponent<DamageableCharacter>();
+        if (dmgChar != null && (!dmgChar.Targetable || !dmgChar.enabled))
+            return; // stop dashing if dead, disabled, or untargetable
+
+        // Prevent spam / overlapping dashes
+        if (!canDash || isDashing || currentDashCount <= 0)
+            return;
+
+        // Determine dash direction
+        Vector2 dashDir = movementInput != Vector2.zero
+            ? movementInput.normalized
+            : new Vector2(lastMoveX, lastMoveY);
+
+        StartCoroutine(PerformDash(dashDir));
+    }
+
+    private IEnumerator PerformDash(Vector2 dashDir)
+    {
+        isDashing = true;
+        canDash = false;
+        canMove = false;
+        canShoot = false;
+
+        currentDashCount--;
+
+        // Activate invincibility
+        var dmgChar = GetComponent<DamageableCharacter>();
+        if (dmgChar != null)
+        {
+            dmgChar.Invincible = true;
+        }
+
+        // Ignore collisions between Player and Enemy layers
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
+
+        // Movement
+        animator.Play("player_dash_tree", 0, 0f);
+        tr.emitting = true;
+        rb.linearVelocity = dashDir * dashSpeed;
+
+        animator.SetFloat("moveX", dashDir.x);
+        animator.SetFloat("moveY", dashDir.y);
+
+        yield return new WaitForSeconds(dashDuration);
+
+        // Stop dash
+        rb.linearVelocity = Vector2.zero;
+        tr.emitting = false;
+        isDashing = false;
+        canMove = true;
+        canShoot = true;
+
+        // Stop ignoring collisions
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
+
+        // Turn off invincibility (after short buffer)
+        if (dmgChar != null)
+        {
+            StartCoroutine(DisableInvincibilityAfterDelay(dmgChar, 0.1f));
+        }
+
+
+        // Only start cooldown/refill after last dash
+        if (currentDashCount <= 0)
+        {
+            yield return new WaitForSeconds(dashCooldown);
+            currentDashCount = maxDashCount;
+        }
+
+        // Now allow next dash
+        canDash = true;
+    }
+
+    private IEnumerator DisableInvincibilityAfterDelay(DamageableCharacter dmgChar, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        dmgChar.Invincible = false;
+    }
+
     
 }

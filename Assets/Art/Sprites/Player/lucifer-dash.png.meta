@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: d3d2984411320cc45952953d8c5e0ec0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8447666175020430660
+    second: lucifer-dash_0
+  - first:
+      213: -1510355459699079409
+    second: lucifer-dash_1
+  - first:
+      213: 3853767265020905578
+    second: lucifer-dash_2
+  - first:
+      213: -2729842776396740299
+    second: lucifer-dash_3
+  - first:
+      213: 1247438584322777902
+    second: lucifer-dash_4
+  - first:
+      213: 677195539490212828
+    second: lucifer-dash_5
+  - first:
+      213: -185932151456023264
+    second: lucifer-dash_6
+  - first:
+      213: -1135199785462664237
+    second: lucifer-dash_7
+  - first:
+      213: 5609294190226452810
+    second: lucifer-dash_8
+  - first:
+      213: 6573423514098805713
+    second: lucifer-dash_9
+  - first:
+      213: -1386496749049275734
+    second: lucifer-dash_10
+  - first:
+      213: -1863441613140778503
+    second: lucifer-dash_11
+  - first:
+      213: -716954487178197608
+    second: lucifer-dash_12
+  - first:
+      213: 1157625976196700214
+    second: lucifer-dash_13
+  - first:
+      213: -5144738626450278702
+    second: lucifer-dash_14
+  - first:
+      213: 9037885515932714406
+    second: lucifer-dash_15
+  - first:
+      213: 6374375102416235273
+    second: lucifer-dash_16
+  - first:
+      213: -2160299662888167240
+    second: lucifer-dash_17
+  - first:
+      213: -857953160529305002
+    second: lucifer-dash_18
+  - first:
+      213: -1602543846397661949
+    second: lucifer-dash_19
+  - first:
+      213: -147049653151019675
+    second: lucifer-dash_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lucifer-dash_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 115
+        width: 16
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba03d81f5cd3ca80800000000000000
+      internalID: -8447666175020430660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 115
+        width: 16
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07801c26b32a0be0800000000000000
+      internalID: -1510355459699079409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 114
+        width: 17
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68899ec8e45b7530800000000000000
+      internalID: 3853767265020905578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 114
+        width: 17
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539c43c4576ad1ad0800000000000000
+      internalID: -2729842776396740299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 116
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23eca188cacf4110800000000000000
+      internalID: 1247438584322777902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 117
+        width: 16
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb0bc651c1e56900800000000000000
+      internalID: 677195539490212828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_6
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 118
+        width: 16
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02db32081bf6b6df0800000000000000
+      internalID: -185932151456023264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_7
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 70
+        width: 35
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3f5664fc5fe30f0800000000000000
+      internalID: -1135199785462664237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 70
+        width: 33
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a413c11c85738dd40800000000000000
+      internalID: 5609294190226452810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 70
+        width: 27
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db2f0ccbdd793b50800000000000000
+      internalID: 6573423514098805713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_10
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 70
+        width: 30
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa1fae7d8c22cce0800000000000000
+      internalID: -1386496749049275734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 70
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1201dc9b9b326e0800000000000000
+      internalID: -1863441613140778503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 70
+        width: 18
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8950f9741bddc06f0800000000000000
+      internalID: -716954487178197608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_13
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 70
+        width: 16
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63818f521b6b01010800000000000000
+      internalID: 1157625976196700214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 7
+        width: 17
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6333c2a773a98b0800000000000000
+      internalID: -5144738626450278702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_15
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 7
+        width: 21
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a541d1fdf40d6d70800000000000000
+      internalID: 9037885515932714406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_16
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 22
+        width: 19
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b2d9cf164567850800000000000000
+      internalID: 6374375102416235273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_17
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 22
+        width: 23
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8972107e21502e0800000000000000
+      internalID: -2160299662888167240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 22
+        width: 24
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6522ab86520f714f0800000000000000
+      internalID: -857953160529305002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_19
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 22
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30daa72ccde92c9e0800000000000000
+      internalID: -1602543846397661949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer-dash_20
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 22
+        width: 17
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dc69b9e1395fdf0800000000000000
+      internalID: -147049653151019675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 763e4d7afbd3ed74882843dbacbc609b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.20000000298023225},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      lucifer-dash_0: -8447666175020430660
+      lucifer-dash_1: -1510355459699079409
+      lucifer-dash_10: -1386496749049275734
+      lucifer-dash_11: -1863441613140778503
+      lucifer-dash_12: -716954487178197608
+      lucifer-dash_13: 1157625976196700214
+      lucifer-dash_14: -5144738626450278702
+      lucifer-dash_15: 9037885515932714406
+      lucifer-dash_16: 6374375102416235273
+      lucifer-dash_17: -2160299662888167240
+      lucifer-dash_18: -857953160529305002
+      lucifer-dash_19: -1602543846397661949
+      lucifer-dash_2: 3853767265020905578
+      lucifer-dash_20: -147049653151019675
+      lucifer-dash_3: -2729842776396740299
+      lucifer-dash_4: 1247438584322777902
+      lucifer-dash_5: 677195539490212828
+      lucifer-dash_6: -185932151456023264
+      lucifer-dash_7: -1135199785462664237
+      lucifer-dash_8: 5609294190226452810
+      lucifer-dash_9: 6573423514098805713
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

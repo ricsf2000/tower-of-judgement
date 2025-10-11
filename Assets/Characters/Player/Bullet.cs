@@ -4,7 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed = 5000.0f;
-    public float damage = 0.5f;
+    public float damage = 1.0f;
     public float knockbackForce = 5.0f;
     public int life = 3;    // How many bounces before destroyed
 
