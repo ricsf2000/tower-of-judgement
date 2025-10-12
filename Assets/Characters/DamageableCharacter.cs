@@ -81,7 +81,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         }
     }
 
-    float _health = 10.0f;
+    [SerializeField] private float _health = 10.0f;
     bool _targetable = true;
 
     public bool _invincible = false;
