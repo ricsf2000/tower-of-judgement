@@ -143,6 +143,8 @@ public class PlayerController : MonoBehaviour
 
     void OnFire()
     {
+        if (isDashing) return; // prevent new attacks during dash
+
         // Get mouse position in world space
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 dir = (mouseWorldPos - (Vector2)transform.position).normalized;
@@ -225,6 +227,7 @@ public class PlayerController : MonoBehaviour
         canShoot = false;
 
         currentDashCount--;
+        animator.ResetTrigger("swordAttack");
 
         // Activate invincibility
         var dmgChar = GetComponent<DamageableCharacter>();
