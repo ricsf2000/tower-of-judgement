@@ -50,6 +50,12 @@ TextureImporter:
   - first:
       213: -2349268260735449135
     second: seraphim_15
+  - first:
+      213: 7676808125493637399
+    second: seraphim_16
+  - first:
+      213: -3364940554173932302
+    second: seraphim_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -165,8 +171,8 @@ TextureImporter:
         y: 96
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -183,12 +189,12 @@ TextureImporter:
       name: seraphim_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 48
+        y: 96
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +211,12 @@ TextureImporter:
       name: seraphim_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
+        x: 96
+        y: 96
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +233,12 @@ TextureImporter:
       name: seraphim_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 0
         y: 48
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +255,12 @@ TextureImporter:
       name: seraphim_4
       rect:
         serializedVersion: 2
-        x: 144
+        x: 48
         y: 48
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +277,12 @@ TextureImporter:
       name: seraphim_5
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 48
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +299,12 @@ TextureImporter:
       name: seraphim_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 144
+        y: 48
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,12 +321,12 @@ TextureImporter:
       name: seraphim_7
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
+        x: 192
+        y: 48
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,12 +343,12 @@ TextureImporter:
       name: seraphim_8
       rect:
         serializedVersion: 2
-        x: 96
+        x: 0
         y: 0
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +365,12 @@ TextureImporter:
       name: seraphim_9
       rect:
         serializedVersion: 2
-        x: 144
+        x: 48
         y: 0
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,12 +387,12 @@ TextureImporter:
       name: seraphim_10
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 0
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.45}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -399,11 +405,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: seraphim_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4ecffa68906b530800000000000000
+      internalID: 3870291403854374070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seraphim_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f07d7cff04ac8920800000000000000
+      internalID: 2993948240862081273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 06baaea5db10aea4eb5a96df541d59ef
+    spriteID: 0515911edf8cb3349bce9be6c03dfb7d
     internalID: 0
     vertices: []
     indices: 
@@ -413,11 +463,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.44999998807907107},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":48.0,"y":48.0},"gridSpriteSize":{"x":48.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       seraphim_0: -6523422752310121832
       seraphim_1: 8357579805718201272
       seraphim_10: -4796442373336930754
+      seraphim_11: 3870291403854374070
+      seraphim_12: 2993948240862081273
       seraphim_2: 5770540191473948219
       seraphim_3: -3258853025337717658
       seraphim_4: -6356135654443549929

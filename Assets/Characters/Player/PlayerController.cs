@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     // private bool isAttacking = false;
     private bool holdAttackFacing = false;
     private float holdAttackTimer = 0f;
-    [SerializeField] private float holdAttackDuration = 0.50f;
+    [SerializeField] private float holdAttackDirectionDuration = 0.50f;
     private float lastMoveX = 0f;
     private float lastMoveY = -1f; // default facing down
     private Vector2 attackDirection = Vector2.zero;
@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
     private int currentDashCount;      // remaining dashes
     private bool isDashing = false;
     private bool canDash = true;
+
+    private int comboStep = 0;
+    private const int maxCombo = 2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -135,7 +138,7 @@ public class PlayerController : MonoBehaviour
     private void HoldAttackFacing()
     {
         holdAttackFacing = true;
-        holdAttackTimer = holdAttackDuration;
+        holdAttackTimer = holdAttackDirectionDuration;
     }
 
     void OnFire()
@@ -185,7 +188,7 @@ public class PlayerController : MonoBehaviour
         canMove = false;
         canShoot = false;
         rb.linearVelocity = Vector2.zero;
-        rb.AddForce(attackDirection * 5.0f, ForceMode2D.Impulse);
+        rb.AddForce(attackDirection * 15.0f, ForceMode2D.Impulse);
     }
 
     public void UnlockMovement()
