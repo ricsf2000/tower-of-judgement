@@ -163,29 +163,29 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         }
     }
     // DamageableCharacter.cs (replace PlayerDied)
-private void PlayerDied()
-{
-    StartCoroutine(DeathSequence());
-}
+    private void PlayerDied()
+    {
+        StartCoroutine(DeathSequence());
+    }
 
-private System.Collections.IEnumerator DeathSequence()
-{
-    // stop collisions/physics, but keep object active so the Animator can play
-    Targetable = false;
-    rb.simulated = false;
+    private System.Collections.IEnumerator DeathSequence()
+    {
+        // stop collisions/physics, but keep object active so the Animator can play
+        Targetable = false;
+        rb.simulated = false;
 
-    // ensure the death animation is playing
-    animator.SetBool("isAlive", false);
+        // ensure the death animation is playing
+        animator.SetBool("isAlive", false);
 
-    // Option 1: wait for the current state's length (simple & robust)
-    float wait = animator.GetCurrentAnimatorStateInfo(0).length;
-    if (wait <= 0f) wait = 0.5f;  // fallback
+        // Option 1: wait for the current state's length (simple & robust)
+        float wait = animator.GetCurrentAnimatorStateInfo(0).length;
+        if (wait <= 0f) wait = 0.5f;  // fallback
 
-    yield return new WaitForSeconds(wait);
+        yield return new WaitForSeconds(wait);
 
-    // Now open the death panel
-    LevelManager.manager.GameOver();
+        // Now open the death panel
+        LevelManager.manager.GameOver();
 
-}
+    }
 
 }
