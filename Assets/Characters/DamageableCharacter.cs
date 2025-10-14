@@ -41,7 +41,12 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
             if (_health <= 0)
             {
-                PlayerDied();
+                animator.SetBool("isAlive", false);
+                Targetable = false;
+                rb.simulated = false;
+
+                if (CompareTag("Player"))
+                    PlayerDied();
             }
         }
         get
@@ -85,14 +90,18 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         }
     }
 
-    float _health = 10.0f;
+    public float _health = 10.0f;
     bool _targetable = true;
 
     public bool _invincible = false;
 
     public void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
+        if (animator != null)
+            Debug.Log($"[{name}] Found animator: {animator.name}");
+        else
+            Debug.LogError($"[{name}] No Animator found!");
         animator.SetBool("isAlive", isAlive);
         rb = GetComponent<Rigidbody2D>();
         physicsCol = GetComponent<Collider2D>();
@@ -116,6 +125,9 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             if (hitReaction != null)
                 hitReaction.TriggerHit();
 
+            if (CompareTag("Player"))
+                CinemachineShake.Instance.Shake(1f, 3.5f, 0.2f);
+
             if (canTurnInvincible)
             {
                 // Activate invincibility and timer
@@ -128,7 +140,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     {
         if (!Invincible)
         {
-            Debug.Log("Slime hit for " + damage);
+            Debug.Log("Enemy hit for " + damage);
             Health -= damage;
 
             // Damage flash effect
@@ -137,6 +149,9 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             HitReaction hitReaction = GetComponent<HitReaction>();
             if (hitReaction != null)
                 hitReaction.TriggerHit();
+
+            if (CompareTag("Player"))
+                CinemachineShake.Instance.Shake(1f, 3.5f, 0.4f);
 
             if (canTurnInvincible)
             {

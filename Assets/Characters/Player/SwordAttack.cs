@@ -56,6 +56,10 @@ public class SwordAttack : MonoBehaviour
                 // Play it
                 audioSource.PlayOneShot(clip);
             }
+
+            // Camera shake effect
+            if (CinemachineShake.Instance != null)
+                CinemachineShake.Instance.Shake(0.4f, .5f, 0.2f);
         }
     }
     

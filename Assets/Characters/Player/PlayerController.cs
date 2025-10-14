@@ -208,6 +208,9 @@ public class PlayerController : MonoBehaviour
 
     public void playSwordSwingFX()
     {
+        // Randomize the pitch
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
+                
         audioSource.volume = .15f;
         audioSource.PlayOneShot(swordSwing);
     }
@@ -232,6 +235,9 @@ public class PlayerController : MonoBehaviour
 
     public void playDashFX()
     {
+        // Randomize the pitch
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
+                
         audioSource.volume = .25f;
         audioSource.PlayOneShot(dashFX);
     }

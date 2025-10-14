@@ -107,6 +107,21 @@ TextureImporter:
   - first:
       213: -2942550786734778018
     second: lucifer_34
+  - first:
+      213: 3974937379282732598
+    second: lucifer_35
+  - first:
+      213: 1415462699558478523
+    second: lucifer_36
+  - first:
+      213: -4631094421979196158
+    second: lucifer_37
+  - first:
+      213: -8651870834097216339
+    second: lucifer_38
+  - first:
+      213: -2123795252162861134
+    second: lucifer_39
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -187,19 +202,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -940,11 +942,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: lucifer_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956f3e13fc6716240800000000000000
+      internalID: 4783234911511508569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_34
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59902756a5f927d0800000000000000
+      internalID: -2942550786734778018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636c1908c70d92730800000000000000
+      internalID: 3974937379282732598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_36
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2aff763dbb4a310800000000000000
+      internalID: 1415462699558478523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a4caa39c17beef94687b1b845714662c
+    spriteID: af2989abf1e8b8449b2aeeed1da113fb
     internalID: 0
     vertices: []
     indices: 
@@ -983,6 +1073,10 @@ TextureImporter:
       lucifer_30: -7648171748123092698
       lucifer_31: -7460139889570408543
       lucifer_32: -4510977418676812235
+      lucifer_33: 4783234911511508569
+      lucifer_34: -2942550786734778018
+      lucifer_35: 3974937379282732598
+      lucifer_36: 1415462699558478523
       lucifer_4: 1516913203471445975
       lucifer_5: -7093804648373550982
       lucifer_6: 5261144970086778243

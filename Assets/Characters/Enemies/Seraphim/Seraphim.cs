@@ -34,7 +34,10 @@ public class Seraphim : MonoBehaviour
     private bool canAttack = true;
     private Vector2 lockedDirection;
 
+    
+
     private bool canMove = true;
+    private bool isDead = false;
 
     public DetectionZone detectionZone;
 
@@ -43,6 +46,10 @@ public class Seraphim : MonoBehaviour
     Rigidbody2D rb;
 
     DamageableCharacter damageableCharacter;
+
+    private AudioSource audioSource;
+
+    public AudioClip deathFX;
 
     void Start()
     {
@@ -55,11 +62,17 @@ public class Seraphim : MonoBehaviour
             lastHealth = damageableCharacter.Health;
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (!damageableCharacter.Targetable)
+            return;
+
+        // Only attack if player is detected
+        bool playerDetected = detectionZone != null && detectionZone.detectedObjs.Exists(obj => obj.CompareTag("Player"));
+        if (!playerDetected)
             return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -103,6 +116,7 @@ public class Seraphim : MonoBehaviour
 
             lastHealth = damageableCharacter.Health;
         }
+        
     }
 
     private IEnumerator EnrageRoutine()
@@ -142,6 +156,8 @@ public class Seraphim : MonoBehaviour
 
     private IEnumerator ChargeAndFire()
     {
+        if (isDead) yield break;
+
         isCharging = true;
         canAttack = false;
 
@@ -190,6 +206,7 @@ public class Seraphim : MonoBehaviour
 
         // Wait for the laser cooldown
         yield return new WaitForSeconds(attackCooldown);
+        if (isDead) yield break;
 
         // Ready for next cycle
         isCharging = false;
@@ -200,6 +217,8 @@ public class Seraphim : MonoBehaviour
 
     private void FireLaser(Vector2 fireDir)
     {
+        if (isDead) return;
+
         canMove = false;
 
         if (laserPrefab == null || firePoint == null)
@@ -222,11 +241,19 @@ public class Seraphim : MonoBehaviour
 
         StartCoroutine(moveCooldown());
     }
-    
+
     private IEnumerator moveCooldown()
     {
         yield return new WaitForSeconds(1f);
         canMove = true;
+    }
+    
+    public void onDeath()
+    {
+        isDead = true;
+        StopAllCoroutines(); // cancel charging/firing
+        audioSource.volume = .25f;
+        audioSource.PlayOneShot(deathFX);
     }
 
 }
