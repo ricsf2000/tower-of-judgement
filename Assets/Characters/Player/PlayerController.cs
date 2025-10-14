@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
 
     private Shoot shoot;
 
+    private AudioSource audioSource;
+    public AudioClip swordSwing;
+    public AudioClip dashFX;
+
     bool canMove = true;
     bool canShoot = true;
     private bool isMoving = false;
@@ -66,6 +70,7 @@ public class PlayerController : MonoBehaviour
         swordCollider = swordHitbox.GetComponent<Collider2D>();
         shoot = GetComponent<Shoot>();
         currentDashCount = maxDashCount;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -143,6 +148,8 @@ public class PlayerController : MonoBehaviour
 
     void OnFire()
     {
+        if (isDashing) return; // prevent new attacks during dash
+
         // Get mouse position in world space
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 dir = (mouseWorldPos - (Vector2)transform.position).normalized;
@@ -199,6 +206,15 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
     }
 
+    public void playSwordSwingFX()
+    {
+        // Randomize the pitch
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
+                
+        audioSource.volume = .15f;
+        audioSource.PlayOneShot(swordSwing);
+    }
+
     void OnDash()
     {
         var dmgChar = GetComponent<DamageableCharacter>();
@@ -217,6 +233,15 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(PerformDash(dashDir));
     }
 
+    public void playDashFX()
+    {
+        // Randomize the pitch
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
+                
+        audioSource.volume = .25f;
+        audioSource.PlayOneShot(dashFX);
+    }
+
     private IEnumerator PerformDash(Vector2 dashDir)
     {
         isDashing = true;
@@ -225,6 +250,7 @@ public class PlayerController : MonoBehaviour
         canShoot = false;
 
         currentDashCount--;
+        animator.ResetTrigger("swordAttack");
 
         // Activate invincibility
         var dmgChar = GetComponent<DamageableCharacter>();

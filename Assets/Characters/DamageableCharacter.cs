@@ -1,4 +1,7 @@
+using System.Collections;
 using TMPro;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
@@ -14,6 +17,8 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     Collider2D physicsCol;
     bool isAlive = true;
     private float invincibleTimeElapsed = 0.0f;
+
+    private DamageFlash _damageFlash;
 
     public float Health
     {
@@ -38,6 +43,10 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             {
                 animator.SetBool("isAlive", false);
                 Targetable = false;
+                rb.simulated = false;
+
+                if (CompareTag("Player"))
+                    PlayerDied();
             }
         }
         get
@@ -81,17 +90,22 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         }
     }
 
-    [SerializeField] private float _health = 10.0f;
+    public float _health = 10.0f;
     bool _targetable = true;
 
     public bool _invincible = false;
 
     public void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
+        if (animator != null)
+            Debug.Log($"[{name}] Found animator: {animator.name}");
+        else
+            Debug.LogError($"[{name}] No Animator found!");
         animator.SetBool("isAlive", isAlive);
         rb = GetComponent<Rigidbody2D>();
         physicsCol = GetComponent<Collider2D>();
+        _damageFlash = GetComponent<DamageFlash>();
     }
 
     public void OnHit(float damage, Vector2 knockback)
@@ -103,6 +117,16 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             // Apply knockback force
             rb.AddForce(knockback, ForceMode2D.Impulse);
             Debug.Log("Knockback applied: " + knockback);
+
+            // Damage flash effect
+            _damageFlash.CallDamageFlash();
+
+            HitReaction hitReaction = GetComponent<HitReaction>();
+            if (hitReaction != null)
+                hitReaction.TriggerHit();
+
+            if (CompareTag("Player"))
+                CinemachineShake.Instance.Shake(1f, 3.5f, 0.2f);
 
             if (canTurnInvincible)
             {
@@ -116,8 +140,18 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     {
         if (!Invincible)
         {
-            Debug.Log("Slime hit for " + damage);
+            Debug.Log("Enemy hit for " + damage);
             Health -= damage;
+
+            // Damage flash effect
+            _damageFlash.CallDamageFlash();
+
+            HitReaction hitReaction = GetComponent<HitReaction>();
+            if (hitReaction != null)
+                hitReaction.TriggerHit();
+
+            if (CompareTag("Player"))
+                CinemachineShake.Instance.Shake(1f, 3.5f, 0.4f);
 
             if (canTurnInvincible)
             {
@@ -142,6 +176,31 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
                 Invincible = false;
             }
         }
+    }
+    // DamageableCharacter.cs (replace PlayerDied)
+    private void PlayerDied()
+    {
+        StartCoroutine(DeathSequence());
+    }
+
+    private System.Collections.IEnumerator DeathSequence()
+    {
+        // stop collisions/physics, but keep object active so the Animator can play
+        Targetable = false;
+        rb.simulated = false;
+
+        // ensure the death animation is playing
+        animator.SetBool("isAlive", false);
+
+        // Option 1: wait for the current state's length (simple & robust)
+        float wait = animator.GetCurrentAnimatorStateInfo(0).length;
+        if (wait <= 0f) wait = 0.5f;  // fallback
+
+        yield return new WaitForSeconds(wait);
+
+        // Now open the death panel
+        LevelManager.manager.GameOver();
+
     }
 
 }

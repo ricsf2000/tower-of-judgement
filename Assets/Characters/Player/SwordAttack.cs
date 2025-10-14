@@ -4,6 +4,7 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     public Collider2D swordCollider;
+
     public float damage = 3;
     public float knockbackForce = 5000f;
     // public Vector3 faceRight = new Vector3(.107f, 0.085f, 0);
@@ -11,12 +12,18 @@ public class SwordAttack : MonoBehaviour
     // public Vector3 faceUp = new Vector3(0f, 0.179f, 0);
     // public Vector3 faceDown = new Vector3(0f, -0.041f, 0);
 
+    [Header("Audio")]
+    public AudioSource audioSource;       // plays the sound
+    public AudioClip[] impactSounds;      // assign 3+ impact sounds in Inspector
+
     void Start()
     {
         if (swordCollider == null)
         {
             Debug.LogWarning("Sword collider not set");
         }
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -34,6 +41,25 @@ public class SwordAttack : MonoBehaviour
             damageableObject.OnHit(damage, knockback);
             // Debug.Log("Hit for " + damage + " points");
             Debug.Log("Hit for " + damage + " points");
+
+            if (impactSounds.Length > 0 && audioSource != null)
+            {
+                // Pick a random impact sound
+                int randomIndex = Random.Range(0, impactSounds.Length);
+                AudioClip clip = impactSounds[randomIndex];
+
+                // Randomize the pitch
+                audioSource.pitch = Random.Range(0.95f, 1.05f);
+
+                audioSource.volume = 0.15f;
+
+                // Play it
+                audioSource.PlayOneShot(clip);
+            }
+
+            // Camera shake effect
+            if (CinemachineShake.Instance != null)
+                CinemachineShake.Instance.Shake(0.4f, .5f, 0.2f);
         }
     }
     

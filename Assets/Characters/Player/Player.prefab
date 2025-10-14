@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3501388676797870286}
   - component: {fileID: 5856224209802872423}
   - component: {fileID: 3294611999879237521}
+  - component: {fileID: 7092230164155083912}
   m_Layer: 0
   m_Name: SwordHitbox
   m_TagString: Untagged
@@ -93,7 +94,109 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   swordCollider: {fileID: 5856224209802872423}
   damage: 3
-  knockbackForce: 10
+  knockbackForce: 15
+  audioSource: {fileID: 8299667085419276712}
+  impactSounds:
+  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
+  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
+  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
+--- !u!82 &7092230164155083912
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621657096867689966}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 8888093021361364818, guid: a13c586fbb9531a48a8d338d98cf237b, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3585627279053337000
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +216,8 @@ GameObject:
   - component: {fileID: 1906188922575641396}
   - component: {fileID: 8299667085419276712}
   - component: {fileID: 395743027798664678}
+  - component: {fileID: 5533871595156739801}
+  - component: {fileID: 2324576399410139598}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -163,7 +268,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8167a0e2d582c20458175a787ed64123, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,11 +361,13 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   swordHitbox: {fileID: 1621657096867689966}
-  holdAttackDuration: 0.5
+  holdAttackDirectionDuration: 0.5
+  swordSwing: {fileID: 8300000, guid: 02d92f1821a2ac64e83f001a295184f2, type: 3}
+  dashFX: {fileID: 8300000, guid: 389db0bf05717794899af61492f6a15d, type: 3}
   dashSpeed: 15
   dashDuration: 0.2
   maxDashCount: 2
-  dashCooldown: 0.2
+  dashCooldown: 1
   tr: {fileID: 8222107168446777735}
 --- !u!50 &1932589114486792951
 Rigidbody2D:
@@ -287,7 +394,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &4259486664418817136
 BoxCollider2D:
@@ -405,11 +512,11 @@ AudioSource:
   m_GameObject: {fileID: 3585627279053337000}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7907046597716260125, guid: a13c586fbb9531a48a8d338d98cf237b, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -602,6 +709,43 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &5533871595156739801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9b43034908adf49ad068a5dc9c6725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageFlash
+  _flashColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashTime: 0.25
+  _flashSpeedCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2324576399410139598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9837b83634d6074bbd018f3aee341b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  animator: {fileID: 872722973001470607}
+  renderers:
+  - {fileID: 4944128680177801756}
+  freezeDuration: 0.15
+  freezeAnimation: 1
 --- !u!1 &7156449797631398727
 GameObject:
   m_ObjectHideFlags: 0
