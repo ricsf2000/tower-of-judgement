@@ -1,4 +1,7 @@
+using System.Collections;
 using TMPro;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
@@ -14,6 +17,8 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     Collider2D physicsCol;
     bool isAlive = true;
     private float invincibleTimeElapsed = 0.0f;
+
+    private DamageFlash _damageFlash;
 
     public float Health
     {
@@ -92,6 +97,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         animator.SetBool("isAlive", isAlive);
         rb = GetComponent<Rigidbody2D>();
         physicsCol = GetComponent<Collider2D>();
+        _damageFlash = GetComponent<DamageFlash>();
     }
 
     public void OnHit(float damage, Vector2 knockback)
@@ -103,6 +109,13 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             // Apply knockback force
             rb.AddForce(knockback, ForceMode2D.Impulse);
             Debug.Log("Knockback applied: " + knockback);
+
+            // Damage flash effect
+            _damageFlash.CallDamageFlash();
+
+            HitReaction hitReaction = GetComponent<HitReaction>();
+            if (hitReaction != null)
+                hitReaction.TriggerHit();
 
             if (canTurnInvincible)
             {
@@ -118,6 +131,13 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         {
             Debug.Log("Slime hit for " + damage);
             Health -= damage;
+
+            // Damage flash effect
+            _damageFlash.CallDamageFlash();
+
+            HitReaction hitReaction = GetComponent<HitReaction>();
+            if (hitReaction != null)
+                hitReaction.TriggerHit();
 
             if (canTurnInvincible)
             {

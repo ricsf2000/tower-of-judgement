@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6502041772668158073}
   - component: {fileID: 1004545791155724565}
   - component: {fileID: 2590652599050109497}
+  - component: {fileID: 5696177050514095159}
+  - component: {fileID: 4267112422769636998}
   m_Layer: 10
   m_Name: Slime
   m_TagString: Enemy
@@ -63,7 +65,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8167a0e2d582c20458175a787ed64123, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,7 +216,45 @@ MonoBehaviour:
   disableSimulation: 0
   canTurnInvincible: 0
   invincibilityTime: 0.25
+  _health: 10
   _invincible: 0
+--- !u!114 &5696177050514095159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811083502597671236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9b43034908adf49ad068a5dc9c6725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageFlash
+  _flashColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashTime: 0.25
+  _flashSpeedCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &4267112422769636998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811083502597671236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9837b83634d6074bbd018f3aee341b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  animator: {fileID: 1004545791155724565}
+  renderers:
+  - {fileID: 1521937507871406167}
+  freezeDuration: 0.15
+  freezeAnimation: 1
 --- !u!1 &6771588971394071392
 GameObject:
   m_ObjectHideFlags: 0

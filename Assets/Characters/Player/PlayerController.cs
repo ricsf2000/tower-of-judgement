@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
 
     private Shoot shoot;
 
+    private AudioSource audioSource;
+    public AudioClip swordSwing;
+    public AudioClip dashFX;
+
     bool canMove = true;
     bool canShoot = true;
     private bool isMoving = false;
@@ -66,6 +70,7 @@ public class PlayerController : MonoBehaviour
         swordCollider = swordHitbox.GetComponent<Collider2D>();
         shoot = GetComponent<Shoot>();
         currentDashCount = maxDashCount;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -201,6 +206,12 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
     }
 
+    public void playSwordSwingFX()
+    {
+        audioSource.volume = .15f;
+        audioSource.PlayOneShot(swordSwing);
+    }
+
     void OnDash()
     {
         var dmgChar = GetComponent<DamageableCharacter>();
@@ -217,6 +228,12 @@ public class PlayerController : MonoBehaviour
             : new Vector2(lastMoveX, lastMoveY);
 
         StartCoroutine(PerformDash(dashDir));
+    }
+
+    public void playDashFX()
+    {
+        audioSource.volume = .25f;
+        audioSource.PlayOneShot(dashFX);
     }
 
     private IEnumerator PerformDash(Vector2 dashDir)
