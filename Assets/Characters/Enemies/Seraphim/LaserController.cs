@@ -23,8 +23,12 @@ public class LaserController : MonoBehaviour
     private SpriteRenderer middleRenderer;
     private float baseSpriteWidth; // the width of the unscaled sprite in world units
 
+    public AudioSource audioSource;
+    public AudioClip impactSound;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         boxCol = GetComponent<BoxCollider2D>();
         middleRenderer = middlePart.GetComponent<SpriteRenderer>();
 
@@ -98,6 +102,13 @@ public class LaserController : MonoBehaviour
             {
                 Vector2 dir = (other.transform.position - transform.position).normalized;
                 player.OnHit(damage, dir * knockbackForce);
+
+                audioSource.pitch = Random.Range(0.95f, 1.05f);
+
+                audioSource.volume = 0.15f;
+
+                // Play it
+                audioSource.PlayOneShot(impactSound);
             }
         }
     }

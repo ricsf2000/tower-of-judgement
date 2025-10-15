@@ -192,13 +192,14 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         // ensure the death animation is playing
         animator.SetBool("isAlive", false);
 
-        // Option 1: wait for the current state's length (simple & robust)
-        float wait = animator.GetCurrentAnimatorStateInfo(0).length;
-        if (wait <= 0f) wait = 0.5f;  // fallback
+        // Wait for the current state's length 
+        // float wait = animator.GetCurrentAnimatorStateInfo(0).length;
+        // if (wait <= 0f) wait = 0.5f;  // fallback
 
-        yield return new WaitForSeconds(wait);
+        // yield return new WaitForSeconds(wait);
+        yield return new WaitForSeconds(2.0f);
 
-        // Now open the death panel
+        // Open the death panel
         LevelManager.manager.GameOver();
 
     }

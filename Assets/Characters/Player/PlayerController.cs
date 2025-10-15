@@ -58,9 +58,6 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private bool canDash = true;
 
-    private int comboStep = 0;
-    private const int maxCombo = 2;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

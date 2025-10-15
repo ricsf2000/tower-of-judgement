@@ -177,18 +177,24 @@ public class Seraphim : MonoBehaviour
         float chargeTimer = 0f;
 
         // Charge phase
+        float lockInRatio = 0.9f; // Lock direction at this percentage of the charge
+        bool hasLockedDirection = false;
+
         while (chargeTimer < chargeTime)
         {
             chargeTimer += Time.deltaTime;
 
-            Vector2 dirToPlayer = (player.position - transform.position).normalized;
-            lockedDirection = dirToPlayer;
-
-            // When the charging animation finishes, pause it on the last frame
-            stateInfo = irisAnimator.GetCurrentAnimatorStateInfo(0);
-            if (stateInfo.IsName("isCharging") && stateInfo.normalizedTime >= 1f)
+            if (!hasLockedDirection)
             {
-                irisAnimator.speed = 0f;  // freeze on the last frame
+                // Track the player until lock-in point
+                Vector2 dirToPlayer = (player.position - transform.position).normalized;
+                lockedDirection = dirToPlayer;
+
+                if (chargeTimer >= chargeTime * lockInRatio)
+                {
+                    hasLockedDirection = true;
+                    Debug.Log("[Seraphim] Locked laser direction!");
+                }
             }
 
             yield return null;

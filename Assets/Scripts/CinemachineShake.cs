@@ -20,6 +20,9 @@ public class CinemachineShake : MonoBehaviour
             perlin = cam.gameObject.AddComponent<CinemachineBasicMultiChannelPerlin>();
         }
 
+        Debug.Log("[CinemachineShake] Found cam: " + cam);
+        Debug.Log("[CinemachineShake] Found perlin: " + perlin);
+
         // Reset initial values
         perlin.AmplitudeGain = 0f;
         perlin.FrequencyGain = 0f;

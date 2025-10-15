@@ -329,12 +329,12 @@ MonoBehaviour:
   damage: 1
   knockbackForce: 5
   moveSpeed: 20
-  preferredDistance: 2.3
+  preferredDistance: 1.5
   stopThreshold: 0.5
   enragedSpeedMultiplier: 2
   enrageDuration: 1.5
   attackRange: 8
-  chargeTime: 1.5
+  chargeTime: 2.2
   attackCooldown: 3
   laserPrefab: {fileID: 6693314044191345402, guid: 0f775ee58f04a1644aa30bc68ba4282a, type: 3}
   firePoint: {fileID: 4352353707234758389}
@@ -357,6 +357,7 @@ MonoBehaviour:
   disableSimulation: 0
   canTurnInvincible: 1
   invincibilityTime: 0.25
+  _health: 10
   _invincible: 0
 --- !u!114 &2286261815326832428
 MonoBehaviour:
