@@ -251,7 +251,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 35
+  m_LinearDamping: 40
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -331,7 +331,7 @@ MonoBehaviour:
   moveSpeed: 20
   preferredDistance: 1.5
   stopThreshold: 0.5
-  enragedSpeedMultiplier: 2
+  enragedSpeedMultiplier: 1.5
   enrageDuration: 1.5
   attackRange: 8
   chargeTime: 2.2
@@ -716,7 +716,6 @@ GameObject:
   - component: {fileID: 8052804671578079518}
   - component: {fileID: 8747761520767289753}
   - component: {fileID: 1662358629941863503}
-  - component: {fileID: 241645731848673853}
   m_Layer: 0
   m_Name: Iris
   m_TagString: Untagged
@@ -843,15 +842,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &241645731848673853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7938510139617689158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a28e4c7699e1db44786e7fe8fbcf4d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'

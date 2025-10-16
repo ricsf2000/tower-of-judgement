@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private Shoot shoot;
 
     private AudioSource audioSource;
-    public AudioClip swordSwing;
+    public AudioClip[] swordSwing;
     public AudioClip dashFX;
 
     bool canMove = true;
@@ -205,11 +205,20 @@ public class PlayerController : MonoBehaviour
 
     public void playSwordSwingFX()
     {
+        int randomIndex = Random.Range(0, swordSwing.Length);
+        AudioClip clip = swordSwing[randomIndex];
+
+        // Stop any currently playing sound
+        if (audioSource.isPlaying)
+            audioSource.Stop();
+
         // Randomize the pitch
         audioSource.pitch = Random.Range(0.95f, 1.05f);
-                
+
         audioSource.volume = .15f;
-        audioSource.PlayOneShot(swordSwing);
+
+        // Play it
+        audioSource.PlayOneShot(clip);
     }
 
     void OnDash()

@@ -256,10 +256,19 @@ public class Seraphim : MonoBehaviour
     
     public void onDeath()
     {
+        if (isDead) return;
         isDead = true;
-        StopAllCoroutines(); // cancel charging/firing
-        audioSource.volume = .25f;
-        audioSource.PlayOneShot(deathFX);
+        StopAllCoroutines();
+
+        if (audioSource != null && deathFX != null && audioSource.enabled)
+        {
+            audioSource.volume = 0.25f;
+            audioSource.PlayOneShot(deathFX);
+        }
+        else
+        {
+            Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
+        }
     }
 
 }

@@ -362,7 +362,10 @@ MonoBehaviour:
     maxNormalAngle: 0
   swordHitbox: {fileID: 1621657096867689966}
   holdAttackDirectionDuration: 0.5
-  swordSwing: {fileID: 8300000, guid: 02d92f1821a2ac64e83f001a295184f2, type: 3}
+  swordSwing:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   dashFX: {fileID: 8300000, guid: 389db0bf05717794899af61492f6a15d, type: 3}
   dashSpeed: 15
   dashDuration: 0.2
@@ -826,7 +829,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Time: 0.2
+  m_Time: 0.17
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -848,7 +851,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0.09748411, b: 0.09748411, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -856,7 +859,7 @@ TrailRenderer:
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
+      ctime0: 56163
       ctime1: 65535
       ctime2: 0
       ctime3: 0
@@ -876,8 +879,8 @@ TrailRenderer:
       m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 12
+    numCapVertices: 12
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}

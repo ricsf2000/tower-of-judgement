@@ -8,6 +8,7 @@ using UnityEngine;
 // A base class for damageable characters (both players and enemies)
 public class DamageableCharacter : MonoBehaviour, IDamageable
 {
+    public static event System.Action<DamageableCharacter> OnAnyCharacterDeath;
     public GameObject healthText;
     public bool disableSimulation = false;
     public bool canTurnInvincible = false;
@@ -44,6 +45,20 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
                 animator.SetBool("isAlive", false);
                 Targetable = false;
                 rb.simulated = false;
+
+                // Try to find the closest WaveManager in the hierarchy
+                EnemyWaveManager manager = GetComponentInParent<EnemyWaveManager>();
+
+                if (manager == null)
+                {
+                    // Fallback for scene-level managers
+                    manager = FindFirstObjectByType<EnemyWaveManager>();
+                }
+
+                if (manager != null)
+                {
+                    manager.RemoveEnemy(this);
+                }
 
                 if (CompareTag("Player"))
                     PlayerDied();
@@ -106,6 +121,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         rb = GetComponent<Rigidbody2D>();
         physicsCol = GetComponent<Collider2D>();
         _damageFlash = GetComponent<DamageFlash>();
+        Debug.Log($"[{name}] spawned with Health = {_health}, Targetable = {Targetable}");
     }
 
     public void OnHit(float damage, Vector2 knockback)
