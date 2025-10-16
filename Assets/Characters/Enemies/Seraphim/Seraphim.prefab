@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296713446710907346}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4559670878040903616}
+  m_Father: {fileID: 219866224998044720}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &6388268595153993015
 CircleCollider2D:
@@ -235,7 +235,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5574479328089693170}
-  - {fileID: 8048315356044260039}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7899999284860279385
@@ -333,14 +332,16 @@ MonoBehaviour:
   stopThreshold: 0.5
   enragedSpeedMultiplier: 1.5
   enrageDuration: 1.5
-  attackRange: 8
+  attackRange: 4
   chargeTime: 2.2
-  attackCooldown: 3
+  attackCooldown: 1.5
   laserPrefab: {fileID: 6693314044191345402, guid: 0f775ee58f04a1644aa30bc68ba4282a, type: 3}
   firePoint: {fileID: 4352353707234758389}
   detectionZone: {fileID: 3664395018057062284}
   irisAnimator: {fileID: 1662358629941863503}
   deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
+  minSpawnDelay: 0.5
+  maxSpawnDelay: 1.5
 --- !u!114 &3437501242977859969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +359,14 @@ MonoBehaviour:
   canTurnInvincible: 1
   invincibilityTime: 0.25
   _health: 10
+  maxHealth: 10
   _invincible: 0
+  SpawnedByWave: 0
+  audioSource: {fileID: 3343150406665617844}
+  impactSounds:
+  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
+  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
+  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
 --- !u!114 &2286261815326832428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,6 +582,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2170747752216617140}
+  - {fileID: 8048315356044260039}
   m_Father: {fileID: 5574479328089693170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5906169317649393503

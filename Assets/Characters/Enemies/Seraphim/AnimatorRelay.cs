@@ -42,4 +42,21 @@ public class AnimatorRelay : MonoBehaviour
         if (dmg != null && dmg.Health <= 0 && seraphim != null)
             seraphim.onDeath();
     }
+
+    public void PlaySpawnAnimation()
+    {
+        var dmg = GetComponentInParent<DamageableCharacter>();
+
+        // Only wave-spawned enemies should play this
+        if (dmg != null && !dmg.SpawnedByWave)
+            return;
+
+        if (bodyAnimator != null)
+        {
+            bodyAnimator.ResetTrigger("spawn");  // clear if already set
+            bodyAnimator.SetTrigger("spawn");
+            Debug.Log($"[{name}] Playing spawn animation (wave-spawned)");
+        }
+    }
+
 }

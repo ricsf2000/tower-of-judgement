@@ -51,6 +51,11 @@ public class Seraphim : MonoBehaviour
 
     public AudioClip deathFX;
 
+    [Header("Spawn Delay Settings")]
+    public float minSpawnDelay = 0.5f;
+    public float maxSpawnDelay = 2.0f;
+    private bool hasSpawned = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -63,11 +68,15 @@ public class Seraphim : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         audioSource = GetComponent<AudioSource>();
+
+        // If not wave-spawned, enable AI immediately
+        if (damageableCharacter == null || !damageableCharacter.SpawnedByWave)
+            hasSpawned = true;
     }
 
     void Update()
     {
-        if (!damageableCharacter.Targetable)
+        if (!damageableCharacter.Targetable || !hasSpawned)
             return;
 
         // Only attack if player is detected
@@ -85,7 +94,7 @@ public class Seraphim : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!damageableCharacter.Targetable || detectionZone.detectedObjs.Count == 0)
+        if (!damageableCharacter.Targetable || detectionZone.detectedObjs.Count == 0 || !hasSpawned)
             return;
 
         Transform target = detectionZone.detectedObjs[0].transform;
@@ -253,7 +262,7 @@ public class Seraphim : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canMove = true;
     }
-    
+
     public void onDeath()
     {
         if (isDead) return;
@@ -262,13 +271,22 @@ public class Seraphim : MonoBehaviour
 
         if (audioSource != null && deathFX != null && audioSource.enabled)
         {
-            audioSource.volume = 0.25f;
+            audioSource.volume = 0.50f;
             audioSource.PlayOneShot(deathFX);
         }
         else
         {
             Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
         }
+    }
+    
+    public IEnumerator SpawnDelay()
+    {
+        float delay = Random.Range(minSpawnDelay, maxSpawnDelay);
+        yield return new WaitForSeconds(delay);
+        hasSpawned = true;
+
+        Debug.Log($"[{name}] Finished spawn delay ({delay:F2}s) — AI active.");
     }
 
 }

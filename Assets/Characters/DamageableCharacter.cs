@@ -1,9 +1,10 @@
 using System.Collections;
 using TMPro;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 // A base class for damageable characters (both players and enemies)
 public class DamageableCharacter : MonoBehaviour, IDamageable
@@ -21,6 +22,24 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     private DamageFlash _damageFlash;
 
+    public float _health = 10.0f;
+    public float maxHealth = 10.0f;
+    bool _targetable = true;
+    public bool _invincible = false;
+
+    public bool IsSpawning { get; private set; }
+    [HideInInspector] public bool SpawnedByWave = false;
+
+
+    [Header("Audio")]
+    public AudioSource audioSource;       // plays the sound
+    public AudioClip[] impactSounds;      // assign 3+ impact sounds in Inspector
+
+    [Header("Player Only Stuff")]
+    private float intensity = 0.0f;
+    Volume _volume;
+    Vignette _vignette;
+
     public float Health
     {
         set
@@ -36,9 +55,17 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
                 float damageDealt = _health - value;
                 textTransform.GetComponent<HealthText>().SetDamageText(damageDealt);
+                Debug.Log($"[Player Health] Taking damage! Old: {_health}, New: {value}");
             }
 
             _health = value;
+
+            // For health bar
+            if (CompareTag("Player") && GameEvents.Instance != null)
+            {
+                GameEvents.Instance.PlayerHealthChanged(_health, maxHealth);
+            }
+
 
             if (_health <= 0)
             {
@@ -105,23 +132,55 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         }
     }
 
-    public float _health = 10.0f;
-    bool _targetable = true;
-
-    public bool _invincible = false;
-
     public void Start()
     {
         animator = GetComponentInChildren<Animator>();
+
         if (animator != null)
             Debug.Log($"[{name}] Found animator: {animator.name}");
         else
             Debug.LogError($"[{name}] No Animator found!");
+
         animator.SetBool("isAlive", isAlive);
         rb = GetComponent<Rigidbody2D>();
         physicsCol = GetComponent<Collider2D>();
         _damageFlash = GetComponent<DamageFlash>();
+
         Debug.Log($"[{name}] spawned with Health = {_health}, Targetable = {Targetable}");
+
+        _volume = FindFirstObjectByType<Volume>();
+        if (_volume == null)
+        {
+            Debug.LogWarning("[DamageableCharacter] No Volume found!");
+            return;
+        }
+
+        if (!_volume.profile.TryGet(out _vignette))
+        {
+            Debug.LogWarning("[DamageableCharacter] No Vignette override found in Volume profile!");
+            return;
+        }
+
+        _vignette.active = false;
+
+    }
+
+    public void PlaySpawnAnimation(float duration)
+    {
+        if (animator != null)
+            animator.SetTrigger("spawn");
+
+        StartCoroutine(EndSpawnAfter(duration));
+    }
+
+    private IEnumerator EndSpawnAfter(float duration)
+    {
+        IsSpawning = true;
+        yield return new WaitForSeconds(duration);
+        IsSpawning = false;
+
+        if (animator != null)
+            animator.SetBool("spawnDone", true);
     }
 
     public void OnHit(float damage, Vector2 knockback)
@@ -141,8 +200,26 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             if (hitReaction != null)
                 hitReaction.TriggerHit();
 
+            if (impactSounds.Length > 0 && audioSource != null)
+            {
+                // Pick a random impact sound
+                int randomIndex = Random.Range(0, impactSounds.Length);
+                AudioClip clip = impactSounds[randomIndex];
+
+                // Randomize the pitch
+                audioSource.pitch = Random.Range(0.95f, 1.05f);
+
+                audioSource.volume = 0.15f;
+
+                // Play it
+                audioSource.PlayOneShot(clip);
+            }
+
             if (CompareTag("Player"))
+            {
                 CinemachineShake.Instance.Shake(1f, 3.5f, 0.2f);
+                StartCoroutine(TakeDamageEffect());
+            }
 
             if (canTurnInvincible)
             {
@@ -167,7 +244,10 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
                 hitReaction.TriggerHit();
 
             if (CompareTag("Player"))
+            {
                 CinemachineShake.Instance.Shake(1f, 3.5f, 0.4f);
+                StartCoroutine(TakeDamageEffect());
+            }
 
             if (canTurnInvincible)
             {
@@ -176,6 +256,33 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             }
         }
     }
+
+    private IEnumerator TakeDamageEffect()
+    {
+        if (_vignette == null)
+            yield break;
+
+        float maxIntensity = 0.45f;
+        float duration = 0.2f;
+
+        _vignette.active = true;
+        _vignette.color.value = Color.red;
+
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            float value = Mathf.Sin(t * Mathf.PI); // fade in/out
+            _vignette.intensity.value = value * maxIntensity;
+            yield return null;
+        }
+
+        _vignette.intensity.value = 0;
+        _vignette.active = false;
+    }
+
     public void RemoveEnemy()
     {
         Destroy(gameObject);

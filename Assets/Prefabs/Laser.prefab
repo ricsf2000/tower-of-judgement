@@ -149,8 +149,9 @@ MonoBehaviour:
   colliderLengthAdjustment: 0.4
   damage: 1
   knockbackForce: 5
-  audioSource: {fileID: 839826390111263971}
-  impactSound: {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!95 &3159722076536029053
 Animator:
   serializedVersion: 7

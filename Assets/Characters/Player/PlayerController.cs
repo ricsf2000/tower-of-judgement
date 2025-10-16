@@ -293,7 +293,7 @@ public class PlayerController : MonoBehaviour
         // Turn off invincibility (after short buffer)
         if (dmgChar != null)
         {
-            StartCoroutine(DisableInvincibilityAfterDelay(dmgChar, 0.1f));
+            StartCoroutine(DisableInvincibilityAfterDelay(dmgChar, 0.4f));
         }
 
 

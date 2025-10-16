@@ -363,14 +363,13 @@ MonoBehaviour:
   swordHitbox: {fileID: 1621657096867689966}
   holdAttackDirectionDuration: 0.5
   swordSwing:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: cbdc62c6ebcf43a4ebb1e9040b126a38, type: 3}
+  - {fileID: 8300000, guid: 8a5859a635f2d564ca8255f2bbf76324, type: 3}
   dashFX: {fileID: 8300000, guid: 389db0bf05717794899af61492f6a15d, type: 3}
   dashSpeed: 15
   dashDuration: 0.2
   maxDashCount: 2
-  dashCooldown: 1
+  dashCooldown: 0.2
   tr: {fileID: 8222107168446777735}
 --- !u!50 &1932589114486792951
 Rigidbody2D:
@@ -483,8 +482,14 @@ MonoBehaviour:
   disableSimulation: 1
   canTurnInvincible: 1
   invincibilityTime: 1
-  _health: 100
+  _health: 3
+  maxHealth: 3
   _invincible: 0
+  audioSource: {fileID: 8299667085419276712}
+  impactSounds:
+  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
+  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
+  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
 --- !u!114 &1906188922575641396
 MonoBehaviour:
   m_ObjectHideFlags: 0

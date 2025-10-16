@@ -99,7 +99,19 @@ public class EnemyWaveManager : MonoBehaviour
             DamageableCharacter dmg = e.GetComponent<DamageableCharacter>();
 
             if (dmg != null && !e.CompareTag("Player"))
+            {
+                dmg.SpawnedByWave = true;
                 activeEnemies.Add(dmg);
+
+                var relay = e.GetComponentInChildren<AnimatorRelay>();
+                if (relay != null)
+                    relay.PlaySpawnAnimation();
+
+                // Start randomized spawn delay
+                var seraphim = e.GetComponent<Seraphim>();
+                if (seraphim != null)
+                    StartCoroutine(seraphim.SpawnDelay());
+            }
 
             Debug.Log($"[WaveManager] Spawned {enemyPrefab.name} at {spawnPos}");
         }
