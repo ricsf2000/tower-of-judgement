@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip[] swordSwing;
     public AudioClip dashFX;
+    public AudioClip deathFX;
 
     bool canMove = true;
     bool canShoot = true;
@@ -314,5 +315,10 @@ public class PlayerController : MonoBehaviour
         dmgChar.Invincible = false;
     }
 
+    public void playDeathFX()
+    {
+        audioSource.volume = 0.50f;
+        audioSource.PlayOneShot(deathFX);
+    }
     
 }
