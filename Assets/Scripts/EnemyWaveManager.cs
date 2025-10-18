@@ -21,7 +21,7 @@ public class EnemyWaveManager : MonoBehaviour
     [Header("Optional Barrier")]
     public List<BarrierController> barriers = new List<BarrierController>();
 
-    private List<DamageableCharacter> activeEnemies = new List<DamageableCharacter>();
+    private List<EnemyDamageable> activeEnemies = new List<EnemyDamageable>();
     private int currentWave = 0;
 
     private void OnEnable()
@@ -96,26 +96,33 @@ public class EnemyWaveManager : MonoBehaviour
 
             Vector3 spawnPos = GetSpawnPosition();
             var e = Instantiate(enemyPrefab, spawnPos, Quaternion.identity, transform);
-            DamageableCharacter dmg = e.GetComponent<DamageableCharacter>();
 
-            if (dmg != null && !e.CompareTag("Player"))
+            // Get EnemyDamageable
+            EnemyDamageable enemyDmg = e.GetComponent<EnemyDamageable>();
+            if (enemyDmg != null)
             {
-                dmg.SpawnedByWave = true;
-                activeEnemies.Add(dmg);
+                enemyDmg.SpawnedByWave = true;
+                activeEnemies.Add(enemyDmg);
 
+                // Relay handles spawn animation trigger
                 var relay = e.GetComponentInChildren<AnimatorRelay>();
                 if (relay != null)
                     relay.PlaySpawnAnimation();
 
-                // Start randomized spawn delay
+                // Random delay before AI activates
                 var seraphim = e.GetComponent<Seraphim>();
                 if (seraphim != null)
                     StartCoroutine(seraphim.SpawnDelay());
+            }
+            else
+            {
+                Debug.LogWarning($"[WaveManager] Spawned {enemyPrefab.name} has no EnemyDamageable component!");
             }
 
             Debug.Log($"[WaveManager] Spawned {enemyPrefab.name} at {spawnPos}");
         }
     }
+
 
     private Vector3 GetSpawnPosition()
     {
@@ -133,10 +140,10 @@ public class EnemyWaveManager : MonoBehaviour
         return transform.position + (Vector3)offset;
     }
 
-    public void RemoveEnemy(DamageableCharacter enemy)
+    public void RemoveEnemy(EnemyDamageable enemy)
     {
         if (!activeEnemies.Contains(enemy))
-            return; // only handle enemies spawned by this wave manager
+            return;
 
         activeEnemies.Remove(enemy);
         Debug.Log($"[WaveManager] Enemy removed. Remaining = {activeEnemies.Count}");
@@ -144,7 +151,6 @@ public class EnemyWaveManager : MonoBehaviour
         if (activeEnemies.Count <= 0)
         {
             Debug.Log("[WaveManager] Wave cleared!");
-            // StartCoroutine(NextWaveDelay());
         }
     }
 

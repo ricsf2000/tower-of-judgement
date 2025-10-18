@@ -11,7 +11,7 @@ public class RoomTransition : MonoBehaviour
 
     void Start()
     {
-        fadeController = FindObjectOfType<FadeController>(); // grab from UI Canvas
+        fadeController = FindFirstObjectByType<FadeController>(); // grab from UI Canvas
     }
 
     private void OnTriggerEnter2D(Collider2D other)

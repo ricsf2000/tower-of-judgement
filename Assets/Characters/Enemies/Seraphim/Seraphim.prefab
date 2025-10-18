@@ -210,10 +210,10 @@ GameObject:
   - component: {fileID: 6704187048503699127}
   - component: {fileID: 6012646269378953417}
   - component: {fileID: 4567515698610447161}
-  - component: {fileID: 3437501242977859969}
   - component: {fileID: 2286261815326832428}
   - component: {fileID: 5443620801389153446}
   - component: {fileID: 3343150406665617844}
+  - component: {fileID: 8231818911604103633}
   m_Layer: 10
   m_Name: Seraphim
   m_TagString: Enemy
@@ -342,31 +342,6 @@ MonoBehaviour:
   deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
   minSpawnDelay: 0.5
   maxSpawnDelay: 1.5
---- !u!114 &3437501242977859969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4082208666007192400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc016b1ac113824e9f875407d82398f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageableCharacter
-  healthText: {fileID: 1942305737207634952, guid: 3739e3b2b143b9a489155107771a7125, type: 3}
-  disableSimulation: 0
-  canTurnInvincible: 1
-  invincibilityTime: 0.25
-  _health: 10
-  maxHealth: 10
-  _invincible: 0
-  SpawnedByWave: 0
-  audioSource: {fileID: 3343150406665617844}
-  impactSounds:
-  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
-  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
-  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
 --- !u!114 &2286261815326832428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +496,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8231818911604103633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082208666007192400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7859304ced3290b4098d181992757476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamageable
+  healthText: {fileID: 1942305737207634952, guid: 3739e3b2b143b9a489155107771a7125, type: 3}
+  disableSimulation: 0
+  canTurnInvincible: 0
+  invincibilityTime: 0.25
+  _health: 10
+  maxHealth: 10
+  audioSource: {fileID: 3343150406665617844}
+  impactSounds:
+  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
+  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
+  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
+  SpawnedByWave: 0
 --- !u!1 &4798711637068068394
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,27 +12,26 @@ public class UIHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        if (GameEvents.Instance != null)
-        {
-            Debug.Log("[UIHandler] Subscribing to health change");
-            GameEvents.Instance.OnPlayerHealthChanged += UpdateHealthUI;
-        }
-        else
-        {
-            Debug.LogWarning("[UIHandler] GameEvents instance missing on enable!");
-        }
+        StartCoroutine(WaitForGameEvents());
+    }
+
+    private IEnumerator WaitForGameEvents()
+    {
+        while (GameEvents.Instance == null)
+            yield return null;
+
+        Debug.Log("[UIHandler] Subscribing to GameEvents");
+        GameEvents.Instance.OnPlayerHealthChanged += UpdateHealthUI;
     }
 
     private void OnDisable()
     {
         if (GameEvents.Instance != null)
         {
-            Debug.Log("[UIHandler] Unsubscribing from health change");
+            Debug.Log("[UIHandler] Unsubscribing from GameEvents");
             GameEvents.Instance.OnPlayerHealthChanged -= UpdateHealthUI;
         }
     }
-
-
 
     void Start()
     {

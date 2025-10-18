@@ -45,7 +45,7 @@ public class Seraphim : MonoBehaviour
 
     Rigidbody2D rb;
 
-    DamageableCharacter damageableCharacter;
+    private EnemyDamageable damageableCharacter;
 
     private AudioSource audioSource;
 
@@ -59,7 +59,7 @@ public class Seraphim : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        damageableCharacter = GetComponent<DamageableCharacter>();
+        damageableCharacter = GetComponent<EnemyDamageable>();
         // irisAnimator = GetComponent<Animator>();
         baseMoveSpeed = moveSpeed;
 

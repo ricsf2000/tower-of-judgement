@@ -45,10 +45,11 @@ public class AnimatorRelay : MonoBehaviour
 
     public void PlaySpawnAnimation()
     {
-        var dmg = GetComponentInParent<DamageableCharacter>();
+        // Try to get an EnemyDamageable specifically
+        var enemyDmg = GetComponentInParent<EnemyDamageable>();
 
         // Only wave-spawned enemies should play this
-        if (dmg != null && !dmg.SpawnedByWave)
+        if (enemyDmg == null || !enemyDmg.SpawnedByWave)
             return;
 
         if (bodyAnimator != null)
@@ -58,5 +59,6 @@ public class AnimatorRelay : MonoBehaviour
             Debug.Log($"[{name}] Playing spawn animation (wave-spawned)");
         }
     }
+
 
 }

@@ -209,15 +209,19 @@ GameObject:
   - component: {fileID: 4944128680177801756}
   - component: {fileID: 6228732373936786587}
   - component: {fileID: 2223413776258832341}
+  - component: {fileID: 2151218090044090533}
+  - component: {fileID: 682738578252953489}
+  - component: {fileID: 6332478940356058002}
+  - component: {fileID: 6824091004906830501}
   - component: {fileID: 1932589114486792951}
   - component: {fileID: 4259486664418817136}
   - component: {fileID: 872722973001470607}
-  - component: {fileID: 6504374567446156351}
   - component: {fileID: 1906188922575641396}
   - component: {fileID: 8299667085419276712}
   - component: {fileID: 395743027798664678}
   - component: {fileID: 5533871595156739801}
   - component: {fileID: 2324576399410139598}
+  - component: {fileID: 7790127734071852181}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -345,32 +349,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 1050
   idleFriction: 0.4
-  collisionOffset: 0.05
-  movementFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  swordHitbox: {fileID: 1621657096867689966}
+  playerAttack: {fileID: 2151218090044090533}
+  playerDash: {fileID: 682738578252953489}
+  playerShoot: {fileID: 6332478940356058002}
+  playerSFX: {fileID: 6824091004906830501}
+  canMove: 1
+--- !u!114 &2151218090044090533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de252f120e084a64fb089636f6e6647b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  swordHitbox: {fileID: 3585627279053337000}
+  swordSwing: []
   holdAttackDirectionDuration: 0.5
-  swordSwing:
-  - {fileID: 8300000, guid: cbdc62c6ebcf43a4ebb1e9040b126a38, type: 3}
-  - {fileID: 8300000, guid: 8a5859a635f2d564ca8255f2bbf76324, type: 3}
-  dashFX: {fileID: 8300000, guid: 389db0bf05717794899af61492f6a15d, type: 3}
-  dashSpeed: 15
+--- !u!114 &682738578252953489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8ad8261e8b9f4d8ac14568f13467f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
+  dashSpeed: 12
   dashDuration: 0.2
   maxDashCount: 2
   dashCooldown: 0.2
   tr: {fileID: 8222107168446777735}
+--- !u!114 &6332478940356058002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcd105b72ba20f4bb4e64358c2b61f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShoot
+--- !u!114 &6824091004906830501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad5dc600bdf4b243aa15ab74c0e2d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSFX
+  swordSwing:
+  - {fileID: 8300000, guid: cbdc62c6ebcf43a4ebb1e9040b126a38, type: 3}
+  - {fileID: 8300000, guid: 8a5859a635f2d564ca8255f2bbf76324, type: 3}
+  dashFX: {fileID: 8300000, guid: 389db0bf05717794899af61492f6a15d, type: 3}
+  deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
 --- !u!50 &1932589114486792951
 Rigidbody2D:
   serializedVersion: 5
@@ -432,7 +476,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0005848929, y: 0.019744236}
+  m_Offset: {x: 0.0005848929, y: -0.0027855374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.2}
@@ -442,7 +486,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.06740637, y: 0.07581382}
+  m_Size: {x: 0.06740637, y: 0.030754276}
   m_EdgeRadius: 0
 --- !u!95 &872722973001470607
 Animator:
@@ -466,30 +510,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6504374567446156351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3585627279053337000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc016b1ac113824e9f875407d82398f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageableChar
-  healthText: {fileID: 1942305737207634952, guid: 3739e3b2b143b9a489155107771a7125, type: 3}
-  disableSimulation: 1
-  canTurnInvincible: 1
-  invincibilityTime: 1
-  _health: 3
-  maxHealth: 3
-  _invincible: 0
-  audioSource: {fileID: 8299667085419276712}
-  impactSounds:
-  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
-  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
-  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
 --- !u!114 &1906188922575641396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,6 +774,30 @@ MonoBehaviour:
   - {fileID: 4944128680177801756}
   freezeDuration: 0.15
   freezeAnimation: 1
+--- !u!114 &7790127734071852181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585627279053337000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb73d5307afbfde47ba252e8d70feafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDamageable
+  healthText: {fileID: 1942305737207634952, guid: 3739e3b2b143b9a489155107771a7125, type: 3}
+  disableSimulation: 0
+  canTurnInvincible: 1
+  invincibilityTime: 1
+  _health: 3
+  maxHealth: 3
+  audioSource: {fileID: 8299667085419276712}
+  impactSounds:
+  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
+  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
+  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
+  showInvincibilityGizmo: 1
 --- !u!1 &7156449797631398727
 GameObject:
   m_ObjectHideFlags: 0
