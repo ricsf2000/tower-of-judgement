@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private float lastMoveX = 0f;
     private float lastMoveY = 1f; // default facing up
     [HideInInspector] public bool canMove = true;
+    [HideInInspector]public bool canAttack = true;
     private bool isMoving = false;
     
     public Vector2 LastMoveDir { get; private set; }

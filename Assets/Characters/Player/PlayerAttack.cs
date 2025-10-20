@@ -68,7 +68,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void HandleAttack()
     {
-        if (!controller.canMove) return;
+        if (!controller.canAttack) return;
 
         animator.ResetTrigger("swordAttack");
 
@@ -123,6 +123,11 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public void EnableNextAttack()
+    {
+        controller.canAttack = true; // allow chaining next combo attack
+    }
+
     public void LockMovement()
     {
         if (controller == null) return;
@@ -144,13 +149,14 @@ public class PlayerAttack : MonoBehaviour
         }
 
         if (dir != Vector2.zero)
-            rb.AddForce(dir * 5f, ForceMode2D.Impulse);
+            rb.AddForce(dir * 3f, ForceMode2D.Impulse);
     }
 
 
     public void UnlockMovement()
     {
         controller.canMove = true;
+        controller.canAttack = true;
         rb.linearVelocity = Vector2.zero;
     }
 

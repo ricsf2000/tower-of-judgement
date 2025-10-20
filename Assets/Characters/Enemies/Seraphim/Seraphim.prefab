@@ -330,7 +330,7 @@ MonoBehaviour:
   moveSpeed: 20
   preferredDistance: 1.5
   stopThreshold: 0.5
-  enragedSpeedMultiplier: 1.5
+  enragedSpeedMultiplier: 1.2
   enrageDuration: 1.5
   attackRange: 4
   chargeTime: 2.2
@@ -519,6 +519,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
   - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
   - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
+  _invincible: 0
+  invincibleOverride: 0
+  showInvincibilityGizmo: 1
   SpawnedByWave: 0
 --- !u!1 &4798711637068068394
 GameObject:

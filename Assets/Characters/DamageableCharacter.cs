@@ -24,7 +24,8 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
 
     protected bool isAlive = true;
     protected bool _targetable = true;
-    protected bool _invincible = false;
+    public bool _invincible = false;
+    public bool invincibleOverride = false;
     protected float invincibleTimeElapsed = 0f;
 
     public bool showInvincibilityGizmo = true;
@@ -96,13 +97,18 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
     protected virtual void FixedUpdate()
     {
         invincibilityGizmoAlpha = Invincible ? 1f : 0f;
-        if (Invincible)
+        if (!invincibleOverride)
         {
-            invincibleTimeElapsed += Time.deltaTime;
-            if (invincibleTimeElapsed > invincibilityTime)
-                Invincible = false;
+            if (Invincible)
+            {
+                invincibleTimeElapsed += Time.deltaTime;
+                if (invincibleTimeElapsed > invincibilityTime)
+                    Invincible = false;
+            }
         }
-
+        else
+            Invincible = true;  // When override is active, force invincible ON every frame
+            
     }
 
     public virtual void OnHit(float damage, Vector2 knockback)
