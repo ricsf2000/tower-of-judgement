@@ -1,312 +1,174 @@
 using System.Collections;
-using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
+using UnityEngine.Rendering;
 
-public class PlayerController : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+[SelectionBase] public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     public float moveSpeed = 700.0f;
-    // public float maxSpeed = 2.2f;
     public float idleFriction = 0.9f;
-    public float collisionOffset = 0.05f;
-    public ContactFilter2D movementFilter;
-    // public SwordAttack swordAttack;
-    public GameObject swordHitbox;
 
-    Collider2D swordCollider;
+    [Header("References")]
+    public PlayerAttack playerAttack;
+    public PlayerDash playerDash;
+    public PlayerShoot playerShoot;
+    public PlayerSFX playerSFX;
 
-    Vector2 movementInput = Vector2.zero;
-    SpriteRenderer spriteRenderer;
-    Rigidbody2D rb;
-    Animator animator;
-    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    private Vector2 facingDirection = Vector2.right; // default right
-    // private bool isAttacking = false;
-    private bool holdAttackFacing = false;
-    private float holdAttackTimer = 0f;
-    [SerializeField] private float holdAttackDirectionDuration = 0.50f;
+    private Rigidbody2D rb;
+    private Animator animator;
+
+    private Vector2 movementInput = Vector2.zero;
     private float lastMoveX = 0f;
-    private float lastMoveY = -1f; // default facing down
-    private Vector2 attackDirection = Vector2.zero;
-
-    private Shoot shoot;
-
-    private AudioSource audioSource;
-    public AudioClip swordSwing;
-    public AudioClip dashFX;
-
-    bool canMove = true;
-    bool canShoot = true;
+    private float lastMoveY = 1f; // default facing up
+    [HideInInspector] public bool canMove = true;
+    [HideInInspector] public bool canAttack = true;
+    [HideInInspector] public bool canDash = true;
+    [HideInInspector]public bool canShoot = true;
     private bool isMoving = false;
-    public bool IsMoving
-    {
-        set
-        {
-            isMoving = value;
-            animator.SetBool("isMoving", value);
-        }
-    }
+    
+    public Vector2 LastMoveDir { get; private set; }
 
-    [Header("Dash Settings")]
-    public float dashSpeed = 15f;
-    public float dashDuration = 0.2f;
-    public int maxDashCount = 2;       // how many dashes allowed before cooldown
-    public float dashCooldown = 0.2f;  // delay to refill all dashes
-    public TrailRenderer tr;
-    private int currentDashCount;      // remaining dashes
-    private bool isDashing = false;
-    private bool canDash = true;
+    [Header("Falling Settings")]
+    public Tilemap holeTilemap;
+    public Transform sprite; // reference to the visual child
+    public SortingGroup sortingGroup;
+    public float fallGravity = 12f;
+    public float fallDepth = -10f;
+    public Vector3 respawnPoint = Vector3.zero;
 
-    private int comboStep = 0;
-    private const int maxCombo = 2;
+    private Vector3 spriteStartLocalPos;
+    private Vector3 fallVelocity;
+    [HideInInspector] public bool isFalling = false;
+    private bool isRespawning = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        swordCollider = swordHitbox.GetComponent<Collider2D>();
-        shoot = GetComponent<Shoot>();
-        currentDashCount = maxDashCount;
-        audioSource = GetComponent<AudioSource>();
+        animator = GetComponentInChildren<Animator>();
+
+        spriteStartLocalPos = sprite.localPosition;
+        sortingGroup.sortingLayerName = "Player";
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        // Hard-lock movement during dash
-        if (isDashing)
-            return;
-            
-        if (canMove == true && movementInput != Vector2.zero)
+        if (!canMove) return;
+
+        if (movementInput != Vector2.zero)
         {
-            // Move animation and add velocity
-
-            // Accelerate the player while run direction is pressed
-            // BUT don't allow the player to run faster than max speed in any direction
-            // rb.linearVelocity = movementInput.normalized * maxSpeed;
-            // rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity + (movementInput * moveSpeed * Time.deltaTime), maxSpeed);
             rb.AddForce(movementInput * moveSpeed * Time.deltaTime, ForceMode2D.Force);
+            Vector2 moveDir = movementInput.normalized;
 
-            // if (rb.linearVelocity.magnitude > maxSpeed)
-            // {
-            //     float limitedSpeed = Mathf.Lerp(rb.linearVelocity.magnitude, maxSpeed, idleFriction);
-            //     rb.linearVelocity = rb.linearVelocity.normalized * limitedSpeed;
-            // }
-
-            // Track the facing direction
-            facingDirection = movementInput.normalized;
-
-            // Control whether looking left or right/up or down
-            if (!holdAttackFacing)
+            if (movementInput.sqrMagnitude > 0.01f)
             {
-                Vector2 moveDir = movementInput.normalized;
-
-                // Update animator parameters directly
-                animator.SetFloat("moveX", moveDir.x);
-                animator.SetFloat("moveY", moveDir.y);
-
-                // Remember the last direction we moved
-                lastMoveX = moveDir.x;
-                lastMoveY = moveDir.y;
+                LastMoveDir = movementInput.normalized;
             }
-            IsMoving = true;
+
+            animator.SetFloat("moveX", moveDir.x);
+            animator.SetFloat("moveY", moveDir.y);
+            lastMoveX = moveDir.x;
+            lastMoveY = moveDir.y;
+            SetIsMoving(true);
         }
         else
         {
             rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, idleFriction);
-            // rb.linearVelocity = Vector2.zero;
-            IsMoving = false;
-
-            // When not moving, keep the last direction in the animator
             animator.SetFloat("lastMoveX", lastMoveX);
             animator.SetFloat("lastMoveY", lastMoveY);
+            SetIsMoving(false);
         }
     }
 
-    private void Update()
+    void Update()
     {
-        if (holdAttackFacing)
-        {
-            holdAttackTimer -= Time.deltaTime;
-            if (holdAttackTimer <= 0f)
-                holdAttackFacing = false;
-        }
-    }
 
+        if (playerAttack) playerAttack.UpdateAttackTimer();
+
+        // Handle Falling
+        Vector3Int pos = holeTilemap.WorldToCell(transform.position);
+        if (holeTilemap.HasTile(pos) && !(playerDash && playerDash.IsDashing))
+        {
+            // Respawn logic
+            if (sprite.position.y < fallDepth)
+            {
+                rb.constraints = RigidbodyConstraints2D.None; // unfreeze before resetting
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                transform.position = respawnPoint;
+                sprite.localPosition = spriteStartLocalPos;
+                sortingGroup.sortingLayerName = "Player";
+                fallVelocity = Vector3.zero;
+                return;
+            }
+
+            // Freeze the Rigidbody immediately
+            rb.linearVelocity = Vector2.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll; // this prevents any motion
+            sortingGroup.sortingLayerName = "Ground";
+            fallVelocity += Physics.gravity * fallGravity * Time.deltaTime;
+            sprite.transform.position += fallVelocity * Time.deltaTime;
+            return; // stop normal movement while falling
+        }
+        
+    }
+    
+    
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
     }
 
-    private void HoldAttackFacing()
+    void OnAttack()
     {
-        holdAttackFacing = true;
-        holdAttackTimer = holdAttackDirectionDuration;
-    }
-
-    void OnFire()
-    {
-        if (isDashing) return; // prevent new attacks during dash
-
-        // Get mouse position in world space
-        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Vector2 dir = (mouseWorldPos - (Vector2)transform.position).normalized;
-
-        // Immediately update facing direction
-        lastMoveX = Mathf.Abs(dir.x) > Mathf.Abs(dir.y) ? Mathf.Sign(dir.x) : 0;
-        lastMoveY = Mathf.Abs(dir.y) > Mathf.Abs(dir.x) ? Mathf.Sign(dir.y) : 0;
-
-        animator.SetFloat("lastMoveX", lastMoveX);
-        animator.SetFloat("lastMoveY", lastMoveY);
-
-        // (existing animator / hitbox setup)
-        animator.SetFloat("attackX", dir.x);
-        animator.SetFloat("attackY", dir.y);
-        animator.SetTrigger("swordAttack");
-        // swordHitbox.GetComponent<SwordAttack>().SetAttackDirection(dir);
-
-        // Save direction for movement push
-        attackDirection = dir.normalized;
-
-        // start facing-hold timer
-        HoldAttackFacing();
+        if (playerAttack) playerAttack.HandleAttack();
     }
 
     void OnShoot(InputValue value)
     {
-        Debug.Log($"OnShoot triggered: {value.isPressed}");
-        if (!canShoot) return;
-
-        if (value.isPressed)
-        {
-            shoot.OnShootPressed();  // begin charging
-        }
-        else
-        {
-            shoot.OnShootReleased();  // release and fire
-        }
-    }
-
-    public void LockMovement()
-    {
-        // Debug.Log("LockMovement fired");
-        canMove = false;
-        canShoot = false;
-        rb.linearVelocity = Vector2.zero;
-        rb.AddForce(attackDirection * 15.0f, ForceMode2D.Impulse);
-    }
-
-    public void UnlockMovement()
-    {
-        // Debug.Log("UnlockMovement fired");
-        canMove = true;
-        canShoot = true;
-        rb.linearVelocity = Vector2.zero;
-    }
-
-    public void playSwordSwingFX()
-    {
-        // Randomize the pitch
-        audioSource.pitch = Random.Range(0.95f, 1.05f);
-                
-        audioSource.volume = .15f;
-        audioSource.PlayOneShot(swordSwing);
+        if (playerShoot) playerShoot.HandleShootInput(value);
     }
 
     void OnDash()
     {
-        var dmgChar = GetComponent<DamageableCharacter>();
-        if (dmgChar != null && (!dmgChar.Targetable || !dmgChar.enabled))
-            return; // stop dashing if dead, disabled, or untargetable
-
-        // Prevent spam / overlapping dashes
-        if (!canDash || isDashing || currentDashCount <= 0)
-            return;
-
-        // Determine dash direction
-        Vector2 dashDir = movementInput != Vector2.zero
-            ? movementInput.normalized
-            : new Vector2(lastMoveX, lastMoveY);
-
-        StartCoroutine(PerformDash(dashDir));
+        if (playerDash) playerDash.TryDash(movementInput, new Vector2(lastMoveX, lastMoveY));
     }
 
-    public void playDashFX()
+    private void SetIsMoving(bool value)
     {
-        // Randomize the pitch
-        audioSource.pitch = Random.Range(0.95f, 1.05f);
-                
-        audioSource.volume = .25f;
-        audioSource.PlayOneShot(dashFX);
+        if (isMoving == value) return;
+        isMoving = value;
+        animator.SetBool("isMoving", value);
     }
 
-    private IEnumerator PerformDash(Vector2 dashDir)
+    private IEnumerator FallRoutine()
     {
-        isDashing = true;
-        canDash = false;
+        isFalling = true;
         canMove = false;
-        canShoot = false;
-
-        currentDashCount--;
-        animator.ResetTrigger("swordAttack");
-
-        // Activate invincibility
-        var dmgChar = GetComponent<DamageableCharacter>();
-        if (dmgChar != null)
-        {
-            dmgChar.Invincible = true;
-        }
-
-        // Ignore collisions between Player and Enemy layers
-        int playerLayer = LayerMask.NameToLayer("Player");
-        int enemyLayer = LayerMask.NameToLayer("Enemy");
-        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
-
-        // Movement
-        animator.Play("player_dash_tree", 0, 0f);
-        tr.emitting = true;
-        rb.linearVelocity = dashDir * dashSpeed;
-
-        animator.SetFloat("moveX", dashDir.x);
-        animator.SetFloat("moveY", dashDir.y);
-
-        yield return new WaitForSeconds(dashDuration);
-
-        // Stop dash
         rb.linearVelocity = Vector2.zero;
-        tr.emitting = false;
-        isDashing = false;
+        sortingGroup.sortingLayerName = "Ground"; // fall below ground
+
+        fallVelocity = Vector3.zero;
+
+        while (sprite.position.y > fallDepth)
+        {
+            fallVelocity += Physics.gravity * fallGravity * Time.deltaTime;
+            sprite.position += fallVelocity * Time.deltaTime;
+            yield return null;
+        }
+
+        // respawn
+        isRespawning = true;
+        transform.position = respawnPoint;
+        sprite.localPosition = spriteStartLocalPos;
+        sortingGroup.sortingLayerName = "Player";
+        isFalling = false;
+
+        yield return new WaitForSeconds(0.5f); // small pause before regaining control
+        isRespawning = false;
         canMove = true;
-        canShoot = true;
-
-        // Stop ignoring collisions
-        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
-
-        // Turn off invincibility (after short buffer)
-        if (dmgChar != null)
-        {
-            StartCoroutine(DisableInvincibilityAfterDelay(dmgChar, 0.1f));
-        }
-
-
-        // Only start cooldown/refill after last dash
-        if (currentDashCount <= 0)
-        {
-            yield return new WaitForSeconds(dashCooldown);
-            currentDashCount = maxDashCount;
-        }
-
-        // Now allow next dash
-        canDash = true;
     }
-
-    private IEnumerator DisableInvincibilityAfterDelay(DamageableCharacter dmgChar, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        dmgChar.Invincible = false;
-    }
-
-    
 }
+
+

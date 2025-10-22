@@ -23,29 +23,80 @@ public class LaserController : MonoBehaviour
     private SpriteRenderer middleRenderer;
     private float baseSpriteWidth; // the width of the unscaled sprite in world units
 
+    [Header("Collision Settings")]
+    public LayerMask obstacleMask;
+
     void Start()
     {
         boxCol = GetComponent<BoxCollider2D>();
         middleRenderer = middlePart.GetComponent<SpriteRenderer>();
-
-        // Compute base sprite width once (unscaled)
         baseSpriteWidth = middleRenderer.sprite.bounds.size.x;
-
         boxCol.isTrigger = true;
-        currentLength = laserLength;
-    
-        // Start at full length (or grow in smoothly if you prefer)
-        currentLength = laserLength;
-        UpdateLaserParts();
+
+        // Initialize beam at correct starting length (avoid first-frame overshoot)
+        Vector2 origin = (Vector2)startPart.position + (Vector2)(transform.right * 0.05f);
+        Vector2 direction = transform.right;
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, laserLength, obstacleMask);
+
+        float initLength = hit.collider ? hit.distance - 0.02f : laserLength;
+        currentLength = Mathf.Max(0.01f, initLength);
+
+        ApplyBeamLength(currentLength);
     }
+
 
     void Update()
     {
-        // Smoothly interpolate toward target length if you want dynamic stretching
-        currentLength = Mathf.Lerp(currentLength, laserLength, Time.deltaTime * stretchSmoothness);
-        UpdateLaserParts();
-        UpdateColliderLength();
+        // Perform a raycast forward to detect walls
+        Vector2 origin = startPart.position;
+        Vector2 direction = transform.right.normalized;
+
+        // Slight forward offset to prevent micro self-hits (if the start sprite is thick)
+        origin += direction * 0.05f;
+
+        // Cast toward walls only
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, laserLength, obstacleMask);
+
+        float targetLength;
+
+        if (hit.collider != null)
+        {
+            // Subtract a tiny margin so the beam doesn’t overlap the wall visually
+            targetLength = hit.distance + 1.0f;
+            Debug.DrawRay(origin, direction * targetLength, Color.red);
+        }
+        else
+        {
+            targetLength = laserLength;
+            Debug.DrawRay(origin, direction * targetLength, Color.green);
+        }
+
+        // Instantly set (or smoothly Lerp) to new length
+        currentLength = Mathf.Lerp(currentLength, targetLength, Time.deltaTime * stretchSmoothness);
+
+        // Apply same length to visuals & collider
+        ApplyBeamLength(currentLength);
     }
+
+    private void ApplyBeamLength(float worldLength)
+    {
+        // --- middle scaling ---
+        Vector3 middleScale = middlePart.localScale;
+        middleScale.x = worldLength / baseSpriteWidth;
+        middlePart.localScale = middleScale;
+
+        // --- end placement ---
+        endPart.localPosition = new Vector3(worldLength, 0f, 0f);
+
+        // --- collider sync ---
+        if (boxCol != null)
+        {
+            float adjusted = Mathf.Max(0f, worldLength - colliderLengthAdjustment);
+            boxCol.size = new Vector2(adjusted, 0.1f);
+            boxCol.offset = new Vector2(adjusted / 2f, 0f);
+        }
+    }
+
 
     private void UpdateLaserParts()
     {

@@ -1,206 +1,213 @@
 using System.Collections;
-using TMPro;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
-// A base class for damageable characters (both players and enemies)
-public class DamageableCharacter : MonoBehaviour, IDamageable
+public abstract class DamageableCharacter : MonoBehaviour, IDamageable
 {
+    public static event System.Action<DamageableCharacter> OnAnyCharacterDeath;
+
+    [Header("General Settings")]
     public GameObject healthText;
     public bool disableSimulation = false;
     public bool canTurnInvincible = false;
     public float invincibilityTime = 0.25f;
-    Animator animator;
-    Rigidbody2D rb;
-    Collider2D physicsCol;
-    bool isAlive = true;
-    private float invincibleTimeElapsed = 0.0f;
+    public float _health = 10f;
+    public float maxHealth = 10f;
 
-    private DamageFlash _damageFlash;
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip[] impactSounds;
 
-    public float Health
-    {
-        set
-        {
-            if (value < _health)
-            {
-                animator.SetTrigger("hit");
-                RectTransform textTransform = Instantiate(healthText).GetComponent<RectTransform>();
-                textTransform.transform.position = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+    protected Animator animator;
+    protected Rigidbody2D rb;
+    protected Collider2D physicsCol;
+    protected DamageFlash _damageFlash;
 
-                Canvas canvas = GameObject.FindFirstObjectByType<Canvas>();
-                textTransform.SetParent(canvas.transform);
+    protected bool isAlive = true;
+    protected bool _targetable = true;
+    public bool _invincible = false;
+    public bool invincibleOverride = false;
+    protected float invincibleTimeElapsed = 0f;
 
-                float damageDealt = _health - value;
-                textTransform.GetComponent<HealthText>().SetDamageText(damageDealt);
-            }
-
-            _health = value;
-
-            if (_health <= 0)
-            {
-                animator.SetBool("isAlive", false);
-                Targetable = false;
-                rb.simulated = false;
-
-                if (CompareTag("Player"))
-                    PlayerDied();
-            }
-        }
-        get
-        {
-            return _health;
-        }
-    }
+    public bool showInvincibilityGizmo = true;
+    private float invincibilityGizmoAlpha = 0f;
 
     public bool Targetable
     {
-        get
-        {
-            return _targetable;
-        }
+        get => _targetable;
         set
         {
             _targetable = value;
-            if (disableSimulation)
-            {
+            if (disableSimulation) 
                 rb.simulated = false;
-            }
-
             physicsCol.enabled = value;
         }
     }
 
     public bool Invincible
     {
-        get
-        {
-            return _invincible;
-        }
+        get => _invincible;
         set
         {
             _invincible = value;
+            if (value) 
+                invincibleTimeElapsed = 0f;
+        }
+    }
 
-            if (_invincible == true)
+    public float Health
+    {
+        get => _health;
+        set
+        {
+            if (value < _health)
             {
-                invincibleTimeElapsed = 0.0f;
+                OnDamageTaken(_health - value);
+            }
+
+            _health = value;
+
+            if (CompareTag("Player") && GameEvents.Instance != null)
+            {
+                Debug.Log($"[DamageableCharacter] Player health updated: {_health}/{maxHealth}");
+                GameEvents.Instance.PlayerHealthChanged(_health, maxHealth);
+            }
+
+            if (_health <= 0 && isAlive)
+            {
+                isAlive = false;
+                Targetable = false;
+                rb.simulated = false;
+                animator.SetBool("isAlive", false);
+                HandleDeath();
             }
         }
     }
 
-    public float _health = 10.0f;
-    bool _targetable = true;
-
-    public bool _invincible = false;
-
-    public void Start()
+    protected virtual void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        if (animator != null)
-            Debug.Log($"[{name}] Found animator: {animator.name}");
-        else
-            Debug.LogError($"[{name}] No Animator found!");
-        animator.SetBool("isAlive", isAlive);
         rb = GetComponent<Rigidbody2D>();
         physicsCol = GetComponent<Collider2D>();
         _damageFlash = GetComponent<DamageFlash>();
+
+        if (animator != null)
+            animator.SetBool("isAlive", isAlive);
     }
 
-    public void OnHit(float damage, Vector2 knockback)
+    protected virtual void FixedUpdate()
     {
-        if (!Invincible)
+        invincibilityGizmoAlpha = Invincible ? 1f : 0f;
+        if (!invincibleOverride)
         {
-            Health -= damage;
-
-            // Apply knockback force
-            rb.AddForce(knockback, ForceMode2D.Impulse);
-            Debug.Log("Knockback applied: " + knockback);
-
-            // Damage flash effect
-            _damageFlash.CallDamageFlash();
-
-            HitReaction hitReaction = GetComponent<HitReaction>();
-            if (hitReaction != null)
-                hitReaction.TriggerHit();
-
-            if (CompareTag("Player"))
-                CinemachineShake.Instance.Shake(1f, 3.5f, 0.2f);
-
-            if (canTurnInvincible)
+            if (Invincible)
             {
-                // Activate invincibility and timer
-                Invincible = true;
+                invincibleTimeElapsed += Time.deltaTime;
+                if (invincibleTimeElapsed > invincibilityTime)
+                    Invincible = false;
             }
         }
+        else
+            Invincible = true;  // When override is active, force invincible ON every frame
+            
     }
 
-    public void OnHit(float damage)
+    public virtual void OnHit(float damage, Vector2 knockback)
     {
-        if (!Invincible)
-        {
-            Debug.Log("Enemy hit for " + damage);
-            Health -= damage;
+        if (Invincible) return;
 
-            // Damage flash effect
-            _damageFlash.CallDamageFlash();
+        Health -= damage;
+        rb.AddForce(knockback, ForceMode2D.Impulse);
+        _damageFlash?.CallDamageFlash();
 
-            HitReaction hitReaction = GetComponent<HitReaction>();
-            if (hitReaction != null)
-                hitReaction.TriggerHit();
+        var hitReaction = GetComponent<HitReaction>();
+        hitReaction?.TriggerHit();
 
-            if (CompareTag("Player"))
-                CinemachineShake.Instance.Shake(1f, 3.5f, 0.4f);
+        PlayImpactSound();
 
-            if (canTurnInvincible)
-            {
-                // Activate invincibility and timer
-                Invincible = true;
-            }
-        }
+        if (canTurnInvincible)
+            Invincible = true;
     }
+
+    public virtual void OnHit(float damage)
+    {
+        if (Invincible) return;
+
+        Health -= damage;
+        _damageFlash?.CallDamageFlash();
+
+        var hitReaction = GetComponent<HitReaction>();
+        hitReaction?.TriggerHit();
+
+        PlayImpactSound();
+
+        if (canTurnInvincible)
+            Invincible = true;
+    }
+
+    protected void PlayImpactSound()
+    {
+        if (impactSounds.Length == 0 || audioSource == null) return;
+        int randomIndex = Random.Range(0, impactSounds.Length);
+        AudioClip clip = impactSounds[randomIndex];
+
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
+        audioSource.volume = 0.15f;
+        audioSource.PlayOneShot(clip);
+    }
+
+    protected void OnDamageTaken(float damageDealt)
+    {
+        if (healthText == null) return;
+
+        var textTransform = Instantiate(healthText).GetComponent<RectTransform>();
+        textTransform.position = Camera.main.WorldToScreenPoint(transform.position);
+        var canvas = GameObject.FindFirstObjectByType<Canvas>();
+        textTransform.SetParent(canvas.transform);
+        textTransform.GetComponent<HealthText>().SetDamageText(damageDealt);
+    }
+
+    protected virtual void HandleDeath()
+    {
+        OnAnyCharacterDeath?.Invoke(this);
+        StartCoroutine(DeathSequence());
+    }
+
+    protected virtual IEnumerator DeathSequence()
+    {
+        // default: wait, then remove object
+        yield return new WaitForSeconds(1.5f);
+        Destroy(gameObject);
+    }
+
     public void RemoveEnemy()
     {
         Destroy(gameObject);
     }
 
-    public void FixedUpdate()
+    public void PlaySpawnAnimation(float duration)
     {
-        if (Invincible)
-        {
-            invincibleTimeElapsed += Time.deltaTime;
-
-            if (invincibleTimeElapsed > invincibilityTime)
-            {
-                Invincible = false;
-            }
-        }
-    }
-    // DamageableCharacter.cs (replace PlayerDied)
-    private void PlayerDied()
-    {
-        StartCoroutine(DeathSequence());
+        if (animator != null)
+            animator.SetTrigger("spawn");
+        StartCoroutine(EndSpawnAfter(duration));
     }
 
-    private System.Collections.IEnumerator DeathSequence()
+    private IEnumerator EndSpawnAfter(float duration)
     {
-        // stop collisions/physics, but keep object active so the Animator can play
-        Targetable = false;
-        rb.simulated = false;
+        yield return new WaitForSeconds(duration);
+        animator?.SetBool("spawnDone", true);
+    }
 
-        // ensure the death animation is playing
-        animator.SetBool("isAlive", false);
+    private void OnDrawGizmos()
+    {
+        if (!showInvincibilityGizmo || invincibilityGizmoAlpha <= 0f)
+            return;
 
-        // Option 1: wait for the current state's length (simple & robust)
-        float wait = animator.GetCurrentAnimatorStateInfo(0).length;
-        if (wait <= 0f) wait = 0.5f;  // fallback
+        // Choose color and radius
+        Color gizmoColor = new Color(1f, 1f, 0f, invincibilityGizmoAlpha * 0.5f); // yellowish, semi-transparent
+        Gizmos.color = gizmoColor;
 
-        yield return new WaitForSeconds(wait);
-
-        // Now open the death panel
-        LevelManager.manager.GameOver();
-
+        float radius = 1.0f; // size around player
+        Gizmos.DrawSphere(transform.position, radius);
     }
 
 }

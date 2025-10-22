@@ -45,16 +45,21 @@ public class Seraphim : MonoBehaviour
 
     Rigidbody2D rb;
 
-    DamageableCharacter damageableCharacter;
+    private EnemyDamageable damageableCharacter;
 
     private AudioSource audioSource;
 
     public AudioClip deathFX;
 
+    [Header("Spawn Delay Settings")]
+    public float minSpawnDelay = 0.5f;
+    public float maxSpawnDelay = 2.0f;
+    private bool hasSpawned = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        damageableCharacter = GetComponent<DamageableCharacter>();
+        damageableCharacter = GetComponent<EnemyDamageable>();
         // irisAnimator = GetComponent<Animator>();
         baseMoveSpeed = moveSpeed;
 
@@ -63,11 +68,15 @@ public class Seraphim : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         audioSource = GetComponent<AudioSource>();
+
+        // If not wave-spawned, enable AI immediately
+        if (damageableCharacter == null || !damageableCharacter.SpawnedByWave)
+            hasSpawned = true;
     }
 
     void Update()
     {
-        if (!damageableCharacter.Targetable)
+        if (!damageableCharacter.Targetable || !hasSpawned)
             return;
 
         // Only attack if player is detected
@@ -85,7 +94,7 @@ public class Seraphim : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!damageableCharacter.Targetable || detectionZone.detectedObjs.Count == 0)
+        if (!damageableCharacter.Targetable || detectionZone.detectedObjs.Count == 0 || !hasSpawned)
             return;
 
         Transform target = detectionZone.detectedObjs[0].transform;
@@ -177,18 +186,24 @@ public class Seraphim : MonoBehaviour
         float chargeTimer = 0f;
 
         // Charge phase
+        float lockInRatio = 0.9f; // Lock direction at this percentage of the charge
+        bool hasLockedDirection = false;
+
         while (chargeTimer < chargeTime)
         {
             chargeTimer += Time.deltaTime;
 
-            Vector2 dirToPlayer = (player.position - transform.position).normalized;
-            lockedDirection = dirToPlayer;
-
-            // When the charging animation finishes, pause it on the last frame
-            stateInfo = irisAnimator.GetCurrentAnimatorStateInfo(0);
-            if (stateInfo.IsName("isCharging") && stateInfo.normalizedTime >= 1f)
+            if (!hasLockedDirection)
             {
-                irisAnimator.speed = 0f;  // freeze on the last frame
+                // Track the player until lock-in point
+                Vector2 dirToPlayer = (player.position - transform.position).normalized;
+                lockedDirection = dirToPlayer;
+
+                if (chargeTimer >= chargeTime * lockInRatio)
+                {
+                    hasLockedDirection = true;
+                    Debug.Log("[Seraphim] Locked laser direction!");
+                }
             }
 
             yield return null;
@@ -247,13 +262,31 @@ public class Seraphim : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canMove = true;
     }
-    
+
     public void onDeath()
     {
+        if (isDead) return;
         isDead = true;
-        StopAllCoroutines(); // cancel charging/firing
-        audioSource.volume = .25f;
-        audioSource.PlayOneShot(deathFX);
+        StopAllCoroutines();
+
+        if (audioSource != null && deathFX != null && audioSource.enabled)
+        {
+            audioSource.volume = 0.50f;
+            audioSource.PlayOneShot(deathFX);
+        }
+        else
+        {
+            Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
+        }
+    }
+    
+    public IEnumerator SpawnDelay()
+    {
+        float delay = Random.Range(minSpawnDelay, maxSpawnDelay);
+        yield return new WaitForSeconds(delay);
+        hasSpawned = true;
+
+        Debug.Log($"[{name}] Finished spawn delay ({delay:F2}s) — AI active.");
     }
 
 }
