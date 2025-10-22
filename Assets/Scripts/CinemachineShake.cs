@@ -12,21 +12,25 @@ public class CinemachineShake : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
         cam = GetComponent<CinemachineCamera>();
+        if (cam == null)
+        {
+            // Try to find the active virtual camera
+            cam = FindFirstObjectByType<CinemachineCamera>();
+        }
 
         perlin = cam.GetComponent<CinemachineBasicMultiChannelPerlin>();
         if (perlin == null)
-        {
             perlin = cam.gameObject.AddComponent<CinemachineBasicMultiChannelPerlin>();
-        }
 
         Debug.Log("[CinemachineShake] Found cam: " + cam);
         Debug.Log("[CinemachineShake] Found perlin: " + perlin);
 
-        // Reset initial values
         perlin.AmplitudeGain = 0f;
         perlin.FrequencyGain = 0f;
     }
+
 
     public void Shake(float amplitude, float frequency, float duration)
     {

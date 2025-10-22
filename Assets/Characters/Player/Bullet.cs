@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         this.direction = direction;
         rb.linearVelocity = this.direction * speed;
 
-        // 💣 Auto-destroy after 5 seconds
+        // Auto-destroy after 5 seconds
         Destroy(gameObject, 5.0f);
     }
 

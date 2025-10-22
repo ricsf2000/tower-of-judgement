@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Slime : MonoBehaviour
 {
     public float damage = 1.0f;
     public float knockbackForce = 800.0f;

@@ -96,7 +96,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.2
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -191,6 +191,8 @@ AnimationClip:
       value: {fileID: 3974937379282732598, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
     - time: 0.3
       value: {fileID: 1415462699558478523, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
+    - time: 0.4
+      value: {fileID: 1415462699558478523, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -262,12 +264,13 @@ AnimationClip:
     - {fileID: -2942550786734778018, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
     - {fileID: 3974937379282732598, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
     - {fileID: 1415462699558478523, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
+    - {fileID: 1415462699558478523, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -427,7 +430,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.2
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -516,13 +519,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: playSwordSwingFX
+    functionName: PlaySwordSwing
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
+  - time: 0.1
     functionName: LockMovement
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -530,6 +533,13 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.3
+    functionName: EnableNextAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4
     functionName: UnlockMovement
     data: 
     objectReferenceParameter: {fileID: 0}

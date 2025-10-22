@@ -78,7 +78,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1159682664920248172, guid: 0ce4f8975163d0b44a30b1187ed64980, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3159722076536029053}
   - component: {fileID: 361655869108904191}
   - component: {fileID: 839826390111263971}
+  - component: {fileID: 9181826748689160246}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Enemy
@@ -149,8 +150,9 @@ MonoBehaviour:
   colliderLengthAdjustment: 0.4
   damage: 1
   knockbackForce: 5
-  audioSource: {fileID: 839826390111263971}
-  impactSound: {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!95 &3159722076536029053
 Animator:
   serializedVersion: 7
@@ -316,6 +318,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!210 &9181826748689160246
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814053054456569410}
+  m_Enabled: 1
+  m_SortingLayerID: 280005865
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &8901261436227361772
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +408,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 5172251557588195902, guid: 0ce4f8975163d0b44a30b1187ed64980, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -484,7 +498,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -3140486373804340645, guid: 0ce4f8975163d0b44a30b1187ed64980, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

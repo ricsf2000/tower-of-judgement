@@ -314,9 +314,7 @@ RectTransform:
   - {fileID: 1860904718}
   - {fileID: 175100307}
   - {fileID: 539212884}
-  - {fileID: 210622174}
-  - {fileID: 186750939}
-  - {fileID: 1683154924}
+  - {fileID: 1417223578}
   - {fileID: 1933136760}
   - {fileID: 1344507325}
   m_Father: {fileID: 1126497872}
@@ -800,14 +798,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ffb342f665ff25e448a91f1e17c11af6, type: 2}
     - {fileID: 11400000, guid: 5272e4e194a63564bb8c411c6417d068, type: 2}
     - {fileID: 11400000, guid: 86ffe83e2c3f7674d98eb58a28a4f5f9, type: 2}
-    - {fileID: 11400000, guid: 0c3ca53aef93fb54ca4e44f2c3e2fb09, type: 2}
-    - {fileID: 11400000, guid: f3710cc803ca06d40945b7b7fb41e781, type: 2}
-    - {fileID: 11400000, guid: eaac4b770308f6143b5df420d92c59be, type: 2}
-    - {fileID: 11400000, guid: 4c13c86033a4dc148bcb7b5aeeb5c564, type: 2}
-    - {fileID: 11400000, guid: b41bd5ca013405e41af178f03fcefda6, type: 2}
-    - {fileID: 11400000, guid: 48e3efd76cd57de42bcf438dc7be822e, type: 2}
-    - {fileID: 11400000, guid: aa4e28f06b5801e4dabd04f8ebb5360e, type: 2}
-    - {fileID: 11400000, guid: d5b40266abb5d2745b4215f88b9cd3a3, type: 2}
+    - {fileID: 11400000, guid: 881b9f104c14d3240944922bb5146cd8, type: 2}
+    - {fileID: 11400000, guid: 6806f83970c6a2d4391744a2937c2405, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -875,90 +867,6 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 3
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 908455602}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 4
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 908455602}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 5
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 908455602}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 6
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 908455602}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 7
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 908455602}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 8
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 908455602}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 9
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1065,14 +973,8 @@ PlayableDirector:
     value: {fileID: 539212881}
   - key: {fileID: -4897387288054929817, guid: 12eede9544c550e409af658942018a5c, type: 2}
     value: {fileID: 908455601}
-  - key: {fileID: -5503537910665685187, guid: 12eede9544c550e409af658942018a5c, type: 2}
-    value: {fileID: 1933136759}
-  - key: {fileID: 8398901978118717001, guid: 12eede9544c550e409af658942018a5c, type: 2}
-    value: {fileID: 210622175}
-  - key: {fileID: 6774812670718595049, guid: 12eede9544c550e409af658942018a5c, type: 2}
-    value: {fileID: 186750940}
-  - key: {fileID: 1030410642317930541, guid: 12eede9544c550e409af658942018a5c, type: 2}
-    value: {fileID: 1683154925}
+  - key: {fileID: -2602444673808183222, guid: 12eede9544c550e409af658942018a5c, type: 2}
+    value: {fileID: 1417223575}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1126497872
@@ -1364,7 +1266,102 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &1683154923
+--- !u!1 &1417223574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417223578}
+  - component: {fileID: 1417223577}
+  - component: {fileID: 1417223576}
+  - component: {fileID: 1417223575}
+  m_Layer: 5
+  m_Name: picture2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1417223575
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417223574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1417223576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417223574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: ee25f3a9efbfb194abfd3ddcc51c1cf0, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1417223577
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417223574}
+  m_CullTransparentMesh: 1
+--- !u!224 &1417223578
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417223574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 182018577}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 604, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1860904717
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1444,8 +1441,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 7174fa50fbfc4cd43a7143136862b4da, type: 3}
-  m_UVRect:
+  m_text: Golden Goose Games Presents
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.92941177}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
     serializedVersion: 2
     x: 0
     y: 0
