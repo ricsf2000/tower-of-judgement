@@ -12,6 +12,7 @@ public class PlayerDash : MonoBehaviour
 
     private int currentDashCount;
     private bool isDashing = false;
+    public bool IsDashing => isDashing;
     private bool canDash = true;
 
     private Rigidbody2D rb;
@@ -23,7 +24,7 @@ public class PlayerDash : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         controller = GetComponent<PlayerController>();
         dmgChar = GetComponent<PlayerDamageable>();
         currentDashCount = maxDashCount;
@@ -32,6 +33,7 @@ public class PlayerDash : MonoBehaviour
     public void TryDash(Vector2 moveInput, Vector2 lastMove)
     {
         if (!canDash || isDashing || currentDashCount <= 0) return;
+        if (controller != null && controller.isFalling) return;
 
         Vector2 dashDir = moveInput != Vector2.zero ? moveInput.normalized : lastMove;
         StartCoroutine(PerformDash(dashDir));
@@ -55,7 +57,11 @@ public class PlayerDash : MonoBehaviour
 
         int playerLayer = LayerMask.NameToLayer("Player");
         int enemyLayer = LayerMask.NameToLayer("Enemy");
+        int groundEdgeLayer = LayerMask.NameToLayer("GroundEdge");
+
+        // Ignore enemies & edge colliders while dashing
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
+        Physics2D.IgnoreLayerCollision(playerLayer, groundEdgeLayer, true);
 
         yield return new WaitForSeconds(dashDuration);
 
@@ -63,6 +69,7 @@ public class PlayerDash : MonoBehaviour
         tr.emitting = false;
 
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
+        Physics2D.IgnoreLayerCollision(playerLayer, groundEdgeLayer, false);
 
         if (dmgChar != null)
             dmgChar.Invincible = false;

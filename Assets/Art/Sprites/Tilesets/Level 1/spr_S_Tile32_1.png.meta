@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e4d75f8b1ff556741aaa4a587f488c39
+guid: 0aa754e2f5ad6c74786eb72bbd8737ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1997651684533497840
-    second: tilesetShadows_0
+      213: -6771878985816416167
+    second: spr_S_Tile32_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,11 +113,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilesetShadows_0
+      name: spr_S_Tile32_1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -128,18 +128,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ff64918f9519bb10800000000000000
-      internalID: 1997651684533497840
+      spriteID: 950ea7cf0f37502a0800000000000000
+      internalID: -6771878985816416167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesetShadows_1
+      name: spr_S_Tile32_1_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
+        x: 16
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -150,18 +150,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8448945954434874b96d9e5038001139
-      internalID: -1533053079
+      spriteID: ca7c69c318dbe314cb958bafb41d3eff
+      internalID: 129821994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesetShadows_2
+      name: spr_S_Tile32_1_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
+        x: 0
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -172,18 +172,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f647306cb01574478907bd129422d67
-      internalID: 586639376
+      spriteID: 74fd5bd2f48207340b7db364afc655f2
+      internalID: -526805346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesetShadows_3
+      name: spr_S_Tile32_1_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 16
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -194,30 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d30f60a48a786284a8aa7cf11638a27c
-      internalID: -416933398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesetShadows_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0baaadeac9232448aebb2a460bcea34
-      internalID: -49594177
+      spriteID: 9a5493c119d5c804cbe120608db35810
+      internalID: -1887733840
       vertices: []
       indices: 
       edges: []
@@ -226,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1b7232bc31bd4d34cbd1b833b370f606
+    spriteID: 8e9d2d209bc98a7428522fad52e7e102
     internalID: 0
     vertices: []
     indices: 
@@ -238,11 +216,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      tilesetShadows_0: 1997651684533497840
-      tilesetShadows_1: -1533053079
-      tilesetShadows_2: 586639376
-      tilesetShadows_3: -416933398
-      tilesetShadows_4: -49594177
+      spr_S_Tile32_1_0: -6771878985816416167
+      spr_S_Tile32_1_1: 129821994
+      spr_S_Tile32_1_2: -526805346
+      spr_S_Tile32_1_3: -1887733840
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

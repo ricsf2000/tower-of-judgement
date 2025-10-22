@@ -27,7 +27,7 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         controller = GetComponent<PlayerController>();
         sfx = GetComponent<PlayerSFX>();
 

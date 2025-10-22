@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 5443620801389153446}
   - component: {fileID: 3343150406665617844}
   - component: {fileID: 8231818911604103633}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Seraphim
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -272,8 +272,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4082208666007192400}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 540211421
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!70 &6012646269378953417
@@ -310,8 +310,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.004410606, y: 0.035823293}
-  m_Size: {x: 0.38771757, y: 0.26744446}
+  m_Offset: {x: -0.004410613, y: -0.0216553}
+  m_Size: {x: 0.38771775, y: 0.15248944}
   m_Direction: 1
 --- !u!114 &4567515698610447161
 MonoBehaviour:

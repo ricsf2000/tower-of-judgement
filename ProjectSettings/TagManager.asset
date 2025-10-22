@@ -14,11 +14,11 @@ TagManager:
   - Walls
   - Water
   - UI
+  - GroundEdge
   - Player
   - Bullet
-  - 
-  - 
   - Enemy
+  - 
   - 
   - 
   - 
@@ -43,6 +43,27 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2770617017
+    locked: 0
+  - name: Ground
+    uniqueID: 1266634305
+    locked: 0
+  - name: WalkInFront
+    uniqueID: 294122809
+    locked: 0
+  - name: Collision
+    uniqueID: 280005865
+    locked: 0
+  - name: Player
+    uniqueID: 540211421
+    locked: 0
+  - name: WalkBehind
+    uniqueID: 292657557
+    locked: 0
+  - name: Decor
+    uniqueID: 2829885261
     locked: 0
   m_RenderingLayers:
   - Default
