@@ -1035,7 +1035,7 @@ MonoBehaviour:
 '
   - 'Once the brightest of the host, now the last to defy Heaven. '
   delayBetweenLines: 2
-  nextSceneName: Level1
+  nextSceneName: Level1-1
 --- !u!4 &908455603
 Transform:
   m_ObjectHideFlags: 0
