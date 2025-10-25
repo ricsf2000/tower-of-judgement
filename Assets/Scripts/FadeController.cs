@@ -1,40 +1,63 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class FadeController : MonoBehaviour
 {
-    private Image fadeImage;
+    public static FadeController Instance { get; private set; }
+    public UnityEngine.UI.Image fadeImage;
+    public float defaultDuration = 0.5f;
 
-    void Awake()
+    // new flag
+    public bool autoFadeOutOnSceneLoad = true;
+
+    private void Awake()
     {
-        fadeImage = GetComponent<Image>();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(transform.root.gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(transform.root.gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (autoFadeOutOnSceneLoad)
+            StartCoroutine(FadeOut(defaultDuration));
     }
 
     public IEnumerator FadeIn(float duration)
     {
-        yield return Fade(0f, 1f, duration); // transparent → black
+        Color c = fadeImage.color;
+        for (float t = 0f; t < 1f; t += Time.deltaTime / duration)
+        {
+            c.a = t;
+            fadeImage.color = c;
+            yield return null;
+        }
+        c.a = 1f;
+        fadeImage.color = c;
     }
 
     public IEnumerator FadeOut(float duration)
     {
-        yield return Fade(1f, 0f, duration); // black → transparent
-    }
-
-    private IEnumerator Fade(float startAlpha, float endAlpha, float duration)
-    {
-        float elapsed = 0f;
         Color c = fadeImage.color;
-
-        while (elapsed < duration)
+        for (float t = 1f; t > 0f; t -= Time.deltaTime / duration)
         {
-            elapsed += Time.deltaTime;
-            c.a = Mathf.Lerp(startAlpha, endAlpha, elapsed / duration);
+            c.a = t;
             fadeImage.color = c;
             yield return null;
         }
-
-        c.a = endAlpha;
+        c.a = 0f;
         fadeImage.color = c;
     }
 }
