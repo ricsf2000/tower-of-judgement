@@ -19,6 +19,9 @@ using UnityEngine.Rendering;
 
     private Rigidbody2D rb;
     private Animator animator;
+    public Rigidbody2D Rb => rb;
+    public Animator Animator => animator;
+
 
     private Vector2 movementInput = Vector2.zero;
     private float lastMoveX = 0f;
@@ -88,28 +91,31 @@ using UnityEngine.Rendering;
         if (playerAttack) playerAttack.UpdateAttackTimer();
 
         // Handle Falling
-        Vector3Int pos = holeTilemap.WorldToCell(transform.position);
-        if (holeTilemap.HasTile(pos) && !(playerDash && playerDash.IsDashing))
+        if (holeTilemap)
         {
-            // Respawn logic
-            if (sprite.position.y < fallDepth)
+            Vector3Int pos = holeTilemap.WorldToCell(transform.position);
+            if (holeTilemap.HasTile(pos) && !(playerDash && playerDash.IsDashing))
             {
-                rb.constraints = RigidbodyConstraints2D.None; // unfreeze before resetting
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                transform.position = respawnPoint;
-                sprite.localPosition = spriteStartLocalPos;
-                sortingGroup.sortingLayerName = "Player";
-                fallVelocity = Vector3.zero;
-                return;
-            }
+                // Respawn logic
+                if (sprite.position.y < fallDepth)
+                {
+                    rb.constraints = RigidbodyConstraints2D.None; // unfreeze before resetting
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                    transform.position = respawnPoint;
+                    sprite.localPosition = spriteStartLocalPos;
+                    sortingGroup.sortingLayerName = "Player";
+                    fallVelocity = Vector3.zero;
+                    return;
+                }
 
-            // Freeze the Rigidbody immediately
-            rb.linearVelocity = Vector2.zero;
-            rb.constraints = RigidbodyConstraints2D.FreezeAll; // this prevents any motion
-            sortingGroup.sortingLayerName = "Ground";
-            fallVelocity += Physics.gravity * fallGravity * Time.deltaTime;
-            sprite.transform.position += fallVelocity * Time.deltaTime;
-            return; // stop normal movement while falling
+                // Freeze the Rigidbody immediately
+                rb.linearVelocity = Vector2.zero;
+                rb.constraints = RigidbodyConstraints2D.FreezeAll; // this prevents any motion
+                sortingGroup.sortingLayerName = "Ground";
+                fallVelocity += Physics.gravity * fallGravity * Time.deltaTime;
+                sprite.transform.position += fallVelocity * Time.deltaTime;
+                return; // stop normal movement while falling
+            }
         }
         
     }

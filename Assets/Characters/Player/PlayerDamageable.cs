@@ -12,6 +12,12 @@ public class PlayerDamageable : DamageableCharacter
     {
         base.Start();
 
+        // Pull persistent health value
+        if (PlayerData.Instance != null)
+            _health = PlayerData.Instance.currentHealth;
+        else
+            _health = maxHealth;
+
         _volume = FindFirstObjectByType<Volume>();
         if (_volume && _volume.profile.TryGet(out _vignette))
             _vignette.active = false;
@@ -29,6 +35,10 @@ public class PlayerDamageable : DamageableCharacter
         // Player UI
         if (GameEvents.Instance != null)
             GameEvents.Instance.PlayerHealthChanged(_health, maxHealth);
+
+        // Save back to persistent data
+        if (PlayerData.Instance != null)
+            PlayerData.Instance.currentHealth = _health;
 
         StartCoroutine(DamageVignetteEffect());
     }
@@ -63,4 +73,31 @@ public class PlayerDamageable : DamageableCharacter
         _vignette.intensity.value = 0;
         _vignette.active = false;
     }
+
+    public void ResetPlayer()
+    {
+        // Restore full health
+        _health = maxHealth;
+        if (PlayerData.Instance != null)
+            PlayerData.Instance.RestoreFullHealth();
+
+        isAlive = true;
+
+        // Restore player movement and physics
+        var controller = GetComponent<PlayerController>();
+        if (controller != null)
+        {
+            controller.canMove = true;
+            controller.Rb.simulated = true;
+            controller.Animator.SetBool("isAlive", true);
+            controller.transform.position = controller.respawnPoint;
+        }
+
+        // Restore targetability and rigidbody state
+        Targetable = true;
+        rb.simulated = true;
+
+        Debug.Log("[PlayerDamageable] Player reset after retry.");
+    }
+
 }

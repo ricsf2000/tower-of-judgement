@@ -15,12 +15,12 @@ public class FadeController : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(transform.root.gameObject);
+            Destroy(gameObject);
             return;
         }
 
         Instance = this;
-        DontDestroyOnLoad(transform.root.gameObject);
+        DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
