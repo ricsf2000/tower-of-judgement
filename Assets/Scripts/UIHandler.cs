@@ -22,6 +22,15 @@ public class UIHandler : MonoBehaviour
 
         Debug.Log("[UIHandler] Subscribing to GameEvents");
         GameEvents.Instance.OnPlayerHealthChanged += UpdateHealthUI;
+
+        // After subscribing, immediately update with current health
+        yield return null; // wait 1 frame to ensure PlayerData/PlayerDamageable initialized
+
+        if (PlayerData.Instance != null)
+        {
+            UpdateHealthUI(PlayerData.Instance.currentHealth, PlayerData.Instance.maxHealth);
+            Debug.Log($"[UIHandler] Initial UI synced to {PlayerData.Instance.currentHealth}/{PlayerData.Instance.maxHealth}");
+        }
     }
 
     private void OnDisable()

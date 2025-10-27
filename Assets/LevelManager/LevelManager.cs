@@ -34,7 +34,21 @@ public class LevelManager : MonoBehaviour
     }
     public void Retry()
     {
-        Debug.Log("[LevelManager] Retry() called");
+        StartCoroutine(ReloadAndReset());
+    }
+
+    private IEnumerator ReloadAndReset()
+    {
+        // Reset PlayerData before reloading
+        if (PlayerData.Instance != null)
+            PlayerData.Instance.RestoreFullHealth();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return null; // wait for scene to fully load
+
+        // Reconnect player to the new scene
+        var player = FindFirstObjectByType<PlayerDamageable>();
+        if (player != null)
+            player.ResetPlayer(); // match the fresh PlayerData values
     }
 }
