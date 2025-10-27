@@ -10,6 +10,7 @@ public class UIHandler : MonoBehaviour
     private VisualElement healthBarBackground;
     private VisualElement healthBar;
     private float initialHealthBarWidth;
+    private bool isInitialized = false;
 
     private void OnEnable()
     {
@@ -24,9 +25,11 @@ public class UIHandler : MonoBehaviour
         Debug.Log("[UIHandler] Subscribing to GameEvents");
         GameEvents.Instance.OnPlayerHealthChanged += UpdateHealthUI;
 
-        // After subscribing, immediately update with current health
-        yield return null; // wait 1 frame to ensure PlayerData/PlayerDamageable initialized
+        // Wait for initialization to complete
+        while (!isInitialized)
+            yield return null;
 
+        // Now sync with current health
         if (PlayerData.Instance != null)
         {
             UpdateHealthUI(PlayerData.Instance.currentHealth, PlayerData.Instance.maxHealth);
@@ -67,7 +70,7 @@ public class UIHandler : MonoBehaviour
             return;
         }
 
-        // Wait one frame for layout to resolve, then capture initial width
+        // Capture initial width before allowing updates
         StartCoroutine(CaptureInitialWidth());
 
         Debug.Log("[UIHandler] Health bar elements found successfully");
@@ -78,18 +81,22 @@ public class UIHandler : MonoBehaviour
         yield return null; // Wait for layout pass
 
         initialHealthBarWidth = healthBar.resolvedStyle.width;
+        isInitialized = true; // Mark as ready
         Debug.Log($"[UIHandler] Captured initial health bar width: {initialHealthBarWidth}px");
     }
 
     private void UpdateHealthUI(float currentHealth, float maxHealth)
     {
         if (healthBar == null || maxHealth <= 0 || initialHealthBarWidth <= 0)
+        {
+            Debug.LogWarning($"[UIHandler] UpdateHealthUI blocked - healthBar: {healthBar != null}, maxHealth: {maxHealth}, initialWidth: {initialHealthBarWidth}");
             return;
+        }
 
         // Calculate health percentage (0 to 1)
         float healthPercentage = Mathf.Clamp01(currentHealth / maxHealth);
 
-        // Scale the health bar from its initial width
+        // Scale the health bar width from its initial width (height is preserved automatically)
         float newWidth = initialHealthBarWidth * healthPercentage;
         healthBar.style.width = newWidth;
 

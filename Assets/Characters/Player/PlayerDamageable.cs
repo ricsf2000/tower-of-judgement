@@ -26,6 +26,13 @@ public class PlayerDamageable : DamageableCharacter
         _volume = FindFirstObjectByType<Volume>();
         if (_volume && _volume.profile.TryGet(out _vignette))
             _vignette.active = false;
+
+        // Explicitly notify UI after health is loaded
+        if (GameEvents.Instance != null)
+        {
+            GameEvents.Instance.PlayerHealthChanged(_health, maxHealth);
+            Debug.Log($"[PlayerDamageable] Triggered UI update: {_health}/{maxHealth}");
+        }
     }
 
     public override void OnHit(float damage, Vector2 knockback)
