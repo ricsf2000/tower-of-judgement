@@ -846,8 +846,8 @@ MonoBehaviour:
   disableSimulation: 0
   canTurnInvincible: 1
   invincibilityTime: 1
-  _health: 3
-  maxHealth: 3
+  _health: 6
+  maxHealth: 6
   audioSource: {fileID: 8299667085419276712}
   impactSounds:
   - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}

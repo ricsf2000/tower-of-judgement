@@ -7,8 +7,9 @@ public class UIHandler : MonoBehaviour
 {
     public UIDocument uiDocument;
 
-    private VisualElement healthContainer;
-    private List<VisualElement> healthSquares = new List<VisualElement>();
+    private VisualElement healthBarBackground;
+    private VisualElement healthBar;
+    private float initialHealthBarWidth;
 
     private void OnEnable()
     {
@@ -51,29 +52,47 @@ public class UIHandler : MonoBehaviour
         }
 
         var root = uiDocument.rootVisualElement;
-        healthContainer = root.Q<VisualElement>("HealthBarContainer");
+        healthBarBackground = root.Q<VisualElement>("HealthBarBackground");
+        healthBar = root.Q<VisualElement>("HealthBar");
 
-        if (healthContainer == null)
+        if (healthBarBackground == null)
         {
-            Debug.LogError("[UIHandler] Could not find HealthBarContainer!");
+            Debug.LogError("[UIHandler] Could not find HealthBarBackground!");
             return;
         }
 
-        // Collect the health squares dynamically
-        foreach (var child in healthContainer.Children())
+        if (healthBar == null)
         {
-            healthSquares.Add(child);
-            Debug.Log($"[UIHandler] Found health square: {child.name}");
+            Debug.LogError("[UIHandler] Could not find HealthBar!");
+            return;
         }
+
+        // Wait one frame for layout to resolve, then capture initial width
+        StartCoroutine(CaptureInitialWidth());
+
+        Debug.Log("[UIHandler] Health bar elements found successfully");
+    }
+
+    private IEnumerator CaptureInitialWidth()
+    {
+        yield return null; // Wait for layout pass
+
+        initialHealthBarWidth = healthBar.resolvedStyle.width;
+        Debug.Log($"[UIHandler] Captured initial health bar width: {initialHealthBarWidth}px");
     }
 
     private void UpdateHealthUI(float currentHealth, float maxHealth)
     {
-        // Show squares based on remaining health
-        for (int i = 0; i < healthSquares.Count; i++)
-        {
-            healthSquares[i].style.display =
-                (i < currentHealth) ? DisplayStyle.Flex : DisplayStyle.None;
-        }
+        if (healthBar == null || maxHealth <= 0 || initialHealthBarWidth <= 0)
+            return;
+
+        // Calculate health percentage (0 to 1)
+        float healthPercentage = Mathf.Clamp01(currentHealth / maxHealth);
+
+        // Scale the health bar from its initial width
+        float newWidth = initialHealthBarWidth * healthPercentage;
+        healthBar.style.width = newWidth;
+
+        Debug.Log($"[UIHandler] Health bar updated: {currentHealth}/{maxHealth} ({healthPercentage * 100f}%) - Width: {newWidth}px");
     }
 }
