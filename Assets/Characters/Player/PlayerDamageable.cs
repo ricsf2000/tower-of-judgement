@@ -12,15 +12,27 @@ public class PlayerDamageable : DamageableCharacter
     {
         base.Start();
 
-        // Pull persistent health value
+        // Sync maxHealth from PlayerData (single source of truth)
         if (PlayerData.Instance != null)
+        {
+            maxHealth = PlayerData.Instance.maxHealth;
             _health = PlayerData.Instance.currentHealth;
+        }
         else
+        {
             _health = maxHealth;
+        }
 
         _volume = FindFirstObjectByType<Volume>();
         if (_volume && _volume.profile.TryGet(out _vignette))
             _vignette.active = false;
+
+        // Explicitly notify UI after health is loaded
+        if (GameEvents.Instance != null)
+        {
+            GameEvents.Instance.PlayerHealthChanged(_health, maxHealth);
+            Debug.Log($"[PlayerDamageable] Triggered UI update: {_health}/{maxHealth}");
+        }
     }
 
     public override void OnHit(float damage, Vector2 knockback)
@@ -76,10 +88,17 @@ public class PlayerDamageable : DamageableCharacter
 
     public void ResetPlayer()
     {
-        // Restore full health
-        _health = maxHealth;
+        // Restore full health from PlayerData
         if (PlayerData.Instance != null)
+        {
             PlayerData.Instance.RestoreFullHealth();
+            maxHealth = PlayerData.Instance.maxHealth;
+            _health = PlayerData.Instance.currentHealth;
+        }
+        else
+        {
+            _health = maxHealth;
+        }
 
         isAlive = true;
 
@@ -99,5 +118,4 @@ public class PlayerDamageable : DamageableCharacter
 
         Debug.Log("[PlayerDamageable] Player reset after retry.");
     }
-
 }

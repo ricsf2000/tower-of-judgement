@@ -5,8 +5,8 @@ public class PlayerData : MonoBehaviour
     public static PlayerData Instance { get; private set; }
 
     [Header("Player Stats")]
-    public float currentHealth = 3f;
-    public float maxHealth = 3f;
+    public float maxHealth = 6f;  // Single source of truth for max health
+    public float currentHealth = 6f;
 
     private void Awake()
     {
@@ -18,6 +18,10 @@ public class PlayerData : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject); // stays across all scenes
+        
+        // Initialize current health to max if not set
+        if (currentHealth <= 0)
+            currentHealth = maxHealth;
     }
 
     // Auto-create if missing when game starts
