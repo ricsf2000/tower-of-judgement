@@ -109,7 +109,11 @@ public class PlayerDamageable : DamageableCharacter
             controller.canMove = true;
             controller.Rb.simulated = true;
             controller.Animator.SetBool("isAlive", true);
-            controller.transform.position = controller.respawnPoint;
+            var fallable = GetComponent<FallableCharacter>();
+            if (fallable != null && fallable.respawnPoint != null)
+            {
+                controller.transform.position = fallable.respawnPoint.position;
+            }
         }
 
         // Restore targetability and rigidbody state

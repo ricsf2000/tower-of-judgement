@@ -1,0 +1,2615 @@
+fileFormatVersion: 2
+guid: 4afb0430a0c8cc94abf1bbc668dad4ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6667895710461988174
+    second: Powers idle full sprite sheet_0
+  - first:
+      213: 4621777595426519877
+    second: Powers idle full sprite sheet_1
+  - first:
+      213: -4543416959225780393
+    second: Powers idle full sprite sheet_2
+  - first:
+      213: 5449627489912048708
+    second: Powers idle full sprite sheet_3
+  - first:
+      213: -8909176815137663618
+    second: Powers idle full sprite sheet_4
+  - first:
+      213: 8695072110622410189
+    second: Powers idle full sprite sheet_5
+  - first:
+      213: 6881662594483454791
+    second: Powers idle full sprite sheet_6
+  - first:
+      213: -2213802089353656514
+    second: Powers idle full sprite sheet_7
+  - first:
+      213: -1319190306071105807
+    second: Powers idle full sprite sheet_8
+  - first:
+      213: -9005267829734277170
+    second: Powers idle full sprite sheet_9
+  - first:
+      213: -5248432275540119291
+    second: Powers idle full sprite sheet_10
+  - first:
+      213: 715789055568074008
+    second: Powers idle full sprite sheet_11
+  - first:
+      213: 3968773364466163671
+    second: Powers idle full sprite sheet_12
+  - first:
+      213: 8361145510260538691
+    second: Powers idle full sprite sheet_13
+  - first:
+      213: -4300636431672184931
+    second: Powers idle full sprite sheet_14
+  - first:
+      213: 3556149352759994928
+    second: Powers idle full sprite sheet_15
+  - first:
+      213: 3126184507420101399
+    second: Powers idle full sprite sheet_16
+  - first:
+      213: 4163590244853300358
+    second: Powers idle full sprite sheet_17
+  - first:
+      213: 5376693737438409032
+    second: Powers idle full sprite sheet_18
+  - first:
+      213: 7695566692557012979
+    second: Powers idle full sprite sheet_19
+  - first:
+      213: 5262656299824684524
+    second: Powers idle full sprite sheet_20
+  - first:
+      213: 7318320233958210408
+    second: Powers idle full sprite sheet_21
+  - first:
+      213: 3251592354742075483
+    second: Powers idle full sprite sheet_22
+  - first:
+      213: 8490473323355922289
+    second: Powers idle full sprite sheet_23
+  - first:
+      213: 4047926647169419836
+    second: Powers idle full sprite sheet_24
+  - first:
+      213: -1684335990522955023
+    second: Powers idle full sprite sheet_25
+  - first:
+      213: -4533542941647623680
+    second: Powers idle full sprite sheet_26
+  - first:
+      213: -5704271333302080108
+    second: Powers idle full sprite sheet_27
+  - first:
+      213: 1322194411475479931
+    second: Powers idle full sprite sheet_28
+  - first:
+      213: 4506824159106594554
+    second: Powers idle full sprite sheet_29
+  - first:
+      213: -1568137863169192468
+    second: Powers idle full sprite sheet_30
+  - first:
+      213: -4757053541501396326
+    second: Powers idle full sprite sheet_31
+  - first:
+      213: -7462190297348970759
+    second: Powers idle full sprite sheet_32
+  - first:
+      213: 2975638739566618229
+    second: Powers idle full sprite sheet_33
+  - first:
+      213: -5308046387246050841
+    second: Powers idle full sprite sheet_34
+  - first:
+      213: -6930619980038177558
+    second: Powers idle full sprite sheet_35
+  - first:
+      213: 3553211272337347297
+    second: Powers idle full sprite sheet_36
+  - first:
+      213: -3921445629276767565
+    second: Powers idle full sprite sheet_37
+  - first:
+      213: 7632713921665255387
+    second: Powers idle full sprite sheet_38
+  - first:
+      213: 5852475284437371762
+    second: Powers idle full sprite sheet_39
+  - first:
+      213: 1311115818047136736
+    second: Powers idle full sprite sheet_40
+  - first:
+      213: -2396890083886802730
+    second: Powers idle full sprite sheet_41
+  - first:
+      213: -825401071198022532
+    second: Powers idle full sprite sheet_42
+  - first:
+      213: -7756513424100313689
+    second: Powers idle full sprite sheet_43
+  - first:
+      213: -1925219680275994422
+    second: Powers idle full sprite sheet_44
+  - first:
+      213: -5969450405652319245
+    second: Powers idle full sprite sheet_45
+  - first:
+      213: -2870938756197918653
+    second: Powers idle full sprite sheet_46
+  - first:
+      213: 2537027756704235752
+    second: Powers idle full sprite sheet_47
+  - first:
+      213: 1139354416857178296
+    second: Powers idle full sprite sheet_48
+  - first:
+      213: -1045503140934689558
+    second: Powers idle full sprite sheet_49
+  - first:
+      213: -1696723981890290872
+    second: Powers idle full sprite sheet_50
+  - first:
+      213: 6264812865730245028
+    second: Powers idle full sprite sheet_51
+  - first:
+      213: 1149951012524556280
+    second: Powers idle full sprite sheet_52
+  - first:
+      213: -308807332651576654
+    second: Powers idle full sprite sheet_53
+  - first:
+      213: -3366117274341892669
+    second: Powers idle full sprite sheet_54
+  - first:
+      213: 4689180051540365362
+    second: Powers idle full sprite sheet_55
+  - first:
+      213: -7341716614827144375
+    second: Powers idle full sprite sheet_56
+  - first:
+      213: -2746834162143945751
+    second: Powers idle full sprite sheet_57
+  - first:
+      213: 5405621241507246202
+    second: Powers idle full sprite sheet_58
+  - first:
+      213: -3379445849837769952
+    second: Powers idle full sprite sheet_59
+  - first:
+      213: -1601259310049208585
+    second: Powers idle full sprite sheet_60
+  - first:
+      213: -3592524873254856193
+    second: Powers idle full sprite sheet_61
+  - first:
+      213: 3060654913032367869
+    second: Powers idle full sprite sheet_62
+  - first:
+      213: -3322145551374457994
+    second: Powers idle full sprite sheet_63
+  - first:
+      213: 2890777588451723824
+    second: Powers idle full sprite sheet_64
+  - first:
+      213: 2359065231195215924
+    second: Powers idle full sprite sheet_65
+  - first:
+      213: 850892103100959310
+    second: Powers idle full sprite sheet_66
+  - first:
+      213: -2515680713958699570
+    second: Powers idle full sprite sheet_67
+  - first:
+      213: -6960582933882070401
+    second: Powers idle full sprite sheet_68
+  - first:
+      213: 1764590349905797893
+    second: Powers idle full sprite sheet_69
+  - first:
+      213: 3376010940081652706
+    second: Powers idle full sprite sheet_70
+  - first:
+      213: -2976670801168015326
+    second: Powers idle full sprite sheet_71
+  - first:
+      213: -6071714152812554754
+    second: Powers idle full sprite sheet_72
+  - first:
+      213: -8478852038852843847
+    second: Powers idle full sprite sheet_73
+  - first:
+      213: 7251419046857157815
+    second: Powers idle full sprite sheet_74
+  - first:
+      213: 5523184581826638071
+    second: Powers idle full sprite sheet_75
+  - first:
+      213: 5235916661558573947
+    second: Powers idle full sprite sheet_76
+  - first:
+      213: 2261404298174134002
+    second: Powers idle full sprite sheet_77
+  - first:
+      213: -6051777390648607150
+    second: Powers idle full sprite sheet_78
+  - first:
+      213: -8636371633026101626
+    second: Powers idle full sprite sheet_79
+  - first:
+      213: 2085727235316358669
+    second: Powers idle full sprite sheet_80
+  - first:
+      213: -1763585179662094353
+    second: Powers idle full sprite sheet_81
+  - first:
+      213: -2942304565765101727
+    second: Powers idle full sprite sheet_82
+  - first:
+      213: 632020302475214161
+    second: Powers idle full sprite sheet_83
+  - first:
+      213: -4536099928825850602
+    second: Powers idle full sprite sheet_84
+  - first:
+      213: 9017025463850716252
+    second: Powers idle full sprite sheet_85
+  - first:
+      213: 2274963462566260079
+    second: Powers idle full sprite sheet_86
+  - first:
+      213: -95407752727697913
+    second: Powers idle full sprite sheet_87
+  - first:
+      213: -5873713975093370537
+    second: Powers idle full sprite sheet_88
+  - first:
+      213: 4307364628573619920
+    second: Powers idle full sprite sheet_89
+  - first:
+      213: 2235765012989220337
+    second: Powers idle full sprite sheet_90
+  - first:
+      213: -3098312516071161087
+    second: Powers idle full sprite sheet_91
+  - first:
+      213: -4989514537886490181
+    second: Powers idle full sprite sheet_92
+  - first:
+      213: 5295980796514930097
+    second: Powers idle full sprite sheet_93
+  - first:
+      213: -6909409717550081502
+    second: Powers idle full sprite sheet_94
+  - first:
+      213: 3004253206824264631
+    second: Powers idle full sprite sheet_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2ff8aed20e673a0800000000000000
+      internalID: -6667895710461988174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54bb14e5c3ad32040800000000000000
+      internalID: 4621777595426519877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757acdef85a82f0c0800000000000000
+      internalID: -4543416959225780393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c49662457f0ab40800000000000000
+      internalID: 5449627489912048708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75d294b3ee3c5480800000000000000
+      internalID: -8909176815137663618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc50e02240a1ba870800000000000000
+      internalID: 8695072110622410189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74387484ba3908f50800000000000000
+      internalID: 6881662594483454791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e37ce0d9abef641e0800000000000000
+      internalID: -2213802089353656514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe2e7fe76b41bde0800000000000000
+      internalID: -1319190306071105807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf7f6dee9cd60380800000000000000
+      internalID: -9005267829734277170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5017cbc17a2d927b0800000000000000
+      internalID: -5248432275540119291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8155f378a5efee900800000000000000
+      internalID: 715789055568074008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df9907f85ae31730800000000000000
+      internalID: 3968773364466163671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d7e66da81c80470800000000000000
+      internalID: 8361145510260538691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f631e73f11154c0800000000000000
+      internalID: -4300636431672184931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03aae7bbefaf95130800000000000000
+      internalID: 3556149352759994928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71bca1b0f30726b20800000000000000
+      internalID: 3126184507420101399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c33ce944b08c930800000000000000
+      internalID: 4163590244853300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841751e977add9a40800000000000000
+      internalID: 5376693737438409032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff303f42252cca60800000000000000
+      internalID: 7695566692557012979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced950e9506b80940800000000000000
+      internalID: 5262656299824684524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bf1a98a75ef8560800000000000000
+      internalID: 7318320233958210408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5007cad40aff1d20800000000000000
+      internalID: 3251592354742075483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f5f8dc08834d570800000000000000
+      internalID: 8490473323355922289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a0f59b6df1d2830800000000000000
+      internalID: 4047926647169419836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa3972375900a8e0800000000000000
+      internalID: -1684335990522955023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a2d1dd6be9511c0800000000000000
+      internalID: -4533542941647623680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49de514e17b56d0b0800000000000000
+      internalID: -5704271333302080108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7da00cdfc0695210800000000000000
+      internalID: 1322194411475479931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af672bcc1b47b8e30800000000000000
+      internalID: 4506824159106594554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedc5fafbeadc3ae0800000000000000
+      internalID: -1568137863169192468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a9b49020d8bfdb0800000000000000
+      internalID: -4757053541501396326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6e5200679f07890800000000000000
+      internalID: -7462190297348970759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57662c30ba79b4920800000000000000
+      internalID: 2975638739566618229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_34
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e157ec1fe70656b0800000000000000
+      internalID: -5308046387246050841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_35
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec799029dd71df90800000000000000
+      internalID: -6930619980038177558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2d49393da8f4130800000000000000
+      internalID: 3553211272337347297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba33f41af93499c0800000000000000
+      internalID: -3921445629276767565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd749053fd8dce960800000000000000
+      internalID: 7632713921665255387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b84a1734b283150800000000000000
+      internalID: 5852475284437371762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f1acc6cb3ffc749b1d789461e54864
+      internalID: 1311115818047136736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcc0c8df1924b3478568fb30f8c0744
+      internalID: -2396890083886802730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ee39f48e5a3394b85b84a1e49e83b2
+      internalID: -825401071198022532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2663afc0c3ed8b74babe9b770bb826f1
+      internalID: -7756513424100313689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7340de4b4cf0f41a74fedcbb6e8140
+      internalID: -1925219680275994422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_45
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee86cdb71d3e1c458b747c473d9a819
+      internalID: -5969450405652319245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_46
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ba4a24bad679644bbfb885f80844a7
+      internalID: -2870938756197918653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_47
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec27a3220535e943b3774ec7029897c
+      internalID: 2537027756704235752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765822e4e38f6ad42975a695978d8cd3
+      internalID: 1139354416857178296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db1bbb3c0517bf498097f443fd238fb
+      internalID: -1045503140934689558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14226be7b15ef7438ea0c944ca96960
+      internalID: -1696723981890290872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc2c747ceb3c444eba076724b1e32de
+      internalID: 6264812865730245028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af956e838c7792644bf6b1f4d76e8f72
+      internalID: 1149951012524556280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547903e29bc81394db44864ddd47c65c
+      internalID: -308807332651576654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_54
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7179f33b6175b7647b6d4b11e55bf6c0
+      internalID: -3366117274341892669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_55
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191e9074698526b44a5df9aa59dd34c6
+      internalID: 4689180051540365362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_56
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42b9716ead8e1c42911e7679d9f43d2
+      internalID: -7341716614827144375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_57
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a409f3e53e3af41bcac8ae3c5c869e
+      internalID: -2746834162143945751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_58
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84129d7bc385c0340b69bc1d0db31194
+      internalID: 5405621241507246202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_59
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f75ef7da6275944956a4cf672f2388
+      internalID: -3379445849837769952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de124fdd1be9e0749be901dc93ccbede
+      internalID: -1601259310049208585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f799863fe0ecb7e45b0b74d128a8e58d
+      internalID: -3592524873254856193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_62
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1025ed2811a794e9364face7b64f8e
+      internalID: 3060654913032367869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb3899464b2d814db9f853626ac68e0
+      internalID: -3322145551374457994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_64
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8698537f097fd474390d303f4be237e8
+      internalID: 2890777588451723824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_65
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcc16898e5d21a4caf9e6a3ba77dadc
+      internalID: 2359065231195215924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_66
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b998f9b490cf4541a84d50cf444e146
+      internalID: 850892103100959310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_67
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c871197c79d4b4788782af69a18acd
+      internalID: -2515680713958699570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_68
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f355fa96a18f427429c93139842f7953
+      internalID: -6960582933882070401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_69
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d98494f068de2340998c31d3f433929
+      internalID: 1764590349905797893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_70
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70c877777965e943933a5f7ca34fd21
+      internalID: 3376010940081652706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_71
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fe9713b7dd54547bf0ba5e9942ee68
+      internalID: -2976670801168015326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b33d17aede3aa4a8f48e4a71e5f65e
+      internalID: -6071714152812554754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_73
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27182d18dbed51e4c96730350c144338
+      internalID: -8478852038852843847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_74
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da01d56ac8cb6864a8960370210a7568
+      internalID: 7251419046857157815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_75
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c799ccbc6860124494b8623d1c934a3
+      internalID: 5523184581826638071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_76
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f83b928f99eab43a226fce84409e6a
+      internalID: 5235916661558573947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_77
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731a8d5d1739b124cb85ad4013ec3434
+      internalID: 2261404298174134002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_78
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffa7028e3b34b44fbcb8e8241dc910f
+      internalID: -6051777390648607150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_79
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5617226f6ae3474ba8462440374a3af
+      internalID: -8636371633026101626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_80
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7897b806e7d02d94a80e5863e7ee61e5
+      internalID: 2085727235316358669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_81
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3577dff7b36ddd4d95af44c10a6f873
+      internalID: -1763585179662094353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_82
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245f40baa73351d40bec064fcfd78117
+      internalID: -2942304565765101727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_83
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06250e31b62b69c4db050638edaaff0a
+      internalID: 632020302475214161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890ac2cf43606ff438b4ce3d40cfa890
+      internalID: -4536099928825850602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_85
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eea9aa19e7cfd343acb92b3a69f4c01
+      internalID: 9017025463850716252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_86
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea22e29b4de12d4dae108f84c5e31b6
+      internalID: 2274963462566260079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_87
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0014eb13a98db4e49a26e8204aa611ec
+      internalID: -95407752727697913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_88
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e898259f957a0d4fadc270177c5d631
+      internalID: -5873713975093370537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_89
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579df239ca5db374b9632d60a74da794
+      internalID: 4307364628573619920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_90
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7c0e9d2c30f3346b018c24bdd105fd
+      internalID: 2235765012989220337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_91
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa07e63f494ef0047a1553aa7c2bd821
+      internalID: -3098312516071161087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_92
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9fc8ef05c67114d966f7621ccfabc9
+      internalID: -4989514537886490181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_93
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880a9e8b7b6766c46b6d45826b218b8d
+      internalID: 5295980796514930097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_94
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc4e192cc48e214f9a8ff48a51a68ca
+      internalID: -6909409717550081502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers idle full sprite sheet_95
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1178692858546284ca31c7200af120e1
+      internalID: 3004253206824264631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2da77b28c500e304e805469f3c0af110
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.3499999940395355},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Powers idle full sprite sheet_0: -6667895710461988174
+      Powers idle full sprite sheet_1: 4621777595426519877
+      Powers idle full sprite sheet_10: -5248432275540119291
+      Powers idle full sprite sheet_11: 715789055568074008
+      Powers idle full sprite sheet_12: 3968773364466163671
+      Powers idle full sprite sheet_13: 8361145510260538691
+      Powers idle full sprite sheet_14: -4300636431672184931
+      Powers idle full sprite sheet_15: 3556149352759994928
+      Powers idle full sprite sheet_16: 3126184507420101399
+      Powers idle full sprite sheet_17: 4163590244853300358
+      Powers idle full sprite sheet_18: 5376693737438409032
+      Powers idle full sprite sheet_19: 7695566692557012979
+      Powers idle full sprite sheet_2: -4543416959225780393
+      Powers idle full sprite sheet_20: 5262656299824684524
+      Powers idle full sprite sheet_21: 7318320233958210408
+      Powers idle full sprite sheet_22: 3251592354742075483
+      Powers idle full sprite sheet_23: 8490473323355922289
+      Powers idle full sprite sheet_24: 4047926647169419836
+      Powers idle full sprite sheet_25: -1684335990522955023
+      Powers idle full sprite sheet_26: -4533542941647623680
+      Powers idle full sprite sheet_27: -5704271333302080108
+      Powers idle full sprite sheet_28: 1322194411475479931
+      Powers idle full sprite sheet_29: 4506824159106594554
+      Powers idle full sprite sheet_3: 5449627489912048708
+      Powers idle full sprite sheet_30: -1568137863169192468
+      Powers idle full sprite sheet_31: -4757053541501396326
+      Powers idle full sprite sheet_32: -7462190297348970759
+      Powers idle full sprite sheet_33: 2975638739566618229
+      Powers idle full sprite sheet_34: -5308046387246050841
+      Powers idle full sprite sheet_35: -6930619980038177558
+      Powers idle full sprite sheet_36: 3553211272337347297
+      Powers idle full sprite sheet_37: -3921445629276767565
+      Powers idle full sprite sheet_38: 7632713921665255387
+      Powers idle full sprite sheet_39: 5852475284437371762
+      Powers idle full sprite sheet_4: -8909176815137663618
+      Powers idle full sprite sheet_40: 1311115818047136736
+      Powers idle full sprite sheet_41: -2396890083886802730
+      Powers idle full sprite sheet_42: -825401071198022532
+      Powers idle full sprite sheet_43: -7756513424100313689
+      Powers idle full sprite sheet_44: -1925219680275994422
+      Powers idle full sprite sheet_45: -5969450405652319245
+      Powers idle full sprite sheet_46: -2870938756197918653
+      Powers idle full sprite sheet_47: 2537027756704235752
+      Powers idle full sprite sheet_48: 1139354416857178296
+      Powers idle full sprite sheet_49: -1045503140934689558
+      Powers idle full sprite sheet_5: 8695072110622410189
+      Powers idle full sprite sheet_50: -1696723981890290872
+      Powers idle full sprite sheet_51: 6264812865730245028
+      Powers idle full sprite sheet_52: 1149951012524556280
+      Powers idle full sprite sheet_53: -308807332651576654
+      Powers idle full sprite sheet_54: -3366117274341892669
+      Powers idle full sprite sheet_55: 4689180051540365362
+      Powers idle full sprite sheet_56: -7341716614827144375
+      Powers idle full sprite sheet_57: -2746834162143945751
+      Powers idle full sprite sheet_58: 5405621241507246202
+      Powers idle full sprite sheet_59: -3379445849837769952
+      Powers idle full sprite sheet_6: 6881662594483454791
+      Powers idle full sprite sheet_60: -1601259310049208585
+      Powers idle full sprite sheet_61: -3592524873254856193
+      Powers idle full sprite sheet_62: 3060654913032367869
+      Powers idle full sprite sheet_63: -3322145551374457994
+      Powers idle full sprite sheet_64: 2890777588451723824
+      Powers idle full sprite sheet_65: 2359065231195215924
+      Powers idle full sprite sheet_66: 850892103100959310
+      Powers idle full sprite sheet_67: -2515680713958699570
+      Powers idle full sprite sheet_68: -6960582933882070401
+      Powers idle full sprite sheet_69: 1764590349905797893
+      Powers idle full sprite sheet_7: -2213802089353656514
+      Powers idle full sprite sheet_70: 3376010940081652706
+      Powers idle full sprite sheet_71: -2976670801168015326
+      Powers idle full sprite sheet_72: -6071714152812554754
+      Powers idle full sprite sheet_73: -8478852038852843847
+      Powers idle full sprite sheet_74: 7251419046857157815
+      Powers idle full sprite sheet_75: 5523184581826638071
+      Powers idle full sprite sheet_76: 5235916661558573947
+      Powers idle full sprite sheet_77: 2261404298174134002
+      Powers idle full sprite sheet_78: -6051777390648607150
+      Powers idle full sprite sheet_79: -8636371633026101626
+      Powers idle full sprite sheet_8: -1319190306071105807
+      Powers idle full sprite sheet_80: 2085727235316358669
+      Powers idle full sprite sheet_81: -1763585179662094353
+      Powers idle full sprite sheet_82: -2942304565765101727
+      Powers idle full sprite sheet_83: 632020302475214161
+      Powers idle full sprite sheet_84: -4536099928825850602
+      Powers idle full sprite sheet_85: 9017025463850716252
+      Powers idle full sprite sheet_86: 2274963462566260079
+      Powers idle full sprite sheet_87: -95407752727697913
+      Powers idle full sprite sheet_88: -5873713975093370537
+      Powers idle full sprite sheet_89: 4307364628573619920
+      Powers idle full sprite sheet_9: -9005267829734277170
+      Powers idle full sprite sheet_90: 2235765012989220337
+      Powers idle full sprite sheet_91: -3098312516071161087
+      Powers idle full sprite sheet_92: -4989514537886490181
+      Powers idle full sprite sheet_93: 5295980796514930097
+      Powers idle full sprite sheet_94: -6909409717550081502
+      Powers idle full sprite sheet_95: 3004253206824264631
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
