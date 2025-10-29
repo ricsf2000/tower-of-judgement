@@ -42,7 +42,7 @@ public class PlayerDamageable : DamageableCharacter
         base.OnHit(damage, knockback);
 
         // Screen shake
-        CinemachineShake.Instance?.Shake(1f, 3.5f, 0.25f);
+        CinemachineShake.Instance?.Shake(1f, 3.5f, 0.50f);
 
         // Player UI
         if (GameEvents.Instance != null)

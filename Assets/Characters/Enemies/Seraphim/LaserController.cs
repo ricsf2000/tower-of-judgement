@@ -92,7 +92,7 @@ public class LaserController : MonoBehaviour
         if (boxCol != null)
         {
             float adjusted = Mathf.Max(0f, worldLength - colliderLengthAdjustment);
-            boxCol.size = new Vector2(adjusted, 0.1f);
+            boxCol.size = new Vector2(adjusted, 0.02f);
             boxCol.offset = new Vector2(adjusted / 2f, 0f);
         }
     }

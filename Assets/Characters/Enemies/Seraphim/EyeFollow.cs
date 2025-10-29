@@ -24,6 +24,9 @@ public class EyeFollow : MonoBehaviour
     private Transform eyeRoot;
     private Vector2 smoothDir;
 
+    private bool isLocked = false;
+    private Vector2 lockedDir = Vector2.zero;
+
     void Start()
     {
         eyeRoot = transform.parent;
@@ -32,6 +35,19 @@ public class EyeFollow : MonoBehaviour
 
     void LateUpdate()
     {
+        // If locked, just stay in locked direction
+        if (isLocked)
+        {
+            Vector2 lockedOffset = GetDirectionalOffset(lockedDir);
+            Vector3 lockedLocalPos = initialLocalPos + (Vector3)lockedOffset;
+            transform.localPosition = Vector3.Lerp(
+                transform.localPosition,
+                lockedLocalPos,
+                Time.deltaTime * followSpeed
+            );
+            return;
+        }
+
         // Return to neutral if no target
         if (detectionZone == null || detectionZone.detectedObjs.Count == 0)
         {
@@ -89,4 +105,17 @@ public class EyeFollow : MonoBehaviour
 
         return Vector2.zero;
     }
+
+    public void LockDirection(Vector2 dir)
+    {
+        isLocked = true;
+        lockedDir = dir.normalized;
+    }
+
+    public void UnlockDirection()
+    {
+        isLocked = false;
+    }
+
+
 }

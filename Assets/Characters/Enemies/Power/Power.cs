@@ -22,10 +22,33 @@ public class Power : MonoBehaviour
     private bool isDead = false;
     private Vector2 lastMoveDir = Vector2.down;
 
+    private AudioSource audioSource;
+
+    public AudioClip deathFX;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         damageableCharacter = GetComponent<EnemyDamageable>();
+        audioSource = GetComponent<AudioSource>();
+
+        // Force-reset alive state on spawn
+        if (damageableCharacter != null && animator != null)
+        {
+            bool alive = damageableCharacter.Health > 0;
+            animator.SetBool("isAlive", alive);
+
+            Debug.Log($"[Power] Start() synced isAlive={alive} for {name}");
+        }
+    }
+
+    private void Update()
+    {
+        // Check for death condition
+        if (!isDead && damageableCharacter != null && !damageableCharacter.IsAlive)
+        {
+            OnDeath();
+        }
     }
 
     // Called by EnemyAI
@@ -35,7 +58,7 @@ public class Power : MonoBehaviour
 
         if (moveInput.sqrMagnitude > 0.01f)
         {
-            rb.AddForce(moveInput.normalized * moveSpeed, ForceMode2D.Force);
+            rb.AddForce(moveInput.normalized * moveSpeed * Time.deltaTime, ForceMode2D.Force);
             rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
             UpdateAnimator(moveInput);
         }
@@ -83,10 +106,22 @@ public class Power : MonoBehaviour
 
     public void OnDeath()
     {
+        NoPushing KinematicObject = GetComponent<NoPushing>();
+        KinematicObject.DisableShell();
+
         if (isDead) return;
         isDead = true;
         rb.linearVelocity = Vector2.zero;
-        animator.SetTrigger("death");
+
+        if (audioSource != null && deathFX != null && audioSource.enabled)
+        {
+            audioSource.volume = 0.50f;
+            audioSource.PlayOneShot(deathFX);
+        }
+        else
+        {
+            Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
+        }
     }
 
     private void UpdateAnimator(Vector2 dir)

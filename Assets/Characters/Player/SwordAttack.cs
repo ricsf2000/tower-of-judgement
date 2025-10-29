@@ -62,7 +62,7 @@ public class SwordAttack : MonoBehaviour
 
         // Camera shake only for player attacks
         if (transform.root.CompareTag("Player") && CinemachineShake.Instance != null)
-            CinemachineShake.Instance.Shake(0.4f, .5f, 0.2f);
+            CinemachineShake.Instance.Shake(0.4f, .5f, 0.4f);
     }
 
 #if UNITY_EDITOR

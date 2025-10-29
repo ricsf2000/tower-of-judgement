@@ -132,32 +132,35 @@ public class PlayerAttack : MonoBehaviour
     {
         if (controller == null) return;
 
-        controller.canMove = false;
-        rb.linearVelocity = Vector2.zero;
+        // controller.canMove = false;
+        // rb.linearVelocity = Vector2.zero;
 
-        Vector2 dir = Vector2.zero;
+        // Vector2 dir = Vector2.zero;
 
-        // Use current input mode to decide lunge direction
-        if (currentInputMode == InputMode.Controller)
-        {
-            dir = controller.LastMoveDir;
-        }
-        else if (currentInputMode == InputMode.KeyboardMouse && Mouse.current != null)
-        {
-            Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            dir = (mouseWorldPos - (Vector2)transform.position).normalized;
-        }
+        // // Use current input mode to decide lunge direction
+        // if (currentInputMode == InputMode.Controller)
+        // {
+        //     dir = controller.LastMoveDir;
+        // }
+        // else if (currentInputMode == InputMode.KeyboardMouse && Mouse.current != null)
+        // {
+        //     Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        //     dir = (mouseWorldPos - (Vector2)transform.position).normalized;
+        // }
 
-        if (dir != Vector2.zero)
-            rb.AddForce(dir * 3f, ForceMode2D.Impulse);
+        // if (dir != Vector2.zero)
+        //     rb.AddForce(dir * 3f, ForceMode2D.Impulse);
+
+        controller.moveSpeedMultiplier = 0.4f;
     }
 
 
     public void UnlockMovement()
     {
-        controller.canMove = true;
+        // controller.canMove = true;
         controller.canAttack = true;
-        rb.linearVelocity = Vector2.zero;
+        // rb.linearVelocity = Vector2.zero;
+        controller.moveSpeedMultiplier = 1f; // restore normal speed
     }
 
     private Vector2 GetAssistedDirection(Vector2 inputDir)

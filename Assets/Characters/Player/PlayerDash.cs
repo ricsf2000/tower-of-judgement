@@ -50,6 +50,7 @@ public class PlayerDash : MonoBehaviour
         isDashing = true;
         canDash = false;
         currentDashCount--;
+        controller.moveSpeedMultiplier = 1f;
 
         if (dmgChar != null)
             dmgChar.Invincible = true;

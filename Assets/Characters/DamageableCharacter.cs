@@ -23,6 +23,7 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
     protected DamageFlash _damageFlash;
 
     protected bool isAlive = true;
+    public bool IsAlive => isAlive;
     protected bool _targetable = true;
     public bool _invincible = false;
     public bool invincibleOverride = false;

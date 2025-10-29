@@ -3563,6 +3563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4974379112203376297, guid: aa552328f21eef2498402628bebae73c, type: 3}
+      propertyPath: holeTilemap
+      value: 
+      objectReference: {fileID: 2080621687}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

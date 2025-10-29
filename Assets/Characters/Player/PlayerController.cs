@@ -34,6 +34,8 @@ using UnityEngine.Rendering;
     
     public Vector2 LastMoveDir { get; private set; }
 
+    [HideInInspector] public float moveSpeedMultiplier = 1f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,7 +48,7 @@ using UnityEngine.Rendering;
 
         if (movementInput != Vector2.zero)
         {
-            rb.AddForce(movementInput * moveSpeed * Time.deltaTime, ForceMode2D.Force);
+            rb.AddForce(movementInput * moveSpeed * moveSpeedMultiplier * Time.deltaTime, ForceMode2D.Force);
             Vector2 moveDir = movementInput.normalized;
 
             if (movementInput.sqrMagnitude > 0.01f)
