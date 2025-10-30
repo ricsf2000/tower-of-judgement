@@ -383,8 +383,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: START
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a86cec19b5c8024e8ad4c4f726ba432, type: 2}
-  m_sharedMaterial: {fileID: 6721465810943916244, guid: 0a86cec19b5c8024e8ad4c4f726ba432, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f2a5c6b8c5b41bea44eed09c7aedc5, type: 2}
+  m_sharedMaterial: {fileID: 6615532421061644444, guid: b1f2a5c6b8c5b41bea44eed09c7aedc5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -986,8 +986,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a86cec19b5c8024e8ad4c4f726ba432, type: 2}
-  m_sharedMaterial: {fileID: 6721465810943916244, guid: 0a86cec19b5c8024e8ad4c4f726ba432, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
+  m_sharedMaterial: {fileID: 6532932040620531989, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1122,8 +1122,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tower of <color=#FF0000>Judgement</color>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50a896577524e9c45bc37d472f1193cc, type: 2}
-  m_sharedMaterial: {fileID: -147683786076071479, guid: 50a896577524e9c45bc37d472f1193cc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8ca4c1cf7efb14edd9b9231c16a09855, type: 2}
+  m_sharedMaterial: {fileID: -4357295456951922683, guid: 8ca4c1cf7efb14edd9b9231c16a09855, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
