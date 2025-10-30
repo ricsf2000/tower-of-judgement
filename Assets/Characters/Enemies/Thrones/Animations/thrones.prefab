@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1242672445711063826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.006, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -173,6 +173,8 @@ GameObject:
   - component: {fileID: 2711476877303529487}
   - component: {fileID: 6580486208914031918}
   - component: {fileID: 4534897538327495202}
+  - component: {fileID: -9174796438358747869}
+  - component: {fileID: 2040557647597919792}
   m_Layer: 9
   m_Name: thrones
   m_TagString: Enemy
@@ -211,7 +213,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 40
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -284,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9837b83634d6074bbd018f3aee341b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitReaction
-  animator: {fileID: 0}
+  animator: {fileID: 2567073755389332}
   renderers: []
   freezeDuration: 0.15
   freezeAnimation: 1
@@ -332,6 +334,132 @@ MonoBehaviour:
   invincibleOverride: 0
   showInvincibilityGizmo: 1
   SpawnedByWave: 0
+--- !u!82 &-9174796438358747869
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4523167113837434958, guid: a13c586fbb9531a48a8d338d98cf237b, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2040557647597919792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a8dc6fa8d624d42b8edc3e8d3f6f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seraphim
+  damage: 1
+  knockbackForce: 5
+  moveSpeed: 20
+  preferredDistance: 1.5
+  stopThreshold: 0.5
+  enragedSpeedMultiplier: 1.2
+  enrageDuration: 1.5
+  attackRange: 4
+  chargeTime: 2.2
+  attackCooldown: 1.5
+  laserPrefab: {fileID: 6693314044191345402, guid: 0f775ee58f04a1644aa30bc68ba4282a, type: 3}
+  firePoint: {fileID: 790951119418952675}
+  detectionZone: {fileID: 1963529149649850836}
+  irisAnimator: {fileID: 9215199189625024008}
+  deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
+  minSpawnDelay: 0.5
+  maxSpawnDelay: 2
 --- !u!1 &5629257702275441858
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,17 +725,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40c94ee1efb45641900cdb9707d7fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EyeFollow
-  detectionZone: {fileID: 0}
+  detectionZone: {fileID: 1963529149649850836}
   followSpeed: 5
   directionSmooth: 15
-  up: {x: 0, y: 0.01}
-  down: {x: 0, y: -0.01}
-  left: {x: -0.02, y: 0}
-  right: {x: 0.02, y: 0}
-  upLeft: {x: -0.01, y: 0.01}
-  upRight: {x: 0.01, y: 0.01}
-  downLeft: {x: -0.01, y: -0.01}
-  downRight: {x: 0.01, y: -0.01}
+  up: {x: 0, y: 0.02}
+  down: {x: 0, y: -0.02}
+  left: {x: -0.04, y: 0}
+  right: {x: 0.04, y: 0}
+  upLeft: {x: -0.02, y: 0.02}
+  upRight: {x: 0.02, y: 0.02}
+  downLeft: {x: -0.02, y: -0.02}
+  downRight: {x: 0.02, y: -0.02}
 --- !u!95 &9215199189625024008
 Animator:
   serializedVersion: 7
