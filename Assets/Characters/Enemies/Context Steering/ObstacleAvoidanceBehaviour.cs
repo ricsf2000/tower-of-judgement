@@ -82,4 +82,25 @@ public static class Directions
             new Vector2(-1,0).normalized,
             new Vector2(-1,1).normalized
         };
+    
+    public static int GetClosestDirectionIndex(Vector2 dir)
+    {
+        if (dir == Vector2.zero)
+            return 0;
+
+        int bestIndex = 0;
+        float bestDot = -Mathf.Infinity;
+
+        for (int i = 0; i < eightDirections.Count; i++)
+        {
+            float dot = Vector2.Dot(dir.normalized, eightDirections[i]);
+            if (dot > bestDot)
+            {
+                bestDot = dot;
+                bestIndex = i;
+            }
+        }
+
+        return bestIndex;
+    }
 }

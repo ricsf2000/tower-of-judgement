@@ -51,6 +51,23 @@ public class ContextSolver : MonoBehaviour
         return resultDirection;
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        if (Application.isPlaying)
+        {
+            // 🟢 Draw the final movement direction chosen by the solver
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawRay(transform.position, resultDirection * 2f);
+
+            // 🏷 Label for clarity in Scene view
+    #if UNITY_EDITOR
+            UnityEditor.Handles.Label(
+                transform.position + Vector3.up * 0.5f,
+                $"Result Dir = {resultDirection.normalized:F2}"
+            );
+    #endif
+        }
+    }
 
     private void OnDrawGizmos()
     {

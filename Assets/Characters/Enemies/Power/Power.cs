@@ -13,6 +13,8 @@ public class Power : MonoBehaviour
     public float attackRange = 1.2f;
     public float attackCooldown = 1.5f;
     private bool canAttack = true;
+    private bool isAttacking = false;
+    private Coroutine activeAttackRoutine;
 
     [Header("References")]
     public Animator animator;
@@ -54,7 +56,7 @@ public class Power : MonoBehaviour
     // Called by EnemyAI
     public void Move(Vector2 moveInput)
     {
-        if (isDead) return;
+        if (isDead || isAttacking) return;
 
         if (moveInput.sqrMagnitude > 0.01f)
         {
@@ -88,20 +90,48 @@ public class Power : MonoBehaviour
     public void Attack()
     {
         if (!canAttack || isDead) return;
-        StartCoroutine(AttackRoutine());
+
+        if (activeAttackRoutine != null)
+            StopCoroutine(activeAttackRoutine);
+
+        activeAttackRoutine = StartCoroutine(AttackRoutine());
     }
 
     private IEnumerator AttackRoutine()
     {
         canAttack = false;
+        isAttacking = true;
 
         animator.SetFloat("attackX", lastMoveDir.x);
         animator.SetFloat("attackY", lastMoveDir.y);
         animator.SetTrigger("attack");
 
+        yield return new WaitForSeconds(1.3f);
+        isAttacking = false;
+
         // delay simulates attack cooldown
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+        activeAttackRoutine = null;
+    }
+    
+    public void CancelAttack()
+    {
+        if (activeAttackRoutine != null)
+        {
+            StopCoroutine(activeAttackRoutine);
+            activeAttackRoutine = null;
+        }
+
+        isAttacking = false;
+        canAttack = true;
+        animator.ResetTrigger("attack");
+        animator.SetBool("isMoving", false);
+        // rb.linearVelocity = Vector2.zero;
+
+        animator.Play("Power Idle Tree", 0, 0f);
+
+        Debug.Log($"[Power] {name}'s attack was canceled!");
     }
 
     public void OnDeath()

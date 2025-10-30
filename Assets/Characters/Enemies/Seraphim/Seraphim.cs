@@ -87,6 +87,15 @@ public class Seraphim : MonoBehaviour
             aimLine.startColor = warningColor;
             aimLine.endColor = warningColor;
         }
+        
+        Collider2D myCollider = GetComponent<Collider2D>();
+        Collider2D[] holeColliders = FindObjectsOfType<Collider2D>();
+
+        foreach (var holeCol in holeColliders)
+        {
+            if (holeCol.gameObject.layer == LayerMask.NameToLayer("GroundEdge"))
+                Physics2D.IgnoreCollision(myCollider, holeCol);
+        }
     }
 
     void Update()

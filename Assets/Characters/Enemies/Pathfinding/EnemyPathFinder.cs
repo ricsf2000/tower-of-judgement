@@ -1,96 +1,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class EnemyPathFinder : MonoBehaviour
+[RequireComponent(typeof(AIData))]
+public class EnemyPathfinder : MonoBehaviour
 {
-    public Transform player;                 // assign at runtime or in inspector
-    public float moveSpeed = 3f;
-    public float nodeReachDistance = 0.1f;
-
-    private Rigidbody2D rb;
-    private List<Node> currentPath = new List<Node>();
-    private int currentIndex = 0;
-    private NodeGridGenerator nodeGrid;      // reference to your node grid generator
+    private AIData aiData;
+    private List<Node> nodePath = new(); // path of Nodes
+    private List<Vector2> path = new();  // path of positions
+    private int currentWaypoint = 0;
+    private float waypointThreshold = 0.3f;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        aiData = GetComponent<AIData>();
     }
 
-    private void Start()
+    private void Update()
     {
-        // Find references in scene
-        nodeGrid = FindFirstObjectByType<NodeGridGenerator>();
-        if (player == null)
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (aiData.currentTarget == null)
+            return;
 
-        InvokeRepeating(nameof(UpdatePath), 0f, 1.0f); // recalc path every 1s
-    }
-
-    private void UpdatePath()
-    {
-        if (nodeGrid == null || player == null) return;
-
-        Node startNode = FindNearestNode(transform.position);
-        Node endNode = FindNearestNode(player.position);
-        if (startNode == null || endNode == null) return;
-
-        currentPath = AStarManager.instance.GeneratePath(startNode, endNode);
-        currentIndex = 0;
-
-        if (currentPath != null && currentPath.Count > 0)
+        // Recalculate if no path or target moved too far
+        if (path.Count == 0 || 
+            Vector2.Distance(path[^1], aiData.currentTarget.position) > 1f)
         {
-            float distToGoal = Vector2.Distance(transform.position, currentPath[^1].transform.position);
-            float newDistToGoal = Vector2.Distance(transform.position, endNode.transform.position);
+            Node start = AStarManager.instance.FindNearestNode(transform.position);
+            Node end = AStarManager.instance.FindNearestNode(aiData.currentTarget.position);
+            nodePath = AStarManager.instance.GeneratePath(start, end);
 
-            // Repath only if new path is significantly better
-            if (newDistToGoal < distToGoal * 0.8f)
-                currentPath = AStarManager.instance.GeneratePath(startNode, endNode);
-        }
-
-    }
-
-    private Node FindNearestNode(Vector3 worldPos)
-    {
-        Node nearest = null;
-        float bestDist = float.MaxValue;
-
-        foreach (Transform child in nodeGrid.transform)
-        {
-            Node node = child.GetComponent<Node>();
-            float dist = Vector2.Distance(worldPos, node.transform.position);
-            if (dist < bestDist)
+            path.Clear();
+            if (nodePath != null)
             {
-                bestDist = dist;
-                nearest = node;
+                foreach (Node n in nodePath)
+                    path.Add(n.transform.position);
             }
-        }
-        return nearest;
-    }
 
-    private void FixedUpdate()
-    {
-        if (currentPath == null || currentPath.Count == 0) return;
-        if (currentIndex >= currentPath.Count) return;
-
-        Vector2 targetPos = currentPath[currentIndex].transform.position;
-        Vector2 dir = targetPos - (Vector2)transform.position;
-        float dist = dir.magnitude;
-
-        if (dist > 0.001f)
-        {
-            dir /= dist;
-            float step = Mathf.Min(moveSpeed * Time.fixedDeltaTime, dist);
-            rb.MovePosition(rb.position + dir * step);
+            currentWaypoint = 0;
         }
 
-        // Reached node?
-        if (dist < nodeReachDistance)
+        // Move along path
+        if (path.Count > 0 && currentWaypoint < path.Count)
         {
-            rb.linearVelocity = Vector2.zero;
-            currentIndex++;
+            Vector2 waypoint = path[currentWaypoint];
+            aiData.currentWaypoint = waypoint;
+
+            if (Vector2.Distance(transform.position, waypoint) < waypointThreshold)
+                currentWaypoint++;
         }
     }
-
 }

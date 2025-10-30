@@ -18,4 +18,9 @@ public class EnemyEventBridge : MonoBehaviour
     {
         if (power) power.Attack();
     }
+
+    public void OnCancelAttack()
+    {
+        if (power) power.CancelAttack();
+    }
 }

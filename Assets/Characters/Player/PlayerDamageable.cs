@@ -52,8 +52,30 @@ public class PlayerDamageable : DamageableCharacter
         if (PlayerData.Instance != null)
             PlayerData.Instance.currentHealth = _health;
 
+        // Trigger vignette overlay
         StartCoroutine(DamageVignetteEffect());
     }
+
+    public override void OnHit(float damage)
+    {
+        if (Invincible) return;
+
+        base.OnHit(damage);
+
+        // Screen shake (optional for fall)
+        CinemachineShake.Instance?.Shake(1f, 3.5f, 0.50f);
+
+        // UI and persistent updates
+        if (GameEvents.Instance != null)
+            GameEvents.Instance.PlayerHealthChanged(_health, maxHealth);
+
+        if (PlayerData.Instance != null)
+            PlayerData.Instance.currentHealth = _health;
+
+        // Trigger vignette overlay
+        StartCoroutine(DamageVignetteEffect());
+    }
+
 
     protected override IEnumerator DeathSequence()
     {
