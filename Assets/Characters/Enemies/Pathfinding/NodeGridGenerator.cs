@@ -40,10 +40,23 @@ public class NodeGridGenerator : MonoBehaviour
             node.connections = new List<Node>();
             foreach (var dir in directions)
             {
+                // Skip diagonals that cut across corners
+                if (Mathf.Abs(dir.x) == 1 && Mathf.Abs(dir.y) == 1)
+                {
+                    Vector3Int horizontal = kvp.Key + new Vector3Int(dir.x, 0, 0);
+                    Vector3Int vertical   = kvp.Key + new Vector3Int(0, dir.y, 0);
+
+                    // Only allow diagonal if both adjacent sides exist
+                    if (!nodes.ContainsKey(horizontal) || !nodes.ContainsKey(vertical))
+                        continue;
+                }
+
                 if (nodes.TryGetValue(kvp.Key + dir, out Node neighbor))
                     node.connections.Add(neighbor);
             }
         }
+
+        
     }
 }
 

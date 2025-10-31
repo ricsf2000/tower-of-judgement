@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 3968773364466163671, guid: 4afb0430a0c8cc94abf1bbc668dad4ef, type: 3}
+      value: {fileID: -6514409127279939456, guid: 083f85e3b10a22249a7d275ca8074e28, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 3968773364466163671, guid: 4afb0430a0c8cc94abf1bbc668dad4ef, type: 3}
+    - {fileID: -6514409127279939456, guid: 083f85e3b10a22249a7d275ca8074e28, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

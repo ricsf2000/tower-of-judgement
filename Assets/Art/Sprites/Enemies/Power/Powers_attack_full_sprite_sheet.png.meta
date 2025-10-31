@@ -1,241 +1,241 @@
 fileFormatVersion: 2
-guid: eb5b003759d362e4583d54aaa8252e99
+guid: 4ef5bfa028c70974e8786a0f64266d91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 806915861967351078
-    second: Powers attack full sprite sheet_0
+      213: -997099228769969656
+    second: Powers_attack_full_sprite_sheet_0
   - first:
-      213: -6033154386157868895
-    second: Powers attack full sprite sheet_1
+      213: 538121481533582625
+    second: Powers_attack_full_sprite_sheet_1
   - first:
-      213: -753885531915927699
-    second: Powers attack full sprite sheet_2
+      213: 1120622133787428519
+    second: Powers_attack_full_sprite_sheet_2
   - first:
-      213: 7680320881904015220
-    second: Powers attack full sprite sheet_3
+      213: -2821844950763839924
+    second: Powers_attack_full_sprite_sheet_3
   - first:
-      213: -5509368861516768221
-    second: Powers attack full sprite sheet_4
+      213: 8337632289909215440
+    second: Powers_attack_full_sprite_sheet_4
   - first:
-      213: -3631491313224303235
-    second: Powers attack full sprite sheet_5
+      213: -7228040048434816712
+    second: Powers_attack_full_sprite_sheet_5
   - first:
-      213: -3253990375450901689
-    second: Powers attack full sprite sheet_6
+      213: -236512624696466420
+    second: Powers_attack_full_sprite_sheet_6
   - first:
-      213: -8689812884201120592
-    second: Powers attack full sprite sheet_7
+      213: 7394707734618890055
+    second: Powers_attack_full_sprite_sheet_7
   - first:
-      213: 8173719465631834096
-    second: Powers attack full sprite sheet_8
+      213: 4835926464986525729
+    second: Powers_attack_full_sprite_sheet_8
   - first:
-      213: -5046000545126942787
-    second: Powers attack full sprite sheet_9
+      213: -6177420900471029535
+    second: Powers_attack_full_sprite_sheet_9
   - first:
-      213: 5036353929572293521
-    second: Powers attack full sprite sheet_10
+      213: 8435295862111824622
+    second: Powers_attack_full_sprite_sheet_10
   - first:
-      213: 4878265285065928291
-    second: Powers attack full sprite sheet_11
+      213: 7797315225506348299
+    second: Powers_attack_full_sprite_sheet_11
   - first:
-      213: 4657948187337495882
-    second: Powers attack full sprite sheet_12
+      213: 1147272386211631845
+    second: Powers_attack_full_sprite_sheet_12
   - first:
-      213: -1182222745789145074
-    second: Powers attack full sprite sheet_13
+      213: 2439242569983281113
+    second: Powers_attack_full_sprite_sheet_13
   - first:
-      213: 8145176042752108378
-    second: Powers attack full sprite sheet_14
+      213: 4740130714701685383
+    second: Powers_attack_full_sprite_sheet_14
   - first:
-      213: 2135677317726960792
-    second: Powers attack full sprite sheet_15
+      213: -4993188683613679871
+    second: Powers_attack_full_sprite_sheet_15
   - first:
-      213: 8359389021481862363
-    second: Powers attack full sprite sheet_16
+      213: -5528079575400795550
+    second: Powers_attack_full_sprite_sheet_16
   - first:
-      213: -5442245745536461839
-    second: Powers attack full sprite sheet_17
+      213: -5121868407156976678
+    second: Powers_attack_full_sprite_sheet_17
   - first:
-      213: -1822079719209061296
-    second: Powers attack full sprite sheet_18
+      213: -395859608841917726
+    second: Powers_attack_full_sprite_sheet_18
   - first:
-      213: -8821525977442145325
-    second: Powers attack full sprite sheet_19
+      213: -1281182669836923917
+    second: Powers_attack_full_sprite_sheet_19
   - first:
-      213: 8698150616874312441
-    second: Powers attack full sprite sheet_20
+      213: 838961813629789822
+    second: Powers_attack_full_sprite_sheet_20
   - first:
-      213: 8325230176396620473
-    second: Powers attack full sprite sheet_21
+      213: -2150025882164413277
+    second: Powers_attack_full_sprite_sheet_21
   - first:
-      213: -2265224112686496336
-    second: Powers attack full sprite sheet_22
+      213: -4712439844030443080
+    second: Powers_attack_full_sprite_sheet_22
   - first:
-      213: 6826396428286811902
-    second: Powers attack full sprite sheet_23
+      213: 2630893417999326820
+    second: Powers_attack_full_sprite_sheet_23
   - first:
-      213: 1255871482367344166
-    second: Powers attack full sprite sheet_24
+      213: 1791556306528727038
+    second: Powers_attack_full_sprite_sheet_24
   - first:
-      213: 6618236219684548464
-    second: Powers attack full sprite sheet_25
+      213: -1946529197615857165
+    second: Powers_attack_full_sprite_sheet_25
   - first:
-      213: 8884788279405906243
-    second: Powers attack full sprite sheet_26
+      213: -554611103972557560
+    second: Powers_attack_full_sprite_sheet_26
   - first:
-      213: 1398160193466450938
-    second: Powers attack full sprite sheet_27
+      213: -3084203104340108881
+    second: Powers_attack_full_sprite_sheet_27
   - first:
-      213: -3772585249775958121
-    second: Powers attack full sprite sheet_28
+      213: -4367330510155388822
+    second: Powers_attack_full_sprite_sheet_28
   - first:
-      213: -1850637486413643094
-    second: Powers attack full sprite sheet_29
+      213: 3674666628610360825
+    second: Powers_attack_full_sprite_sheet_29
   - first:
-      213: -4045154734184090714
-    second: Powers attack full sprite sheet_30
+      213: 672293048826484798
+    second: Powers_attack_full_sprite_sheet_30
   - first:
-      213: 2152143601318544645
-    second: Powers attack full sprite sheet_31
+      213: 5203983998346887609
+    second: Powers_attack_full_sprite_sheet_31
   - first:
-      213: 4297438072921828188
-    second: Powers attack full sprite sheet_32
+      213: -1468830821651243217
+    second: Powers_attack_full_sprite_sheet_32
   - first:
-      213: -3045515761047012398
-    second: Powers attack full sprite sheet_33
+      213: 960206339672179546
+    second: Powers_attack_full_sprite_sheet_33
   - first:
-      213: -3191338564776383368
-    second: Powers attack full sprite sheet_34
+      213: -6664452233930214840
+    second: Powers_attack_full_sprite_sheet_34
   - first:
-      213: -4236320390541350037
-    second: Powers attack full sprite sheet_35
+      213: -1262054938305679811
+    second: Powers_attack_full_sprite_sheet_35
   - first:
-      213: -3766111531511392643
-    second: Powers attack full sprite sheet_36
+      213: 349202651267550715
+    second: Powers_attack_full_sprite_sheet_36
   - first:
-      213: 2227173304187603505
-    second: Powers attack full sprite sheet_37
+      213: 5997646945946057401
+    second: Powers_attack_full_sprite_sheet_37
   - first:
-      213: -1977945132853928815
-    second: Powers attack full sprite sheet_38
+      213: -2920151167774909455
+    second: Powers_attack_full_sprite_sheet_38
   - first:
-      213: -7557771713918900072
-    second: Powers attack full sprite sheet_39
+      213: -6767282642088991679
+    second: Powers_attack_full_sprite_sheet_39
   - first:
-      213: 2538884560543241388
-    second: Powers attack full sprite sheet_40
+      213: -2916841802572105786
+    second: Powers_attack_full_sprite_sheet_40
   - first:
-      213: 5312013775381859258
-    second: Powers attack full sprite sheet_41
+      213: -4065715761117364515
+    second: Powers_attack_full_sprite_sheet_41
   - first:
-      213: 8793549543115258560
-    second: Powers attack full sprite sheet_42
+      213: 6985899045343849388
+    second: Powers_attack_full_sprite_sheet_42
   - first:
-      213: -7966375186885885859
-    second: Powers attack full sprite sheet_43
+      213: -411805633782054643
+    second: Powers_attack_full_sprite_sheet_43
   - first:
-      213: 224569962229599038
-    second: Powers attack full sprite sheet_44
+      213: -8525664447271521412
+    second: Powers_attack_full_sprite_sheet_44
   - first:
-      213: -8612665147330615630
-    second: Powers attack full sprite sheet_45
+      213: 6456687050913756669
+    second: Powers_attack_full_sprite_sheet_45
   - first:
-      213: 1482090503203884289
-    second: Powers attack full sprite sheet_46
+      213: 1848203561283942625
+    second: Powers_attack_full_sprite_sheet_46
   - first:
-      213: 4204084741322958189
-    second: Powers attack full sprite sheet_47
+      213: -5134551688999938663
+    second: Powers_attack_full_sprite_sheet_47
   - first:
-      213: 4587805061932397440
-    second: Powers attack full sprite sheet_48
+      213: -721077789579275357
+    second: Powers_attack_full_sprite_sheet_48
   - first:
-      213: 6343553953368658869
-    second: Powers attack full sprite sheet_49
+      213: 8161312463276021128
+    second: Powers_attack_full_sprite_sheet_49
   - first:
-      213: 199406945805706322
-    second: Powers attack full sprite sheet_50
+      213: -3676608875233741893
+    second: Powers_attack_full_sprite_sheet_50
   - first:
-      213: -3584993530322731688
-    second: Powers attack full sprite sheet_51
+      213: -1145274245171002429
+    second: Powers_attack_full_sprite_sheet_51
   - first:
-      213: -466520829661903262
-    second: Powers attack full sprite sheet_52
+      213: -4698180812807984924
+    second: Powers_attack_full_sprite_sheet_52
   - first:
-      213: 803477956378145009
-    second: Powers attack full sprite sheet_53
+      213: -7020184937854277378
+    second: Powers_attack_full_sprite_sheet_53
   - first:
-      213: 1875559947851057624
-    second: Powers attack full sprite sheet_54
+      213: 2851346562031097296
+    second: Powers_attack_full_sprite_sheet_54
   - first:
-      213: -6397935334651543894
-    second: Powers attack full sprite sheet_55
+      213: -698794164703213584
+    second: Powers_attack_full_sprite_sheet_55
   - first:
-      213: -6103500345223071121
-    second: Powers attack full sprite sheet_56
+      213: 7510935440652801161
+    second: Powers_attack_full_sprite_sheet_56
   - first:
-      213: 5111624929936241748
-    second: Powers attack full sprite sheet_57
+      213: -2160117672711718834
+    second: Powers_attack_full_sprite_sheet_57
   - first:
-      213: 4862793967277324545
-    second: Powers attack full sprite sheet_58
+      213: 1449018358605714807
+    second: Powers_attack_full_sprite_sheet_58
   - first:
-      213: 4963456560023653469
-    second: Powers attack full sprite sheet_59
+      213: -2905165128349312146
+    second: Powers_attack_full_sprite_sheet_59
   - first:
-      213: 1410098741252288655
-    second: Powers attack full sprite sheet_60
+      213: 7835481941671674579
+    second: Powers_attack_full_sprite_sheet_60
   - first:
-      213: 3029077525936874909
-    second: Powers attack full sprite sheet_61
+      213: -8119452715372007869
+    second: Powers_attack_full_sprite_sheet_61
   - first:
-      213: 924390849405315305
-    second: Powers attack full sprite sheet_62
+      213: -530294738374244207
+    second: Powers_attack_full_sprite_sheet_62
   - first:
-      213: 8253547208932640845
-    second: Powers attack full sprite sheet_63
+      213: 7075863918692095178
+    second: Powers_attack_full_sprite_sheet_63
   - first:
-      213: 8352351492224707852
-    second: Powers attack full sprite sheet_64
+      213: 5411809137255833305
+    second: Powers_attack_full_sprite_sheet_64
   - first:
-      213: -3880864868447299256
-    second: Powers attack full sprite sheet_65
+      213: 4733259211397873375
+    second: Powers_attack_full_sprite_sheet_65
   - first:
-      213: -1711147981230077716
-    second: Powers attack full sprite sheet_66
+      213: -408178233362542007
+    second: Powers_attack_full_sprite_sheet_66
   - first:
-      213: -222660448365025943
-    second: Powers attack full sprite sheet_67
+      213: 264877250861418884
+    second: Powers_attack_full_sprite_sheet_67
   - first:
-      213: 9011488487695911482
-    second: Powers attack full sprite sheet_68
+      213: 7762821601341219263
+    second: Powers_attack_full_sprite_sheet_68
   - first:
-      213: -4465823016853147188
-    second: Powers attack full sprite sheet_69
+      213: 7989479733099462657
+    second: Powers_attack_full_sprite_sheet_69
   - first:
-      213: -8724641623631921038
-    second: Powers attack full sprite sheet_70
+      213: -1151050434364083057
+    second: Powers_attack_full_sprite_sheet_70
   - first:
-      213: 3027874266122762860
-    second: Powers attack full sprite sheet_71
+      213: -4144499498225069725
+    second: Powers_attack_full_sprite_sheet_71
   - first:
-      213: 4143984033855708655
-    second: Powers attack full sprite sheet_72
+      213: 8812991495182343575
+    second: Powers_attack_full_sprite_sheet_72
   - first:
-      213: 7488727971797476943
-    second: Powers attack full sprite sheet_73
+      213: 8128055420673634915
+    second: Powers_attack_full_sprite_sheet_73
   - first:
-      213: -8805236211378614436
-    second: Powers attack full sprite sheet_74
+      213: 1178080140905155308
+    second: Powers_attack_full_sprite_sheet_74
   - first:
-      213: -8019620687389760771
-    second: Powers attack full sprite sheet_75
+      213: 1837796031484560291
+    second: Powers_attack_full_sprite_sheet_75
   - first:
-      213: 1182577145968054235
-    second: Powers attack full sprite sheet_76
+      213: -539734681181890666
+    second: Powers_attack_full_sprite_sheet_76
   - first:
-      213: -6631051737616009529
-    second: Powers attack full sprite sheet_77
+      213: 2495902741076956979
+    second: Powers_attack_full_sprite_sheet_77
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -332,7 +332,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -344,7 +344,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_0
+      name: Powers_attack_full_sprite_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -359,14 +359,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62d213483bdb23b00800000000000000
-      internalID: 806915861967351078
+      spriteID: 80a9957c8879922f0800000000000000
+      internalID: -997099228769969656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_1
+      name: Powers_attack_full_sprite_sheet_1
       rect:
         serializedVersion: 2
         x: 96
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a868f10d0ee54ca0800000000000000
-      internalID: -6033154386157868895
+      spriteID: 12de0d8e2aac77700800000000000000
+      internalID: 538121481533582625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_2
+      name: Powers_attack_full_sprite_sheet_2
       rect:
         serializedVersion: 2
         x: 192
@@ -403,14 +403,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6f38dc5a19a985f0800000000000000
-      internalID: -753885531915927699
+      spriteID: 7a607d3b4ef3d8f00800000000000000
+      internalID: 1120622133787428519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_3
+      name: Powers_attack_full_sprite_sheet_3
       rect:
         serializedVersion: 2
         x: 288
@@ -425,14 +425,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47757e6662bf59a60800000000000000
-      internalID: 7680320881904015220
+      spriteID: c4edd72d7fac6d8d0800000000000000
+      internalID: -2821844950763839924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_4
+      name: Powers_attack_full_sprite_sheet_4
       rect:
         serializedVersion: 2
         x: 384
@@ -447,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32cd1b8d53aca83b0800000000000000
-      internalID: -5509368861516768221
+      spriteID: 0d09ddb946835b370800000000000000
+      internalID: 8337632289909215440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_5
+      name: Powers_attack_full_sprite_sheet_5
       rect:
         serializedVersion: 2
         x: 480
@@ -469,14 +469,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7d395e14e95a9dc0800000000000000
-      internalID: -3631491313224303235
+      spriteID: 839deba2fd7d0bb90800000000000000
+      internalID: -7228040048434816712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_6
+      name: Powers_attack_full_sprite_sheet_6
       rect:
         serializedVersion: 2
         x: 576
@@ -491,14 +491,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74385b07ef087d2d0800000000000000
-      internalID: -3253990375450901689
+      spriteID: c04621c550db7bcf0800000000000000
+      internalID: -236512624696466420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_7
+      name: Powers_attack_full_sprite_sheet_7
       rect:
         serializedVersion: 2
         x: 0
@@ -513,14 +513,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bc5490f835976780800000000000000
-      internalID: -8689812884201120592
+      spriteID: 74fdacb71874f9660800000000000000
+      internalID: 7394707734618890055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_8
+      name: Powers_attack_full_sprite_sheet_8
       rect:
         serializedVersion: 2
         x: 96
@@ -535,14 +535,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ff5eaa3c82ee6170800000000000000
-      internalID: 8173719465631834096
+      spriteID: 120be618f79ac1340800000000000000
+      internalID: 4835926464986525729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_9
+      name: Powers_attack_full_sprite_sheet_9
       rect:
         serializedVersion: 2
         x: 192
@@ -557,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db7f7433d3109f9b0800000000000000
-      internalID: -5046000545126942787
+      spriteID: 1e0c95f9b64654aa0800000000000000
+      internalID: -6177420900471029535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_10
+      name: Powers_attack_full_sprite_sheet_10
       rect:
         serializedVersion: 2
         x: 288
@@ -579,14 +579,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19b9c471739b4e540800000000000000
-      internalID: 5036353929572293521
+      spriteID: eea6f7cf4e0301570800000000000000
+      internalID: 8435295862111824622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_11
+      name: Powers_attack_full_sprite_sheet_11
       rect:
         serializedVersion: 2
         x: 384
@@ -601,14 +601,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36e697c3e6413b340800000000000000
-      internalID: 4878265285065928291
+      spriteID: b0dfc0ab2e0a53c60800000000000000
+      internalID: 7797315225506348299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_12
+      name: Powers_attack_full_sprite_sheet_12
       rect:
         serializedVersion: 2
         x: 480
@@ -623,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a451d60923b54a040800000000000000
-      internalID: 4657948187337495882
+      spriteID: 5e252c0282eebef00800000000000000
+      internalID: 1147272386211631845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_13
+      name: Powers_attack_full_sprite_sheet_13
       rect:
         serializedVersion: 2
         x: 576
@@ -645,14 +645,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e00e9d72da6e79fe0800000000000000
-      internalID: -1182222745789145074
+      spriteID: 9d74dd8913ee9d120800000000000000
+      internalID: 2439242569983281113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_14
+      name: Powers_attack_full_sprite_sheet_14
       rect:
         serializedVersion: 2
         x: 0
@@ -667,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a57e245b47a790170800000000000000
-      internalID: 8145176042752108378
+      spriteID: 78266be45c358c140800000000000000
+      internalID: 4740130714701685383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_15
+      name: Powers_attack_full_sprite_sheet_15
       rect:
         serializedVersion: 2
         x: 96
@@ -689,14 +689,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89c79f5843373ad10800000000000000
-      internalID: 2135677317726960792
+      spriteID: 10fc4b8e851a4bab0800000000000000
+      internalID: -4993188683613679871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_16
+      name: Powers_attack_full_sprite_sheet_16
       rect:
         serializedVersion: 2
         x: 192
@@ -711,14 +711,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd40abc6604820470800000000000000
-      internalID: 8359389021481862363
+      spriteID: 262b42a4ae05843b0800000000000000
+      internalID: -5528079575400795550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_17
+      name: Powers_attack_full_sprite_sheet_17
       rect:
         serializedVersion: 2
         x: 288
@@ -733,14 +733,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f31be424524974b0800000000000000
-      internalID: -5442245745536461839
+      spriteID: ad3dc1d02d77be8b0800000000000000
+      internalID: -5121868407156976678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_18
+      name: Powers_attack_full_sprite_sheet_18
       rect:
         serializedVersion: 2
         x: 384
@@ -755,14 +755,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 054b910362ca6b6e0800000000000000
-      internalID: -1822079719209061296
+      spriteID: 2ea6d0a78cf918af0800000000000000
+      internalID: -395859608841917726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_19
+      name: Powers_attack_full_sprite_sheet_19
       rect:
         serializedVersion: 2
         x: 480
@@ -777,14 +777,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3db2ea9acd4a39580800000000000000
-      internalID: -8821525977442145325
+      spriteID: 3fbcbf75623583ee0800000000000000
+      internalID: -1281182669836923917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_20
+      name: Powers_attack_full_sprite_sheet_20
       rect:
         serializedVersion: 2
         x: 576
@@ -799,14 +799,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f263a9b6e906b870800000000000000
-      internalID: 8698150616874312441
+      spriteID: e766581135794ab00800000000000000
+      internalID: 838961813629789822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_21
+      name: Powers_attack_full_sprite_sheet_21
       rect:
         serializedVersion: 2
         x: 0
@@ -821,14 +821,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b2bb798cb8298370800000000000000
-      internalID: 8325230176396620473
+      spriteID: 3acb1bbf9d29922e0800000000000000
+      internalID: -2150025882164413277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_22
+      name: Powers_attack_full_sprite_sheet_22
       rect:
         serializedVersion: 2
         x: 96
@@ -843,14 +843,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b50ca2dbae4090e0800000000000000
-      internalID: -2265224112686496336
+      spriteID: 8b11b2fedec0a9eb0800000000000000
+      internalID: -4712439844030443080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_23
+      name: Powers_attack_full_sprite_sheet_23
       rect:
         serializedVersion: 2
         x: 192
@@ -865,14 +865,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efed70c326b3cbe50800000000000000
-      internalID: 6826396428286811902
+      spriteID: 46e53c5ef9fc28420800000000000000
+      internalID: 2630893417999326820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_24
+      name: Powers_attack_full_sprite_sheet_24
       rect:
         serializedVersion: 2
         x: 288
@@ -887,14 +887,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62e7c069570cd6110800000000000000
-      internalID: 1255871482367344166
+      spriteID: eff61cdf7f2ecd810800000000000000
+      internalID: 1791556306528727038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_25
+      name: Powers_attack_full_sprite_sheet_25
       rect:
         serializedVersion: 2
         x: 384
@@ -909,14 +909,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07febe1e6c2b8db50800000000000000
-      internalID: 6618236219684548464
+      spriteID: 3f14e27020a8cf4e0800000000000000
+      internalID: -1946529197615857165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_26
+      name: Powers_attack_full_sprite_sheet_26
       rect:
         serializedVersion: 2
         x: 480
@@ -931,14 +931,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3490b82dddb1d4b70800000000000000
-      internalID: 8884788279405906243
+      spriteID: 80d7a3fa320ad48f0800000000000000
+      internalID: -554611103972557560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_27
+      name: Powers_attack_full_sprite_sheet_27
       rect:
         serializedVersion: 2
         x: 576
@@ -953,14 +953,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af3c8a6c943476310800000000000000
-      internalID: 1398160193466450938
+      spriteID: fa996ae0e95b235d0800000000000000
+      internalID: -3084203104340108881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_28
+      name: Powers_attack_full_sprite_sheet_28
       rect:
         serializedVersion: 2
         x: 0
@@ -975,14 +975,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 797c93e04b515abc0800000000000000
-      internalID: -3772585249775958121
+      spriteID: a6866754a002463c0800000000000000
+      internalID: -4367330510155388822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_29
+      name: Powers_attack_full_sprite_sheet_29
       rect:
         serializedVersion: 2
         x: 96
@@ -997,14 +997,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa20b4ed2073156e0800000000000000
-      internalID: -1850637486413643094
+      spriteID: 9f58d4a54d90ff230800000000000000
+      internalID: 3674666628610360825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_30
+      name: Powers_attack_full_sprite_sheet_30
       rect:
         serializedVersion: 2
         x: 192
@@ -1019,14 +1019,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a3b77f8339bcd7c0800000000000000
-      internalID: -4045154734184090714
+      spriteID: e38544847f6745900800000000000000
+      internalID: 672293048826484798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_31
+      name: Powers_attack_full_sprite_sheet_31
       rect:
         serializedVersion: 2
         x: 288
@@ -1041,14 +1041,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 505c83ee333fddd10800000000000000
-      internalID: 2152143601318544645
+      spriteID: 9b18846efd3483840800000000000000
+      internalID: 5203983998346887609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_32
+      name: Powers_attack_full_sprite_sheet_32
       rect:
         serializedVersion: 2
         x: 384
@@ -1063,14 +1063,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5baeb4982193ab30800000000000000
-      internalID: 4297438072921828188
+      spriteID: f2f1550662aad9be0800000000000000
+      internalID: -1468830821651243217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_33
+      name: Powers_attack_full_sprite_sheet_33
       rect:
         serializedVersion: 2
         x: 480
@@ -1085,14 +1085,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2db70f81d872cb5d0800000000000000
-      internalID: -3045515761047012398
+      spriteID: a530d3b1496535d00800000000000000
+      internalID: 960206339672179546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_34
+      name: Powers_attack_full_sprite_sheet_34
       rect:
         serializedVersion: 2
         x: 576
@@ -1107,14 +1107,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87caf78db7616b3d0800000000000000
-      internalID: -3191338564776383368
+      spriteID: 842f706c00c1383a0800000000000000
+      internalID: -6664452233930214840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_35
+      name: Powers_attack_full_sprite_sheet_35
       rect:
         serializedVersion: 2
         x: 0
@@ -1129,14 +1129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6be90fbc019535c0800000000000000
-      internalID: -4236320390541350037
+      spriteID: d3e234368b74c7ee0800000000000000
+      internalID: -1262054938305679811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_36
+      name: Powers_attack_full_sprite_sheet_36
       rect:
         serializedVersion: 2
         x: 96
@@ -1151,14 +1151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d76d2cb04851cbbc0800000000000000
-      internalID: -3766111531511392643
+      spriteID: bfd4d6f06fd98d400800000000000000
+      internalID: 349202651267550715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_37
+      name: Powers_attack_full_sprite_sheet_37
       rect:
         serializedVersion: 2
         x: 192
@@ -1173,14 +1173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13ac551f15288ee10800000000000000
-      internalID: 2227173304187603505
+      spriteID: 9ba3255de1ceb3350800000000000000
+      internalID: 5997646945946057401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_38
+      name: Powers_attack_full_sprite_sheet_38
       rect:
         serializedVersion: 2
         x: 288
@@ -1195,14 +1195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19c570b916dec84e0800000000000000
-      internalID: -1977945132853928815
+      spriteID: 1fb955a0cf98977d0800000000000000
+      internalID: -2920151167774909455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_39
+      name: Powers_attack_full_sprite_sheet_39
       rect:
         serializedVersion: 2
         x: 384
@@ -1217,14 +1217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8986e524ba66d1790800000000000000
-      internalID: -7557771713918900072
+      spriteID: 1446e97aa48c512a0800000000000000
+      internalID: -6767282642088991679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_40
+      name: Powers_attack_full_sprite_sheet_40
       rect:
         serializedVersion: 2
         x: 480
@@ -1239,14 +1239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca457e46e0eeb3320800000000000000
-      internalID: 2538884560543241388
+      spriteID: 6c7fdaba5db4587d0800000000000000
+      internalID: -2916841802572105786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_41
+      name: Powers_attack_full_sprite_sheet_41
       rect:
         serializedVersion: 2
         x: 576
@@ -1261,14 +1261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abb0e9b626018b940800000000000000
-      internalID: 5312013775381859258
+      spriteID: dde74ec6e0da397c0800000000000000
+      internalID: -4065715761117364515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_42
+      name: Powers_attack_full_sprite_sheet_42
       rect:
         serializedVersion: 2
         x: 0
@@ -1283,14 +1283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cafe2028b6f80a70800000000000000
-      internalID: 8793549543115258560
+      spriteID: cabe57a3b26e2f060800000000000000
+      internalID: 6985899045343849388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_43
+      name: Powers_attack_full_sprite_sheet_43
       rect:
         serializedVersion: 2
         x: 96
@@ -1305,14 +1305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d504e26a9ffb17190800000000000000
-      internalID: -7966375186885885859
+      spriteID: d018ae935f8f84af0800000000000000
+      internalID: -411805633782054643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_44
+      name: Powers_attack_full_sprite_sheet_44
       rect:
         serializedVersion: 2
         x: 192
@@ -1327,14 +1327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3b0be9d035dd1300800000000000000
-      internalID: 224569962229599038
+      spriteID: c73343a2b51cea980800000000000000
+      internalID: -8525664447271521412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_45
+      name: Powers_attack_full_sprite_sheet_45
       rect:
         serializedVersion: 2
         x: 288
@@ -1349,14 +1349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b6a8fb2eaaa97880800000000000000
-      internalID: -8612665147330615630
+      spriteID: df5349fe9a2ca9950800000000000000
+      internalID: 6456687050913756669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_46
+      name: Powers_attack_full_sprite_sheet_46
       rect:
         serializedVersion: 2
         x: 384
@@ -1371,14 +1371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10d8270d571719410800000000000000
-      internalID: 1482090503203884289
+      spriteID: 1e8f0f6c85326a910800000000000000
+      internalID: 1848203561283942625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_47
+      name: Powers_attack_full_sprite_sheet_47
       rect:
         serializedVersion: 2
         x: 480
@@ -1393,14 +1393,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d65e13c4cc8e75a30800000000000000
-      internalID: 4204084741322958189
+      spriteID: 995d64061786eb8b0800000000000000
+      internalID: -5134551688999938663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_48
+      name: Powers_attack_full_sprite_sheet_48
       rect:
         serializedVersion: 2
         x: 576
@@ -1415,14 +1415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 083383785682baf30800000000000000
-      internalID: 4587805061932397440
+      spriteID: 3a314b022973ef5f0800000000000000
+      internalID: -721077789579275357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_49
+      name: Powers_attack_full_sprite_sheet_49
       rect:
         serializedVersion: 2
         x: 0
@@ -1437,14 +1437,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b3501406b4d80850800000000000000
-      internalID: 6343553953368658869
+      spriteID: 8851982e17ec24170800000000000000
+      internalID: 8161312463276021128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_50
+      name: Powers_attack_full_sprite_sheet_50
       rect:
         serializedVersion: 2
         x: 96
@@ -1459,14 +1459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 254ae7a8f8f64c200800000000000000
-      internalID: 199406945805706322
+      spriteID: bb3f4ad15bf0afcc0800000000000000
+      internalID: -3676608875233741893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_51
+      name: Powers_attack_full_sprite_sheet_51
       rect:
         serializedVersion: 2
         x: 192
@@ -1481,14 +1481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85d3a07d06b8f3ec0800000000000000
-      internalID: -3584993530322731688
+      spriteID: 3c3cd26542b2b10f0800000000000000
+      internalID: -1145274245171002429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_52
+      name: Powers_attack_full_sprite_sheet_52
       rect:
         serializedVersion: 2
         x: 288
@@ -1503,14 +1503,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2668ea3f6c59689f0800000000000000
-      internalID: -466520829661903262
+      spriteID: 4e8260a5175bcceb0800000000000000
+      internalID: -4698180812807984924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_53
+      name: Powers_attack_full_sprite_sheet_53
       rect:
         serializedVersion: 2
         x: 384
@@ -1525,14 +1525,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f0b6ceb1f6862b00800000000000000
-      internalID: 803477956378145009
+      spriteID: ef8e5a95efa439e90800000000000000
+      internalID: -7020184937854277378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_54
+      name: Powers_attack_full_sprite_sheet_54
       rect:
         serializedVersion: 2
         x: 480
@@ -1547,14 +1547,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d9cc9ed5d3570a10800000000000000
-      internalID: 1875559947851057624
+      spriteID: 0d515615794029720800000000000000
+      internalID: 2851346562031097296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Powers attack full sprite sheet_55
+      name: Powers_attack_full_sprite_sheet_55
       rect:
         serializedVersion: 2
         x: 576
@@ -1569,8 +1569,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aaebc2af5b7f537a0800000000000000
-      internalID: -6397935334651543894
+      spriteID: 0f7cfb9d8626d46f0800000000000000
+      internalID: -698794164703213584
       vertices: []
       indices: 
       edges: []
@@ -1579,7 +1579,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 86517a98f28550c49b91690f385e7720
+    spriteID: 80b017f57a05dff4a962439ab913263b
     internalID: 0
     vertices: []
     indices: 
@@ -1591,62 +1591,62 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.4000000059604645},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Powers attack full sprite sheet_0: 806915861967351078
-      Powers attack full sprite sheet_1: -6033154386157868895
-      Powers attack full sprite sheet_10: 5036353929572293521
-      Powers attack full sprite sheet_11: 4878265285065928291
-      Powers attack full sprite sheet_12: 4657948187337495882
-      Powers attack full sprite sheet_13: -1182222745789145074
-      Powers attack full sprite sheet_14: 8145176042752108378
-      Powers attack full sprite sheet_15: 2135677317726960792
-      Powers attack full sprite sheet_16: 8359389021481862363
-      Powers attack full sprite sheet_17: -5442245745536461839
-      Powers attack full sprite sheet_18: -1822079719209061296
-      Powers attack full sprite sheet_19: -8821525977442145325
-      Powers attack full sprite sheet_2: -753885531915927699
-      Powers attack full sprite sheet_20: 8698150616874312441
-      Powers attack full sprite sheet_21: 8325230176396620473
-      Powers attack full sprite sheet_22: -2265224112686496336
-      Powers attack full sprite sheet_23: 6826396428286811902
-      Powers attack full sprite sheet_24: 1255871482367344166
-      Powers attack full sprite sheet_25: 6618236219684548464
-      Powers attack full sprite sheet_26: 8884788279405906243
-      Powers attack full sprite sheet_27: 1398160193466450938
-      Powers attack full sprite sheet_28: -3772585249775958121
-      Powers attack full sprite sheet_29: -1850637486413643094
-      Powers attack full sprite sheet_3: 7680320881904015220
-      Powers attack full sprite sheet_30: -4045154734184090714
-      Powers attack full sprite sheet_31: 2152143601318544645
-      Powers attack full sprite sheet_32: 4297438072921828188
-      Powers attack full sprite sheet_33: -3045515761047012398
-      Powers attack full sprite sheet_34: -3191338564776383368
-      Powers attack full sprite sheet_35: -4236320390541350037
-      Powers attack full sprite sheet_36: -3766111531511392643
-      Powers attack full sprite sheet_37: 2227173304187603505
-      Powers attack full sprite sheet_38: -1977945132853928815
-      Powers attack full sprite sheet_39: -7557771713918900072
-      Powers attack full sprite sheet_4: -5509368861516768221
-      Powers attack full sprite sheet_40: 2538884560543241388
-      Powers attack full sprite sheet_41: 5312013775381859258
-      Powers attack full sprite sheet_42: 8793549543115258560
-      Powers attack full sprite sheet_43: -7966375186885885859
-      Powers attack full sprite sheet_44: 224569962229599038
-      Powers attack full sprite sheet_45: -8612665147330615630
-      Powers attack full sprite sheet_46: 1482090503203884289
-      Powers attack full sprite sheet_47: 4204084741322958189
-      Powers attack full sprite sheet_48: 4587805061932397440
-      Powers attack full sprite sheet_49: 6343553953368658869
-      Powers attack full sprite sheet_5: -3631491313224303235
-      Powers attack full sprite sheet_50: 199406945805706322
-      Powers attack full sprite sheet_51: -3584993530322731688
-      Powers attack full sprite sheet_52: -466520829661903262
-      Powers attack full sprite sheet_53: 803477956378145009
-      Powers attack full sprite sheet_54: 1875559947851057624
-      Powers attack full sprite sheet_55: -6397935334651543894
-      Powers attack full sprite sheet_6: -3253990375450901689
-      Powers attack full sprite sheet_7: -8689812884201120592
-      Powers attack full sprite sheet_8: 8173719465631834096
-      Powers attack full sprite sheet_9: -5046000545126942787
+      Powers_attack_full_sprite_sheet_0: -997099228769969656
+      Powers_attack_full_sprite_sheet_1: 538121481533582625
+      Powers_attack_full_sprite_sheet_10: 8435295862111824622
+      Powers_attack_full_sprite_sheet_11: 7797315225506348299
+      Powers_attack_full_sprite_sheet_12: 1147272386211631845
+      Powers_attack_full_sprite_sheet_13: 2439242569983281113
+      Powers_attack_full_sprite_sheet_14: 4740130714701685383
+      Powers_attack_full_sprite_sheet_15: -4993188683613679871
+      Powers_attack_full_sprite_sheet_16: -5528079575400795550
+      Powers_attack_full_sprite_sheet_17: -5121868407156976678
+      Powers_attack_full_sprite_sheet_18: -395859608841917726
+      Powers_attack_full_sprite_sheet_19: -1281182669836923917
+      Powers_attack_full_sprite_sheet_2: 1120622133787428519
+      Powers_attack_full_sprite_sheet_20: 838961813629789822
+      Powers_attack_full_sprite_sheet_21: -2150025882164413277
+      Powers_attack_full_sprite_sheet_22: -4712439844030443080
+      Powers_attack_full_sprite_sheet_23: 2630893417999326820
+      Powers_attack_full_sprite_sheet_24: 1791556306528727038
+      Powers_attack_full_sprite_sheet_25: -1946529197615857165
+      Powers_attack_full_sprite_sheet_26: -554611103972557560
+      Powers_attack_full_sprite_sheet_27: -3084203104340108881
+      Powers_attack_full_sprite_sheet_28: -4367330510155388822
+      Powers_attack_full_sprite_sheet_29: 3674666628610360825
+      Powers_attack_full_sprite_sheet_3: -2821844950763839924
+      Powers_attack_full_sprite_sheet_30: 672293048826484798
+      Powers_attack_full_sprite_sheet_31: 5203983998346887609
+      Powers_attack_full_sprite_sheet_32: -1468830821651243217
+      Powers_attack_full_sprite_sheet_33: 960206339672179546
+      Powers_attack_full_sprite_sheet_34: -6664452233930214840
+      Powers_attack_full_sprite_sheet_35: -1262054938305679811
+      Powers_attack_full_sprite_sheet_36: 349202651267550715
+      Powers_attack_full_sprite_sheet_37: 5997646945946057401
+      Powers_attack_full_sprite_sheet_38: -2920151167774909455
+      Powers_attack_full_sprite_sheet_39: -6767282642088991679
+      Powers_attack_full_sprite_sheet_4: 8337632289909215440
+      Powers_attack_full_sprite_sheet_40: -2916841802572105786
+      Powers_attack_full_sprite_sheet_41: -4065715761117364515
+      Powers_attack_full_sprite_sheet_42: 6985899045343849388
+      Powers_attack_full_sprite_sheet_43: -411805633782054643
+      Powers_attack_full_sprite_sheet_44: -8525664447271521412
+      Powers_attack_full_sprite_sheet_45: 6456687050913756669
+      Powers_attack_full_sprite_sheet_46: 1848203561283942625
+      Powers_attack_full_sprite_sheet_47: -5134551688999938663
+      Powers_attack_full_sprite_sheet_48: -721077789579275357
+      Powers_attack_full_sprite_sheet_49: 8161312463276021128
+      Powers_attack_full_sprite_sheet_5: -7228040048434816712
+      Powers_attack_full_sprite_sheet_50: -3676608875233741893
+      Powers_attack_full_sprite_sheet_51: -1145274245171002429
+      Powers_attack_full_sprite_sheet_52: -4698180812807984924
+      Powers_attack_full_sprite_sheet_53: -7020184937854277378
+      Powers_attack_full_sprite_sheet_54: 2851346562031097296
+      Powers_attack_full_sprite_sheet_55: -698794164703213584
+      Powers_attack_full_sprite_sheet_6: -236512624696466420
+      Powers_attack_full_sprite_sheet_7: 7394707734618890055
+      Powers_attack_full_sprite_sheet_8: 4835926464986525729
+      Powers_attack_full_sprite_sheet_9: -6177420900471029535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
