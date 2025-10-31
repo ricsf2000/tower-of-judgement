@@ -179,8 +179,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tower of Judgement
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 50a896577524e9c45bc37d472f1193cc, type: 2}
-  m_sharedMaterial: {fileID: -147683786076071479, guid: 50a896577524e9c45bc37d472f1193cc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8ca4c1cf7efb14edd9b9231c16a09855, type: 2}
+  m_sharedMaterial: {fileID: -4357295456951922683, guid: 8ca4c1cf7efb14edd9b9231c16a09855, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -378,7 +378,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1652,8 +1652,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
-  m_sharedMaterial: {fileID: 6532932040620531989, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f2a5c6b8c5b41bea44eed09c7aedc5, type: 2}
+  m_sharedMaterial: {fileID: 6615532421061644444, guid: b1f2a5c6b8c5b41bea44eed09c7aedc5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
