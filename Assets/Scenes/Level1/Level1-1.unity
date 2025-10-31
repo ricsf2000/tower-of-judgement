@@ -3208,6 +3208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 154ac8a97169b934eac637489e8c39df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  defaultVolume: 0.2
 --- !u!82 &1135365769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3221,7 +3222,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

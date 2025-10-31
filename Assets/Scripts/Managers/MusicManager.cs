@@ -4,11 +4,15 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance { get; private set; }
+
+    [Range(0f, 1f)]
+    public float defaultVolume = 0.3f; // lower by default
+
     private AudioSource source;
 
     void Awake()
     {
-        // Make sure only one MusicManager exists
+        // Ensure only one MusicManager exists
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -20,15 +24,14 @@ public class MusicManager : MonoBehaviour
 
         source = GetComponent<AudioSource>();
         source.loop = true;
-        source.playOnAwake = false; // don't auto-play on awake
-        source.spatialBlend = 0f;   // 2D sound
-        source.volume = 1f;
+        source.playOnAwake = false;
+        source.spatialBlend = 0f; // 2D
+        source.volume = defaultVolume; // apply volume immediately
     }
 
     void Start()
     {
-        // Play the clip set in the AudioSource automatically when the game starts
-        if (source != null && source.clip && !source.isPlaying)
+        if (source.clip && !source.isPlaying)
             source.Play();
     }
 
@@ -38,6 +41,7 @@ public class MusicManager : MonoBehaviour
         if (!restart && source.clip == clip && source.isPlaying) return;
 
         source.clip = clip;
+        source.volume = defaultVolume;
         source.Play();
     }
 }
