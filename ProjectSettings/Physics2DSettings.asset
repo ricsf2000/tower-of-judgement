@@ -48,7 +48,7 @@ Physics2DSettings:
   m_UseSubStepping: 0
   m_UseSubStepContacts: 0
   m_QueriesHitTriggers: 1
-  m_QueriesStartInColliders: 1
+  m_QueriesStartInColliders: 0
   m_CallbacksOnDisable: 1
   m_ReuseCollisionCallbacks: 1
   m_AutoSyncTransforms: 0

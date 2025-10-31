@@ -33,11 +33,14 @@ public class PlayerDash : MonoBehaviour
     public void TryDash(Vector2 moveInput, Vector2 lastMove)
     {
         if (!canDash || isDashing || currentDashCount <= 0) return;
-        if (controller != null && controller.isFalling) return;
+
+        FallableCharacter fallable = GetComponent<FallableCharacter>();
+        if (fallable != null && fallable.IsFalling) return;
 
         Vector2 dashDir = moveInput != Vector2.zero ? moveInput.normalized : lastMove;
         StartCoroutine(PerformDash(dashDir));
     }
+
 
     private IEnumerator PerformDash(Vector2 dashDir)
     {
@@ -47,6 +50,7 @@ public class PlayerDash : MonoBehaviour
         isDashing = true;
         canDash = false;
         currentDashCount--;
+        controller.moveSpeedMultiplier = 1f;
 
         if (dmgChar != null)
             dmgChar.Invincible = true;

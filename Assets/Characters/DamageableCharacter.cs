@@ -23,6 +23,7 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
     protected DamageFlash _damageFlash;
 
     protected bool isAlive = true;
+    public bool IsAlive => isAlive;
     protected bool _targetable = true;
     public bool _invincible = false;
     public bool invincibleOverride = false;
@@ -124,6 +125,21 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
 
         PlayImpactSound();
 
+        if (TryGetComponent(out EnemyAI enemyAI))
+        {
+            Debug.Log($"[DamageableCharacter] {name} was hit — attempting to stun.");
+
+            // Optional: Check for shield logic later (enemyAI.HasActiveShield())
+            // if (!enemyAI.HasActiveShield()) // Only stun if shield is gone
+            enemyAI.ApplyStun(0.7f);
+        }
+        
+        // Allow falling into holes when hit
+        if (TryGetComponent(out FallableCharacter fallable))
+        {
+            fallable.OnHit(0.7f); // temporarily ignore GroundEdge collisions for 0.7 seconds
+        }
+
         if (canTurnInvincible)
             Invincible = true;
     }
@@ -139,6 +155,18 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
         hitReaction?.TriggerHit();
 
         PlayImpactSound();
+
+        if (TryGetComponent(out EnemyAI enemyAI))
+        {
+            // Optional: Check for shield logic later (enemyAI.HasActiveShield())
+            enemyAI.ApplyStun(0.7f);
+        }
+
+        // Allow falling into holes when hit
+        if (TryGetComponent(out FallableCharacter fallable))
+        {
+            fallable.OnHit(0.7f); // temporarily ignore GroundEdge collisions for 0.7 seconds
+        }
 
         if (canTurnInvincible)
             Invincible = true;

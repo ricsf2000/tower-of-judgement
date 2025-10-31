@@ -42,7 +42,7 @@ public class PlayerDamageable : DamageableCharacter
         base.OnHit(damage, knockback);
 
         // Screen shake
-        CinemachineShake.Instance?.Shake(1f, 3.5f, 0.25f);
+        CinemachineShake.Instance?.Shake(1f, 3.5f, 0.50f);
 
         // Player UI
         if (GameEvents.Instance != null)
@@ -52,8 +52,30 @@ public class PlayerDamageable : DamageableCharacter
         if (PlayerData.Instance != null)
             PlayerData.Instance.currentHealth = _health;
 
+        // Trigger vignette overlay
         StartCoroutine(DamageVignetteEffect());
     }
+
+    public override void OnHit(float damage)
+    {
+        if (Invincible) return;
+
+        base.OnHit(damage);
+
+        // Screen shake (optional for fall)
+        CinemachineShake.Instance?.Shake(1f, 3.5f, 0.50f);
+
+        // UI and persistent updates
+        if (GameEvents.Instance != null)
+            GameEvents.Instance.PlayerHealthChanged(_health, maxHealth);
+
+        if (PlayerData.Instance != null)
+            PlayerData.Instance.currentHealth = _health;
+
+        // Trigger vignette overlay
+        StartCoroutine(DamageVignetteEffect());
+    }
+
 
     protected override IEnumerator DeathSequence()
     {
@@ -109,7 +131,11 @@ public class PlayerDamageable : DamageableCharacter
             controller.canMove = true;
             controller.Rb.simulated = true;
             controller.Animator.SetBool("isAlive", true);
-            controller.transform.position = controller.respawnPoint;
+            var fallable = GetComponent<FallableCharacter>();
+            if (fallable != null && fallable.respawnPoint != null)
+            {
+                controller.transform.position = fallable.respawnPoint.position;
+            }
         }
 
         // Restore targetability and rigidbody state

@@ -9,12 +9,12 @@ public class Slime : MonoBehaviour
     public DetectionZone detectionZone;
     Rigidbody2D rb;
 
-    DamageableCharacter damageableCharacter;
+    private EnemyDamageable damageableCharacter;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        damageableCharacter = GetComponent<DamageableCharacter>();
+        damageableCharacter = GetComponent<EnemyDamageable>();
     }
 
     void FixedUpdate()

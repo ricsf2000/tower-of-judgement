@@ -12,6 +12,7 @@ public class Seraphim : MonoBehaviour
     public float moveSpeed = 50.0f;
     public float preferredDistance = 5f;   // where it likes to stay from player
     public float stopThreshold = 0.5f;     // buffer zone (to prevent constant back-forth movement)
+    public float maxVelocity = 3.5f;
 
     [Header("Enrage Settings")]
     public float enragedSpeedMultiplier = 2.0f;   // temporary speed boost
@@ -33,9 +34,9 @@ public class Seraphim : MonoBehaviour
     private bool isCharging = false;
     private bool canAttack = true;
     private Vector2 lockedDirection;
+    public EyeFollow eyeFollow;
 
     
-
     private bool canMove = true;
     private bool isDead = false;
 
@@ -56,6 +57,11 @@ public class Seraphim : MonoBehaviour
     public float maxSpawnDelay = 2.0f;
     private bool hasSpawned = false;
 
+    [Header("Aim Line Settings")]
+    public LineRenderer aimLine;
+    public Color warningColor = new Color(1f, 0.2f, 0.2f, 0.4f);
+    public float lineWidth = 0.05f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -72,60 +78,72 @@ public class Seraphim : MonoBehaviour
         // If not wave-spawned, enable AI immediately
         if (damageableCharacter == null || !damageableCharacter.SpawnedByWave)
             hasSpawned = true;
+
+        if (aimLine != null)
+        {
+            aimLine.enabled = false;
+            aimLine.startWidth = lineWidth;
+            aimLine.endWidth = lineWidth;
+            aimLine.startColor = warningColor;
+            aimLine.endColor = warningColor;
+        }
+        
+        Collider2D myCollider = GetComponent<Collider2D>();
+        Collider2D[] holeColliders = FindObjectsOfType<Collider2D>();
+
+        foreach (var holeCol in holeColliders)
+        {
+            if (holeCol.gameObject.layer == LayerMask.NameToLayer("GroundEdge"))
+                Physics2D.IgnoreCollision(myCollider, holeCol);
+        }
     }
 
     void Update()
     {
+        if (isDead) return;
+
         if (!damageableCharacter.Targetable || !hasSpawned)
             return;
 
-        // Only attack if player is detected
-        bool playerDetected = detectionZone != null && detectionZone.detectedObjs.Exists(obj => obj.CompareTag("Player"));
-        if (!playerDetected)
-            return;
-
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (!isCharging && canAttack && distanceToPlayer <= attackRange)
+        // Enrage check
+        if (damageableCharacter != null && damageableCharacter.Health < lastHealth && !isEnraged)
         {
-            StartCoroutine(ChargeAndFire());
+            StartCoroutine(EnrageRoutine());
         }
+
     }
 
-    void FixedUpdate()
+    public void Move(Vector2 moveInput)
     {
-        if (!damageableCharacter.Targetable || detectionZone.detectedObjs.Count == 0 || !hasSpawned)
-            return;
+        if (isDead || isCharging) return;
 
-        Transform target = detectionZone.detectedObjs[0].transform;
-        Vector2 toTarget = (target.position - transform.position);
-        float distance = toTarget.magnitude;
-        Vector2 direction = toTarget.normalized;
-
-        // Proportional force control
-        float distanceError = distance - preferredDistance;
-
-        // Only move if outside threshold
-        if (Mathf.Abs(distanceError) > stopThreshold)
+        if (moveInput.sqrMagnitude > 0.01f)
         {
-            // Force scales with how far off you are — smooth push/pull
-            if (canMove)
-                rb.AddForce(direction * moveSpeed * distanceError);
+            rb.AddForce(moveInput.normalized * moveSpeed * Time.deltaTime, ForceMode2D.Force);
+            rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
         }
-
-        // Cap top speed
-        rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, 4f);
-
-        if (damageableCharacter != null)
+        else
         {
-            if (damageableCharacter.Health < lastHealth && !isEnraged)
-            {
-                StartCoroutine(EnrageRoutine());
-            }
-
-            lastHealth = damageableCharacter.Health;
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, 0.2f);
         }
         
+    }
+
+    public void LookAt(Vector2 targetPos)
+    {
+        if (isDead || isCharging) return;
+
+        Vector2 dir = (targetPos - (Vector2)transform.position).normalized;
+        if (dir.sqrMagnitude > 0.01f)
+            lockedDirection = dir;
+    }
+
+    public void Attack()
+    {
+        if (!canAttack || isCharging || isDead)
+            return;
+
+        StartCoroutine(ChargeAndFire());
     }
 
     private IEnumerator EnrageRoutine()
@@ -139,91 +157,72 @@ public class Seraphim : MonoBehaviour
         isEnraged = false;
     }
 
-    // void OnCollisionEnter2D(Collision2D col)
-    // {
-    //     Collider2D collider = col.collider;
-
-    //     // Only deal damage if the collided object is the player
-    //     if (!col.collider.CompareTag("Player"))
-    //         return;
-
-    //     IDamageable damageable = collider.gameObject.GetComponent<IDamageable>();
-    //     if (damageable != null)
-    //     {
-    //         // Offset for collision detection changes the direction where the force comes from
-    //         Vector2 direction = (Vector2) (collider.gameObject.transform.position - transform.position).normalized;
-
-    //         // Knockback is in direction of swordCollider towards collider
-    //         Vector2 knockback = direction * knockbackForce;
-
-    //         // After making sure the collider has a script that implements IDamageable, we can run OnHit implementation and pass our Vector2 force
-    //         damageable.OnHit(damage, knockback);
-    //     }
-
-    // }
-
-
     private IEnumerator ChargeAndFire()
     {
         if (isDead) yield break;
 
         isCharging = true;
         canAttack = false;
+        canMove = false; // stop movement during attack
 
-        // Trigger the charge animation ONCE
+        // Instantly lock direction toward player's current position
+        lockedDirection = (player.position - transform.position).normalized;
+        Debug.Log("[Seraphim] Locked direction at time of firing prep.");
+
+        // Tell eye to freeze in that direction
+        if (eyeFollow != null)
+            eyeFollow.LockDirection(lockedDirection);
+
+        // Show warning line in locked direction
+        if (aimLine != null)
+            aimLine.enabled = true;
+
+
+        // Trigger charging animation
         irisAnimator.ResetTrigger("isCharging");
         irisAnimator.SetTrigger("isCharging");
 
-        // Make sure the animator actually switches states this frame
+        // Wait a single frame so the animation updates
         yield return null;
 
-        // Get animation info
-        AnimatorStateInfo stateInfo = irisAnimator.GetCurrentAnimatorStateInfo(0);
-        float animLength = stateInfo.length;
-
-        // Optionally sync chargeTime to animation
-        // chargeTime = animLength;
+        // Charge-up delay (visual + sound telegraph)
         float chargeTimer = 0f;
-
-        // Charge phase
-        float lockInRatio = 0.9f; // Lock direction at this percentage of the charge
-        bool hasLockedDirection = false;
-
         while (chargeTimer < chargeTime)
         {
             chargeTimer += Time.deltaTime;
 
-            if (!hasLockedDirection)
-            {
-                // Track the player until lock-in point
-                Vector2 dirToPlayer = (player.position - transform.position).normalized;
-                lockedDirection = dirToPlayer;
+            // Reposition line so it stays anchored to firePoint even if Seraphim moves
+            if (aimLine != null)
+                UpdateAimLine(lockedDirection);
 
-                if (chargeTimer >= chargeTime * lockInRatio)
-                {
-                    hasLockedDirection = true;
-                    Debug.Log("[Seraphim] Locked laser direction!");
-                }
-            }
+            // Pulse line brightness
+            float pulse = Mathf.PingPong(Time.time * 5f, 0.3f) + 0.7f;
+            Color c = new Color(1f, 0.2f, 0.2f, pulse * 0.5f);
+            aimLine.startColor = c;
+            aimLine.endColor = c;
 
             yield return null;
         }
 
-        // Resume animator speed so we can play the next animation
-        irisAnimator.speed = 1f;
+        // Hide warning line right before firing
+        if (aimLine != null)
+            aimLine.enabled = false;
 
-        // Fire the laser
+        // Fire laser in frozen direction
         FireLaser(lockedDirection);
+        Debug.Log("[Seraphim] Laser fired in locked direction!");
 
-        // Return to Idle AFTER firing
+        if (eyeFollow != null)
+            eyeFollow.UnlockDirection();
+
+        // Play idle animation again
         irisAnimator.ResetTrigger("isCharging");
         irisAnimator.SetTrigger("isIdle");
 
-        // Wait for the laser cooldown
+        // Cooldown before next attack
         yield return new WaitForSeconds(attackCooldown);
-        if (isDead) yield break;
 
-        // Ready for next cycle
+        canMove = true;
         isCharging = false;
         canAttack = true;
     }
@@ -244,7 +243,7 @@ public class Seraphim : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
 
         // Instantiate and align the laser
-        LaserController laser = Instantiate(laserPrefab, firePoint.position, rotation);
+        LaserController laser = Instantiate(laserPrefab, firePoint.position, rotation, transform);
         laser.transform.right = fireDir;
 
         // (optional) trigger attack animation
@@ -265,6 +264,9 @@ public class Seraphim : MonoBehaviour
 
     public void onDeath()
     {
+        NoPushing KinematicObject = GetComponent<NoPushing>();
+        KinematicObject.DisableShell();
+
         if (isDead) return;
         isDead = true;
         StopAllCoroutines();
@@ -279,7 +281,7 @@ public class Seraphim : MonoBehaviour
             Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
         }
     }
-    
+
     public IEnumerator SpawnDelay()
     {
         float delay = Random.Range(minSpawnDelay, maxSpawnDelay);
@@ -287,6 +289,19 @@ public class Seraphim : MonoBehaviour
         hasSpawned = true;
 
         Debug.Log($"[{name}] Finished spawn delay ({delay:F2}s) — AI active.");
+    }
+    
+    private void UpdateAimLine(Vector2 direction)
+    {
+        if (aimLine == null || firePoint == null)
+            return;
+
+        Vector3 start = firePoint.position;
+        Vector3 end = start + (Vector3)direction.normalized * attackRange;
+
+        aimLine.positionCount = 2;
+        aimLine.SetPosition(0, start);
+        aimLine.SetPosition(1, end);
     }
 
 }

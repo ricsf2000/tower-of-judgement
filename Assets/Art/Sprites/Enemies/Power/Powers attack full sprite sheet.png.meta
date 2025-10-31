@@ -1,0 +1,1641 @@
+fileFormatVersion: 2
+guid: eb5b003759d362e4583d54aaa8252e99
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 806915861967351078
+    second: Powers attack full sprite sheet_0
+  - first:
+      213: -6033154386157868895
+    second: Powers attack full sprite sheet_1
+  - first:
+      213: -753885531915927699
+    second: Powers attack full sprite sheet_2
+  - first:
+      213: 7680320881904015220
+    second: Powers attack full sprite sheet_3
+  - first:
+      213: -5509368861516768221
+    second: Powers attack full sprite sheet_4
+  - first:
+      213: -3631491313224303235
+    second: Powers attack full sprite sheet_5
+  - first:
+      213: -3253990375450901689
+    second: Powers attack full sprite sheet_6
+  - first:
+      213: -8689812884201120592
+    second: Powers attack full sprite sheet_7
+  - first:
+      213: 8173719465631834096
+    second: Powers attack full sprite sheet_8
+  - first:
+      213: -5046000545126942787
+    second: Powers attack full sprite sheet_9
+  - first:
+      213: 5036353929572293521
+    second: Powers attack full sprite sheet_10
+  - first:
+      213: 4878265285065928291
+    second: Powers attack full sprite sheet_11
+  - first:
+      213: 4657948187337495882
+    second: Powers attack full sprite sheet_12
+  - first:
+      213: -1182222745789145074
+    second: Powers attack full sprite sheet_13
+  - first:
+      213: 8145176042752108378
+    second: Powers attack full sprite sheet_14
+  - first:
+      213: 2135677317726960792
+    second: Powers attack full sprite sheet_15
+  - first:
+      213: 8359389021481862363
+    second: Powers attack full sprite sheet_16
+  - first:
+      213: -5442245745536461839
+    second: Powers attack full sprite sheet_17
+  - first:
+      213: -1822079719209061296
+    second: Powers attack full sprite sheet_18
+  - first:
+      213: -8821525977442145325
+    second: Powers attack full sprite sheet_19
+  - first:
+      213: 8698150616874312441
+    second: Powers attack full sprite sheet_20
+  - first:
+      213: 8325230176396620473
+    second: Powers attack full sprite sheet_21
+  - first:
+      213: -2265224112686496336
+    second: Powers attack full sprite sheet_22
+  - first:
+      213: 6826396428286811902
+    second: Powers attack full sprite sheet_23
+  - first:
+      213: 1255871482367344166
+    second: Powers attack full sprite sheet_24
+  - first:
+      213: 6618236219684548464
+    second: Powers attack full sprite sheet_25
+  - first:
+      213: 8884788279405906243
+    second: Powers attack full sprite sheet_26
+  - first:
+      213: 1398160193466450938
+    second: Powers attack full sprite sheet_27
+  - first:
+      213: -3772585249775958121
+    second: Powers attack full sprite sheet_28
+  - first:
+      213: -1850637486413643094
+    second: Powers attack full sprite sheet_29
+  - first:
+      213: -4045154734184090714
+    second: Powers attack full sprite sheet_30
+  - first:
+      213: 2152143601318544645
+    second: Powers attack full sprite sheet_31
+  - first:
+      213: 4297438072921828188
+    second: Powers attack full sprite sheet_32
+  - first:
+      213: -3045515761047012398
+    second: Powers attack full sprite sheet_33
+  - first:
+      213: -3191338564776383368
+    second: Powers attack full sprite sheet_34
+  - first:
+      213: -4236320390541350037
+    second: Powers attack full sprite sheet_35
+  - first:
+      213: -3766111531511392643
+    second: Powers attack full sprite sheet_36
+  - first:
+      213: 2227173304187603505
+    second: Powers attack full sprite sheet_37
+  - first:
+      213: -1977945132853928815
+    second: Powers attack full sprite sheet_38
+  - first:
+      213: -7557771713918900072
+    second: Powers attack full sprite sheet_39
+  - first:
+      213: 2538884560543241388
+    second: Powers attack full sprite sheet_40
+  - first:
+      213: 5312013775381859258
+    second: Powers attack full sprite sheet_41
+  - first:
+      213: 8793549543115258560
+    second: Powers attack full sprite sheet_42
+  - first:
+      213: -7966375186885885859
+    second: Powers attack full sprite sheet_43
+  - first:
+      213: 224569962229599038
+    second: Powers attack full sprite sheet_44
+  - first:
+      213: -8612665147330615630
+    second: Powers attack full sprite sheet_45
+  - first:
+      213: 1482090503203884289
+    second: Powers attack full sprite sheet_46
+  - first:
+      213: 4204084741322958189
+    second: Powers attack full sprite sheet_47
+  - first:
+      213: 4587805061932397440
+    second: Powers attack full sprite sheet_48
+  - first:
+      213: 6343553953368658869
+    second: Powers attack full sprite sheet_49
+  - first:
+      213: 199406945805706322
+    second: Powers attack full sprite sheet_50
+  - first:
+      213: -3584993530322731688
+    second: Powers attack full sprite sheet_51
+  - first:
+      213: -466520829661903262
+    second: Powers attack full sprite sheet_52
+  - first:
+      213: 803477956378145009
+    second: Powers attack full sprite sheet_53
+  - first:
+      213: 1875559947851057624
+    second: Powers attack full sprite sheet_54
+  - first:
+      213: -6397935334651543894
+    second: Powers attack full sprite sheet_55
+  - first:
+      213: -6103500345223071121
+    second: Powers attack full sprite sheet_56
+  - first:
+      213: 5111624929936241748
+    second: Powers attack full sprite sheet_57
+  - first:
+      213: 4862793967277324545
+    second: Powers attack full sprite sheet_58
+  - first:
+      213: 4963456560023653469
+    second: Powers attack full sprite sheet_59
+  - first:
+      213: 1410098741252288655
+    second: Powers attack full sprite sheet_60
+  - first:
+      213: 3029077525936874909
+    second: Powers attack full sprite sheet_61
+  - first:
+      213: 924390849405315305
+    second: Powers attack full sprite sheet_62
+  - first:
+      213: 8253547208932640845
+    second: Powers attack full sprite sheet_63
+  - first:
+      213: 8352351492224707852
+    second: Powers attack full sprite sheet_64
+  - first:
+      213: -3880864868447299256
+    second: Powers attack full sprite sheet_65
+  - first:
+      213: -1711147981230077716
+    second: Powers attack full sprite sheet_66
+  - first:
+      213: -222660448365025943
+    second: Powers attack full sprite sheet_67
+  - first:
+      213: 9011488487695911482
+    second: Powers attack full sprite sheet_68
+  - first:
+      213: -4465823016853147188
+    second: Powers attack full sprite sheet_69
+  - first:
+      213: -8724641623631921038
+    second: Powers attack full sprite sheet_70
+  - first:
+      213: 3027874266122762860
+    second: Powers attack full sprite sheet_71
+  - first:
+      213: 4143984033855708655
+    second: Powers attack full sprite sheet_72
+  - first:
+      213: 7488727971797476943
+    second: Powers attack full sprite sheet_73
+  - first:
+      213: -8805236211378614436
+    second: Powers attack full sprite sheet_74
+  - first:
+      213: -8019620687389760771
+    second: Powers attack full sprite sheet_75
+  - first:
+      213: 1182577145968054235
+    second: Powers attack full sprite sheet_76
+  - first:
+      213: -6631051737616009529
+    second: Powers attack full sprite sheet_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d213483bdb23b00800000000000000
+      internalID: 806915861967351078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 672
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a868f10d0ee54ca0800000000000000
+      internalID: -6033154386157868895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f38dc5a19a985f0800000000000000
+      internalID: -753885531915927699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47757e6662bf59a60800000000000000
+      internalID: 7680320881904015220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 672
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32cd1b8d53aca83b0800000000000000
+      internalID: -5509368861516768221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 672
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d395e14e95a9dc0800000000000000
+      internalID: -3631491313224303235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 672
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74385b07ef087d2d0800000000000000
+      internalID: -3253990375450901689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc5490f835976780800000000000000
+      internalID: -8689812884201120592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff5eaa3c82ee6170800000000000000
+      internalID: 8173719465631834096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7f7433d3109f9b0800000000000000
+      internalID: -5046000545126942787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 576
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b9c471739b4e540800000000000000
+      internalID: 5036353929572293521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e697c3e6413b340800000000000000
+      internalID: 4878265285065928291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 576
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a451d60923b54a040800000000000000
+      internalID: 4657948187337495882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00e9d72da6e79fe0800000000000000
+      internalID: -1182222745789145074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57e245b47a790170800000000000000
+      internalID: 8145176042752108378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c79f5843373ad10800000000000000
+      internalID: 2135677317726960792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd40abc6604820470800000000000000
+      internalID: 8359389021481862363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f31be424524974b0800000000000000
+      internalID: -5442245745536461839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054b910362ca6b6e0800000000000000
+      internalID: -1822079719209061296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db2ea9acd4a39580800000000000000
+      internalID: -8821525977442145325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 480
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f263a9b6e906b870800000000000000
+      internalID: 8698150616874312441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2bb798cb8298370800000000000000
+      internalID: 8325230176396620473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b50ca2dbae4090e0800000000000000
+      internalID: -2265224112686496336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efed70c326b3cbe50800000000000000
+      internalID: 6826396428286811902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e7c069570cd6110800000000000000
+      internalID: 1255871482367344166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07febe1e6c2b8db50800000000000000
+      internalID: 6618236219684548464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3490b82dddb1d4b70800000000000000
+      internalID: 8884788279405906243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af3c8a6c943476310800000000000000
+      internalID: 1398160193466450938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797c93e04b515abc0800000000000000
+      internalID: -3772585249775958121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa20b4ed2073156e0800000000000000
+      internalID: -1850637486413643094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3b77f8339bcd7c0800000000000000
+      internalID: -4045154734184090714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505c83ee333fddd10800000000000000
+      internalID: 2152143601318544645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5baeb4982193ab30800000000000000
+      internalID: 4297438072921828188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_33
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db70f81d872cb5d0800000000000000
+      internalID: -3045515761047012398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_34
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87caf78db7616b3d0800000000000000
+      internalID: -3191338564776383368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6be90fbc019535c0800000000000000
+      internalID: -4236320390541350037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76d2cb04851cbbc0800000000000000
+      internalID: -3766111531511392643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ac551f15288ee10800000000000000
+      internalID: 2227173304187603505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c570b916dec84e0800000000000000
+      internalID: -1977945132853928815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8986e524ba66d1790800000000000000
+      internalID: -7557771713918900072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_40
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca457e46e0eeb3320800000000000000
+      internalID: 2538884560543241388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_41
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb0e9b626018b940800000000000000
+      internalID: 5312013775381859258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cafe2028b6f80a70800000000000000
+      internalID: 8793549543115258560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d504e26a9ffb17190800000000000000
+      internalID: -7966375186885885859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b0be9d035dd1300800000000000000
+      internalID: 224569962229599038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_45
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6a8fb2eaaa97880800000000000000
+      internalID: -8612665147330615630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_46
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d8270d571719410800000000000000
+      internalID: 1482090503203884289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65e13c4cc8e75a30800000000000000
+      internalID: 4204084741322958189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_48
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083383785682baf30800000000000000
+      internalID: 4587805061932397440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3501406b4d80850800000000000000
+      internalID: 6343553953368658869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254ae7a8f8f64c200800000000000000
+      internalID: 199406945805706322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d3a07d06b8f3ec0800000000000000
+      internalID: -3584993530322731688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2668ea3f6c59689f0800000000000000
+      internalID: -466520829661903262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f0b6ceb1f6862b00800000000000000
+      internalID: 803477956378145009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_54
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d9cc9ed5d3570a10800000000000000
+      internalID: 1875559947851057624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers attack full sprite sheet_55
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaebc2af5b7f537a0800000000000000
+      internalID: -6397935334651543894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 86517a98f28550c49b91690f385e7720
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.4000000059604645},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Powers attack full sprite sheet_0: 806915861967351078
+      Powers attack full sprite sheet_1: -6033154386157868895
+      Powers attack full sprite sheet_10: 5036353929572293521
+      Powers attack full sprite sheet_11: 4878265285065928291
+      Powers attack full sprite sheet_12: 4657948187337495882
+      Powers attack full sprite sheet_13: -1182222745789145074
+      Powers attack full sprite sheet_14: 8145176042752108378
+      Powers attack full sprite sheet_15: 2135677317726960792
+      Powers attack full sprite sheet_16: 8359389021481862363
+      Powers attack full sprite sheet_17: -5442245745536461839
+      Powers attack full sprite sheet_18: -1822079719209061296
+      Powers attack full sprite sheet_19: -8821525977442145325
+      Powers attack full sprite sheet_2: -753885531915927699
+      Powers attack full sprite sheet_20: 8698150616874312441
+      Powers attack full sprite sheet_21: 8325230176396620473
+      Powers attack full sprite sheet_22: -2265224112686496336
+      Powers attack full sprite sheet_23: 6826396428286811902
+      Powers attack full sprite sheet_24: 1255871482367344166
+      Powers attack full sprite sheet_25: 6618236219684548464
+      Powers attack full sprite sheet_26: 8884788279405906243
+      Powers attack full sprite sheet_27: 1398160193466450938
+      Powers attack full sprite sheet_28: -3772585249775958121
+      Powers attack full sprite sheet_29: -1850637486413643094
+      Powers attack full sprite sheet_3: 7680320881904015220
+      Powers attack full sprite sheet_30: -4045154734184090714
+      Powers attack full sprite sheet_31: 2152143601318544645
+      Powers attack full sprite sheet_32: 4297438072921828188
+      Powers attack full sprite sheet_33: -3045515761047012398
+      Powers attack full sprite sheet_34: -3191338564776383368
+      Powers attack full sprite sheet_35: -4236320390541350037
+      Powers attack full sprite sheet_36: -3766111531511392643
+      Powers attack full sprite sheet_37: 2227173304187603505
+      Powers attack full sprite sheet_38: -1977945132853928815
+      Powers attack full sprite sheet_39: -7557771713918900072
+      Powers attack full sprite sheet_4: -5509368861516768221
+      Powers attack full sprite sheet_40: 2538884560543241388
+      Powers attack full sprite sheet_41: 5312013775381859258
+      Powers attack full sprite sheet_42: 8793549543115258560
+      Powers attack full sprite sheet_43: -7966375186885885859
+      Powers attack full sprite sheet_44: 224569962229599038
+      Powers attack full sprite sheet_45: -8612665147330615630
+      Powers attack full sprite sheet_46: 1482090503203884289
+      Powers attack full sprite sheet_47: 4204084741322958189
+      Powers attack full sprite sheet_48: 4587805061932397440
+      Powers attack full sprite sheet_49: 6343553953368658869
+      Powers attack full sprite sheet_5: -3631491313224303235
+      Powers attack full sprite sheet_50: 199406945805706322
+      Powers attack full sprite sheet_51: -3584993530322731688
+      Powers attack full sprite sheet_52: -466520829661903262
+      Powers attack full sprite sheet_53: 803477956378145009
+      Powers attack full sprite sheet_54: 1875559947851057624
+      Powers attack full sprite sheet_55: -6397935334651543894
+      Powers attack full sprite sheet_6: -3253990375450901689
+      Powers attack full sprite sheet_7: -8689812884201120592
+      Powers attack full sprite sheet_8: 8173719465631834096
+      Powers attack full sprite sheet_9: -5046000545126942787
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

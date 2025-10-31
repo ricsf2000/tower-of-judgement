@@ -1,0 +1,1783 @@
+fileFormatVersion: 2
+guid: 436a5831039e6144f87813d3709b8697
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8750522403360377021
+    second: Powers walk complete sprite sheet_0
+  - first:
+      213: 1632226592883435571
+    second: Powers walk complete sprite sheet_1
+  - first:
+      213: -3089083218136398631
+    second: Powers walk complete sprite sheet_2
+  - first:
+      213: -8141418078716627850
+    second: Powers walk complete sprite sheet_3
+  - first:
+      213: -5970770342333013196
+    second: Powers walk complete sprite sheet_4
+  - first:
+      213: 4844885912884351402
+    second: Powers walk complete sprite sheet_5
+  - first:
+      213: -9125115106240569755
+    second: Powers walk complete sprite sheet_6
+  - first:
+      213: -6746552785989785297
+    second: Powers walk complete sprite sheet_7
+  - first:
+      213: -4951403495736116897
+    second: Powers walk complete sprite sheet_8
+  - first:
+      213: -7990448684561188230
+    second: Powers walk complete sprite sheet_9
+  - first:
+      213: 5307041397056102853
+    second: Powers walk complete sprite sheet_10
+  - first:
+      213: -4867560239190844922
+    second: Powers walk complete sprite sheet_11
+  - first:
+      213: 6902480515073716271
+    second: Powers walk complete sprite sheet_12
+  - first:
+      213: -6242153910944375474
+    second: Powers walk complete sprite sheet_13
+  - first:
+      213: -6593586213585212697
+    second: Powers walk complete sprite sheet_14
+  - first:
+      213: 317249218097934442
+    second: Powers walk complete sprite sheet_15
+  - first:
+      213: -3262885531772253719
+    second: Powers walk complete sprite sheet_16
+  - first:
+      213: -5008315646195009025
+    second: Powers walk complete sprite sheet_17
+  - first:
+      213: 1925788326935529143
+    second: Powers walk complete sprite sheet_18
+  - first:
+      213: -6003341125340801989
+    second: Powers walk complete sprite sheet_19
+  - first:
+      213: -2284665456534419125
+    second: Powers walk complete sprite sheet_20
+  - first:
+      213: 9129679783107508346
+    second: Powers walk complete sprite sheet_21
+  - first:
+      213: 5205004620610396733
+    second: Powers walk complete sprite sheet_22
+  - first:
+      213: -3932433736781708968
+    second: Powers walk complete sprite sheet_23
+  - first:
+      213: 3370664936399281685
+    second: Powers walk complete sprite sheet_24
+  - first:
+      213: 1683011975508730151
+    second: Powers walk complete sprite sheet_25
+  - first:
+      213: -4351945335350502813
+    second: Powers walk complete sprite sheet_26
+  - first:
+      213: 8172367184451274780
+    second: Powers walk complete sprite sheet_27
+  - first:
+      213: 9215358572568877725
+    second: Powers walk complete sprite sheet_28
+  - first:
+      213: 8707371132556819711
+    second: Powers walk complete sprite sheet_29
+  - first:
+      213: -2153280203833077328
+    second: Powers walk complete sprite sheet_30
+  - first:
+      213: 6989745605495573633
+    second: Powers walk complete sprite sheet_31
+  - first:
+      213: -4698520426683839830
+    second: Powers walk complete sprite sheet_32
+  - first:
+      213: 4776979321203327667
+    second: Powers walk complete sprite sheet_33
+  - first:
+      213: 7506224485122460117
+    second: Powers walk complete sprite sheet_34
+  - first:
+      213: -7438135591799665977
+    second: Powers walk complete sprite sheet_35
+  - first:
+      213: 8518504909406540188
+    second: Powers walk complete sprite sheet_36
+  - first:
+      213: -615311380581320460
+    second: Powers walk complete sprite sheet_37
+  - first:
+      213: 2997647032245358015
+    second: Powers walk complete sprite sheet_38
+  - first:
+      213: -1067000064414062534
+    second: Powers walk complete sprite sheet_39
+  - first:
+      213: 165105794443815149
+    second: Powers walk complete sprite sheet_40
+  - first:
+      213: 3918274534325205165
+    second: Powers walk complete sprite sheet_41
+  - first:
+      213: -305200796994300218
+    second: Powers walk complete sprite sheet_42
+  - first:
+      213: 2311581607054542235
+    second: Powers walk complete sprite sheet_43
+  - first:
+      213: -4293782012935652692
+    second: Powers walk complete sprite sheet_44
+  - first:
+      213: 7804949670342902446
+    second: Powers walk complete sprite sheet_45
+  - first:
+      213: -4362374560909159159
+    second: Powers walk complete sprite sheet_46
+  - first:
+      213: 2299535408943108068
+    second: Powers walk complete sprite sheet_47
+  - first:
+      213: -4465891271039644716
+    second: Powers walk complete sprite sheet_48
+  - first:
+      213: -8246194565188169340
+    second: Powers walk complete sprite sheet_49
+  - first:
+      213: -3334666327682736971
+    second: Powers walk complete sprite sheet_50
+  - first:
+      213: -7548514787078922475
+    second: Powers walk complete sprite sheet_51
+  - first:
+      213: 6553092701048392870
+    second: Powers walk complete sprite sheet_52
+  - first:
+      213: 882617065932450596
+    second: Powers walk complete sprite sheet_53
+  - first:
+      213: -6723901050398260164
+    second: Powers walk complete sprite sheet_54
+  - first:
+      213: 1666495964519040564
+    second: Powers walk complete sprite sheet_55
+  - first:
+      213: -5527378722719956392
+    second: Powers walk complete sprite sheet_56
+  - first:
+      213: 5589298994479696201
+    second: Powers walk complete sprite sheet_57
+  - first:
+      213: -5192566178627874490
+    second: Powers walk complete sprite sheet_58
+  - first:
+      213: -811588056794338089
+    second: Powers walk complete sprite sheet_59
+  - first:
+      213: -6390700873886480869
+    second: Powers walk complete sprite sheet_60
+  - first:
+      213: -7918858401629889465
+    second: Powers walk complete sprite sheet_61
+  - first:
+      213: -5659122406720765506
+    second: Powers walk complete sprite sheet_62
+  - first:
+      213: -5283411480548197601
+    second: Powers walk complete sprite sheet_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3477b948c36ef8680800000000000000
+      internalID: -8750522403360377021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33863c53075d6a610800000000000000
+      internalID: 1632226592883435571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d40c550e2f5125d0800000000000000
+      internalID: -3089083218136398631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674f62a746fd30f80800000000000000
+      internalID: -8141418078716627850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433adc51200932da0800000000000000
+      internalID: -5970770342333013196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa114c6811e7c3340800000000000000
+      internalID: 4844885912884351402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56edaf568241d5180800000000000000
+      internalID: -9125115106240569755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2928a46cfd6f52a0800000000000000
+      internalID: -6746552785989785297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59750911c4194bb0800000000000000
+      internalID: -4951403495736116897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a3eb0b1493c1190800000000000000
+      internalID: -7990448684561188230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c162df580666a940800000000000000
+      internalID: 5307041397056102853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ad63c70c3f27cb0800000000000000
+      internalID: -4867560239190844922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f20360225798acf50800000000000000
+      internalID: 6902480515073716271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d58d0271a6f59a0800000000000000
+      internalID: -6242153910944375474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea2757e540ee74a0800000000000000
+      internalID: -6593586213585212697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a607ff5ab78176400800000000000000
+      internalID: 317249218097934442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e904f775e6e7b2d0800000000000000
+      internalID: -3262885531772253719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9f3897473ee7ab0800000000000000
+      internalID: -5008315646195009025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b60693b746c9ba10800000000000000
+      internalID: 1925788326935529143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b345196bd09dfaca0800000000000000
+      internalID: -6003341125340801989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4909a83fdc3b40e0800000000000000
+      internalID: -2284665456534419125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a783031446323be70800000000000000
+      internalID: 9129679783107508346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32efb90024eb3840800000000000000
+      internalID: 5205004620610396733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8514d50f9503d69c0800000000000000
+      internalID: -3932433736781708968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e91fea6e107ce20800000000000000
+      internalID: 3370664936399281685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7212de889724b5710800000000000000
+      internalID: 1683011975508730151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ad38c66c8ca93c0800000000000000
+      internalID: -4351945335350502813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18074bb7a41a6170800000000000000
+      internalID: 8172367184451274780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a91d3fbc783ef70800000000000000
+      internalID: 9215358572568877725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc3a8359ebc6d870800000000000000
+      internalID: 8707371132556819711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b116ac20130e12e0800000000000000
+      internalID: -2153280203833077328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c49ed4890900160800000000000000
+      internalID: 6989745605495573633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaac795d0908bceb0800000000000000
+      internalID: -4698520426683839830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b206b3126d3b4240800000000000000
+      internalID: 4776979321203327667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9401846677b2860800000000000000
+      internalID: 7506224485122460117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca4793961f66c890800000000000000
+      internalID: -7438135591799665977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c911996051fc73670800000000000000
+      internalID: 8518504909406540188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8f1363f89f577f0800000000000000
+      internalID: -615311380581320460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd0df6f718c99920800000000000000
+      internalID: 2997647032245358015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_39
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38e74938114131f0800000000000000
+      internalID: -1067000064414062534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8ae2468d29a4200800000000000000
+      internalID: 165105794443815149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8b9e6dde1806630800000000000000
+      internalID: 3918274534325205165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c61dfdfd75b3cbf0800000000000000
+      internalID: -305200796994300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9500dd6933641020800000000000000
+      internalID: 2311581607054542235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa3208320c6964c0800000000000000
+      internalID: -4293782012935652692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_45
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2479e6f50c05c60800000000000000
+      internalID: 7804949670342902446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_46
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9051fcf137bb573c0800000000000000
+      internalID: -4362374560909159159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_47
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef8c7e554799ef10800000000000000
+      internalID: 2299535408943108068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db0a20ec87f502c0800000000000000
+      internalID: -4465891271039644716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481d331bbb1af8d80800000000000000
+      internalID: -8246194565188169340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc930e84a2e8b1d0800000000000000
+      internalID: -3334666327682736971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f906e7bc94e3790800000000000000
+      internalID: -7548514787078922475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6acc132871341fa50800000000000000
+      internalID: 6553092701048392870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42be99f8b8faf3c00800000000000000
+      internalID: 882617065932450596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_54
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34c2229e97efa2a0800000000000000
+      internalID: -6723901050398260164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_55
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43687c01045902710800000000000000
+      internalID: 1666495964519040564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8528935465eca43b0800000000000000
+      internalID: -5527378722719956392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949096572dd219d40800000000000000
+      internalID: 5589298994479696201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_58
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6419d2a629c40f7b0800000000000000
+      internalID: -5192566178627874490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_59
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dce2da56f8acb4f0800000000000000
+      internalID: -811588056794338089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_60
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16c7322a6baf47a0800000000000000
+      internalID: -6390700873886480869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c9b385d309a1290800000000000000
+      internalID: -7918858401629889465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_62
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb184f68722c671b0800000000000000
+      internalID: -5659122406720765506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powers walk complete sprite sheet_63
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b34bb404d8da6b0800000000000000
+      internalID: -5283411480548197601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 62c9f2fad361e3643819bd2461c94998
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.3499999940395355},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Powers walk complete sprite sheet_0: -8750522403360377021
+      Powers walk complete sprite sheet_1: 1632226592883435571
+      Powers walk complete sprite sheet_10: 5307041397056102853
+      Powers walk complete sprite sheet_11: -4867560239190844922
+      Powers walk complete sprite sheet_12: 6902480515073716271
+      Powers walk complete sprite sheet_13: -6242153910944375474
+      Powers walk complete sprite sheet_14: -6593586213585212697
+      Powers walk complete sprite sheet_15: 317249218097934442
+      Powers walk complete sprite sheet_16: -3262885531772253719
+      Powers walk complete sprite sheet_17: -5008315646195009025
+      Powers walk complete sprite sheet_18: 1925788326935529143
+      Powers walk complete sprite sheet_19: -6003341125340801989
+      Powers walk complete sprite sheet_2: -3089083218136398631
+      Powers walk complete sprite sheet_20: -2284665456534419125
+      Powers walk complete sprite sheet_21: 9129679783107508346
+      Powers walk complete sprite sheet_22: 5205004620610396733
+      Powers walk complete sprite sheet_23: -3932433736781708968
+      Powers walk complete sprite sheet_24: 3370664936399281685
+      Powers walk complete sprite sheet_25: 1683011975508730151
+      Powers walk complete sprite sheet_26: -4351945335350502813
+      Powers walk complete sprite sheet_27: 8172367184451274780
+      Powers walk complete sprite sheet_28: 9215358572568877725
+      Powers walk complete sprite sheet_29: 8707371132556819711
+      Powers walk complete sprite sheet_3: -8141418078716627850
+      Powers walk complete sprite sheet_30: -2153280203833077328
+      Powers walk complete sprite sheet_31: 6989745605495573633
+      Powers walk complete sprite sheet_32: -4698520426683839830
+      Powers walk complete sprite sheet_33: 4776979321203327667
+      Powers walk complete sprite sheet_34: 7506224485122460117
+      Powers walk complete sprite sheet_35: -7438135591799665977
+      Powers walk complete sprite sheet_36: 8518504909406540188
+      Powers walk complete sprite sheet_37: -615311380581320460
+      Powers walk complete sprite sheet_38: 2997647032245358015
+      Powers walk complete sprite sheet_39: -1067000064414062534
+      Powers walk complete sprite sheet_4: -5970770342333013196
+      Powers walk complete sprite sheet_40: 165105794443815149
+      Powers walk complete sprite sheet_41: 3918274534325205165
+      Powers walk complete sprite sheet_42: -305200796994300218
+      Powers walk complete sprite sheet_43: 2311581607054542235
+      Powers walk complete sprite sheet_44: -4293782012935652692
+      Powers walk complete sprite sheet_45: 7804949670342902446
+      Powers walk complete sprite sheet_46: -4362374560909159159
+      Powers walk complete sprite sheet_47: 2299535408943108068
+      Powers walk complete sprite sheet_48: -4465891271039644716
+      Powers walk complete sprite sheet_49: -8246194565188169340
+      Powers walk complete sprite sheet_5: 4844885912884351402
+      Powers walk complete sprite sheet_50: -3334666327682736971
+      Powers walk complete sprite sheet_51: -7548514787078922475
+      Powers walk complete sprite sheet_52: 6553092701048392870
+      Powers walk complete sprite sheet_53: 882617065932450596
+      Powers walk complete sprite sheet_54: -6723901050398260164
+      Powers walk complete sprite sheet_55: 1666495964519040564
+      Powers walk complete sprite sheet_56: -5527378722719956392
+      Powers walk complete sprite sheet_57: 5589298994479696201
+      Powers walk complete sprite sheet_58: -5192566178627874490
+      Powers walk complete sprite sheet_59: -811588056794338089
+      Powers walk complete sprite sheet_6: -9125115106240569755
+      Powers walk complete sprite sheet_60: -6390700873886480869
+      Powers walk complete sprite sheet_61: -7918858401629889465
+      Powers walk complete sprite sheet_62: -5659122406720765506
+      Powers walk complete sprite sheet_63: -5283411480548197601
+      Powers walk complete sprite sheet_7: -6746552785989785297
+      Powers walk complete sprite sheet_8: -4951403495736116897
+      Powers walk complete sprite sheet_9: -7990448684561188230
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
