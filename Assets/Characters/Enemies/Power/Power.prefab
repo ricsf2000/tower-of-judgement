@@ -390,7 +390,7 @@ MonoBehaviour:
   separationForce: 800
   attackRange: 1.15
   attackDuration: 0.5
-  attackAnimationSpeed: 2
+  attackAnimationSpeed: 1.5
   attackCooldown: 1
   animator: {fileID: 539863521343703437}
   deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}

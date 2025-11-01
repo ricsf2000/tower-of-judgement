@@ -610,7 +610,7 @@ MonoBehaviour:
   enragedSpeedMultiplier: 1.2
   enrageDuration: 1.5
   attackRange: 4
-  chargeTime: 0.5
+  chargeTime: 1
   attackCooldown: 1
   laserPrefab: {fileID: 6693314044191345402, guid: 0f775ee58f04a1644aa30bc68ba4282a, type: 3}
   firePoint: {fileID: 4352353707234758389}
