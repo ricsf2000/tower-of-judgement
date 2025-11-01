@@ -13,7 +13,7 @@ public class PathFollowingBehaviour : SteeringBehaviour
         int bestDirIndex = Directions.GetClosestDirectionIndex(dirToWaypoint);
 
         // boost interest in that direction
-        interest[bestDirIndex] += 1.5f;
+        interest[bestDirIndex] += 1.0f;
 
         return (danger, interest);
     }

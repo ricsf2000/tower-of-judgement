@@ -1,54 +1,67 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class NPC_Controller : MonoBehaviour
 {
+    public int maxHealth = 100;
+    public int curHealth;
+    public int panicMultiplier = 1;
+
+
     public Node currentNode;
-    public List<Node> path;
+    public List<Node> path = new List<Node>();
+
+    public enum StateMachine
+    {
+        Patrol,
+        Engage,
+        Evade
+    }
+
+    public StateMachine currentState;
 
     public PlayerController player;
 
-    public enum StateMachine { Patrol, Engage, Evade }
-    public StateMachine currentState;
-
-    public Vector2 CurrentMoveDirection { get; private set; }
-    public bool HasPath => path != null && path.Count > 0;
+    public float speed = 3f;
 
     private void Start()
     {
-        if (currentNode == null)
-        {
-            currentNode = AStarManager.instance.FindNearestNode(transform.position);
-            if (currentNode == null)
-                Debug.LogWarning($"[{name}] No node found near start position!");
-        }
-
-        currentState = StateMachine.Patrol;
-        if (path == null)
-            path = new List<Node>();
+        curHealth = maxHealth;
     }
 
     private void Update()
     {
+        switch (currentState)
+        {
+            case StateMachine.Patrol:
+                Patrol();
+                break;
+            case StateMachine.Engage: 
+                Engage(); 
+                break;
+            case StateMachine.Evade: 
+                Evade(); 
+                break;
+        }
+
         bool playerSeen = Vector2.Distance(transform.position, player.transform.position) < 5.0f;
 
-        // only change state when conditions actually change
-        if (!playerSeen && currentState != StateMachine.Patrol)
+        if(!playerSeen && currentState != StateMachine.Patrol && curHealth > (maxHealth * 20) / 100)
         {
             currentState = StateMachine.Patrol;
             path.Clear();
-        }
-        else if (playerSeen && currentState != StateMachine.Engage)
+        }else if(playerSeen && currentState != StateMachine.Engage && curHealth > (maxHealth * 20) / 100)
         {
             currentState = StateMachine.Engage;
             path.Clear();
-        }
-
-        switch (currentState)
+        }else if(currentState != StateMachine.Evade && curHealth <= (maxHealth * 20) / 100)
         {
-            case StateMachine.Patrol:  Patrol();  break;
-            case StateMachine.Engage:  Engage();  break;
-            case StateMachine.Evade:   Evade();   break;
+            panicMultiplier = 2;
+            currentState = StateMachine.Evade;
+            path.Clear();
         }
 
         CreatePath();
@@ -56,44 +69,40 @@ public class NPC_Controller : MonoBehaviour
 
     void Patrol()
     {
-        if (path.Count == 0)
-            path = AStarManager.instance.GeneratePath(
-                currentNode,
-                AStarManager.instance.NodesInScene()[Random.Range(0, AStarManager.instance.NodesInScene().Length)]);
+        if(path.Count == 0)
+        {
+            path = AStarManager.instance.GeneratePath(currentNode, AStarManager.instance.AllNodes()[Random.Range(0, AStarManager.instance.AllNodes().Length)]);
+        }
     }
 
     void Engage()
     {
         if (path.Count == 0)
-            path = AStarManager.instance.GeneratePath(
-                currentNode,
-                AStarManager.instance.FindNearestNode(player.transform.position));
+        {
+            path = AStarManager.instance.GeneratePath(currentNode, AStarManager.instance.FindNearestNode(player.transform.position));
+        }
     }
 
     void Evade()
     {
         if (path.Count == 0)
-            path = AStarManager.instance.GeneratePath(
-                currentNode,
-                AStarManager.instance.FindFurthestNode(player.transform.position));
+        {
+            path = AStarManager.instance.GeneratePath(currentNode, AStarManager.instance.FindFurthestNode(player.transform.position));
+        }
     }
 
     public void CreatePath()
     {
         if (path.Count > 0)
         {
-            Vector3 targetPos = path[0].transform.position;
-            CurrentMoveDirection = ((Vector2)(targetPos - transform.position)).normalized;
+            int x = 0;
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(path[x].transform.position.x, path[x].transform.position.y, -2), (speed * panicMultiplier) * Time.deltaTime);
 
-            if (Vector2.Distance(transform.position, targetPos) < 0.1f)
+            if (Vector2.Distance(transform.position, path[x].transform.position) < 0.1f)
             {
-                currentNode = path[0];
-                path.RemoveAt(0);
+                currentNode = path[x];
+                path.RemoveAt(x);
             }
-        }
-        else
-        {
-            CurrentMoveDirection = Vector2.zero;
         }
     }
 }
