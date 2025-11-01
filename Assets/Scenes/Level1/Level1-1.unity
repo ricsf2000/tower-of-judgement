@@ -22119,15 +22119,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6134454
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6134454
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.6134454
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30213,7 +30213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: waves.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: 'barriers.Array.data[0]'
@@ -30225,11 +30225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: waves.Array.data[1].enemies.Array.size
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: waves.Array.data[2].enemies.Array.size
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: waves.Array.data[3].enemies.Array.size

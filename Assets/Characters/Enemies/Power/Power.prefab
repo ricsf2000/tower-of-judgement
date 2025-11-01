@@ -385,9 +385,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   moveSpeed: 2000
   maxVelocity: 3.5
-  stopThreshold: 0.5
-  attackRange: 1.2
-  attackCooldown: 2
+  stopThreshold: 0.2
+  separationRadius: 0.53
+  separationForce: 800
+  attackRange: 1.15
+  attackDuration: 0.5
+  attackAnimationSpeed: 1.5
+  attackCooldown: 1
   animator: {fileID: 539863521343703437}
   deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
 --- !u!114 &6833379330422499169
