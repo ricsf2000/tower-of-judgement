@@ -197,7 +197,8 @@ public class Seraphim : MonoBehaviour
 
             // Pulse line brightness
             float pulse = Mathf.PingPong(Time.time * 5f, 0.3f) + 0.7f;
-            Color c = new Color(1f, 0.2f, 0.2f, pulse * 0.5f);
+            Color c = warningColor;
+            c.a = pulse * 0.5f;
             aimLine.startColor = c;
             aimLine.endColor = c;
 
@@ -249,7 +250,7 @@ public class Seraphim : MonoBehaviour
         // (optional) trigger attack animation
         Debug.Log("Seraphim fired laser!");
 
-        // Pass Seraphim’s damage values to the beam
+        // Pass Seraphim's damage values to the beam
         laser.damage = damage;
         laser.knockbackForce = knockbackForce;
 

@@ -3428,7 +3428,7 @@ Transform:
   m_GameObject: {fileID: 1376793033}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000006624512, y: -0.00006835923, z: 0.000015992706, w: 1}
-  m_LocalPosition: {x: 1.5000005, y: -3.64, z: -10}
+  m_LocalPosition: {x: 11.935001, y: -5.837, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22119,15 +22119,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6134454
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6134454
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.6134454
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5324425869525767339, guid: 3c0022aadc58fd047afd071e7505dfe3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30225,11 +30225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: waves.Array.data[1].enemies.Array.size
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: waves.Array.data[2].enemies.Array.size
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
       propertyPath: waves.Array.data[3].enemies.Array.size

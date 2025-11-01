@@ -610,8 +610,8 @@ MonoBehaviour:
   enragedSpeedMultiplier: 1.2
   enrageDuration: 1.5
   attackRange: 4
-  chargeTime: 1.8
-  attackCooldown: 1.5
+  chargeTime: 0.5
+  attackCooldown: 1
   laserPrefab: {fileID: 6693314044191345402, guid: 0f775ee58f04a1644aa30bc68ba4282a, type: 3}
   firePoint: {fileID: 4352353707234758389}
   eyeFollow: {fileID: 8747761520767289753}
@@ -621,7 +621,7 @@ MonoBehaviour:
   minSpawnDelay: 0.5
   maxSpawnDelay: 1.5
   aimLine: {fileID: 2678641895545776164}
-  warningColor: {r: 1, g: 0, b: 0, a: 0.4}
+  warningColor: {r: 0.9098039, g: 0.7764706, b: 0.1254902, a: 0.4}
   lineWidth: 0.05
 --- !u!114 &2286261815326832428
 MonoBehaviour:
@@ -939,32 +939,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67be65b0456f30b4981ac23e0a0713a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  steeringBehaviours:
-  - {fileID: 8163542994641913694}
-  - {fileID: 913454814533971070}
   detectors:
   - {fileID: 5477929595595917421}
   - {fileID: 5003723401915935493}
   aiData: {fileID: 8643545723161450940}
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
-  attackDelay: 1
   attackDistance: 1.5
-  OnAttackPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4567515698610447161}
-        m_TargetAssemblyTypeName: Seraphim, Assembly-CSharp
-        m_MethodName: Attack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  attackDelay: 1
+  enableRetreat: 1
+  retreatRatio: 0.6
+  wallCheckDistance: 0.3
+  wallLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  steeringBehaviours:
+  - {fileID: 8163542994641913694}
+  - {fileID: 913454814533971070}
+  movementDirectionSolver: {fileID: 8870222977239898519}
   OnMovementInput:
     m_PersistentCalls:
       m_Calls:
@@ -995,14 +987,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  movementInput: {x: 0, y: 0}
-  movementDirectionSolver: {fileID: 8870222977239898519}
-  enableRetreat: 1
-  retreatRatio: 0.6
-  wallCheckDistance: 0.3
-  wallLayers:
-    serializedVersion: 2
-    m_Bits: 8
+  OnAttackPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4567515698610447161}
+        m_TargetAssemblyTypeName: Seraphim, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCancelAttack:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8643545723161450940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,6 +1020,10 @@ MonoBehaviour:
   targets: []
   obstacles: []
   currentTarget: {fileID: 0}
+  position: {x: 0, y: 0}
+  lastKnownTargetPosition: {x: 0, y: 0}
+  lastSeenTimer: 0
+  memoryDuration: 2.5
 --- !u!114 &6872124065978375845
 MonoBehaviour:
   m_ObjectHideFlags: 0
