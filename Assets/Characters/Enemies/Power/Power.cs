@@ -9,10 +9,6 @@ public class Power : MonoBehaviour
     public float maxVelocity = 3.5f;
     public float stopThreshold = 0.2f;
 
-    [Header("Separation Settings")]
-    public float separationRadius = 1.5f;      // How close is too close to allies
-    public float separationForce = 40f;        // Strength of the push-away force
-
     [Header("Attack Settings")]
     public float attackRange = 1.2f;
     public float attackDuration = 1.3f;
@@ -64,29 +60,15 @@ public class Power : MonoBehaviour
     {
         if (isDead || isAttacking) return;
 
-        // Calculate separation force from nearby enemies
-        Vector2 separationVector = CalculateSeparation();
-
         if (moveInput.sqrMagnitude > 0.01f)
         {
-            // Combine movement input with separation force
-            Vector2 combinedForce = (moveInput.normalized * moveSpeed + separationVector * separationForce) * Time.deltaTime;
-            rb.AddForce(combinedForce, ForceMode2D.Force);
+            rb.AddForce(moveInput.normalized * moveSpeed * Time.deltaTime, ForceMode2D.Force);
             rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
             UpdateAnimator(moveInput);
         }
         else
         {
-            // Even when idle, apply separation to prevent clustering
-            if (separationVector.sqrMagnitude > 0.01f)
-            {
-                rb.AddForce(separationVector * separationForce * Time.deltaTime, ForceMode2D.Force);
-                rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity * 0.5f);
-            }
-            else
-            {
-                rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, 0.2f);
-            }
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, 0.2f);
         }
 
         animator.SetBool("isMoving", moveInput.sqrMagnitude > 0.01f);
@@ -189,40 +171,4 @@ public class Power : MonoBehaviour
         }
     }
 
-    private Vector2 CalculateSeparation()
-    {
-        Vector2 separationVector = Vector2.zero;
-        int nearbyCount = 0;
-
-        // Find all nearby Power enemies
-        Collider2D[] nearbyColliders = Physics2D.OverlapCircleAll(transform.position, separationRadius);
-
-        foreach (Collider2D col in nearbyColliders)
-        {
-            // Skip self
-            if (col.gameObject == gameObject) continue;
-
-            // Only separate from other Power enemies
-            Power otherPower = col.GetComponent<Power>();
-            if (otherPower != null && !otherPower.isDead)
-            {
-                Vector2 awayFromOther = (Vector2)transform.position - (Vector2)col.transform.position;
-                float distance = awayFromOther.magnitude;
-
-                if (distance > 0.01f && distance < separationRadius)
-                {
-                    // Stronger push when closer
-                    separationVector += awayFromOther.normalized / distance;
-                    nearbyCount++;
-                }
-            }
-        }
-
-        if (nearbyCount > 0)
-        {
-            separationVector /= nearbyCount;
-        }
-
-        return separationVector;
-    }
 }
