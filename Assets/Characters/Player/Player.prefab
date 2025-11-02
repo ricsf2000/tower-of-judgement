@@ -568,7 +568,7 @@ MonoBehaviour:
   dashSpeed: 12
   dashDuration: 0.2
   maxDashCount: 2
-  dashCooldown: 0.2
+  dashCooldown: 0.8
   tr: {fileID: 8222107168446777735}
 --- !u!114 &6332478940356058002
 MonoBehaviour:

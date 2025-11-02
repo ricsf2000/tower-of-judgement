@@ -11,6 +11,8 @@ public class Power : MonoBehaviour
 
     [Header("Attack Settings")]
     public float attackRange = 1.2f;
+    public float attackDuration = 1.3f;
+    public float attackAnimationSpeed = 1.5f;
     public float attackCooldown = 1.5f;
     private bool canAttack = true;
     private bool isAttacking = false;
@@ -106,7 +108,9 @@ public class Power : MonoBehaviour
         animator.SetFloat("attackY", lastMoveDir.y);
         animator.SetTrigger("attack");
 
-        yield return new WaitForSeconds(1.3f);
+        animator.speed = attackAnimationSpeed;
+        yield return new WaitForSeconds(attackDuration);
+        animator.speed = 1.0f;
         isAttacking = false;
 
         // delay simulates attack cooldown
@@ -114,7 +118,7 @@ public class Power : MonoBehaviour
         canAttack = true;
         activeAttackRoutine = null;
     }
-    
+
     public void CancelAttack()
     {
         if (activeAttackRoutine != null)
@@ -166,4 +170,5 @@ public class Power : MonoBehaviour
             animator.SetFloat("lastMoveY", dir.y);
         }
     }
+
 }
