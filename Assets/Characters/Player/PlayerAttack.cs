@@ -151,7 +151,7 @@ public class PlayerAttack : MonoBehaviour
         // if (dir != Vector2.zero)
         //     rb.AddForce(dir * 3f, ForceMode2D.Impulse);
 
-        controller.moveSpeedMultiplier = 0.4f;
+        controller.moveSpeedMultiplier = 0.2f;
     }
 
 

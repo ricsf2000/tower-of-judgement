@@ -159,7 +159,7 @@ public class EnemyAI : MonoBehaviour
 
     private void HandleAttack(float distance)
     {
-        movementInput = Vector2.zero;
+        movementInput = movementDirectionSolver.GetDirectionToMove(steeringBehaviours, aiData);
 
         if (Time.time - lastAttackTime >= attackDelay)
         {

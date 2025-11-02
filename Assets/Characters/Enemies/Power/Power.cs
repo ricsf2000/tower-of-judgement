@@ -60,19 +60,24 @@ public class Power : MonoBehaviour
     {
         if (isDead || isAttacking) return;
 
-        if (moveInput.sqrMagnitude > 0.01f)
+        bool isMoving = moveInput.sqrMagnitude > 0.01f;
+
+        if (isMoving)
         {
             rb.AddForce(moveInput.normalized * moveSpeed * Time.deltaTime, ForceMode2D.Force);
             rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
-            UpdateAnimator(moveInput);
+
+            animator.SetFloat("moveX", lastMoveDir.x);
+            animator.SetFloat("moveY", lastMoveDir.y);
         }
         else
         {
             rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, 0.2f);
         }
 
-        animator.SetBool("isMoving", moveInput.sqrMagnitude > 0.01f);
+        animator.SetBool("isMoving", isMoving);
     }
+
 
     // Called by EnemyAI
     public void LookAt(Vector2 targetPos)

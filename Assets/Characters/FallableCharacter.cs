@@ -11,7 +11,7 @@ public class FallableCharacter : MonoBehaviour
     public Tilemap holeTilemap;
     public Transform sprite;                       // The child sprite transform (for visual sinking)
     public SortingGroup sortingGroup;               // To change sorting layer while falling
-    public Transform respawnPoint;                  // Optional: where to respawn (for player)
+    public Vector3 respawnPosition;                  // Where to respawn
     private Rigidbody2D rb;
 
     [Header("Falling Settings")]
@@ -39,6 +39,7 @@ public class FallableCharacter : MonoBehaviour
             if (holeObj != null)
                 holeTilemap = holeObj.GetComponent<Tilemap>();
         }
+        respawnPosition = transform.position; // fallback default
 
     }
 
@@ -97,7 +98,7 @@ public class FallableCharacter : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else if (respawnPoint != null)
+        else
         {
             Respawn();
         }
@@ -144,7 +145,7 @@ public class FallableCharacter : MonoBehaviour
         // Unfreeze and reset state
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        transform.position = respawnPoint.position;
+        transform.position =  respawnPosition;
         sprite.localPosition = spriteStartLocalPos;
         sortingGroup.sortingLayerName = "Player";
         fallVelocity = Vector3.zero;
