@@ -67,5 +67,8 @@ TagManager:
   - name: Decor
     uniqueID: 2829885261
     locked: 0
+  - name: Border
+    uniqueID: 1169721667
+    locked: 0
   m_RenderingLayers:
   - Default

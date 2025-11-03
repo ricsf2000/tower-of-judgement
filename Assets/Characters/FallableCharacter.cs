@@ -155,10 +155,20 @@ public class FallableCharacter : MonoBehaviour
         {
             if (TryGetComponent(out DamageableCharacter dmgChar))
             {
+                // Temporarily disable invincibility so damage applies
+                bool wasInvincible = dmgChar.Invincible;
+                dmgChar.Invincible = false;
+
                 float fallDamage = 1f;
                 dmgChar.OnHit(fallDamage);
+
                 Debug.Log($"[FallableCharacter] Player took {fallDamage} fall damage on respawn. New HP: {dmgChar.Health}");
 
+                // Immediately make player collidable again
+                dmgChar.Targetable = true;
+
+                // Restore previous invincibility state or start new brief one
+                dmgChar.Invincible = wasInvincible;
                 StartCoroutine(ReenableAfterDelay(dmgChar, 0.5f));
             }
         }
@@ -166,8 +176,8 @@ public class FallableCharacter : MonoBehaviour
 
     private IEnumerator ReenableAfterDelay(DamageableCharacter dmgChar, float delay)
     {
+        // dmgChar.Invincible = true;
         yield return new WaitForSeconds(delay);
-        dmgChar.Targetable = true;
         dmgChar.Invincible = false;
     }
 }
