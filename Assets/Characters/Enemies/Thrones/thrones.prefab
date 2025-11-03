@@ -84,6 +84,88 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1201499549926922022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1790947734002009134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905580707095501325}
+  - component: {fileID: 949173230765952506}
+  - component: {fileID: 4753231554930273106}
+  m_Layer: 9
+  m_Name: Hitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905580707095501325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790947734002009134}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4073770365493699094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &949173230765952506
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790947734002009134}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.004468918, y: -0.028734922}
+  m_Radius: 0.098320246
+--- !u!114 &4753231554930273106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790947734002009134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd96bca898180f41b74528e8c9f1833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  parent: {fileID: -7667731448326935395}
 --- !u!1 &2182632347709244129
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,8 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6da17c9bd5c7d409d51d8e454d1875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SeekBehaviour
-  targetRechedThreshold: 0.5
-  showGizmo: 1
+  targetRechedThreshold: 1
+  showGizmo: 0
 --- !u!1 &2356409278556515381
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,14 +383,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe611bae9d1f124d8ef4c742ec3b30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetDetector
-  targetDetectionRange: 5
+  targetDetectionRange: 3
   obstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 200
+    m_Bits: 136
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  showGizmos: 1
+  showGizmos: 0
 --- !u!1 &3542254578791173264
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +411,10 @@ GameObject:
   - component: {fileID: -6341552878214867340}
   - component: {fileID: 4021005728987182060}
   - component: {fileID: 1252664366244749922}
+  - component: {fileID: -7667731448326935395}
+  - component: {fileID: 8382754573417105799}
+  - component: {fileID: 5156091679730828704}
+  - component: {fileID: 2976036630956483914}
   m_Layer: 9
   m_Name: thrones
   m_TagString: Enemy
@@ -352,6 +438,7 @@ Transform:
   - {fileID: 5727348325183585688}
   - {fileID: 4908149129955716596}
   - {fileID: 3835674452049098960}
+  - {fileID: 905580707095501325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8496547969964814051
@@ -379,7 +466,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!210 &1296269962749378044
 SortingGroup:
@@ -427,8 +514,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.48, y: 0.48}
+  m_Offset: {x: -0.00043904287, y: -0.020541752}
+  m_Size: {x: 0.2265263, y: 0.2265263}
   m_Direction: 1
 --- !u!114 &2711476877303529487
 MonoBehaviour:
@@ -605,30 +692,78 @@ MonoBehaviour:
   aiData: {fileID: 4021005728987182060}
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
-  attackDistance: 0.5
+  attackDistance: 1.5
   attackDelay: 1
   enableRetreat: 0
   retreatRatio: 0.6
   wallCheckDistance: 1
   wallLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   steeringBehaviours:
   - {fileID: 9172986038612327889}
   - {fileID: 8845500068945361217}
   movementDirectionSolver: {fileID: 1407296861881279612}
   OnMovementInput:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -7667731448326935395}
+        m_TargetAssemblyTypeName: Thrones, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPointerInput:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -7667731448326935395}
+        m_TargetAssemblyTypeName: Thrones, Assembly-CSharp
+        m_MethodName: LookAt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnAttackPressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -7667731448326935395}
+        m_TargetAssemblyTypeName: Thrones, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCancelAttack:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-6341552878214867340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,13 +808,278 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9837b83634d6074bbd018f3aee341b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitReaction
-  animator: {fileID: 0}
+  animator: {fileID: 2567073755389332}
   renderers:
   - {fileID: 4129053402685763881}
   - {fileID: 5428091404681931713}
   - {fileID: 6367765943819748062}
   freezeDuration: 0.15
   freezeAnimation: 1
+--- !u!114 &-7667731448326935395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54aa117416771f446af288567147751d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Thrones
+  moveSpeed: 1000
+  maxVelocity: 3.5
+  stopThreshold: 0.2
+  attackCooldown: 1.5
+  chargeTime: 2
+  attackAnimationSpeed: 3
+  maxBounces: 5
+  hurlTimeout: 2
+  damage: 1
+  knockbackForce: 5
+  hitbox: {fileID: 4753231554930273106}
+  animator: {fileID: 2567073755389332}
+  eyeFollow: {fileID: 7212976495432339178}
+  tr: {fileID: 8382754573417105799}
+  ricochetPreview: {fileID: 2976036630956483914}
+  deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
+--- !u!96 &8382754573417105799
+TrailRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 0.2
+  m_PreviewTimeScale: 1
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.025352478
+        value: 0.24683762
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.8238507, b: 0, a: 1}
+      key1: {r: 1, g: 0.33333334, b: 0, a: 0.6039216}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_MinVertexDistance: 0.1
+  m_MaskInteraction: 0
+  m_Autodestruct: 0
+  m_Emitting: 0
+  m_ApplyActiveColorSpace: 1
+--- !u!120 &5156091679730828704
+LineRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.082271576
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 0, b: 0, a: 0.5686275}
+      key1: {r: 1, g: 0, b: 0, a: 0.5686275}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 64764
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_MaskInteraction: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
+  m_ApplyActiveColorSpace: 1
+--- !u!114 &2976036630956483914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c181c04d5bc95f44eb7d44c48cfee703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  maxBounces: 1
+  maxDistance: 30
+  bounceMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &4871732685514603177
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,11 +1177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5957ea6e8501c0648ba228af47c44348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleDetector
-  detectionRadius: 2
+  detectionRadius: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 72
-  showGizmos: 1
+    m_Bits: 8
+  showGizmos: 0
 --- !u!1 &5541696602499700304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1709,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Radius: 3
 --- !u!114 &1963529149649850836
 MonoBehaviour:
   m_ObjectHideFlags: 0

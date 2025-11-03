@@ -8,6 +8,7 @@ TagManager:
   - Canvas
   - Bullet
   - SpawnPoint
+  - PlayerWeapon
   layers:
   - Default
   - TransparentFX

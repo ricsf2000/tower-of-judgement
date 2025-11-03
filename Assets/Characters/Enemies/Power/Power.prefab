@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddbe39e269fcc04cae317193dd5b1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  preferredDistance: 2.5
+  preferredDistance: 2.2
   strafeStrength: 3
   strafeDirection: 1
   strafeStartRatio: 0.7
@@ -451,8 +451,6 @@ MonoBehaviour:
   moveSpeed: 1750
   maxVelocity: 3.5
   stopThreshold: 0.2
-  separationRadius: 0.53
-  separationForce: 800
   attackRange: 1.15
   attackDuration: 0.5
   attackAnimationSpeed: 1.5
@@ -1087,7 +1085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2573123252640993020
 Transform:
   m_ObjectHideFlags: 0
