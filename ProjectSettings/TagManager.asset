@@ -51,6 +51,9 @@ TagManager:
   - name: Ground
     uniqueID: 1266634305
     locked: 0
+  - name: Collectable
+    uniqueID: 2064337225
+    locked: 0
   - name: WalkInFront
     uniqueID: 294122809
     locked: 0

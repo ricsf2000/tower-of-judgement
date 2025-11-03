@@ -1041,7 +1041,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 280005865
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3707,7 +3707,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 292657557
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3791,6 +3791,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1502324839
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.232222
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.48690125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689914870942173211, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113930521389540073, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+      propertyPath: m_Name
+      value: Red Feather
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
 --- !u!1 &1531353745
 GameObject:
   m_ObjectHideFlags: 0
@@ -14676,7 +14733,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 294122809
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -30362,3 +30419,4 @@ SceneRoots:
   - {fileID: 2000517221}
   - {fileID: 1216786035}
   - {fileID: 548378511}
+  - {fileID: 1502324839}
