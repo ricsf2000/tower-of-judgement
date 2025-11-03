@@ -26,11 +26,10 @@ Transform:
   m_GameObject: {fileID: 1747082567010574618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.148, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7327550604064653259}
+  m_Children: []
   m_Father: {fileID: 7689914870942173211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3543493013769046673
@@ -101,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7327550604064653259}
   - component: {fileID: 876099771672569590}
+  - component: {fileID: 2987476397669188546}
   m_Layer: 0
   m_Name: FEATHER_1
   m_TagString: Untagged
@@ -117,11 +117,11 @@ Transform:
   m_GameObject: {fileID: 2243899255174092039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001, y: -0.188, z: 0}
+  m_LocalPosition: {x: 0.0009994507, y: -0.035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4554931205470843350}
+  m_Father: {fileID: 7689914870942173211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &876099771672569590
 SpriteRenderer:
@@ -167,8 +167,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2064337225
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -9193035748975598447, guid: f9925fc4caebb6d4cbaacd8a9a82baae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,6 +181,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2987476397669188546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243899255174092039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537612d134f3c4c95ab3a7fef9ae6fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  floatAmplitude: 0.02
+  floatSpeed: 6
+  shadowTransform: {fileID: 4554931205470843350}
+  shadowScaleMin: 0.7
+  shadowScaleMax: 1
+  enableGlow: 1
+  glowSpeed: 4
+  minBrightness: 1.5
+  maxBrightness: 1.9
 --- !u!1 &9113930521389540073
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +234,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7327550604064653259}
   - {fileID: 4554931205470843350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -250,7 +272,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0039691925, y: -0.062156916}
+  m_Offset: {x: 0, y: -0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -260,7 +282,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.37314224, y: 0.404881}
+  m_Size: {x: 0.12, y: 0.22}
   m_EdgeRadius: 0
 --- !u!114 &4284769369317053290
 MonoBehaviour:
