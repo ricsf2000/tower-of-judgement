@@ -17,12 +17,15 @@ public class EnemyWaveManager : MonoBehaviour
     [Header("Spawn Settings")]
     public Vector2 spawnAreaSize = new Vector2(10, 6);
     public Transform[] spawnPoints; // optional fixed spawn points
+    // public bool loopSpawnPoints = false; // if false, use random area when spawn points run out (hard code for now to not change all instances)
 
     [Header("Optional Barrier")]
     public List<BarrierController> barriers = new List<BarrierController>();
 
     private List<EnemyDamageable> activeEnemies = new List<EnemyDamageable>();
     private int currentWave = 0;
+    private int spawnedThisWave = 0;
+    private List<int> availableSpawnIndices = new List<int>();
 
     private void OnEnable()
     {
@@ -80,6 +83,18 @@ public class EnemyWaveManager : MonoBehaviour
     private void SpawnWave(EnemyWave wave)
     {
         activeEnemies.RemoveAll(e => e == null);
+        spawnedThisWave = 0; // Reset counter at start of wave
+        
+        // Reset available spawn points for this wave
+        availableSpawnIndices.Clear();
+        if (spawnPoints != null && spawnPoints.Length > 0)
+        {
+            for (int i = 0; i < spawnPoints.Length; i++)
+            {
+                availableSpawnIndices.Add(i);
+            }
+        }
+        
         if (wave == null || wave.enemies == null || wave.enemies.Length == 0)
         {
             Debug.LogWarning("[WaveManager] Empty wave — skipping");
@@ -94,8 +109,16 @@ public class EnemyWaveManager : MonoBehaviour
                 continue;
             }
 
+            // Check if we've run out of spawn points
+            if (spawnPoints != null && spawnPoints.Length > 0 && availableSpawnIndices.Count == 0)
+            {
+                Debug.LogWarning($"[WaveManager] Ran out of spawn points! Only spawned {spawnedThisWave} enemies.");
+                break; // Stop spawning
+            }
+
             Vector3 spawnPos = GetSpawnPosition();
             var e = Instantiate(enemyPrefab, spawnPos, Quaternion.identity, transform);
+            spawnedThisWave++; // Increment after each spawn
 
             // Get EnemyDamageable
             EnemyDamageable enemyDmg = e.GetComponent<EnemyDamageable>();
@@ -124,14 +147,22 @@ public class EnemyWaveManager : MonoBehaviour
     }
 
 
+
     private Vector3 GetSpawnPosition()
     {
-        if (spawnPoints != null && spawnPoints.Length > 0)
+        if (spawnPoints != null && spawnPoints.Length > 0 && availableSpawnIndices.Count > 0)
         {
-            int i = Random.Range(0, spawnPoints.Length);
-            return spawnPoints[i].position;
+            // Pick a random index from available spawn points
+            int randomIndex = Random.Range(0, availableSpawnIndices.Count);
+            int spawnPointIndex = availableSpawnIndices[randomIndex];
+            
+            // Remove this spawn point from available list
+            availableSpawnIndices.RemoveAt(randomIndex);
+            
+            return spawnPoints[spawnPointIndex].position;
         }
 
+        // Random area spawning (fallback if no spawn points)
         Vector2 offset = new Vector2(
             Random.Range(-spawnAreaSize.x / 2f, spawnAreaSize.x / 2f),
             Random.Range(-spawnAreaSize.y / 2f, spawnAreaSize.y / 2f)

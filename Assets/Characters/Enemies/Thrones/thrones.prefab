@@ -477,7 +477,7 @@ SortingGroup:
   m_GameObject: {fileID: 3542254578791173264}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!70 &9013896761757058223
@@ -569,8 +569,8 @@ MonoBehaviour:
   disableSimulation: 0
   canTurnInvincible: 0
   invincibilityTime: 0.25
-  _health: 10
-  maxHealth: 10
+  _health: 20
+  maxHealth: 20
   audioSource: {fileID: 0}
   impactSounds: []
   _invincible: 0
@@ -827,16 +827,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54aa117416771f446af288567147751d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Thrones
-  moveSpeed: 1000
+  moveSpeed: 2000
   maxVelocity: 3.5
   stopThreshold: 0.2
-  attackCooldown: 1.5
-  chargeTime: 2
-  attackAnimationSpeed: 3
+  attackCooldown: 1
+  chargeTime: 0.8
+  chargeSpeed: 3.5
+  attackAnimationSpeed: 6
   maxBounces: 5
   hurlTimeout: 2
   damage: 1
   knockbackForce: 5
+  IsHurling: 0
   hitbox: {fileID: 4753231554930273106}
   animator: {fileID: 2567073755389332}
   eyeFollow: {fileID: 7212976495432339178}
@@ -1075,6 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c181c04d5bc95f44eb7d44c48cfee703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  enablePreview: 0
   maxBounces: 1
   maxDistance: 30
   bounceMask:

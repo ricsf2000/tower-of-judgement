@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class RicochetPreview : MonoBehaviour
 {
     [Header("Settings")]
+    public bool enablePreview = false; // Toggle in inspector
     public int maxBounces = 5;
     public float maxDistance = 30f;
     public LayerMask bounceMask; // what layers to bounce on (e.g., Walls)
@@ -19,6 +20,12 @@ public class RicochetPreview : MonoBehaviour
 
     public void DrawPath(Vector2 origin, Vector2 direction)
     {
+        if (!enablePreview)
+        {
+            lr.positionCount = 0;
+            return;
+        }
+
         lr.positionCount = 1;
         lr.SetPosition(0, origin);
 
