@@ -336,7 +336,7 @@ SortingGroup:
   m_GameObject: {fileID: 1791772867190913764}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!82 &757094064623098892
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6832b9e5d0d7e5c40a5a8ceae271fa8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleAvoidanceBehaviour
-  radius: 1.5
+  radius: 1
   agentColliderSize: 0.6
   showGizmo: 1
 --- !u!1 &5819476483983586487

@@ -11,13 +11,14 @@ public class FallableCharacter : MonoBehaviour
     public Tilemap holeTilemap;
     public Transform sprite;                       // The child sprite transform (for visual sinking)
     public SortingGroup sortingGroup;               // To change sorting layer while falling
-    public Vector3 respawnPosition;                  // Where to respawn
+    public Vector3 respawnPosition;                 // Where to respawn
     private Rigidbody2D rb;
 
     [Header("Falling Settings")]
     public float fallGravity = 9.81f;               // How fast they sink visually
     public float fallDepth = -10f;                  // Y position threshold before respawn
     public bool destroyOnFall = false;              // If true, object is destroyed instead of respawned
+    public float moveLockDuration = 0.5f;           // Time before player can move again after respawn
 
     private Vector3 spriteStartLocalPos;
     private Vector3 fallVelocity;
@@ -40,7 +41,6 @@ public class FallableCharacter : MonoBehaviour
                 holeTilemap = holeObj.GetComponent<Tilemap>();
         }
         respawnPosition = transform.position; // fallback default
-
     }
 
     private void Update()
@@ -53,7 +53,7 @@ public class FallableCharacter : MonoBehaviour
         {
             StartCoroutine(HandleFall());
         }
-}
+    }
 
     private IEnumerator HandleFall()
     {
@@ -139,13 +139,12 @@ public class FallableCharacter : MonoBehaviour
         }
     }
 
-
     private void Respawn()
     {
         // Unfreeze and reset state
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        transform.position =  respawnPosition;
+        transform.position = respawnPosition;
         sprite.localPosition = spriteStartLocalPos;
         sortingGroup.sortingLayerName = "Player";
         fallVelocity = Vector3.zero;
@@ -155,29 +154,33 @@ public class FallableCharacter : MonoBehaviour
         {
             if (TryGetComponent(out DamageableCharacter dmgChar))
             {
-                // Temporarily disable invincibility so damage applies
-                bool wasInvincible = dmgChar.Invincible;
-                dmgChar.Invincible = false;
-
                 float fallDamage = 1f;
                 dmgChar.OnHit(fallDamage);
-
                 Debug.Log($"[FallableCharacter] Player took {fallDamage} fall damage on respawn. New HP: {dmgChar.Health}");
 
-                // Immediately make player collidable again
-                dmgChar.Targetable = true;
-
-                // Restore previous invincibility state or start new brief one
-                dmgChar.Invincible = wasInvincible;
                 StartCoroutine(ReenableAfterDelay(dmgChar, 0.5f));
+
+                // Prevent player from moving for a short time
+                if (TryGetComponent(out PlayerController controller))
+                {
+                    StartCoroutine(LockMovementTemporarily(controller));
+                }
             }
         }
     }
 
     private IEnumerator ReenableAfterDelay(DamageableCharacter dmgChar, float delay)
     {
-        // dmgChar.Invincible = true;
         yield return new WaitForSeconds(delay);
+        dmgChar.Targetable = true;
         dmgChar.Invincible = false;
+    }
+
+    // Locks player movement after respawn
+    private IEnumerator LockMovementTemporarily(PlayerController controller)
+    {
+        controller.canMove = false;
+        yield return new WaitForSeconds(moveLockDuration);
+        controller.canMove = true;
     }
 }
