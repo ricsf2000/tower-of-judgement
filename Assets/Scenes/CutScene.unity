@@ -797,7 +797,7 @@ MonoBehaviour:
   sceneGroup: 1
   menuClip: {fileID: 8300000, guid: f2b0de07b1c3bfc46841820005b85242, type: 3}
   backstoryClip: {fileID: 8300000, guid: f9e7b522074d64c54872c9a51d3c701b, type: 3}
-  roomsClip: {fileID: 8300000, guid: 0711a972b6ee449549f2412f95d940d5, type: 3}
+  roomsClip: {fileID: 8300000, guid: c8d7fd9105110443b9f211f60773662d, type: 3}
 --- !u!4 &562197086
 Transform:
   m_ObjectHideFlags: 0
