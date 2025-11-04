@@ -334,7 +334,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2356409278556515381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27b38fe52b54543498a21412f1b5fc81, type: 3}
   m_Name: 
@@ -530,7 +530,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitReaction
   animator: {fileID: 2567073755389332}
-  renderers: []
+  renderers:
+  - {fileID: 4129053402685763881}
+  - {fileID: 5428091404681931713}
+  - {fileID: 6367765943819748062}
   freezeDuration: 0.15
   freezeAnimation: 1
 --- !u!114 &6580486208914031918
@@ -571,7 +574,7 @@ MonoBehaviour:
   invincibilityTime: 0.25
   _health: 20
   maxHealth: 20
-  audioSource: {fileID: 0}
+  audioSource: {fileID: -9174796438358747869}
   impactSounds: []
   _invincible: 0
   invincibleOverride: 0
