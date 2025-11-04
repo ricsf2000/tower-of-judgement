@@ -144,4 +144,30 @@ public class PlayerDamageable : DamageableCharacter
 
         Debug.Log("[PlayerDamageable] Player reset after retry.");
     }
+    public void RestoreHealth(float amount)
+    {
+    if (amount <= 0) return;
+    if (!isAlive) return;
+
+    // Apply heal & clamp
+    _health = Mathf.Clamp(_health + amount, 0, maxHealth);
+
+    // UI update
+    GameEvents.Instance?.PlayerHealthChanged(_health, maxHealth);
+
+    // Persist
+    if (PlayerData.Instance != null)
+        PlayerData.Instance.currentHealth = _health;
+
+    // Stop damage vignette
+    StopCoroutine(nameof(DamageVignetteEffect));
+    if (_vignette != null)
+    {
+        _vignette.intensity.value = 0f;
+        _vignette.active = false;
+    }
+
+    Debug.Log($"[PlayerDamageable] Restored health. Now {_health}/{maxHealth}");
+    }
+
 }
