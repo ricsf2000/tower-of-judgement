@@ -132,9 +132,9 @@ public class PlayerDamageable : DamageableCharacter
             controller.Rb.simulated = true;
             controller.Animator.SetBool("isAlive", true);
             var fallable = GetComponent<FallableCharacter>();
-            if (fallable != null && fallable.respawnPoint != null)
+            if (fallable != null && fallable.respawnPosition != null)
             {
-                controller.transform.position = fallable.respawnPoint.position;
+                controller.transform.position = fallable.respawnPosition;
             }
         }
 

@@ -8,6 +8,7 @@ TagManager:
   - Canvas
   - Bullet
   - SpawnPoint
+  - PlayerWeapon
   layers:
   - Default
   - TransparentFX
@@ -68,6 +69,9 @@ TagManager:
     locked: 0
   - name: Decor
     uniqueID: 2829885261
+    locked: 0
+  - name: Border
+    uniqueID: 1169721667
     locked: 0
   m_RenderingLayers:
   - Default
