@@ -386,7 +386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 540211421
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 5666041778152302455, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -567,8 +567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
   dashSpeed: 12
   dashDuration: 0.2
-  maxDashCount: 2
-  dashCooldown: 0.8
+  maxDashCount: 4
+  dashCooldown: 0.5
   tr: {fileID: 8222107168446777735}
 --- !u!114 &6332478940356058002
 MonoBehaviour:
@@ -971,7 +971,7 @@ SortingGroup:
   m_GameObject: {fileID: 3585627279053337000}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!70 &8964575435719062601
@@ -1026,10 +1026,11 @@ MonoBehaviour:
   holeTilemap: {fileID: 0}
   sprite: {fileID: 7458944622017485863}
   sortingGroup: {fileID: 2346937247784646955}
-  respawnPoint: {fileID: 0}
+  respawnPosition: {x: 0, y: 0, z: 0}
   fallGravity: 1
   fallDepth: -10
   destroyOnFall: 0
+  moveLockDuration: 0.5
   ignoreDuringDash: 1
   playerDash: {fileID: 682738578252953489}
 --- !u!114 &2698546350920186056

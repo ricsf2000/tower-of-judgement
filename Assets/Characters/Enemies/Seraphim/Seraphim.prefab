@@ -549,7 +549,7 @@ SortingGroup:
   m_GameObject: {fileID: 4082208666007192400}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!70 &6012646269378953417
@@ -610,7 +610,7 @@ MonoBehaviour:
   enragedSpeedMultiplier: 1.2
   enrageDuration: 1.5
   attackRange: 4
-  chargeTime: 1
+  chargeTime: 0.6
   attackCooldown: 1
   laserPrefab: {fileID: 6693314044191345402, guid: 0f775ee58f04a1644aa30bc68ba4282a, type: 3}
   firePoint: {fileID: 4352353707234758389}
@@ -850,7 +850,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 540211421
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}

@@ -7767,6 +7767,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5964973423978292499, guid: 0f571097b9b73d84383a63cd4ac05fcd, type: 3}
   m_PrefabInstance: {fileID: 1814232240}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &791371152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791371153}
+  m_Layer: 0
+  m_Name: SpawnPoint (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &791371153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791371152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.297, y: 13.992, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797688733
 GameObject:
   m_ObjectHideFlags: 0
@@ -85065,5 +85096,6 @@ SceneRoots:
   - {fileID: 1394460665}
   - {fileID: 1001853258}
   - {fileID: 1327865310}
+  - {fileID: 791371153}
   - {fileID: 702034772}
   - {fileID: 1424834573}

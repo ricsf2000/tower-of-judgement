@@ -14,6 +14,7 @@ public class Thrones : MonoBehaviour
     private bool canAttack = true;
     private bool isAttacking = false;
     public float chargeTime = 2.0f;
+    public float chargeSpeed = 5f;
     private Coroutine activeAttackRoutine;
     private Vector2 lockedDirection;
     public float attackAnimationSpeed = 3f;
@@ -147,15 +148,15 @@ public class Thrones : MonoBehaviour
 
         animator.speed = attackAnimationSpeed;
 
-        // Lock the direction
-        lockedDirection = (player.position - transform.position).normalized;
-
         float chargeTimer = 0f;
 
-        // Charge-up phase: show predictive ricochet path (uses locked direction)
+        // Charge-up phase: show predictive ricochet path (continuously update direction)
         while (chargeTimer < chargeTime)
         {
             chargeTimer += Time.deltaTime;
+
+            // Update direction to track player during charge
+            lockedDirection = (player.position - transform.position).normalized;
 
             if (ricochetPreview != null)
             {
@@ -164,6 +165,9 @@ public class Thrones : MonoBehaviour
 
             yield return null;
         }
+
+        // Lock the direction right before launch
+        lockedDirection = (player.position - transform.position).normalized;
 
         // Clear ricochet preview before launching
         if (ricochetPreview != null)
@@ -196,7 +200,7 @@ public class Thrones : MonoBehaviour
         rb.angularDamping = 0f;
 
         direction = lockedDirection;
-        rb.linearVelocity = direction * 5f;
+        rb.linearVelocity = direction * chargeSpeed;
 
         Physics2D.IgnoreLayerCollision(gameObject.layer, enemyLayer, true);
 
@@ -286,6 +290,10 @@ public class Thrones : MonoBehaviour
 
         if (isDead) return;
         isDead = true;
+        
+        // Stop animation immediately
+        animator.speed = 0f;
+        
         rb.linearVelocity = Vector2.zero;
 
         if (audioSource != null && deathFX != null && audioSource.enabled)
@@ -335,7 +343,7 @@ public class Thrones : MonoBehaviour
     private void bounce(Vector2 dir)
     {
         direction = dir;
-        rb.linearVelocity = direction * 5f;
+        rb.linearVelocity = direction * chargeSpeed;
     }
     
 }
