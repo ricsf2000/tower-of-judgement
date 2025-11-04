@@ -86,6 +86,7 @@ public class Thrones : MonoBehaviour
         // Check for death condition
         if (!isDead && damageableCharacter != null && !damageableCharacter.IsAlive)
         {
+            Debug.Log($"[Thrones] Calling OnDeath() for {name}");
             OnDeath();
         }
     }
@@ -102,15 +103,15 @@ public class Thrones : MonoBehaviour
             rb.AddForce(moveInput.normalized * moveSpeed * Time.deltaTime, ForceMode2D.Force);
             rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
 
-            animator.SetFloat("moveX", lastMoveDir.x);
-            animator.SetFloat("moveY", lastMoveDir.y);
+            // animator.SetFloat("moveX", lastMoveDir.x);
+            // animator.SetFloat("moveY", lastMoveDir.y);
         }
         else
         {
             rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, 0.2f);
         }
 
-        animator.SetBool("isMoving", isMoving);
+        // animator.SetBool("isMoving", isMoving);
     }
 
 
@@ -274,8 +275,8 @@ public class Thrones : MonoBehaviour
 
         isAttacking = false;
         canAttack = true;
-        animator.ResetTrigger("attack");
-        animator.SetBool("isMoving", false);
+        // animator.ResetTrigger("attack");
+        // animator.SetBool("isMoving", false);
         // rb.linearVelocity = Vector2.zero;
 
         animator.Play("Power Idle Tree", 0, 0f);
@@ -285,8 +286,9 @@ public class Thrones : MonoBehaviour
 
     public void OnDeath()
     {
-        NoPushing KinematicObject = GetComponent<NoPushing>();
-        KinematicObject.DisableShell();
+        var kinematicObject = GetComponent<NoPushing>();
+        if (kinematicObject != null)
+            kinematicObject.DisableShell();
 
         if (isDead) return;
         isDead = true;
@@ -309,14 +311,14 @@ public class Thrones : MonoBehaviour
 
     private void UpdateAnimator(Vector2 dir)
     {
-        animator.SetFloat("moveX", dir.x);
-        animator.SetFloat("moveY", dir.y);
+        // animator.SetFloat("moveX", dir.x);
+        // animator.SetFloat("moveY", dir.y);
 
         if (dir.sqrMagnitude > 0.01f)
         {
             lastMoveDir = dir;
-            animator.SetFloat("lastMoveX", dir.x);
-            animator.SetFloat("lastMoveY", dir.y);
+            // animator.SetFloat("lastMoveX", dir.x);
+            // animator.SetFloat("lastMoveY", dir.y);
         }
     }
 

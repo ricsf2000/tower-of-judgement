@@ -22,13 +22,12 @@ public class FallCheckpoint : MonoBehaviour
 
         Vector3 newRespawnPos = Vector3.zero;
 
-        // --- TILEMAP CHECKPOINT ---
+        // Tilemap checkpoint
         if (checkpointTilemap != null)
         {
             Vector3 world = other.bounds.center;
             Vector3Int cellPos = checkpointTilemap.WorldToCell(world);
 
-            // manually scale if your grid cell size is 0.16
             Vector3 tileCenter = checkpointTilemap.GetCellCenterWorld(cellPos);
             fallable.respawnPosition = tileCenter;
 
@@ -39,21 +38,21 @@ public class FallCheckpoint : MonoBehaviour
                 fallable.respawnPosition = newRespawnPos;
 
                 if (debugLogs)
-                    Debug.Log($"[Checkpoint] ✅ Player stepped on tile {cellPos}, respawn set to {newRespawnPos}");
+                    Debug.Log($"[Checkpoint] Player stepped on tile {cellPos}, respawn set to {newRespawnPos}");
             }
             else if (debugLogs)
             {
-                Debug.LogWarning($"[Checkpoint] ⚠ Player entered tilemap trigger, but no tile found at {cellPos}");
+                Debug.LogWarning($"[Checkpoint] Player entered tilemap trigger, but no tile found at {cellPos}");
             }
         }
-        // --- TRANSFORM CHECKPOINT ---
+        // Transform checkpoint
         else
         {
             newRespawnPos = transform.position;
             fallable.respawnPosition = newRespawnPos;
 
             if (debugLogs)
-                Debug.Log($"[Checkpoint] ✅ Player reached single checkpoint at {newRespawnPos}");
+                Debug.Log($"[Checkpoint] Player reached single checkpoint at {newRespawnPos}");
         }
     }
 }
