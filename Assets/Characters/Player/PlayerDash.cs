@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerDash : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class PlayerDash : MonoBehaviour
     public int maxDashCount = 2;
     public float dashCooldown = 0.2f;
     public TrailRenderer tr;
+    public float dashDistance = 5f;
+
+    [Header("Dash Bridge Tilemap")]
+    public Tilemap dashBridgeTilemap;
 
     private int currentDashCount;
     private bool isDashing = false;
@@ -41,12 +46,46 @@ public class PlayerDash : MonoBehaviour
         StartCoroutine(PerformDash(dashDir));
     }
 
+    private bool TryGetDashBridge(Vector2 worldPos, Vector2 dashDir, out Vector2 targetWorldPos)
+    {
+        targetWorldPos = worldPos;
+
+        if (dashBridgeTilemap == null)
+            return false;
+
+        Vector3Int startCell = dashBridgeTilemap.WorldToCell(worldPos);
+
+        // Must be standing on a bridge tile
+        if (!dashBridgeTilemap.HasTile(startCell))
+            return false;
+
+        Vector3Int dir = new Vector3Int(
+            Mathf.RoundToInt(dashDir.x),
+            Mathf.RoundToInt(dashDir.y),
+            0
+        );
+
+        // Search forward for another bridge tile in that direction
+        for (int i = 1; i <= 10; i++)
+        {
+            Vector3Int check = startCell + dir * i;
+            if (dashBridgeTilemap.HasTile(check))
+            {
+                targetWorldPos = dashBridgeTilemap.GetCellCenterWorld(check);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
 
     private IEnumerator PerformDash(Vector2 dashDir)
     {
         if (controller != null)
             controller.canMove = true;
-        
+            
         isDashing = true;
         canDash = false;
         currentDashCount--;
@@ -57,7 +96,28 @@ public class PlayerDash : MonoBehaviour
 
         animator.Play("player_dash_tree", 0, 0f);
         tr.emitting = true;
-        rb.linearVelocity = dashDir * dashSpeed;
+
+        if (controller != null)
+            controller.canMove = false;
+
+        rb.linearVelocity = Vector2.zero;
+
+        // --- DASH BRIDGE CHECK ---
+        float finalDashDistance = dashDistance;
+        Vector2 targetPos;
+        if (TryGetDashBridge(transform.position, dashDir, out targetPos))
+        {
+            float bridgeDist = Vector2.Distance(rb.position, targetPos);
+            finalDashDistance = bridgeDist + 1.7f;  
+
+            Debug.Log($"[DashBridge] Found bridge tile at {targetPos}, dist={bridgeDist:F2}, newDuration={dashDuration:F2}");
+        }
+
+
+
+        // --- DASH START ---
+        dashSpeed = finalDashDistance / dashDuration;
+        rb.linearVelocity = dashDir.normalized * dashSpeed;
 
         int playerLayer = LayerMask.NameToLayer("Player");
         int enemyLayer = LayerMask.NameToLayer("Enemy");
@@ -68,6 +128,10 @@ public class PlayerDash : MonoBehaviour
         Physics2D.IgnoreLayerCollision(playerLayer, groundEdgeLayer, true);
 
         yield return new WaitForSeconds(dashDuration);
+
+        // --- DASH END ---
+        if (controller != null)
+            controller.canMove = true;
 
         rb.linearVelocity = Vector2.zero;
         tr.emitting = false;
@@ -87,4 +151,5 @@ public class PlayerDash : MonoBehaviour
         canDash = true;
         isDashing = false;
     }
+
 }

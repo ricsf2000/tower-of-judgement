@@ -326,8 +326,7 @@ public class Thrones : MonoBehaviour
     {
         if (!IsHurling) return;
 
-        lastBounceTime = Time.time; // reset timer each bounce
-
+        lastBounceTime = Time.time;
         currentBounces--;
 
         if (currentBounces <= 0)
@@ -336,11 +335,27 @@ public class Thrones : MonoBehaviour
             return;
         }
 
-        // Bounce
-        var firstContact = collision.contacts[0];
-        Vector2 newVelocity = Vector2.Reflect(direction.normalized, firstContact.normal);
-        bounce(newVelocity.normalized);
+        // Calculate reflection
+        var contact = collision.contacts[0];
+        Vector2 reflectDir = Vector2.Reflect(direction.normalized, contact.normal);
+
+        // Find direction toward player
+        if (player != null)
+        {
+            Vector2 toPlayer = ((Vector2)player.position - (Vector2)transform.position).normalized;
+
+            // Blend reflection and player direction
+            float homingStrength = 0.7f; // 0 = pure reflection, 1 = always go straight toward player
+            Vector2 blended = Vector2.Lerp(reflectDir, toPlayer, homingStrength).normalized;
+
+            bounce(blended);
+        }
+        else
+        {
+            bounce(reflectDir.normalized);
+        }
     }
+
     
     private void bounce(Vector2 dir)
     {

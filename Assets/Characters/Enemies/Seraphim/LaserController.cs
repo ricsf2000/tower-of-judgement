@@ -26,6 +26,10 @@ public class LaserController : MonoBehaviour
     [Header("Collision Settings")]
     public LayerMask obstacleMask;
 
+    [Header("Impact FX")]
+    public GameObject impactFXPrefab;
+    private GameObject activeImpactFX;  // currently spawned effect
+
     void Start()
     {
         boxCol = GetComponent<BoxCollider2D>();
@@ -61,14 +65,35 @@ public class LaserController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            // Subtract a tiny margin so the beam doesn’t overlap the wall visually
-            targetLength = hit.distance + 1.0f;
+            // Add a tiny margin so the beam doesn’t overlap the wall visually
+            targetLength = hit.distance + 0.5f;
             Debug.DrawRay(origin, direction * targetLength, Color.red);
+
+            // Handle impact FX
+            Vector2 impactPos = hit.point;
+
+            if (activeImpactFX == null)
+            {
+                // Instantiate once when the beam first hits
+                activeImpactFX = Instantiate(impactFXPrefab, impactPos, Quaternion.identity);
+            }
+            else
+            {
+                // Move existing FX to follow the hit point
+                activeImpactFX.transform.position = impactPos;
+            }
         }
         else
         {
             targetLength = laserLength;
             Debug.DrawRay(origin, direction * targetLength, Color.green);
+
+            // Destroy FX when no longer hitting
+            if (activeImpactFX != null)
+            {
+                Destroy(activeImpactFX);
+                activeImpactFX = null;
+            }
         }
 
         // Instantly set (or smoothly Lerp) to new length
@@ -80,15 +105,15 @@ public class LaserController : MonoBehaviour
 
     private void ApplyBeamLength(float worldLength)
     {
-        // --- middle scaling ---
+        // Middle scaling
         Vector3 middleScale = middlePart.localScale;
         middleScale.x = worldLength / baseSpriteWidth;
         middlePart.localScale = middleScale;
 
-        // --- end placement ---
+        // End placement
         endPart.localPosition = new Vector3(worldLength, 0f, 0f);
 
-        // --- collider sync ---
+        // Collider sync
         if (boxCol != null)
         {
             float adjusted = Mathf.Max(0f, worldLength - colliderLengthAdjustment);
@@ -137,6 +162,9 @@ public class LaserController : MonoBehaviour
     // Called by Animation Event at the end of the clip
     public void OnLaserEnd()
     {
+        if (activeImpactFX != null)
+            Destroy(activeImpactFX);
+        
         Destroy(gameObject);
     }
 
