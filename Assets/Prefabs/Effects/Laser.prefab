@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8167a0e2d582c20458175a787ed64123, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,7 +152,8 @@ MonoBehaviour:
   knockbackForce: 5
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
+  impactFXPrefab: {fileID: 8211167293663932103, guid: 0e54a7af40b09b746b1a62f0c2127f5b, type: 3}
 --- !u!95 &3159722076536029053
 Animator:
   serializedVersion: 7
@@ -327,7 +328,7 @@ SortingGroup:
   m_GameObject: {fileID: 5814053054456569410}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_SortAtRoot: 0
 --- !u!1 &8901261436227361772
@@ -387,7 +388,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8167a0e2d582c20458175a787ed64123, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -477,7 +478,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8167a0e2d582c20458175a787ed64123, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

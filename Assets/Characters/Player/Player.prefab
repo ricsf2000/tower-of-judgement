@@ -570,6 +570,7 @@ MonoBehaviour:
   maxDashCount: 4
   dashCooldown: 0.5
   tr: {fileID: 8222107168446777735}
+  dashDistance: 3.5
 --- !u!114 &6332478940356058002
 MonoBehaviour:
   m_ObjectHideFlags: 0

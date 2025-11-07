@@ -6,7 +6,7 @@ using UnityEngine;
 public class NodeGridGenerator : MonoBehaviour
 {
     public Tilemap walkableTilemap;
-    public Tilemap wallTilemap;
+    public List<Tilemap> wallTilemaps;
     public GameObject nodePrefab;
 
     private Dictionary<Vector3Int, Node> nodes = new();
@@ -18,7 +18,7 @@ public class NodeGridGenerator : MonoBehaviour
 
         foreach (Vector3Int pos in walkableTilemap.cellBounds.allPositionsWithin)
         {
-            if (walkableTilemap.HasTile(pos) && !wallTilemap.HasTile(pos))
+            if (walkableTilemap.HasTile(pos) && !IsWallTile(pos))
             {
                 Vector3 worldPos = walkableTilemap.GetCellCenterWorld(pos);
                 Node node = Instantiate(nodePrefab, worldPos, Quaternion.identity, transform).GetComponent<Node>();
@@ -44,7 +44,7 @@ public class NodeGridGenerator : MonoBehaviour
                 if (Mathf.Abs(dir.x) == 1 && Mathf.Abs(dir.y) == 1)
                 {
                     Vector3Int horizontal = kvp.Key + new Vector3Int(dir.x, 0, 0);
-                    Vector3Int vertical   = kvp.Key + new Vector3Int(0, dir.y, 0);
+                    Vector3Int vertical = kvp.Key + new Vector3Int(0, dir.y, 0);
 
                     // Only allow diagonal if both adjacent sides exist
                     if (!nodes.ContainsKey(horizontal) || !nodes.ContainsKey(vertical))
@@ -55,8 +55,16 @@ public class NodeGridGenerator : MonoBehaviour
                     node.connections.Add(neighbor);
             }
         }
-
-        
+    }
+    
+    private bool IsWallTile(Vector3Int pos)
+    {
+        foreach (Tilemap wall in wallTilemaps)
+        {
+            if (wall != null && wall.HasTile(pos))
+                return true;
+        }
+        return false;
     }
 }
 
