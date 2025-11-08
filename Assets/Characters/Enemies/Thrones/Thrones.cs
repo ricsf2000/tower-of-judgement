@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Thrones : MonoBehaviour
+public class Thrones : MonoBehaviour, IHitbox
 {
     [Header("Movement Settings")]
     public float moveSpeed = 60f;
@@ -30,6 +30,11 @@ public class Thrones : MonoBehaviour
     public ThroneHitbox hitbox;
     private float originalLinearDrag;
     private float originalAngularDrag;
+
+    public bool canBreakObjects = true;
+
+    public float Damage => damage;
+    public bool CanBreakObjects => canBreakObjects;
 
 
 

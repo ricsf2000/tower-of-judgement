@@ -1,11 +1,15 @@
 using UnityEngine;
 
-public class SwordAttack : MonoBehaviour
+public class SwordAttack : MonoBehaviour, IHitbox
 {
     [Header("Hitbox Settings")]
     public Collider2D swordCollider;
     public float damage = 3f;
     public float knockbackForce = 5000f;
+
+    public bool canBreakObjects = true;
+    public float Damage => damage;
+    public bool CanBreakObjects => canBreakObjects;
 
     [Header("Faction Settings")]
     [Tooltip("What tag this attack should damage (e.g. 'Enemy' for player sword, 'Player' for enemy sword)")]

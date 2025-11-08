@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LaserController : MonoBehaviour
+public class LaserController : MonoBehaviour, IHitbox
 {
     [Header("Laser Parts (Assign in Inspector)")]
     public Transform startPart;     // The glowing origin of the laser
@@ -22,6 +22,11 @@ public class LaserController : MonoBehaviour
     private BoxCollider2D boxCol;
     private SpriteRenderer middleRenderer;
     private float baseSpriteWidth; // the width of the unscaled sprite in world units
+    public bool canBreakObjects = true;
+
+    public float Damage => damage;
+    public bool CanBreakObjects => canBreakObjects;
+
 
     [Header("Collision Settings")]
     public LayerMask obstacleMask;
