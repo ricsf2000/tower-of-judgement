@@ -575,7 +575,10 @@ MonoBehaviour:
   _health: 20
   maxHealth: 20
   audioSource: {fileID: -9174796438358747869}
-  impactSounds: []
+  impactSounds:
+  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
+  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
+  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
   _invincible: 0
   invincibleOverride: 0
   showInvincibilityGizmo: 1
@@ -844,6 +847,7 @@ MonoBehaviour:
   knockbackForce: 5
   IsHurling: 0
   hitbox: {fileID: 4753231554930273106}
+  canBreakObjects: 1
   animator: {fileID: 2567073755389332}
   eyeFollow: {fileID: 7212976495432339178}
   tr: {fileID: 8382754573417105799}
