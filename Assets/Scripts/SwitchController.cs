@@ -57,20 +57,32 @@ public class SwitchController : MonoBehaviour
 
     private IEnumerator HandleBarrierSequence()
     {
+        // Freeze everything
+        GameFreezeManager.Instance?.FreezeGame();
+
         // Focus camera on the barrier before it disappears
         if (focusTarget != null && CameraFocusController.Instance != null)
         {
             CameraFocusController.Instance.FocusOnTarget(focusTarget);
-            yield return new WaitForSeconds(1f); // short delay for camera pan
+
+            // Wait in real-time so Time.timeScale = 0 doesn’t stop this
+            yield return new WaitForSecondsRealtime(1f); // short delay for camera pan
         }
 
         barrier?.DeactivateBarrier();
 
         // Wait for fade-out
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSecondsRealtime(1.5f);
 
         // Return camera to player
         if (CameraFocusController.Instance != null)
             CameraFocusController.Instance.ReturnToPlayer();
+
+        // Small delay before resuming gameplay
+        yield return new WaitForSecondsRealtime(0.5f);
+
+
+        // Unfreeze everything
+        GameFreezeManager.Instance?.UnfreezeGame();
     }
 }
