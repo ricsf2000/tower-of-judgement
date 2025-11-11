@@ -61,6 +61,10 @@ public class BossAI : MonoBehaviour
 
     private void Update()
     {
+        // Prevent boss AI during cutscene or before it's ended
+        if (CutsceneDialogueController.IsCutsceneActive)
+            return;
+            
         if (damageableCharacter == null || !damageableCharacter.IsAlive)
             return;
 

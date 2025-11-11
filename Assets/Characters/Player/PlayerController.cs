@@ -46,7 +46,16 @@ using UnityEngine.Rendering;
 
     void FixedUpdate()
     {
-        if (!canMove && PauseMenu.isPaused) return;
+        if (!canMove) return;
+
+        if (PauseMenu.isPaused || CutsceneDialogueController.IsCutsceneActive)
+        {
+            rb.linearVelocity = Vector2.zero;
+            animator.SetBool("isMoving", false);
+            animator.SetFloat("moveX", 0);
+            animator.SetFloat("moveY", 0);
+            return;
+        }
 
         if (movementInput != Vector2.zero)
         {
@@ -81,24 +90,33 @@ using UnityEngine.Rendering;
     
     void OnMove(InputValue movementValue)
     {
-        if (!PauseMenu.isPaused)
-            movementInput = movementValue.Get<Vector2>();
+        if (PauseMenu.isPaused || CutsceneDialogueController.IsCutsceneActive || !canMove)
+        {
+            movementInput = Vector2.zero;
+            return;
+        }
+    
+        movementInput = movementValue.Get<Vector2>();
     }
 
     void OnAttack()
     {
-        Debug.Log($"Paused? {PauseMenu.isPaused}");
-        if (playerAttack && !PauseMenu.isPaused) playerAttack.HandleAttack();
+        if (PauseMenu.isPaused || CutsceneDialogueController.IsCutsceneActive || !canAttack)
+            return;
+
+        playerAttack?.HandleAttack();
     }
 
     void OnShoot(InputValue value)
     {
-        if (playerShoot && !PauseMenu.isPaused) playerShoot.HandleShootInput(value);
+        if (CutsceneDialogueController.IsCutsceneActive || PauseMenu.isPaused) return;
+        if (playerAttack) playerAttack.HandleAttack();
     }
 
     void OnDash()
     {
-        if (playerDash && !PauseMenu.isPaused) playerDash.TryDash(movementInput, new Vector2(lastMoveX, lastMoveY));
+        if (CutsceneDialogueController.IsCutsceneActive || PauseMenu.isPaused) return;
+        if (playerDash) playerDash.TryDash(movementInput, new Vector2(lastMoveX, lastMoveY));
     }
 
     void OnPause()

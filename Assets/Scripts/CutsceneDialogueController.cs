@@ -32,6 +32,13 @@ public class CutsceneDialogueController : MonoBehaviour
 
     private string lastScheme;
 
+    public static bool IsCutsceneActive { get; private set; } = false;
+
+    public static void SetCutsceneActive(bool value)
+    {
+        IsCutsceneActive = value;
+    }
+
     private void Awake()
     {
         if (!playerInput)
@@ -54,6 +61,7 @@ public class CutsceneDialogueController : MonoBehaviour
 
     public void PlayDialogue()
     {
+        IsCutsceneActive = true;
         Debug.Log("[CutsceneDialogueController] PlayDialogue triggered by Timeline");
         if (dialogueRoutine != null)
             StopCoroutine(dialogueRoutine);
@@ -128,6 +136,9 @@ public class CutsceneDialogueController : MonoBehaviour
     private void Update()
     {
         if (!playerInput) return;
+
+        if (!IsCutsceneActive)
+            return;
 
         string currentScheme = playerInput.currentControlScheme;
         if (currentScheme != lastScheme)
@@ -219,6 +230,8 @@ public class CutsceneDialogueController : MonoBehaviour
 
     public void EndCutscene()
     {
+        IsCutsceneActive = false;
+
         if (skipPromptText != null)
         skipPromptText.gameObject.SetActive(false);
 
