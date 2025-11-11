@@ -1,9 +1,13 @@
 using UnityEngine;
 
-public class WaveHitbox : MonoBehaviour
+public class WaveHitbox : MonoBehaviour, IHitbox
 {
     private WaveProjectile parentProjectile;
     private float damage;
+
+    public float Damage => damage;
+    public bool canBreakObjects = true;
+    public bool CanBreakObjects => canBreakObjects;
 
     public void SetOwner(WaveProjectile owner)
     {
