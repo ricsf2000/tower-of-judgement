@@ -15,8 +15,8 @@ public class PlayerAttack : MonoBehaviour
     private Animator animator;
     private PlayerController controller;
     private PlayerSFX sfx;
+    private PlayerInput playerInput;
 
-    private PlayerControls controls;
     private Vector2 lookInput;
     private enum InputMode { KeyboardMouse, Controller }
     private InputMode currentInputMode = InputMode.KeyboardMouse;
@@ -30,15 +30,8 @@ public class PlayerAttack : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         controller = GetComponent<PlayerController>();
         sfx = GetComponent<PlayerSFX>();
-
-        controls = new PlayerControls();
-        controls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
-        controls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
-        controls.Player.Attack.performed += ctx => HandleAttack();
+        playerInput = GetComponent<PlayerInput>();
     }
-
-    private void OnEnable() => controls.Player.Enable();
-    private void OnDisable() => controls.Player.Disable();
 
     private void Update()
     {
@@ -48,23 +41,12 @@ public class PlayerAttack : MonoBehaviour
 
     private void DetectInputMode()
     {
-        if (Mouse.current != null)
-        {
-            if (Mouse.current.delta.ReadValue().sqrMagnitude > 0.01f ||
-                Mouse.current.leftButton.isPressed)
-            {
-                lastMouseInputTime = Time.time;
-                currentInputMode = InputMode.KeyboardMouse;
-            }
-        }
-
-        if (Gamepad.current != null)
-        {
-            Vector2 moveInput = controls.Player.Move.ReadValue<Vector2>();
-            if (moveInput.sqrMagnitude > 0.1f && Time.time > lastMouseInputTime + mousePriorityDuration)
-                currentInputMode = InputMode.Controller;
-        }
+        if (playerInput.currentControlScheme == "Keyboard&Mouse")
+            currentInputMode = InputMode.KeyboardMouse;
+        else if (playerInput.currentControlScheme == "Gamepad")
+            currentInputMode = InputMode.Controller;
     }
+
 
     public void HandleAttack()
     {
@@ -84,7 +66,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else if (currentInputMode == InputMode.Controller)
         {
-             Vector2 moveDir = controls.Player.Move.ReadValue<Vector2>();
+            Vector2 moveDir = controller.LastMoveDir;
             if (moveDir.sqrMagnitude > 0.1f)
             {
                 dir = GetAssistedDirection(moveDir.normalized);

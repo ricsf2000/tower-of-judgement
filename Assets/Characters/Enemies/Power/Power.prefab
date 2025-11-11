@@ -322,7 +322,10 @@ MonoBehaviour:
   _health: 8
   maxHealth: 8
   audioSource: {fileID: 757094064623098892}
-  impactSounds: []
+  impactSounds:
+  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
+  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
+  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
   _invincible: 0
   invincibleOverride: 0
   showInvincibilityGizmo: 1
@@ -781,15 +784,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9a5968c197093478301cb8aa8a4997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  swordCollider: {fileID: 7873735729456904555}
+  swordColliders:
+  - {fileID: 7873735729456904555}
   damage: 1
   knockbackForce: 10
+  canBreakObjects: 1
   targetTag: Player
   audioSource: {fileID: 757094064623098892}
-  impactSounds:
-  - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
-  - {fileID: 8300000, guid: 7899cc83d6907f64fa7fc0daf9ead7a2, type: 3}
-  - {fileID: 8300000, guid: be66f91830804bb4da6287a65729f793, type: 3}
+  impactSounds: []
   impactVolume: 0.15
 --- !u!82 &4211494438030496484
 AudioSource:

@@ -1,8 +1,12 @@
 using UnityEngine;
 
-public class ThroneHitbox : MonoBehaviour
+public class ThroneHitbox : MonoBehaviour, IHitbox
 {
     public Thrones parent;
+    public bool canBreakObjects = true;
+
+    public float Damage => parent.damage;
+    public bool CanBreakObjects => canBreakObjects;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

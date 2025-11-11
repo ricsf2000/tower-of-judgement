@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrarySourceAsset
+  m_Library:
+  - m_Name: Pot
+    m_Hash: 653276655
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: breakable pots (white)_4
+      m_Hash: 1026896070
+      m_Sprite: {fileID: 6874682733285117400, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6874682733285117400, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: PotBreak
+    m_Hash: 383178679
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: breakable pots_1
+      m_Hash: 430282605
+      m_Sprite: {fileID: 712106424782909616, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 712106424782909616, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+    - m_Name: breakable pots_2
+      m_Hash: 11323095
+      m_Sprite: {fileID: -2228334384404301237, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2228334384404301237, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+    - m_Name: breakable pots_3
+      m_Hash: 934016577
+      m_Sprite: {fileID: -737321356121686490, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -737321356121686490, guid: e89d422db2f4a73458ddebebb3327443, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638982097909215755
+  m_Version: 1

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1669308687265183843}
   - component: {fileID: 1279317548630270133}
-  - component: {fileID: -6000560292691649167}
   - component: {fileID: 2606521636945628508}
+  - component: {fileID: 5332044914332225558}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -47,19 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   deathPanel: {fileID: 0}
---- !u!114 &-6000560292691649167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7236485701672228981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc06f7cd86b434e4abda59243e798270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  deathPanel: {fileID: 0}
 --- !u!114 &2606521636945628508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,3 +59,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5c214528ac6224fab228c3f4a2f202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+--- !u!114 &5332044914332225558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236485701672228981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcee87c34659464eb164b17f10ff953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  pauseMenu: {fileID: 384516434011949134, guid: 9a4ecdc455501b94a9d4559852568153, type: 3}
+  firstSelectedButton: {fileID: 0}

@@ -1,11 +1,15 @@
 using UnityEngine;
 
-public class SwordAttack : MonoBehaviour
+public class SwordAttack : MonoBehaviour, IHitbox
 {
     [Header("Hitbox Settings")]
-    public Collider2D swordCollider;
+     public Collider2D[] swordColliders;
     public float damage = 3f;
     public float knockbackForce = 5000f;
+
+    public bool canBreakObjects = true;
+    public float Damage => damage;
+    public bool CanBreakObjects => canBreakObjects;
 
     [Header("Faction Settings")]
     [Tooltip("What tag this attack should damage (e.g. 'Enemy' for player sword, 'Player' for enemy sword)")]
@@ -22,8 +26,8 @@ public class SwordAttack : MonoBehaviour
     {
         parentTransform = transform.parent;
 
-        if (swordCollider == null)
-            Debug.LogWarning($"{name}: Sword collider not set!");
+        if (swordColliders == null || swordColliders.Length == 0)
+            Debug.LogWarning($"{name}: Sword colliders not set!");
 
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
@@ -31,6 +35,8 @@ public class SwordAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+        Debug.Log($"[SwordAttack] Triggered with {collider.name}");
+
         // Ignore hits on self or same faction
         if (collider.CompareTag(transform.root.tag))
             return;
@@ -68,15 +74,19 @@ public class SwordAttack : MonoBehaviour
 #if UNITY_EDITOR
     void OnDrawGizmos()
     {
-        if (swordCollider != null)
+        if (swordColliders != null)
         {
             Gizmos.color = Color.green;
-            Gizmos.matrix = swordCollider.transform.localToWorldMatrix;
+            foreach (var swordCollider in swordColliders)
+            {
+                if (swordCollider == null) continue;
+                Gizmos.matrix = swordCollider.transform.localToWorldMatrix;
 
-            if (swordCollider is BoxCollider2D box)
-                Gizmos.DrawWireCube(box.offset, box.size);
-            else if (swordCollider is CircleCollider2D circle)
-                Gizmos.DrawWireSphere(circle.offset, circle.radius);
+                if (swordCollider is BoxCollider2D box)
+                    Gizmos.DrawWireCube(box.offset, box.size);
+                else if (swordCollider is CircleCollider2D circle)
+                    Gizmos.DrawWireSphere(circle.offset, circle.radius);
+            }
         }
     }
 #endif

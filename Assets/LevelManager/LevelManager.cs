@@ -2,11 +2,14 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager manager { get; private set; }
     public GameObject deathPanel;
+    public GameObject firstSelectedButton;
 
     private void Awake()
     {
@@ -31,6 +34,21 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("[LevelManager] GameOver() called");
         deathPanel.SetActive(true);
+         // Disable gameplay input
+        var playerInput = FindFirstObjectByType<PlayerInput>();
+        if (playerInput != null)
+        {
+            Debug.Log("[LevelManager] Switching to UI action map (input locked)");
+            playerInput.SwitchCurrentActionMap("UI");
+        }
+
+        // Select Retry button automatically
+        if (EventSystem.current != null && firstSelectedButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(firstSelectedButton);
+            Debug.Log($"[LevelManager] Selected button: {firstSelectedButton.name}");
+        }
     }
     public void Retry()
     {
@@ -50,5 +68,12 @@ public class LevelManager : MonoBehaviour
         var player = FindFirstObjectByType<PlayerDamageable>();
         if (player != null)
             player.ResetPlayer(); // match the fresh PlayerData values
+        
+        var playerInput = FindFirstObjectByType<PlayerInput>();
+        if (playerInput != null)
+        {
+            Debug.Log("[LevelManager] Restoring Player action map");
+            playerInput.SwitchCurrentActionMap("Player");
+        }
     }
 }

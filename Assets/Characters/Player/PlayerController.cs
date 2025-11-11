@@ -21,6 +21,7 @@ using UnityEngine.Rendering;
     private Animator animator;
     public Rigidbody2D Rb => rb;
     public Animator Animator => animator;
+    private PauseMenu pauseMenu;
 
 
     private Vector2 movementInput = Vector2.zero;
@@ -40,11 +41,21 @@ using UnityEngine.Rendering;
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        pauseMenu = FindAnyObjectByType<PauseMenu>();
     }
 
     void FixedUpdate()
     {
         if (!canMove) return;
+
+        if (PauseMenu.isPaused || CutsceneDialogueController.IsCutsceneActive)
+        {
+            rb.linearVelocity = Vector2.zero;
+            animator.SetBool("isMoving", false);
+            animator.SetFloat("moveX", 0);
+            animator.SetFloat("moveY", 0);
+            return;
+        }
 
         if (movementInput != Vector2.zero)
         {
@@ -79,22 +90,45 @@ using UnityEngine.Rendering;
     
     void OnMove(InputValue movementValue)
     {
+        if (PauseMenu.isPaused || CutsceneDialogueController.IsCutsceneActive || !canMove)
+        {
+            movementInput = Vector2.zero;
+            return;
+        }
+    
         movementInput = movementValue.Get<Vector2>();
     }
 
     void OnAttack()
     {
-        if (playerAttack) playerAttack.HandleAttack();
+        if (PauseMenu.isPaused || CutsceneDialogueController.IsCutsceneActive || !canAttack)
+            return;
+
+        playerAttack?.HandleAttack();
     }
 
     void OnShoot(InputValue value)
     {
-        if (playerShoot) playerShoot.HandleShootInput(value);
+        if (CutsceneDialogueController.IsCutsceneActive || PauseMenu.isPaused) return;
+        if (playerAttack) playerAttack.HandleAttack();
     }
 
     void OnDash()
     {
+        if (CutsceneDialogueController.IsCutsceneActive || PauseMenu.isPaused) return;
         if (playerDash) playerDash.TryDash(movementInput, new Vector2(lastMoveX, lastMoveY));
+    }
+
+    void OnPause()
+    {
+        if (PauseMenu.isPaused)
+        {
+            pauseMenu.ResumeGame();
+        }
+        else if (!PauseMenu.isPaused)
+        {
+            pauseMenu.PauseGame();
+        }
     }
 
     private void SetIsMoving(bool value)

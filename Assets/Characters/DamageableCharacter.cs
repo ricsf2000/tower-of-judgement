@@ -123,8 +123,6 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
         var hitReaction = GetComponent<HitReaction>();
         hitReaction?.TriggerHit();
 
-        PlayImpactSound();
-
         if (TryGetComponent(out EnemyAI enemyAI))
         {
             Debug.Log($"[DamageableCharacter] {name} was hit — attempting to stun.");
@@ -153,8 +151,6 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
 
         var hitReaction = GetComponent<HitReaction>();
         hitReaction?.TriggerHit();
-
-        PlayImpactSound();
 
         if (TryGetComponent(out EnemyAI enemyAI))
         {
@@ -192,6 +188,8 @@ public abstract class DamageableCharacter : MonoBehaviour, IDamageable
         var canvas = GameObject.FindFirstObjectByType<Canvas>();
         textTransform.SetParent(canvas.transform);
         textTransform.GetComponent<HealthText>().SetDamageText(damageDealt);
+
+        PlayImpactSound();
     }
 
     protected virtual void HandleDeath()

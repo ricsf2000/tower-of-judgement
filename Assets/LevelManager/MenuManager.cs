@@ -4,6 +4,17 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
+    public void StartGame(string levelName)
+    {
+        // Only reset when starting a new run
+        if (PlayerData.Instance != null)
+        {
+            PlayerData.Instance.RestoreFullHealth();
+        }
+
+        SceneManager.LoadScene(levelName);
+    }
+
     public void ChangeScene(string name)
     {
         SceneManager.LoadScene(name);

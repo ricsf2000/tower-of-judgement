@@ -108,7 +108,7 @@ public class PlayerDash : MonoBehaviour
         if (TryGetDashBridge(transform.position, dashDir, out targetPos))
         {
             float bridgeDist = Vector2.Distance(rb.position, targetPos);
-            finalDashDistance = bridgeDist + 1.7f;  
+            finalDashDistance = bridgeDist + 1f;  
 
             Debug.Log($"[DashBridge] Found bridge tile at {targetPos}, dist={bridgeDist:F2}, newDuration={dashDuration:F2}");
         }

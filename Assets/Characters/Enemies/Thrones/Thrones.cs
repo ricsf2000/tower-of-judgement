@@ -30,6 +30,14 @@ public class Thrones : MonoBehaviour
     public ThroneHitbox hitbox;
     private float originalLinearDrag;
     private float originalAngularDrag;
+    [SerializeField] private float minVelocityThreshold = 10f;
+    [SerializeField] private float velocityCheckDelay = 1f; // grace period after launch
+    private float hurlStartTime; // store when the most recent bounce or launch happened
+
+    public bool canBreakObjects = true;
+
+    public float Damage => damage;
+    public bool CanBreakObjects => canBreakObjects;
 
 
 
@@ -179,12 +187,7 @@ public class Thrones : MonoBehaviour
             eyeFollow.LockDirection(lockedDirection);
 
         // Disable collision with player
-        Collider2D[] PlayerCollider = FindObjectsOfType<Collider2D>();
-        foreach (var playerCol in PlayerCollider)
-        {
-            if (playerCol.gameObject.layer == LayerMask.NameToLayer("Player"))
-                Physics2D.IgnoreCollision(myCollider, playerCol, true);
-        }
+        IgnorePlayerCollisions(true);
 
         // Launch
         IsHurling = true;
@@ -213,11 +216,7 @@ public class Thrones : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         // Enable collision with player
-        foreach (var playerCol in PlayerCollider)
-        {
-            if (playerCol.gameObject.layer == LayerMask.NameToLayer("Player"))
-                Physics2D.IgnoreCollision(myCollider, playerCol, false);
-        }
+        IgnorePlayerCollisions(false);
     }
 
 
@@ -252,6 +251,7 @@ public class Thrones : MonoBehaviour
 
     private IEnumerator HurlMonitor()
     {
+        hurlStartTime = Time.time;
         while (IsHurling)
         {
             // If it’s been too long since the last bounce, stop
@@ -259,6 +259,18 @@ public class Thrones : MonoBehaviour
             {
                 StopHurl();
                 yield break;
+            }
+
+            // Stop if velocity is too low
+            // Wait a bit before enforcing velocity threshold
+            if (Time.time - hurlStartTime > velocityCheckDelay)
+            {
+                if (rb.linearVelocity.magnitude < minVelocityThreshold)
+                {
+                    Debug.Log($"[Thrones] Hurl stopped (velocity too low: {rb.linearVelocity.magnitude:F2})");
+                    StopHurl();
+                    yield break;
+                }
             }
 
             yield return null;
@@ -326,8 +338,22 @@ public class Thrones : MonoBehaviour
     {
         if (!IsHurling) return;
 
+        // Ignore bouncing off breakable objects
+        if (collision.collider.GetComponent<HittableObject>() != null)
+        {
+            Physics2D.IgnoreCollision(myCollider, collision.collider, true);
+            rb.linearVelocity = direction.normalized * chargeSpeed;
+            return;
+        }
+
         lastBounceTime = Time.time;
         currentBounces--;
+
+        // Keep ignoring player collisions during hurl
+        IgnorePlayerCollisions(true);
+
+         // Reset the velocity check timer
+        hurlStartTime = Time.time;
 
         if (currentBounces <= 0)
         {
@@ -356,11 +382,22 @@ public class Thrones : MonoBehaviour
         }
     }
 
-    
+
     private void bounce(Vector2 dir)
     {
         direction = dir;
         rb.linearVelocity = direction * chargeSpeed;
     }
+    
+    private void IgnorePlayerCollisions(bool ignore)
+    {
+        Collider2D[] allColliders = FindObjectsOfType<Collider2D>();
+        foreach (var col in allColliders)
+        {
+            if (col.gameObject.layer == LayerMask.NameToLayer("Player"))
+                Physics2D.IgnoreCollision(myCollider, col, ignore);
+        }
+    }
+
     
 }
