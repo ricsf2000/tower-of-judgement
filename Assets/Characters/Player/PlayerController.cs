@@ -21,6 +21,7 @@ using UnityEngine.Rendering;
     private Animator animator;
     public Rigidbody2D Rb => rb;
     public Animator Animator => animator;
+    private PauseMenu pauseMenu;
 
 
     private Vector2 movementInput = Vector2.zero;
@@ -40,11 +41,12 @@ using UnityEngine.Rendering;
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        pauseMenu = FindAnyObjectByType<PauseMenu>();
     }
 
     void FixedUpdate()
     {
-        if (!canMove) return;
+        if (!canMove && PauseMenu.isPaused) return;
 
         if (movementInput != Vector2.zero)
         {
@@ -79,22 +81,36 @@ using UnityEngine.Rendering;
     
     void OnMove(InputValue movementValue)
     {
-        movementInput = movementValue.Get<Vector2>();
+        if (!PauseMenu.isPaused)
+            movementInput = movementValue.Get<Vector2>();
     }
 
     void OnAttack()
     {
-        if (playerAttack) playerAttack.HandleAttack();
+        Debug.Log($"Paused? {PauseMenu.isPaused}");
+        if (playerAttack && !PauseMenu.isPaused) playerAttack.HandleAttack();
     }
 
     void OnShoot(InputValue value)
     {
-        if (playerShoot) playerShoot.HandleShootInput(value);
+        if (playerShoot && !PauseMenu.isPaused) playerShoot.HandleShootInput(value);
     }
 
     void OnDash()
     {
-        if (playerDash) playerDash.TryDash(movementInput, new Vector2(lastMoveX, lastMoveY));
+        if (playerDash && !PauseMenu.isPaused) playerDash.TryDash(movementInput, new Vector2(lastMoveX, lastMoveY));
+    }
+
+    void OnPause()
+    {
+        if (PauseMenu.isPaused)
+        {
+            pauseMenu.ResumeGame();
+        }
+        else if (!PauseMenu.isPaused)
+        {
+            pauseMenu.PauseGame();
+        }
     }
 
     private void SetIsMoving(bool value)

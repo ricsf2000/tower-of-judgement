@@ -151,8 +151,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.004468918, y: -0.028734922}
-  m_Radius: 0.098320246
+  m_Offset: {x: -0.0044689253, y: -0.027637824}
+  m_Radius: 0.10161151
 --- !u!114 &4753231554930273106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   parent: {fileID: -7667731448326935395}
+  canBreakObjects: 1
 --- !u!1 &2182632347709244129
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,9 +515,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00043904287, y: -0.020541752}
-  m_Size: {x: 0.2265263, y: 0.2265263}
-  m_Direction: 1
+  m_Offset: {x: -0.0041654706, y: -0.027124412}
+  m_Size: {x: 0.18396768, y: 0.19032617}
+  m_Direction: 0
 --- !u!114 &2711476877303529487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +848,8 @@ MonoBehaviour:
   knockbackForce: 5
   IsHurling: 0
   hitbox: {fileID: 4753231554930273106}
+  minVelocityThreshold: 2
+  velocityCheckDelay: 0.15
   canBreakObjects: 1
   animator: {fileID: 2567073755389332}
   eyeFollow: {fileID: 7212976495432339178}

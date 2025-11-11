@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Michael : MonoBehaviour
 {
@@ -9,13 +10,22 @@ public class Michael : MonoBehaviour
     public float stopThreshold = 0.2f;
 
     [Header("Attack Settings")]
-    public float attackRange = 1.2f;
     public float attackDuration = 1.3f;
     public float attackAnimationSpeed = 1.5f;
     public float attackCooldown = 1.5f;
     private bool canAttack = true;
     private bool isAttacking = false;
     private Coroutine activeAttackRoutine;
+    private Vector2 lockedDirection;
+
+    [Header("Corner Positions (Assign in Inspector)")]
+    [SerializeField] private List<Transform> cornerPositions;
+
+    [Header("Projectile Prefab")]
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private float projectileSpeed = 6f;
+    [SerializeField] private float timeBetweenShots = 0.5f;
+
 
     [Header("References")]
     public Animator animator;
@@ -87,10 +97,12 @@ public class Michael : MonoBehaviour
         if (dir.sqrMagnitude > 0.01f)
         {
             lastMoveDir = dir;
-            animator.SetFloat("lookX", dir.x);
-            animator.SetFloat("lookY", dir.y);
+            animator.SetFloat("lookX", lastMoveDir.x);
+            animator.SetFloat("lookY", lastMoveDir.y);
         }
     }
+
+    // ============================================ PHASE 1 =========================================================================================================
 
     // Called by EnemyAI
     public void Attack()
@@ -100,6 +112,7 @@ public class Michael : MonoBehaviour
         if (activeAttackRoutine != null)
             StopCoroutine(activeAttackRoutine);
 
+        lockedDirection = lastMoveDir;
         activeAttackRoutine = StartCoroutine(AttackRoutine());
     }
 
@@ -137,10 +150,119 @@ public class Michael : MonoBehaviour
         animator.SetBool("isMoving", false);
         // rb.linearVelocity = Vector2.zero;
 
-        animator.Play("Power Idle Tree", 0, 0f);
+        animator.Play("Michael Idle Tree", 0, 0f);
 
-        Debug.Log($"[Power] {name}'s attack was canceled!");
+        Debug.Log($"[Michael] {name}'s attack was canceled!");
     }
+
+
+    // Corner range attack
+    public IEnumerator CornerRangedAttack()
+    {
+        // If already attacking, skip starting another volley
+        if (isDead || isAttacking)
+        {
+            Debug.LogWarning("[Michael] Tried to start ranged attack while already attacking.");
+            yield break;
+        }
+
+        isAttacking = true;
+        yield return StartCoroutine(CornerAttackRoutine());
+        isAttacking = false;
+    }
+
+    private IEnumerator CornerAttackRoutine()
+    {
+        // Choose random corner
+        Transform targetCorner = cornerPositions[Random.Range(0, cornerPositions.Count)];
+        Debug.Log($"[Michael] Moving to corner: {targetCorner.name}");
+
+        // Move quickly to that corner
+        float moveSpeed = 8f;
+        float stopDistance = 0.1f;
+
+        while (Vector2.Distance(transform.position, targetCorner.position) > stopDistance)
+        {
+            Vector2 dir = (targetCorner.position - transform.position).normalized;
+            rb.linearVelocity = dir * moveSpeed;
+            LookAt(targetCorner.position);
+            yield return null;
+        }
+
+        rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(0.25f);
+
+        // Begin attack sequence
+        var player = FindFirstObjectByType<PlayerController>();
+        if (!player)
+        {
+            Debug.LogWarning("[Michael] No player found for ranged attack.");
+            yield break;
+        }
+
+        int shots = Random.Range(3, 6);
+        Debug.Log($"[Michael] Performing {shots} ranged swings.");
+
+        for (int i = 0; i < shots; i++)
+        {
+            LookAt(player.transform.position);
+            animator.SetTrigger("swordAttack");
+
+            yield return new WaitForSeconds(0.67f); // Impact timing
+            FireProjectileAtPlayer();
+
+            // Only wait between swings if more remain
+            if (i < shots - 1)
+                yield return new WaitForSeconds(attackDuration + timeBetweenShots);
+        }
+
+        yield return new WaitForSeconds(0.3f);
+        Debug.Log("[Michael] Finished corner ranged volley.");
+    }
+
+
+
+
+    private void FireProjectileAtPlayer()
+    {
+        var player = FindFirstObjectByType<PlayerController>();
+        if (!player)
+        {
+            Debug.LogWarning("[Michael] No player found for projectile target.");
+            return;
+        }
+
+        if (!projectilePrefab)
+        {
+            Debug.LogError("[Michael] projectilePrefab is missing in the Inspector!");
+            return;
+        }
+
+        Vector2 spawnPos = transform.position;
+        Vector2 dir = ((Vector2)player.transform.position - spawnPos).normalized;
+
+        // Instantiate projectile
+        GameObject proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+
+         // Initialize projectile script
+        WaveProjectile wave = proj.GetComponent<WaveProjectile>();
+        if (wave != null)
+        {
+            wave.Initialize(dir);
+        }
+        else
+        {
+            // Fallback if using Rigidbody only
+            var rb = proj.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = dir * projectileSpeed;
+            }
+        }
+
+        Debug.Log("[Michael] Fired projectile toward player.");
+    }
+
 
     public void OnDeath()
     {

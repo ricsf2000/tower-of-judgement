@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1118131964047287020}
   - component: {fileID: 3708417503044831329}
   - component: {fileID: 523568352558124962}
+  - component: {fileID: -1198097230335899135}
+  - component: {fileID: 7476828999499748128}
   m_Layer: 0
   m_Name: Pot1
   m_TagString: Untagged
@@ -171,6 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   breakEffectPrefab: {fileID: 4737966786474125803, guid: 78044f5d65452f945bb1e13d9c2c4210, type: 3}
+  shakeIntensity: 0.05
+  shakeDuration: 0.15
   health: 1
 --- !u!95 &523568352558124962
 Animator:
@@ -194,3 +198,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1198097230335899135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602864901159882170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteLibrary
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 99ba217d609fcc2488c9d1e7c2e54629, type: 3}
+--- !u!114 &7476828999499748128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602864901159882170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 944592907

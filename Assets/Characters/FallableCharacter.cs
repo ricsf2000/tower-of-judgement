@@ -179,8 +179,18 @@ public class FallableCharacter : MonoBehaviour
     // Locks player movement after respawn
     private IEnumerator LockMovementTemporarily(PlayerController controller)
     {
+        yield return null;
         controller.canMove = false;
-        yield return new WaitForSeconds(moveLockDuration);
+        rb.linearVelocity = Vector2.zero;
+
+        float timer = moveLockDuration;
+        while (timer > 0)
+        {
+            rb.linearVelocity = Vector2.zero; // enforce stillness
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
         controller.canMove = true;
     }
 }

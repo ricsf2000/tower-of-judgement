@@ -173,6 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HittableObject
   breakEffectPrefab: {fileID: 4737966786474125803, guid: 9e6897df63b1da04b8b0184819064bb3, type: 3}
+  shakeIntensity: 0.05
+  shakeDuration: 0.15
   health: 1
 --- !u!95 &8608462924814621941
 Animator:

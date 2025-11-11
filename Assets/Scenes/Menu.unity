@@ -637,17 +637,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_PointAction: {fileID: 8372659604500211707, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_MoveAction: {fileID: 4042240309757171729, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_SubmitAction: {fileID: 3614170731319776956, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_CancelAction: {fileID: -8857075875974023777, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_LeftClickAction: {fileID: 5631063365167827549, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_MiddleClickAction: {fileID: 3763962397560848275, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_RightClickAction: {fileID: -2343295441425168148, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_ScrollWheelAction: {fileID: -4530178311080765568, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_TrackedDevicePositionAction: {fileID: -540487167478886634, guid: 5a215dcc46c965c45928d59326765978, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 3051454876559114984, guid: 5a215dcc46c965c45928d59326765978, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1302299379}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1117736103
@@ -815,7 +815,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2606521636945628508, guid: 729716f83fcfc364d971a387ee022852, type: 3}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: StartGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
