@@ -19,6 +19,9 @@ public class PlayerData : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject); // stays across all scenes
         
+        // Apply difficulty settings to max health
+        maxHealth = DifficultySettings.GetMaxHealth();
+        
         // Initialize current health to max if not set
         if (currentHealth <= 0)
             currentHealth = maxHealth;
