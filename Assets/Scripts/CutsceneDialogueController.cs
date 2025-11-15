@@ -134,7 +134,9 @@ public class CutsceneDialogueController : MonoBehaviour
     }
 
     private void Update()
-    {
+    {  
+
+
         if (!playerInput) return;
 
         if (!IsCutsceneActive)
@@ -150,6 +152,7 @@ public class CutsceneDialogueController : MonoBehaviour
         bool skipPressed =
             (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame)) ||
             (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame); // Y on Xbox / Triangle on PlayStation
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
 
         if (skipPressed)
         {
