@@ -18,10 +18,16 @@ public class SwitchController : MonoBehaviour
 
     private bool isActivated = false;
 
+    [Header("Audio")]
+    private AudioSource audioSource;
+    public AudioClip[] hitImpact;
+
     private void Awake()
     {
         if (spriteResolver == null)
             spriteResolver = GetComponent<SpriteResolver>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -37,6 +43,14 @@ public class SwitchController : MonoBehaviour
     {
         isActivated = true;
         spriteResolver?.SetCategoryAndLabel("Off", "tileset_393");
+
+        if (hitImpact != null && audioSource != null)
+        {
+            int randomIndex = Random.Range(0, hitImpact.Length);
+            AudioClip clip = hitImpact[randomIndex];
+            audioSource.volume = 0.50f;
+            audioSource.PlayOneShot(clip);
+        }
 
         // Check if all switches in group are activated
         if (AreAllSwitchesActivated())
