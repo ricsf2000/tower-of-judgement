@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using System.Collections.Generic;
 
 public class HittableObject : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class HittableObject : MonoBehaviour
     private Animator animator;
     private DamageFlash damageFlash;
     private Vector3 originalPosition;
+
+    [Header("Loot")]
+    public List<LootItems> lootTable = new List<LootItems>();
 
     private void Start()
     {
@@ -90,6 +94,14 @@ public class HittableObject : MonoBehaviour
             PlayBreakSound(clip);
         }
 
+        foreach(LootItems lootItem in lootTable)
+        {
+            if(Random.Range(0f, 100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+            }
+            break;
+        }
 
         if (animator != null)
             animator.SetBool("isBroken", isBroken);
@@ -98,6 +110,14 @@ public class HittableObject : MonoBehaviour
 
         if (breakEffectPrefab != null)
             Instantiate(breakEffectPrefab, transform.position, Quaternion.identity);
+    }
+
+    void InstantiateLoot(GameObject loot)
+    {
+        if(loot)
+        {
+            GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
+        }
     }
 
     private void RemoveObject()

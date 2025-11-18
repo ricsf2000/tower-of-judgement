@@ -180,6 +180,9 @@ MonoBehaviour:
   hitImpact: []
   breakSFX:
   - {fileID: 8300000, guid: d9f0579869dccba42bc17f864b2845f2, type: 3}
+  lootTable:
+  - itemPrefab: {fileID: 9113930521389540073, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+    dropChance: 10
 --- !u!95 &7285252511459545355
 Animator:
   serializedVersion: 7

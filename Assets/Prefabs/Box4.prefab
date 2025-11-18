@@ -190,6 +190,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f7e5655ef88411d42a9759ef4c667eaa, type: 3}
   breakSFX:
   - {fileID: 8300000, guid: 56d583db52923634b9b75c9c576d95ad, type: 3}
+  lootTable:
+  - itemPrefab: {fileID: 9113930521389540073, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+    dropChance: 12
 --- !u!114 &3724916600908108862
 MonoBehaviour:
   m_ObjectHideFlags: 0
