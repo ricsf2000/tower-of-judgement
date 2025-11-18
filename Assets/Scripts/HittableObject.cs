@@ -112,7 +112,7 @@ public class HittableObject : MonoBehaviour
 
         AudioSource tempSource = temp.AddComponent<AudioSource>();
         tempSource.clip = clip;
-        tempSource.volume = 0.15f;
+        tempSource.volume = 0.50f;
         tempSource.spatialBlend = 0f;
         tempSource.rolloffMode = AudioRolloffMode.Linear; 
         tempSource.minDistance = 0.01f; 
