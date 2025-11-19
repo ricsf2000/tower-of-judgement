@@ -122,6 +122,27 @@ TextureImporter:
   - first:
       213: -2123795252162861134
     second: lucifer_39
+  - first:
+      213: -3745014980485927776
+    second: lucifer_40
+  - first:
+      213: 1417983642323336920
+    second: lucifer_41
+  - first:
+      213: -2339951299745024716
+    second: lucifer_42
+  - first:
+      213: 8309479756019537750
+    second: lucifer_43
+  - first:
+      213: -6264154388792046095
+    second: lucifer_44
+  - first:
+      213: -3898459737707189542
+    second: lucifer_45
+  - first:
+      213: -7939644880136244226
+    second: lucifer_46
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -218,7 +239,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -234,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 432
+        y: 528
         width: 48
         height: 48
       alignment: 9
@@ -256,7 +277,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 480
         width: 48
         height: 48
       alignment: 9
@@ -278,7 +299,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 336
+        y: 432
         width: 48
         height: 48
       alignment: 9
@@ -300,7 +321,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 288
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -322,7 +343,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 288
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -344,7 +365,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 288
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -366,7 +387,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 288
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -388,7 +409,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 288
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -410,7 +431,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 288
+        y: 384
         width: 48
         height: 48
       alignment: 9
@@ -432,7 +453,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 240
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -454,7 +475,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 240
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -476,7 +497,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 240
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -498,7 +519,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 240
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -520,7 +541,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 240
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -542,7 +563,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 240
+        y: 336
         width: 48
         height: 48
       alignment: 9
@@ -564,7 +585,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -586,7 +607,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 192
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -608,7 +629,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 192
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -630,7 +651,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 192
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -652,7 +673,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 192
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -674,7 +695,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 192
+        y: 288
         width: 48
         height: 48
       alignment: 9
@@ -696,7 +717,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 144
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -718,7 +739,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 144
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -740,7 +761,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 144
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -762,7 +783,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 144
+        y: 240
         width: 48
         height: 48
       alignment: 9
@@ -784,7 +805,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -806,7 +827,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 96
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -828,7 +849,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -850,7 +871,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 96
+        y: 192
         width: 48
         height: 48
       alignment: 9
@@ -872,7 +893,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 144
         width: 48
         height: 48
       alignment: 9
@@ -894,7 +915,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 144
         width: 48
         height: 48
       alignment: 9
@@ -916,7 +937,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 48
+        y: 144
         width: 48
         height: 48
       alignment: 9
@@ -938,7 +959,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 48
+        y: 144
         width: 48
         height: 48
       alignment: 9
@@ -960,7 +981,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 96
         width: 48
         height: 48
       alignment: 9
@@ -982,7 +1003,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
+        y: 96
         width: 48
         height: 48
       alignment: 9
@@ -1004,7 +1025,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
+        y: 96
         width: 48
         height: 48
       alignment: 9
@@ -1026,7 +1047,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 0
+        y: 96
         width: 48
         height: 48
       alignment: 9
@@ -1043,11 +1064,187 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: lucifer_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20513a8e82c0bbfb0800000000000000
+      internalID: -4631094421979196158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_38
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4a213e0516ee780800000000000000
+      internalID: -8651870834097216339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7eb237873c682e0800000000000000
+      internalID: -2123795252162861134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_40
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0acae9997b8070cc0800000000000000
+      internalID: -3745014980485927776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de3ff12c90bda310800000000000000
+      internalID: 1417983642323336920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435fbf2c0b2d68fd0800000000000000
+      internalID: -2339951299745024716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65718d500d3315370800000000000000
+      internalID: 8309479756019537750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lucifer_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd88d5b5c04119a0800000000000000
+      internalID: -6264154388792046095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: af2989abf1e8b8449b2aeeed1da113fb
+    spriteID: 5f72441c2ffc2264c9fa1c4da0a4a0ae
     internalID: 0
     vertices: []
     indices: 
@@ -1090,7 +1287,15 @@ TextureImporter:
       lucifer_34: -2942550786734778018
       lucifer_35: 3974937379282732598
       lucifer_36: 1415462699558478523
+      lucifer_37: -4631094421979196158
+      lucifer_38: -8651870834097216339
+      lucifer_39: -2123795252162861134
       lucifer_4: 1516913203471445975
+      lucifer_40: -3745014980485927776
+      lucifer_41: 1417983642323336920
+      lucifer_42: -2339951299745024716
+      lucifer_43: 8309479756019537750
+      lucifer_44: -6264154388792046095
       lucifer_5: -7093804648373550982
       lucifer_6: 5261144970086778243
       lucifer_7: -2081099982513837032
