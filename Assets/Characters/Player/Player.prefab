@@ -92,9 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9a5968c197093478301cb8aa8a4997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  swordCollider: {fileID: 5856224209802872423}
+  swordColliders: []
   damage: 3
   knockbackForce: 10
+  canBreakObjects: 1
   targetTag: Enemy
   audioSource: {fileID: 8299667085419276712}
   impactSounds:
@@ -567,10 +568,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
   dashSpeed: 12
   dashDuration: 0.2
-  maxDashCount: 4
-  dashCooldown: 0.5
+  maxDashCount: 2
+  dashCooldown: 0.8
   tr: {fileID: 8222107168446777735}
   dashDistance: 3.5
+  dashBridgeTilemap: {fileID: 0}
 --- !u!114 &6332478940356058002
 MonoBehaviour:
   m_ObjectHideFlags: 0

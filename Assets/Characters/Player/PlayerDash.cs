@@ -11,6 +11,7 @@ public class PlayerDash : MonoBehaviour
     public float dashCooldown = 0.2f;
     public TrailRenderer tr;
     public float dashDistance = 5f;
+    private bool rechargeRunning = false;
 
     [Header("Dash Bridge Tilemap")]
     public Tilemap dashBridgeTilemap;
@@ -43,6 +44,7 @@ public class PlayerDash : MonoBehaviour
         if (fallable != null && fallable.IsFalling) return;
 
         Vector2 dashDir = moveInput != Vector2.zero ? moveInput.normalized : lastMove;
+        Debug.Log($"moveInput: {moveInput}, lastMove: {lastMove}");
         StartCoroutine(PerformDash(dashDir));
     }
 
@@ -79,16 +81,20 @@ public class PlayerDash : MonoBehaviour
         return false;
     }
 
-
-
     private IEnumerator PerformDash(Vector2 dashDir)
     {
         if (controller != null)
             controller.canMove = true;
             
         isDashing = true;
-        canDash = false;
         currentDashCount--;
+        
+        StartCoroutine(RechargeDash());
+
+        // Only disable immediate dashing if no charges remain
+        if (currentDashCount <= 0)
+            canDash = false;
+        
         controller.moveSpeedMultiplier = 1f;
 
         if (dmgChar != null)
@@ -102,7 +108,7 @@ public class PlayerDash : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
 
-        // --- DASH BRIDGE CHECK ---
+        // Dash bridge check
         float finalDashDistance = dashDistance;
         Vector2 targetPos;
         if (TryGetDashBridge(transform.position, dashDir, out targetPos))
@@ -113,9 +119,7 @@ public class PlayerDash : MonoBehaviour
             Debug.Log($"[DashBridge] Found bridge tile at {targetPos}, dist={bridgeDist:F2}, newDuration={dashDuration:F2}");
         }
 
-
-
-        // --- DASH START ---
+        // Dash start
         dashSpeed = finalDashDistance / dashDuration;
         rb.linearVelocity = dashDir.normalized * dashSpeed;
 
@@ -129,9 +133,12 @@ public class PlayerDash : MonoBehaviour
 
         yield return new WaitForSeconds(dashDuration);
 
-        // --- DASH END ---
+        // Dash end
         if (controller != null)
+        {
             controller.canMove = true;
+            controller.moveSpeedMultiplier = 1f;
+        }
 
         rb.linearVelocity = Vector2.zero;
         tr.emitting = false;
@@ -142,14 +149,39 @@ public class PlayerDash : MonoBehaviour
         if (dmgChar != null)
             dmgChar.Invincible = false;
 
-        if (currentDashCount <= 0)
-        {
-            yield return new WaitForSeconds(dashCooldown);
-            currentDashCount = maxDashCount;
-        }
-
-        canDash = true;
+        if (currentDashCount > 0)
+            canDash = true;
+        
         isDashing = false;
     }
+
+    private IEnumerator RechargeDash()
+    {
+        // If cooldown already running, restart it
+        if (rechargeCoroutine != null)
+        {
+            StopCoroutine(rechargeCoroutine);
+        }
+
+        rechargeCoroutine = StartCoroutine(RechargeCoroutine());
+
+        // Must return something because signature is IEnumerator
+        yield break;
+    }
+
+    private Coroutine rechargeCoroutine;
+
+    private IEnumerator RechargeCoroutine()
+    {
+        yield return new WaitForSeconds(dashCooldown);
+
+        // Refill all charges
+        currentDashCount = maxDashCount;
+        canDash = true;
+
+        // Mark cooldown as finished
+        rechargeCoroutine = null;
+    }
+
 
 }
