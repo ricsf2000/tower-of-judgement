@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using System.Collections.Generic;
 
 public class HittableObject : MonoBehaviour
 {
@@ -13,15 +14,24 @@ public class HittableObject : MonoBehaviour
     public float health = 1f;
     private bool isBroken = false;
 
+    [Header("Audio")]
+    private AudioSource audioSource;
+    public AudioClip[] hitImpact;
+    public AudioClip[] breakSFX;
+
     private Animator animator;
     private DamageFlash damageFlash;
     private Vector3 originalPosition;
+
+    [Header("Loot")]
+    public List<LootItems> lootTable = new List<LootItems>();
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         damageFlash = GetComponent<DamageFlash>();
         originalPosition = transform.localPosition;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,6 +52,15 @@ public class HittableObject : MonoBehaviour
 
                 StopAllCoroutines(); // prevent stacking shakes
                 StartCoroutine(ShakeObject());
+
+                if (hitImpact != null)
+                {
+                    int randomIndex = Random.Range(0, hitImpact.Length);
+                    AudioClip clip = hitImpact[randomIndex];
+                    audioSource.PlayOneShot(clip, 0.35f);
+                }
+
+
             }
             else
             {
@@ -68,6 +87,22 @@ public class HittableObject : MonoBehaviour
     {
         isBroken = true;
 
+        if (breakSFX != null)
+        {
+            int randomIndex = Random.Range(0, breakSFX.Length);
+            AudioClip clip = breakSFX[randomIndex];
+            PlayBreakSound(clip);
+        }
+
+        foreach(LootItems lootItem in lootTable)
+        {
+            if(Random.Range(0f, 100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+            }
+            break;
+        }
+
         if (animator != null)
             animator.SetBool("isBroken", isBroken);
         else
@@ -77,8 +112,34 @@ public class HittableObject : MonoBehaviour
             Instantiate(breakEffectPrefab, transform.position, Quaternion.identity);
     }
 
+    void InstantiateLoot(GameObject loot)
+    {
+        if(loot)
+        {
+            GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
+        }
+    }
+
     private void RemoveObject()
     {
         Destroy(gameObject);
+    }
+
+    private void PlayBreakSound(AudioClip clip)
+    {
+        GameObject temp = new GameObject("BreakSound");
+        temp.transform.position = transform.position;
+
+        AudioSource tempSource = temp.AddComponent<AudioSource>();
+        tempSource.clip = clip;
+        tempSource.volume = 0.50f;
+        tempSource.spatialBlend = 0f;
+        tempSource.rolloffMode = AudioRolloffMode.Linear; 
+        tempSource.minDistance = 0.01f; 
+        tempSource.maxDistance = 500f;
+        tempSource.outputAudioMixerGroup = audioSource.outputAudioMixerGroup;
+        tempSource.Play();
+
+        Destroy(temp, clip.length);
     }
 }

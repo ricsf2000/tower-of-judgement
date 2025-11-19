@@ -584,6 +584,9 @@ MonoBehaviour:
   invincibleOverride: 0
   showInvincibilityGizmo: 1
   SpawnedByWave: 0
+  lootTable:
+  - itemPrefab: {fileID: 9113930521389540073, guid: 4c4b9d6f42189534c8e5d68078083cb0, type: 3}
+    dropChance: 25
 --- !u!82 &-9174796438358747869
 AudioSource:
   m_ObjectHideFlags: 0
