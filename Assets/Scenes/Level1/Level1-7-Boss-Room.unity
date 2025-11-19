@@ -2834,11 +2834,13 @@ MonoBehaviour:
     Now, I only pray that you rise for the right reason
 
 '
-  delayBetweenLines: 0
+  delayBetweenLines: 2
   nextSceneName: 
   playerInput: {fileID: 1413215047}
   xboxIcons: {fileID: 11400000, guid: fa669c0e4fcdd354dba32225094cb40b, type: 2}
   keyboardIcons: {fileID: 11400000, guid: 2bc1d13cbca44774fab71b82d2b59699, type: 2}
+  allowSkipCutscene: 0
+  requireAdvanceInput: 1
 --- !u!4 &419414265
 Transform:
   m_ObjectHideFlags: 0

@@ -136,4 +136,26 @@ public class TypewriterEffect : MonoBehaviour
         CompleteTextRevealed?.Invoke();
         _readyForNewText = true;
     }
+
+    public void ForceSkip()
+    {
+        CurrentlySkipping = true;
+    }
+
+    public void ForceComplete()
+    {
+        CurrentlySkipping = true;
+
+        if (_textBox != null)
+        {
+            // Set index to the end
+            _currentVisibleCharacterIndex = _textBox.textInfo.characterCount;
+            _textBox.maxVisibleCharacters = _currentVisibleCharacterIndex;
+        }
+
+        // Immediately notify listeners
+        CompleteTextRevealed?.Invoke();
+    }
+
+
 }
