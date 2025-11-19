@@ -44,18 +44,18 @@ public class WaveProjectile : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // Ignore triggers from the child hitbox
-        if (other.GetComponent<WaveHitbox>() != null)
-            return;
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     // Ignore triggers from the child hitbox
+    //     if (other.GetComponent<WaveHitbox>() != null)
+    //         return;
         
-        if (other.gameObject.layer == LayerMask.NameToLayer("Walls"))
-        {
-            Debug.Log("[WaveProjectile] Trigger hit wall, destroying.");
-            Destroy(gameObject);
-        }
-    }
+    //     if (other.gameObject.layer == LayerMask.NameToLayer("Walls"))
+    //     {
+    //         Debug.Log("[WaveProjectile] Trigger hit wall, destroying.");
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     // Called by hitbox when it connects with player
     public void DestroySelf()

@@ -35,7 +35,10 @@ public class TimelineTrigger : MonoBehaviour
             timeline.Play();
 
         // Wait until the Timeline finishes
-        yield return new WaitUntil(() => timeline.state != PlayState.Playing);
+        yield return new WaitUntil(() =>
+            timeline.time >= timeline.duration ||
+            timeline.state != PlayState.Playing
+        );
 
         // Unfreeze after the Timeline finishes
         CutsceneDialogueController.SetCutsceneActive(false);

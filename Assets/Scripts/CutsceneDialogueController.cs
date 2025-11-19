@@ -20,17 +20,23 @@ public class CutsceneDialogueController : MonoBehaviour
 
     private bool skipping = false;
     private bool skipPromptVisible = false;
+    private bool lineFullyRevealed = false;
 
     [Header("Scene Transition")]
     [SerializeField] private string nextSceneName;
     private Coroutine dialogueRoutine;
 
     [Header("Input")]
-    [SerializeField] private PlayerInput playerInput; // assign your persistent InputManager here
+    [SerializeField] private PlayerInput playerInput;
     [SerializeField] private TMP_SpriteAsset xboxIcons;
     [SerializeField] private TMP_SpriteAsset keyboardIcons;
 
     private string lastScheme;
+
+    [Header("Dialogue Options")]
+    public bool allowSkipCutscene = true;   // Enabled for opening cutscenes
+    public bool requireAdvanceInput = false; // Dialogue boxes: true. Opening cutscene: false.
+
 
     public static bool IsCutsceneActive { get; private set; } = false;
 
@@ -59,10 +65,24 @@ public class CutsceneDialogueController : MonoBehaviour
             skipPromptText.gameObject.SetActive(false);
     }
 
+    private void OnEnable()
+    {
+        TypewriterEffect.CompleteTextRevealed += OnLineFinished;
+    }
+
+    private void OnDisable()
+    {
+        TypewriterEffect.CompleteTextRevealed -= OnLineFinished;
+    }
+
+    private void OnLineFinished()
+    {
+        lineFullyRevealed = true;
+    }
+
     public void PlayDialogue()
     {
         IsCutsceneActive = true;
-        Debug.Log("[CutsceneDialogueController] PlayDialogue triggered by Timeline");
         if (dialogueRoutine != null)
             StopCoroutine(dialogueRoutine);
         dialogueRoutine = StartCoroutine(PlayDialogueRoutine());
@@ -74,27 +94,21 @@ public class CutsceneDialogueController : MonoBehaviour
         {
             if (skipping) break;
 
-            // Prevent the one-frame flash
             dialogueText.alpha = 0;
             dialogueText.maxVisibleCharacters = 0;
 
-            // Assign text (this will trigger TypewriterEffect)
             dialogueText.text = lines[i];
-
-            // Wait a single frame so TMP & TypewriterEffect prepare
             yield return null;
-
-            // Reveal text now that TypewriterEffect has reset
             dialogueText.alpha = 1;
 
-            // Wait for typing to finish
+            lineFullyRevealed = false;
+
             bool done = false;
             System.Action handler = () => done = true;
             TypewriterEffect.CompleteTextRevealed += handler;
             yield return new WaitUntil(() => done);
             TypewriterEffect.CompleteTextRevealed -= handler;
 
-            // Short delay before next line
             float t = 0f;
             while (t < delayBetweenLines && !skipping)
             {
@@ -117,13 +131,14 @@ public class CutsceneDialogueController : MonoBehaviour
 
     private IEnumerator PlaySingleLineRoutine(int i)
     {
-        // Hide text first to prevent flash
         dialogueText.alpha = 0;
         dialogueText.maxVisibleCharacters = 0;
         dialogueText.text = lines[i];
 
-        yield return null; // let TMP rebuild
+        yield return null;
         dialogueText.alpha = 1;
+
+        lineFullyRevealed = false;
 
         bool done = false;
         System.Action handler = () => done = true;
@@ -134,13 +149,9 @@ public class CutsceneDialogueController : MonoBehaviour
     }
 
     private void Update()
-    {  
-
-
+    {
         if (!playerInput) return;
-
-        if (!IsCutsceneActive)
-            return;
+        if (!IsCutsceneActive) return;
 
         string currentScheme = playerInput.currentControlScheme;
         if (currentScheme != lastScheme)
@@ -148,13 +159,47 @@ public class CutsceneDialogueController : MonoBehaviour
             lastScheme = currentScheme;
             UpdateSkipPrompt(currentScheme);
         }
-    
-        bool skipPressed =
-            (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame)) ||
-            (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame); // Y on Xbox / Triangle on PlayStation
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
 
-        if (skipPressed)
+        bool advancePressed =
+            requireAdvanceInput &&
+            (
+                (Keyboard.current?.spaceKey.wasPressedThisFrame ?? false) ||
+                (Gamepad.current?.buttonSouth.wasPressedThisFrame ?? false)
+            );
+
+        bool skipPressed =
+            allowSkipCutscene &&
+            (
+                (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame) ||
+                (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame)
+            );
+
+        // If typing, reveal entire line
+        if (!lineFullyRevealed && advancePressed && requireAdvanceInput)
+        {
+            typewriter.ForceComplete();
+            return;
+        }
+
+
+        // Press again to advance timeline
+        if (lineFullyRevealed && advancePressed && requireAdvanceInput)
+        {
+            lineFullyRevealed = false;
+            AdvanceTimelineToNextSignal();
+            return;
+        }
+
+        // Hide skip prompt entirely when skipping is turned off
+        if (!allowSkipCutscene && skipPromptVisible)
+        {
+            skipPromptVisible = false;
+            if (skipPromptText != null)
+                skipPromptText.gameObject.SetActive(false);
+        }
+
+        // Skip cutscene
+        if (skipPressed && allowSkipCutscene)
         {
             if (!skipPromptVisible)
             {
@@ -167,8 +212,47 @@ public class CutsceneDialogueController : MonoBehaviour
                 SkipCutscene();
             }
         }
-
     }
+
+    // Advance the timeline when skipping
+    private void AdvanceTimelineToNextSignal()
+    {
+        if (director == null) return;
+
+        var markerTimes = new System.Collections.Generic.List<double>();
+
+        foreach (var output in director.playableAsset.outputs)
+        {
+            if (output.sourceObject is UnityEngine.Timeline.SignalTrack track)
+            {
+                foreach (var m in track.GetMarkers())
+                    markerTimes.Add(m.time);
+            }
+        }
+
+        markerTimes.Sort();
+
+        double current = director.time;
+
+        foreach (double t in markerTimes)
+        {
+            if (t > current + 0.0001f)
+            {
+                // Jump slightly before the signal to guarantee it fires
+                director.time = t - 0.01f;
+                if (director.time < 0) director.time = 0;
+
+                director.Evaluate();
+                return;
+            }
+        }
+
+        // No more signals, finish timeline
+        director.time = director.duration;
+        director.Evaluate();
+    }
+
+
 
     private void SkipCutscene()
     {
@@ -236,9 +320,8 @@ public class CutsceneDialogueController : MonoBehaviour
         IsCutsceneActive = false;
 
         if (skipPromptText != null)
-        skipPromptText.gameObject.SetActive(false);
+            skipPromptText.gameObject.SetActive(false);
 
-        // Automatically load next scene when cutscene finishes or is skipped
         if (!string.IsNullOrEmpty(nextSceneName))
             SceneManager.LoadScene(nextSceneName);
     }
