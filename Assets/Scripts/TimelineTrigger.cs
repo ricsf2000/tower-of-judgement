@@ -6,7 +6,9 @@ public class TimelineTrigger : MonoBehaviour
 {
     [Header("References")]
     public PlayableDirector timeline;
-    public MonoBehaviour bossAI;
+    public MonoBehaviour bossAI; // reference to bossAI script
+    public Michael boss; // reference to boss script (michael.cs)
+    private bool startFinished = false;
 
     private bool hasPlayed = false;
 
@@ -48,4 +50,5 @@ public class TimelineTrigger : MonoBehaviour
 
         Debug.Log("[TimelineTrigger] Cutscene finished. Player and boss re-enabled.");
     }
+
 }

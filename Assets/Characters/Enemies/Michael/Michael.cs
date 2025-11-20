@@ -102,6 +102,22 @@ public class Michael : MonoBehaviour
         }
     }
 
+    // ============================================ START =========================================================================================================
+    
+    // Begin the starting animation
+    // Called in the timeline
+    public void startCombat()
+    {
+        animator.SetTrigger("startCombat");
+    }
+
+    // Ends the starting animation
+    // Called at the end of startingCombat anim
+    public void startingDone()
+    {
+        animator.SetTrigger("startingDone");
+    }
+
     // ============================================ PHASE 1 =========================================================================================================
 
     // Called by EnemyAI
