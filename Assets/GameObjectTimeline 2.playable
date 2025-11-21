@@ -163,7 +163,7 @@ MonoBehaviour:
     m_Start: 32.25
     m_ClipIn: 0
     m_Asset: {fileID: -6186128156742496741}
-    m_Duration: 16.293917633810388
+    m_Duration: 10.233333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: -9212518297159308726}
     m_EaseInDuration: 0
@@ -264,6 +264,7 @@ MonoBehaviour:
     - {fileID: -4079637966375752759}
     - {fileID: -7935089588385802759}
     - {fileID: -5233395957837696290}
+    - {fileID: 6669595922628069970}
 --- !u!114 &-8884809311179232467
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
-  m_Time: 0.016666666666666666
+  m_Time: 0
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: c0bc94ac49d5bf84e9712438068d98e8, type: 2}
@@ -292,10 +293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
-  m_Time: 42.483333333333334
+  m_Time: 42.78333333333333
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 615285ba69f31d743968a2208c45c90e, type: 2}
+  m_Asset: {fileID: 11400000, guid: e15dc18d716befd4bbfe772a74a6a772, type: 2}
 --- !u!114 &-6499694613190301604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,7 +358,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 3531492386474009772}
-    m_Duration: 48.54391763381039
+    m_Duration: 42.483333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5330089180394114613}
     m_EaseInDuration: 0
@@ -437,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
-  m_Time: 48.55
+  m_Time: 48.31666666666667
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 5272e4e194a63564bb8c411c6417d068, type: 2}
@@ -596,7 +597,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 6485897223582731473}
-    m_Duration: 48.54391763381039
+    m_Duration: 42.483333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: 2021041059641787868}
     m_EaseInDuration: 0
@@ -729,7 +730,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -2727782309317933756}
-    m_Duration: 48.54391763381039
+    m_Duration: 42.483333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5898952568221649427}
     m_EaseInDuration: 0
@@ -809,6 +810,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
   m_Name: ActivationPlayableAsset
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.ActivationPlayableAsset
+--- !u!114 &6669595922628069970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalEmitter
+  m_Time: 48.31666666666667
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 39f98b8131700154b80b36aee49fb81d, type: 2}
 --- !u!114 &7998814245073426576
 MonoBehaviour:
   m_ObjectHideFlags: 1

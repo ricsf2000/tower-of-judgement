@@ -283,7 +283,9 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: a8ecfc56ea0b8134dbf967d3b8c6460d
+    name: MasterSFXPitch
   m_AudioMixerGroupViews:
   - guids:
     - e10bed5dcd0649a47a6d53722aaa9e74

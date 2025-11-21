@@ -41,15 +41,10 @@ public class Michael : MonoBehaviour
     private bool isDead = false;
     private Vector2 lastMoveDir = Vector2.down;
 
-    private AudioSource audioSource;
-
-    public AudioClip deathFX;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         damageableCharacter = GetComponent<EnemyDamageable>();
-        audioSource = GetComponent<AudioSource>();
 
         // Force-reset alive state on spawn
         if (damageableCharacter != null && animator != null)
@@ -378,16 +373,6 @@ public class Michael : MonoBehaviour
         if (isDead) return;
         isDead = true;
         rb.linearVelocity = Vector2.zero;
-
-        if (audioSource != null && deathFX != null && audioSource.enabled)
-        {
-            audioSource.volume = 0.50f;
-            audioSource.PlayOneShot(deathFX);
-        }
-        else
-        {
-            Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
-        }
     }
 
     private void UpdateAnimator(Vector2 dir)

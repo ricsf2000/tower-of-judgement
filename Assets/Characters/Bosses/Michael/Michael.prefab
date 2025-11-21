@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 7394384881392674503}
   - component: {fileID: 1784522005634375961}
   - component: {fileID: 8385757812501856695}
-  - component: {fileID: 7581438195755316052}
+  - component: {fileID: 1800961116147563557}
   - component: {fileID: 366275161272418493}
   - component: {fileID: 5851605866097821097}
   - component: {fileID: 1822464704190869122}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAI
   currentPhase: 0
-  damageableCharacter: {fileID: 7581438195755316052}
+  damageableCharacter: {fileID: 1800961116147563557}
   phase2Threshold: 0.7
   phase3Threshold: 0
   detectors:
@@ -278,8 +278,7 @@ MonoBehaviour:
   flownAway: 0
   waveManager: {fileID: 0}
   animator: {fileID: 5192565788407555550}
-  deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
---- !u!114 &7581438195755316052
+--- !u!114 &1800961116147563557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -288,13 +287,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 455030735673152881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7859304ced3290b4098d181992757476, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b6e0895b39cb7741be1d703be77bc55, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamageable
+  m_EditorClassIdentifier: Assembly-CSharp::BossDamageable
   healthText: {fileID: 1942305737207634952, guid: 3739e3b2b143b9a489155107771a7125, type: 3}
   disableSimulation: 1
   canTurnInvincible: 1
-  invincibilityTime: 1
+  invincibilityTime: 0.8
   _health: 50
   maxHealth: 50
   audioSource: {fileID: 1822464704190869122}
@@ -307,6 +306,11 @@ MonoBehaviour:
   showInvincibilityGizmo: 0
   SpawnedByWave: 0
   lootTable: []
+  defeatTimeline: {fileID: 0}
+  bossAI: {fileID: 2650528225559408281}
+  boss: {fileID: 8385757812501856695}
+  audioSource: {fileID: 1822464704190869122}
+  deathFX: {fileID: 8300000, guid: 1198c0ba69f53cb498c08cdbd15349a7, type: 3}
 --- !u!114 &366275161272418493
 MonoBehaviour:
   m_ObjectHideFlags: 0

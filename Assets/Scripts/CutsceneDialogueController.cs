@@ -36,6 +36,8 @@ public class CutsceneDialogueController : MonoBehaviour
     [Header("Dialogue Options")]
     public bool allowSkipCutscene = true;   // Enabled for opening cutscenes
     public bool requireAdvanceInput = false; // Dialogue boxes: true. Opening cutscene: false.
+    private float advanceCooldown = 0f;
+
 
 
     public static bool IsCutsceneActive { get; private set; } = false;
@@ -174,19 +176,20 @@ public class CutsceneDialogueController : MonoBehaviour
                 (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame)
             );
 
-        // If typing, reveal entire line
-        if (!lineFullyRevealed && advancePressed && requireAdvanceInput)
+        // If lines are typing, reveal entire line
+        if (!lineFullyRevealed && advancePressed && requireAdvanceInput && advanceCooldown <= 0f)
         {
             typewriter.ForceComplete();
+            advanceCooldown = 0.2f; // small delay
             return;
         }
 
-
         // Press again to advance timeline
-        if (lineFullyRevealed && advancePressed && requireAdvanceInput)
+        if (lineFullyRevealed && advancePressed && requireAdvanceInput && advanceCooldown <= 0f)
         {
             lineFullyRevealed = false;
             AdvanceTimelineToNextSignal();
+            advanceCooldown = 0.2f; // same delay before next skip allowed
             return;
         }
 
@@ -212,6 +215,13 @@ public class CutsceneDialogueController : MonoBehaviour
                 SkipCutscene();
             }
         }
+
+        // Cooldown for skipping between signals in the timeline
+        if (advanceCooldown > 0f)
+        {
+            advanceCooldown -= Time.deltaTime;
+        }
+
     }
 
     // Advance the timeline when skipping
@@ -234,12 +244,20 @@ public class CutsceneDialogueController : MonoBehaviour
 
         double current = director.time;
 
-        foreach (double t in markerTimes)
+        for (int i = 0; i < markerTimes.Count; i++)
         {
+            double t = markerTimes[i];
+
             if (t > current + 0.0001f)
             {
+                // If this next signal is the last one, dont skip
+                if (i == markerTimes.Count - 1)
+                {
+                    return;
+                }
+
                 // Jump slightly before the signal to guarantee it fires
-                director.time = t - 0.01f;
+                director.time = t - 0.07f;
                 if (director.time < 0) director.time = 0;
 
                 director.Evaluate();
@@ -317,6 +335,8 @@ public class CutsceneDialogueController : MonoBehaviour
 
     public void EndCutscene()
     {
+        ResetCutsceneState();
+
         IsCutsceneActive = false;
 
         if (skipPromptText != null)
@@ -325,4 +345,32 @@ public class CutsceneDialogueController : MonoBehaviour
         if (!string.IsNullOrEmpty(nextSceneName))
             SceneManager.LoadScene(nextSceneName);
     }
+
+    private void ResetCutsceneState()
+    {
+        // Reset reveal and skip state
+        lineFullyRevealed = false;
+        skipping = false;
+        skipPromptVisible = false;
+
+        if (skipPromptText != null)
+            skipPromptText.gameObject.SetActive(false);
+
+        // Fully reset dialogue text
+        if (dialogueText != null)
+        {
+            dialogueText.text = "";
+            dialogueText.alpha = 0;
+            dialogueText.maxVisibleCharacters = 0;
+            dialogueText.ForceMeshUpdate(true);
+        }
+
+        if (typewriter != null)
+        {
+            typewriter.ForceSkip();     // safely ends coroutine + clears skipping state
+            typewriter.ForceComplete();     // makes TypewriterEffect ready for the next text
+        }
+    }
+
+
 }
