@@ -11,6 +11,7 @@ public class BossAI : MonoBehaviour
         Chase,
         MeleeAttack,
         RangedAttack,
+        SpawnWave,
         Stunned
     }
 
@@ -50,6 +51,10 @@ public class BossAI : MonoBehaviour
     private float stunTimer;
     private Coroutine activeMeleeRoutine;
     private bool rangedRoutineActive = false;
+
+    // Phase 2
+    private Coroutine activeSpawningRoutine;
+    private bool spawnedWave = false;
 
     private Vector2 movementInput;
 
@@ -127,6 +132,10 @@ public class BossAI : MonoBehaviour
             case EnemyState.RangedAttack:
                 HandleRangedAttack();
                 break;
+            
+            case EnemyState.SpawnWave:
+                HandleSpawnWave();
+                break;
 
             // case EnemyState.Stunned:
             //     HandleStunned();
@@ -154,6 +163,7 @@ public class BossAI : MonoBehaviour
         {
             aiTimer = attackDecisionDelay;
 
+            // Phase 1
             if (currentPhase == BossPhase.Phase1)
             {
                 float choice = Random.value;
@@ -168,6 +178,25 @@ public class BossAI : MonoBehaviour
                 {
                     SetState(EnemyState.RangedAttack);
                     rangedCooldownTimer = rangedDecisionCooldown;
+                    return;
+                }
+            }
+
+            // Phase 2
+            if (currentPhase == BossPhase.Phase2)
+            {
+                //float choice = Random.value;
+
+                Debug.Log($"[BossAI] Phase2 decision. spawnedWave={spawnedWave}, activeRoutine={activeSpawningRoutine}");
+
+                if (!spawnedWave)
+                {
+                    SetState(EnemyState.SpawnWave);
+                    return;
+                }
+                else
+                {
+                    SetState(EnemyState.MeleeAttack);
                     return;
                 }
             }
@@ -238,6 +267,34 @@ public class BossAI : MonoBehaviour
         rangedRoutineActive = false;
     }
 
+    private void HandleSpawnWave()
+    {
+        // Prevent stacking multiple routines
+        if (activeSpawningRoutine == null)
+            activeSpawningRoutine = StartCoroutine(SpawnWaveRoutine());
+    }
+
+    private IEnumerator SpawnWaveRoutine()
+    {
+        Debug.Log("[BossAI] Starting wave spawning sequence.");
+
+         // Stop movement
+        michael.Move(Vector2.zero);
+
+        // Fly Away
+        michael.flyAway();
+
+        // Wait until wave is finished
+        yield return new WaitUntil(() => michael.flownAway == false);
+
+        spawnedWave = true;
+        activeSpawningRoutine = null;
+
+        // Return to chase state
+        SetState(EnemyState.Chase);
+        Debug.Log("[BossAI] Finished wave spawning");
+    }
+
     // Stun
     // private void HandleStunned()
     // {
@@ -263,6 +320,7 @@ public class BossAI : MonoBehaviour
             return;
 
         currentState = newState;
+        
         if (logStates)
             Debug.Log($"[BossAI] {name} entered {currentState}");
     }

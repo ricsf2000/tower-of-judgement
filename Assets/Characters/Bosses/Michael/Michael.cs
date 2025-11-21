@@ -8,6 +8,7 @@ public class Michael : MonoBehaviour
     public float moveSpeed = 60f;
     public float maxVelocity = 3.5f;
     public float stopThreshold = 0.2f;
+    private bool canMove = true;
 
     [Header("Attack Settings")]
     public float attackDuration = 1.3f;
@@ -26,24 +27,24 @@ public class Michael : MonoBehaviour
     [SerializeField] private float projectileSpeed = 6f;
     [SerializeField] private float timeBetweenShots = 0.5f;
 
+    // Fly away settings
+    [HideInInspector] public bool flownAway = false;
+    [SerializeField] private EnemyWaveManager waveManager;
+
 
     [Header("References")]
     public Animator animator;
     private Rigidbody2D rb;
     private EnemyDamageable damageableCharacter;
+    private Collider2D[] allColliders;
 
     private bool isDead = false;
     private Vector2 lastMoveDir = Vector2.down;
-
-    private AudioSource audioSource;
-
-    public AudioClip deathFX;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         damageableCharacter = GetComponent<EnemyDamageable>();
-        audioSource = GetComponent<AudioSource>();
 
         // Force-reset alive state on spawn
         if (damageableCharacter != null && animator != null)
@@ -53,6 +54,8 @@ public class Michael : MonoBehaviour
 
             Debug.Log($"[Power] Start() synced isAlive={alive} for {name}");
         }
+
+        allColliders = GetComponentsInChildren<Collider2D>();
     }
 
     private void Update()
@@ -67,7 +70,7 @@ public class Michael : MonoBehaviour
     // Called by EnemyAI
     public void Move(Vector2 moveInput)
     {
-        if (isDead || isAttacking) return;
+        if (isDead || isAttacking || !canMove) return;
 
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
 
@@ -77,7 +80,7 @@ public class Michael : MonoBehaviour
             rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
 
             animator.SetFloat("lookX", lastMoveDir.x);
-            animator.SetFloat("lookX", lastMoveDir.y);
+            animator.SetFloat("lookY", lastMoveDir.y);
         }
         else
         {
@@ -236,9 +239,6 @@ public class Michael : MonoBehaviour
         Debug.Log("[Michael] Finished corner ranged volley.");
     }
 
-
-
-
     private void FireProjectileAtPlayer()
     {
         var player = FindFirstObjectByType<PlayerController>();
@@ -280,6 +280,91 @@ public class Michael : MonoBehaviour
     }
 
 
+    // ============================================ PHASE 2 =========================================================================================================
+
+    // Michael flies away and spawns a wave of enemies
+    public void flyAway()
+    {
+        Debug.Log("[Michael] flyAway() called");
+        StartCoroutine(FlyAwayRoutine());
+    }
+
+    private IEnumerator FlyAwayRoutine()
+    {
+        // Enable IFrames and stop movement
+        damageableCharacter.Invincible = true;
+
+         // Disable all colliders
+        foreach (var col in allColliders)
+            col.enabled = false;
+
+        flownAway = true;
+        animator.SetBool("flownAway", true);
+
+        // Wait until animation is finished
+        yield return new WaitForSeconds(2.5f);  
+
+        // Enable the wave manager
+        if (waveManager != null)
+        {
+            waveManager.gameObject.SetActive(true);
+            EnemyWaveManager.OnAllWavesCleared += FlyBackHandler;
+        }
+    }
+
+    private void FlyBackHandler()
+    {
+        // Unsubscribe to avoid duplicate calls
+        EnemyWaveManager.OnAllWavesCleared -= FlyBackHandler;
+
+        // Call the flyBack function
+        flyBack();
+    }
+
+    // Called after all waves are cleared
+    public void flyBack()
+    {
+        Debug.Log("[Michael] flyBack() called");
+        StartCoroutine(FlyBackRoutine());
+    }
+    
+    private IEnumerator FlyBackRoutine()
+    {
+         // Pick a landing spot near the player
+        var player = FindFirstObjectByType<PlayerController>();
+        if (player != null)
+        {
+            Vector2 playerPos = player.transform.position;
+
+            float offsetX = Random.Range(0.05f,0.20f);
+            float offsetY = Random.Range(0.05f,0.20f);
+            Vector2 landingOffset = new Vector2(offsetX, offsetY);
+            Vector2 landingPos = playerPos + landingOffset;
+
+            transform.position = landingPos; // instantly put Michael there
+        }
+
+        canMove = false;
+        flownAway = false;
+        animator.SetBool("flownAway", flownAway);
+
+        // Enable all colliders again
+        foreach (var col in allColliders)
+            col.enabled = true;
+        
+        yield return new WaitForSeconds(1.2f);
+
+        canMove = true;
+        damageableCharacter.Invincible = false;
+    }
+
+    // ============================================ DEFEATED =========================================================================================================
+
+    public void OnDefeat()
+    {
+        
+    }
+
     public void OnDeath()
     {
         NoPushing KinematicObject = GetComponent<NoPushing>();
@@ -288,16 +373,6 @@ public class Michael : MonoBehaviour
         if (isDead) return;
         isDead = true;
         rb.linearVelocity = Vector2.zero;
-
-        if (audioSource != null && deathFX != null && audioSource.enabled)
-        {
-            audioSource.volume = 0.50f;
-            audioSource.PlayOneShot(deathFX);
-        }
-        else
-        {
-            Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
-        }
     }
 
     private void UpdateAnimator(Vector2 dir)

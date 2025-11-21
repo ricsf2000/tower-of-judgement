@@ -27,6 +27,10 @@ public class EnemyWaveManager : MonoBehaviour
     private int spawnedThisWave = 0;
     private List<int> availableSpawnIndices = new List<int>();
 
+    // For Michael boss
+    public static event System.Action OnAllWavesCleared;
+
+
     private void OnEnable()
     {
         Debug.Log($"[WaveManager] OnEnable() — starting encounter");
@@ -78,6 +82,9 @@ public class EnemyWaveManager : MonoBehaviour
         }
 
         Debug.Log("[WaveManager] All waves cleared!");
+
+        // For Michael boss
+        OnAllWavesCleared?.Invoke();
     }
 
     private void SpawnWave(EnemyWave wave)

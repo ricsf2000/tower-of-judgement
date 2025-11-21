@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.Audio;
+using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class PauseMenu : MonoBehaviour
     private PlayerInput playerInput;
 
     [SerializeField] private GameObject deathScreen;
+
+    public AudioMixer masterMixer;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -42,6 +47,13 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0.0f;
         isPaused = true;
+
+        // Pause audio
+        masterMixer.SetFloat("MasterSFXPitch", 0f);
+
+        // Fade the music
+        StartCoroutine(FadeMusic(0.05f, 0.25f));
+
         playerInput.SwitchCurrentActionMap("UI");
         EventSystem.current.SetSelectedGameObject(firstSelectedButton);
     }
@@ -51,6 +63,13 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        
+        // Resume audio
+        masterMixer.SetFloat("MasterSFXPitch", 1f);
+
+        // Fade music back in
+        StartCoroutine(FadeMusic(MusicManager.Instance.defaultVolume,0.25f));
+
         playerInput.SwitchCurrentActionMap("Player");
     }
     
@@ -58,6 +77,27 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
+        masterMixer.SetFloat("MasterSFXPitch", 1f);
+        StartCoroutine(FadeMusic(MusicManager.Instance.defaultVolume,0.25f));
         SceneManager.LoadScene("Menu");
     }
+
+    private IEnumerator FadeMusic(float targetVolume, float duration)
+    {
+        if (MusicManager.Instance == null) yield break;
+
+        AudioSource music = MusicManager.Instance.GetComponent<AudioSource>();
+        float start = music.volume;
+        float t = 0f;
+
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime; // works while paused
+            music.volume = Mathf.Lerp(start, targetVolume, t / duration);
+            yield return null;
+        }
+
+        music.volume = targetVolume;
+    }
+
 }
