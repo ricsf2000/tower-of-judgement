@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1279317548630270133}
   - component: {fileID: 2606521636945628508}
   - component: {fileID: 5332044914332225558}
+  - component: {fileID: 8342793596349055421}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   deathPanel: {fileID: 0}
+  firstSelectedButton: {fileID: 0}
 --- !u!114 &2606521636945628508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5c214528ac6224fab228c3f4a2f202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  difficultyPanelName: DifficultySelectionPanel
 --- !u!114 &5332044914332225558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,5 +74,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcee87c34659464eb164b17f10ff953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
-  pauseMenu: {fileID: 384516434011949134, guid: 9a4ecdc455501b94a9d4559852568153, type: 3}
+  pauseMenu: {fileID: 0}
+  enterCodeMenu: {fileID: 8342793596349055421}
   firstSelectedButton: {fileID: 0}
+  deathScreen: {fileID: 0}
+  masterMixer: {fileID: 24100000, guid: a13c586fbb9531a48a8d338d98cf237b, type: 2}
+--- !u!114 &8342793596349055421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236485701672228981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4191729841af8df4a9bd7da40b6e371d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnterCodeMenu
+  enterCodeMenu: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  codeInputField: {fileID: 0}
+  firstSelectedButton: {fileID: 0}
+  errorText: {fileID: 0}

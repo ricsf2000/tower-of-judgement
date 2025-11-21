@@ -22,6 +22,7 @@ using UnityEngine.Rendering;
     public Rigidbody2D Rb => rb;
     public Animator Animator => animator;
     private PauseMenu pauseMenu;
+    private EnterCodeMenu enterCodeMenu;
 
 
     private Vector2 movementInput = Vector2.zero;
@@ -42,6 +43,7 @@ using UnityEngine.Rendering;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         pauseMenu = FindAnyObjectByType<PauseMenu>();
+        enterCodeMenu = FindAnyObjectByType<EnterCodeMenu>();
     }
 
     void FixedUpdate()
@@ -121,11 +123,19 @@ using UnityEngine.Rendering;
 
     void OnPause()
     {
+        // If the Enter Code menu is open, close it first
+        if (enterCodeMenu != null && enterCodeMenu.IsOpen)
+        {
+            enterCodeMenu.CloseCodeMenu();
+            return;
+        }
+
+        // Otherwise handle normal pause/resume
         if (PauseMenu.isPaused)
         {
             pauseMenu.ResumeGame();
         }
-        else if (!PauseMenu.isPaused)
+        else
         {
             pauseMenu.PauseGame();
         }

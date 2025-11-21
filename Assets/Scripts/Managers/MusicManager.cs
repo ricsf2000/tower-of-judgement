@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 public class MusicManager : MonoBehaviour
@@ -44,4 +46,40 @@ public class MusicManager : MonoBehaviour
         source.volume = defaultVolume;
         source.Play();
     }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded; // Listen to scene loads
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // When the player enters a code and enters a new scene, fade the music back in
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Whenever a new scene loads, fade the music back in
+        StartCoroutine(FadeIn());
+    }
+
+    private IEnumerator FadeIn()
+    {
+        float duration = 0.25f;
+        float t = 0f;
+
+        float start = source.volume;
+        float end = defaultVolume;
+
+        while (t < duration)
+        {
+            t += Time.unscaledDeltaTime;
+            source.volume = Mathf.Lerp(start, end, t / duration);
+            yield return null;
+        }
+
+        source.volume = end;
+    }
+
 }
