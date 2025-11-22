@@ -4,10 +4,11 @@ using TMPro;
 using UnityEngine.Playables;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using UnityEngine.InputSystem.Controls;
 
 public class CutsceneDialogueController : MonoBehaviour
-{   
-    private SceneMusicTag musicTag;
+{
     [Header("References")]
     public TypewriterEffect typewriter;
     public TMP_Text dialogueText;
@@ -49,9 +50,7 @@ public class CutsceneDialogueController : MonoBehaviour
     }
 
     private void Awake()
-    {   
-        musicTag = FindAnyObjectByType<SceneMusicTag>();
-
+    {
         if (!playerInput)
             playerInput = FindAnyObjectByType<PlayerInput>();
 
@@ -113,14 +112,15 @@ public class CutsceneDialogueController : MonoBehaviour
             TypewriterEffect.CompleteTextRevealed += handler;
             yield return new WaitUntil(() => done);
             TypewriterEffect.CompleteTextRevealed -= handler;
+
             float t = 0f;
             while (t < delayBetweenLines && !skipping)
             {
                 t += Time.deltaTime;
                 yield return null;
             }
-            
         }
+
         EndCutscene();
     }
 
@@ -174,9 +174,24 @@ public class CutsceneDialogueController : MonoBehaviour
         bool skipPressed =
             allowSkipCutscene &&
             (
-                (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame) ||
-                (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame)
+                (Keyboard.current?.anyKey.wasPressedThisFrame ?? false) ||
+                (Gamepad.current?.allControls.Any(c =>
+                    c is ButtonControl b &&
+                    b.wasPressedThisFrame &&
+                    b != Gamepad.current.leftStickButton &&
+                    b != Gamepad.current.rightStickButton &&
+                    b != Gamepad.current.leftStick.up &&
+                    b != Gamepad.current.leftStick.down &&
+                    b != Gamepad.current.leftStick.left &&
+                    b != Gamepad.current.leftStick.right &&
+                    b != Gamepad.current.rightStick.up &&
+                    b != Gamepad.current.rightStick.down &&
+                    b != Gamepad.current.rightStick.left &&
+                    b != Gamepad.current.rightStick.right
+                ) ?? false)
             );
+
+
 
         // If lines are typing, reveal entire line
         if (!lineFullyRevealed && advancePressed && requireAdvanceInput && advanceCooldown <= 0f)
@@ -209,8 +224,11 @@ public class CutsceneDialogueController : MonoBehaviour
             if (!skipPromptVisible)
             {
                 skipPromptVisible = true;
-                skipPromptText.gameObject.SetActive(true);
-                UpdateSkipPrompt(playerInput ? playerInput.currentControlScheme : "Keyboard&Mouse");
+                if (skipPromptText != null)
+                {
+                    skipPromptText.gameObject.SetActive(true);
+                    skipPromptText.text = "Press any button to skip";
+                }
             }
             else
             {
@@ -297,26 +315,9 @@ public class CutsceneDialogueController : MonoBehaviour
     private void UpdateSkipPrompt(string controlScheme)
     {
         if (skipPromptText == null)
-            return;
+        return;
 
-        string iconTag = "";
-
-        switch (controlScheme)
-        {
-            case "Gamepad":
-                skipPromptText.spriteAsset = xboxIcons;
-                iconTag = "<sprite name=\"xbox_Y\">";
-                skipPromptText.text = $"Press {iconTag} to skip";
-                break;
-
-            case "Keyboard&Mouse":
-            default:
-                skipPromptText.spriteAsset = keyboardIcons;
-                iconTag = "<sprite name=\"KBM_Space\">";
-                skipPromptText.text = $"Press {iconTag} to skip";
-                break;
-        }
-
+        skipPromptText.text = "Press any button to skip";
         skipPromptText.ForceMeshUpdate();
     }
 
@@ -340,10 +341,6 @@ public class CutsceneDialogueController : MonoBehaviour
         ResetCutsceneState();
 
         IsCutsceneActive = false;
-
-        /*if (musicTag != null && musicTag.bossClip != null)
-        MusicManager.Instance.SetTrack(musicTag.bossClip, true);*/
-        
 
         if (skipPromptText != null)
             skipPromptText.gameObject.SetActive(false);
