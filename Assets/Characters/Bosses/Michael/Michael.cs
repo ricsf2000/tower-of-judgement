@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Michael : MonoBehaviour
 {
@@ -22,14 +23,19 @@ public class Michael : MonoBehaviour
     [Header("Corner Positions (Assign in Inspector)")]
     [SerializeField] private List<Transform> cornerPositions;
 
-    [Header("Projectile Prefab")]
+    [Header("Projectile")]
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private float waveAttackDuration = 1.0f;
     [SerializeField] private float projectileSpeed = 6f;
     [SerializeField] private float timeBetweenShots = 0.5f;
+    private bool fireProjectileThisAttack = false;
+
 
     // Fly away settings
     [HideInInspector] public bool flownAway = false;
-    [SerializeField] private EnemyWaveManager waveManager;
+    [SerializeField] private EnemyWaveManager[] waveManagers;
+    private int nextWaveIndex = 0;
+    [SerializeField] public float landingDelayTimer = 0f;
 
 
     [Header("References")]
@@ -56,6 +62,10 @@ public class Michael : MonoBehaviour
         }
 
         allColliders = GetComponentsInChildren<Collider2D>();
+
+        nextWaveIndex = 0;
+        flownAway = false;
+
     }
 
     private void Update()
@@ -65,7 +75,21 @@ public class Michael : MonoBehaviour
         {
             OnDeath();
         }
+
+        if (landingDelayTimer > 0f)
+            landingDelayTimer -= Time.deltaTime;
     }
+
+    private void OnDisable()
+    {
+        EnemyWaveManager.OnAllWavesCleared -= FlyBackHandler;
+    }
+
+    private void OnDestroy()
+    {
+        EnemyWaveManager.OnAllWavesCleared -= FlyBackHandler;
+    }
+
 
     // Called by EnemyAI
     public void Move(Vector2 moveInput)
@@ -186,14 +210,19 @@ public class Michael : MonoBehaviour
         }
 
         isAttacking = true;
+        fireProjectileThisAttack = true;
+
         yield return StartCoroutine(CornerAttackRoutine());
+
         isAttacking = false;
+        fireProjectileThisAttack = false;
     }
 
     private IEnumerator CornerAttackRoutine()
     {
         // Choose random corner
-        Transform targetCorner = cornerPositions[Random.Range(0, cornerPositions.Count)];
+        Transform targetCorner = cornerPositions.Where(c => Vector2.Distance(transform.position, c.position) > 0.5f).OrderBy(c => Random.value).First();
+
         Debug.Log($"[Michael] Moving to corner: {targetCorner.name}");
 
         // Fly up
@@ -229,18 +258,26 @@ public class Michael : MonoBehaviour
             LookAt(player.transform.position);
             animator.SetTrigger("swordAttack");
 
-            yield return new WaitForSeconds(0.67f); // Impact timing
-            FireProjectileAtPlayer();
+            // Wait for the animation duration
+            yield return new WaitForSeconds(waveAttackDuration);
 
-            // Only wait between swings if more remain
             if (i < shots - 1)
-                yield return new WaitForSeconds(attackDuration + timeBetweenShots);
+                yield return new WaitForSeconds(timeBetweenShots);
         }
 
         yield return new WaitForSeconds(0.3f);
         damageableCharacter.invincibleOverride = false;
         Debug.Log("[Michael] Finished corner ranged volley.");
     }
+
+    // Called during the attack animation in Unity
+    public void AnimEventFireProjectile()
+    {
+        if (!fireProjectileThisAttack) return;
+
+        FireProjectileAtPlayer();
+    }
+
 
     private void FireProjectileAtPlayer()
     {
@@ -267,7 +304,7 @@ public class Michael : MonoBehaviour
         WaveProjectile wave = proj.GetComponent<WaveProjectile>();
         if (wave != null)
         {
-            wave.Initialize(dir);
+            wave.Initialize(dir, projectileSpeed);
         }
         else
         {
@@ -308,10 +345,15 @@ public class Michael : MonoBehaviour
         yield return new WaitForSeconds(2.5f);  
 
         // Enable the wave manager
-        if (waveManager != null)
+        // Make sure there's still waves to spawn
+        if (nextWaveIndex < waveManagers.Length)
         {
-            waveManager.gameObject.SetActive(true);
+            waveManagers[nextWaveIndex].gameObject.SetActive(true);
             EnemyWaveManager.OnAllWavesCleared += FlyBackHandler;
+        }
+        else
+        {
+            Debug.Log("[Michael] No more wave managers to activate.");
         }
     }
 
@@ -322,6 +364,9 @@ public class Michael : MonoBehaviour
 
         // Call the flyBack function
         flyBack();
+
+        // Move to the next wave
+        nextWaveIndex++;
     }
 
     // Called after all waves are cleared
@@ -354,6 +399,8 @@ public class Michael : MonoBehaviour
         // Enable all colliders again
         foreach (var col in allColliders)
             col.enabled = true;
+        
+        landingDelayTimer = 1.0f;   // Delay before bossAI picks a new state
         
         yield return new WaitForSeconds(1.0f);
 
