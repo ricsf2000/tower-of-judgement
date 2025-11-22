@@ -1985,10 +1985,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f36399f93e4bfe478585a263a515635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusicTag
-  sceneGroup: 2
+  sceneGroup: 4
   menuClip: {fileID: 8300000, guid: f2b0de07b1c3bfc46841820005b85242, type: 3}
   backstoryClip: {fileID: 8300000, guid: f9e7b522074d64c54872c9a51d3c701b, type: 3}
   roomsClip: {fileID: 8300000, guid: c8d7fd9105110443b9f211f60773662d, type: 3}
+  bossClip: {fileID: 8300000, guid: b6497e75982600f429fd8a6a08cae63b, type: 3}
+  No_musicClip: {fileID: 0}
 --- !u!4 &168714225
 Transform:
   m_ObjectHideFlags: 0

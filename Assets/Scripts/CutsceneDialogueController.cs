@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class CutsceneDialogueController : MonoBehaviour
-{
+{   
+    private SceneMusicTag musicTag;
     [Header("References")]
     public TypewriterEffect typewriter;
     public TMP_Text dialogueText;
@@ -48,7 +49,9 @@ public class CutsceneDialogueController : MonoBehaviour
     }
 
     private void Awake()
-    {
+    {   
+        musicTag = FindAnyObjectByType<SceneMusicTag>();
+
         if (!playerInput)
             playerInput = FindAnyObjectByType<PlayerInput>();
 
@@ -338,6 +341,10 @@ public class CutsceneDialogueController : MonoBehaviour
         ResetCutsceneState();
 
         IsCutsceneActive = false;
+
+        if (musicTag != null && musicTag.bossClip != null)
+        MusicManager.Instance.SetTrack(musicTag.bossClip, true);
+        
 
         if (skipPromptText != null)
             skipPromptText.gameObject.SetActive(false);

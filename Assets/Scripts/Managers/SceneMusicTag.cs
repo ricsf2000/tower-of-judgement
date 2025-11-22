@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SceneMusicTag : MonoBehaviour
 {
-    public enum SceneGroup { Menu, Backstory, Rooms }
+    public enum SceneGroup { Menu, Backstory, Rooms, Boss, No_music }
     [Header("What is this scene?")]
     public SceneGroup sceneGroup;
 
@@ -10,6 +10,8 @@ public class SceneMusicTag : MonoBehaviour
     public AudioClip menuClip;
     public AudioClip backstoryClip;
     public AudioClip roomsClip;
+    public AudioClip bossClip;
+    public AudioClip No_musicClip;
 
     void Start()
     {
@@ -25,6 +27,12 @@ public class SceneMusicTag : MonoBehaviour
                 break;
             case SceneGroup.Rooms:
                 MusicManager.Instance.SetTrack(roomsClip, false);
+                break;
+            case SceneGroup.Boss:
+                MusicManager.Instance.SetTrack(bossClip, false);
+                break;
+            case SceneGroup.No_music:
+                MusicManager.Instance.SetTrack(No_musicClip, false);
                 break;
         }
     }
