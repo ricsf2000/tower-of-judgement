@@ -279,7 +279,9 @@ MonoBehaviour:
   projectileSpeed: 8.5
   timeBetweenShots: 0.1
   flownAway: 0
-  waveManagers: []
+  waveManagers:
+  - {fileID: 0}
+  - {fileID: 0}
   landingDelayTimer: 0
   animator: {fileID: 5192565788407555550}
 --- !u!114 &1800961116147563557
