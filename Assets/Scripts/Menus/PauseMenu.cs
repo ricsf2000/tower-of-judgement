@@ -9,6 +9,8 @@ using System.Collections;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public EnterCodeMenu enterCodeMenu;
+
     public static bool isPaused;
     public GameObject firstSelectedButton;
 
@@ -81,6 +83,12 @@ public class PauseMenu : MonoBehaviour
         StartCoroutine(FadeMusic(MusicManager.Instance.defaultVolume,0.25f));
         SceneManager.LoadScene("Menu");
     }
+
+    public void OpenEnterCodeMenu()
+    {
+        enterCodeMenu.OpenCodeMenu();
+    }
+
 
     private IEnumerator FadeMusic(float targetVolume, float duration)
     {

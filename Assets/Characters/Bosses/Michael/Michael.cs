@@ -196,20 +196,22 @@ public class Michael : MonoBehaviour
         Transform targetCorner = cornerPositions[Random.Range(0, cornerPositions.Count)];
         Debug.Log($"[Michael] Moving to corner: {targetCorner.name}");
 
-        // Move quickly to that corner
-        float moveSpeed = 8f;
-        float stopDistance = 0.1f;
-
-        while (Vector2.Distance(transform.position, targetCorner.position) > stopDistance)
-        {
-            Vector2 dir = (targetCorner.position - transform.position).normalized;
-            rb.linearVelocity = dir * moveSpeed;
-            LookAt(targetCorner.position);
-            yield return null;
-        }
-
+        // Fly up
+        damageableCharacter.invincibleOverride = true;
+        animator.SetBool("flownAway", true);
         rb.linearVelocity = Vector2.zero;
-        yield return new WaitForSeconds(0.25f);
+
+        // Wait for fly-up anim to finish
+        yield return new WaitForSeconds(1.0f);
+
+        // Teleport to corner
+        transform.position = targetCorner.position;
+
+        // Land
+        animator.SetBool("flownAway", false);
+
+        // Wait for landing animation to finish
+        yield return new WaitForSeconds(1.0f);
 
         // Begin attack sequence
         var player = FindFirstObjectByType<PlayerController>();
@@ -236,6 +238,7 @@ public class Michael : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.3f);
+        damageableCharacter.invincibleOverride = false;
         Debug.Log("[Michael] Finished corner ranged volley.");
     }
 
@@ -292,7 +295,7 @@ public class Michael : MonoBehaviour
     private IEnumerator FlyAwayRoutine()
     {
         // Enable IFrames and stop movement
-        damageableCharacter.Invincible = true;
+        damageableCharacter.invincibleOverride = true;
 
          // Disable all colliders
         foreach (var col in allColliders)
@@ -352,10 +355,10 @@ public class Michael : MonoBehaviour
         foreach (var col in allColliders)
             col.enabled = true;
         
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.0f);
 
         canMove = true;
-        damageableCharacter.Invincible = false;
+        damageableCharacter.invincibleOverride = false;
     }
 
     // ============================================ DEFEATED =========================================================================================================

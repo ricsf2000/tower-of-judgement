@@ -50,7 +50,8 @@ public class PlayerAttack : MonoBehaviour
 
     public void HandleAttack()
     {
-        if (!controller.canAttack) return;
+        if (!controller.canAttack) return;  // Stop queued attacks
+        controller.canAttack = false;       // Lock until EnableNextAttack()
 
         animator.ResetTrigger("swordAttack");
 
