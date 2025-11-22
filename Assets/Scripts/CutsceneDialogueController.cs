@@ -113,15 +113,22 @@ public class CutsceneDialogueController : MonoBehaviour
             TypewriterEffect.CompleteTextRevealed += handler;
             yield return new WaitUntil(() => done);
             TypewriterEffect.CompleteTextRevealed -= handler;
-
+            if (i == lines.Length - 1)
+            {
+                if (musicTag != null && musicTag.bossClip != null)
+                {
+                    MusicManager.Instance.SetTrack(musicTag.bossClip, true);
+                }
+            }
             float t = 0f;
             while (t < delayBetweenLines && !skipping)
             {
                 t += Time.deltaTime;
                 yield return null;
             }
+            //trigger the boss music at last line
+            
         }
-
         EndCutscene();
     }
 
@@ -342,8 +349,8 @@ public class CutsceneDialogueController : MonoBehaviour
 
         IsCutsceneActive = false;
 
-        if (musicTag != null && musicTag.bossClip != null)
-        MusicManager.Instance.SetTrack(musicTag.bossClip, true);
+        /*if (musicTag != null && musicTag.bossClip != null)
+        MusicManager.Instance.SetTrack(musicTag.bossClip, true);*/
         
 
         if (skipPromptText != null)

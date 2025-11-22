@@ -2672,6 +2672,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0dcf16a3f392d4b44a748eb4bcc0f3a2, type: 2}
     - {fileID: 11400000, guid: e15dc18d716befd4bbfe772a74a6a772, type: 2}
     - {fileID: 11400000, guid: 39f98b8131700154b80b36aee49fb81d, type: 2}
+    - {fileID: 11400000, guid: 9028695d5f5398743951e1a36841a19d, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2986,6 +2987,20 @@ MonoBehaviour:
         - m_Target: {fileID: 1251263672}
           m_TargetAssemblyTypeName: BossDamageable, Assembly-CSharp
           m_MethodName: NotifyCutsceneFinished
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1229108870}
+          m_TargetAssemblyTypeName: BossMusicTrigger, Assembly-CSharp
+          m_MethodName: PlayBossMusic
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7485,6 +7500,8 @@ PlayableDirector:
     value: {fileID: 60907591}
   - key: {fileID: 6660378118768174905, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
     value: {fileID: 2014855569}
+  - key: {fileID: -3431161560173951605, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
+    value: {fileID: 419414263}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &776008963
@@ -73989,6 +74006,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4191729841af8df4a9bd7da40b6e371d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnterCodeMenu
+--- !u!1 &1229108869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229108871}
+  - component: {fileID: 1229108870}
+  m_Layer: 0
+  m_Name: BossMusicPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1229108870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229108869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507d990c341557b40bab0b9bdd9c30af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMusicTrigger
+  bossClip: {fileID: 8300000, guid: b6497e75982600f429fd8a6a08cae63b, type: 3}
+--- !u!4 &1229108871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229108869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.95002, y: 4.10999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1235782943 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2650528225559408281, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
@@ -94591,3 +94653,4 @@ SceneRoots:
   - {fileID: 1072649687}
   - {fileID: 1413825996}
   - {fileID: 119348570}
+  - {fileID: 1229108871}
