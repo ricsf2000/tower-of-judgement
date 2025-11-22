@@ -130,9 +130,9 @@ BoxCollider2D:
   m_Offset: {x: 0.0009930134, y: 0.090140484}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.35}
+    pivot: {x: 0.5, y: 0.4}
     oldSize: {x: 0.96, y: 0.96}
-    newSize: {x: 0.96, y: 0.5}
+    newSize: {x: 0.96, y: 0.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455030735673152881}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f51a2804938be324cb85c9d2b026d031, type: 3}
   m_Name: 
@@ -203,7 +203,7 @@ MonoBehaviour:
   currentPhase: 0
   damageableCharacter: {fileID: 1800961116147563557}
   phase2Threshold: 0.7
-  phase3Threshold: 0
+  phase3Threshold: 0.3
   detectors:
   - {fileID: 6923397740314609326}
   - {fileID: 5274597241516423659}
@@ -217,6 +217,8 @@ MonoBehaviour:
   rangedDecisionCooldown: 5
   michael: {fileID: 8385757812501856695}
   logStates: 1
+  waveLimitInPhase2: 1
+  waveLimitInPhase3: 2
 --- !u!114 &7394384881392674503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,10 +275,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   projectilePrefab: {fileID: 3958839713410716231, guid: 3be6682695e0ddc4684490b18630e68b, type: 3}
+  waveAttackDuration: 0.5
   projectileSpeed: 1
-  timeBetweenShots: 0.4
+  timeBetweenShots: 0.1
   flownAway: 0
-  waveManager: {fileID: 0}
+  waveManagers:
+  - {fileID: 0}
+  - {fileID: 0}
+  landingDelayTimer: 0
   animator: {fileID: 5192565788407555550}
 --- !u!114 &1800961116147563557
 MonoBehaviour:

@@ -19,9 +19,10 @@ public class WaveProjectile : MonoBehaviour
     }
 
     // Called by the spawner (Michael / Player)
-    public void Initialize(Vector2 fireDirection)
+    public void Initialize(Vector2 fireDirection, float newSpeed)
     {
         direction = fireDirection.normalized;
+        speed = newSpeed;   // override speed
 
         // Rotate sprite to face direction
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f;

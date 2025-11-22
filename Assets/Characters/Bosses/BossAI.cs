@@ -54,7 +54,9 @@ public class BossAI : MonoBehaviour
 
     // Phase 2
     private Coroutine activeSpawningRoutine;
-    private bool spawnedWave = false;
+    private int wavesSpawned = 0;
+    [SerializeField] private int waveLimitInPhase2 = 1; // 1 wave in phase 2
+    [SerializeField] private int waveLimitInPhase3 = 2; // 1 wave in phase 3 (set to 3 if we want 2 waves)
 
     private Vector2 movementInput;
 
@@ -153,6 +155,9 @@ public class BossAI : MonoBehaviour
 
     private void HandleChase(Vector2 targetPos)
     {
+        if (michael.landingDelayTimer > 0f)
+            return;
+            
         michael.LookAt(targetPos);
 
         movementInput = movementDirectionSolver.GetDirectionToMove(steeringBehaviours, aiData);
@@ -185,18 +190,49 @@ public class BossAI : MonoBehaviour
             // Phase 2
             if (currentPhase == BossPhase.Phase2)
             {
-                //float choice = Random.value;
+                float choice = Random.value;
 
-                Debug.Log($"[BossAI] Phase2 decision. spawnedWave={spawnedWave}, activeRoutine={activeSpawningRoutine}");
-
-                if (!spawnedWave)
+                if (wavesSpawned < waveLimitInPhase2)
                 {
                     SetState(EnemyState.SpawnWave);
                     return;
                 }
-                else
+
+                // 60% chance melee, 40% ranged
+                if (choice < 0.6f)
                 {
                     SetState(EnemyState.MeleeAttack);
+                    return;
+                }
+                else if (rangedCooldownTimer <= 0f)
+                {
+                    SetState(EnemyState.RangedAttack);
+                    rangedCooldownTimer = rangedDecisionCooldown;
+                    return;
+                }
+            }
+
+            // Phase 3
+            if (currentPhase == BossPhase.Phase3)
+            {
+                float choice = Random.value;
+
+                if (wavesSpawned < waveLimitInPhase3)
+                {
+                    SetState(EnemyState.SpawnWave);
+                    return;
+                }
+
+                // 50% chance melee, 50% ranged
+                if (choice < 0.5f)
+                {
+                    SetState(EnemyState.MeleeAttack);
+                    return;
+                }
+                else if (rangedCooldownTimer <= 0f)
+                {
+                    SetState(EnemyState.RangedAttack);
+                    rangedCooldownTimer = rangedDecisionCooldown;
                     return;
                 }
             }
@@ -287,7 +323,7 @@ public class BossAI : MonoBehaviour
         // Wait until wave is finished
         yield return new WaitUntil(() => michael.flownAway == false);
 
-        spawnedWave = true;
+        wavesSpawned++;
         activeSpawningRoutine = null;
 
         // Return to chase state

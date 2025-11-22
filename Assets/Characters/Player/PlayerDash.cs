@@ -138,6 +138,7 @@ public class PlayerDash : MonoBehaviour
         {
             controller.canMove = true;
             controller.moveSpeedMultiplier = 1f;
+            controller.canAttack = true;    // Make sure dashes can never lock attacks
         }
 
         rb.linearVelocity = Vector2.zero;
