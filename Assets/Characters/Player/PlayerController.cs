@@ -23,6 +23,7 @@ using UnityEngine.Rendering;
     public Animator Animator => animator;
     private PauseMenu pauseMenu;
     private EnterCodeMenu enterCodeMenu;
+    private CutsceneDialogueController cutsceneDialogueController;
 
 
     private Vector2 movementInput = Vector2.zero;
@@ -44,13 +45,21 @@ using UnityEngine.Rendering;
         animator = GetComponentInChildren<Animator>();
         pauseMenu = FindAnyObjectByType<PauseMenu>();
         enterCodeMenu = FindAnyObjectByType<EnterCodeMenu>();
+        cutsceneDialogueController = FindFirstObjectByType<CutsceneDialogueController>();
     }
 
     void FixedUpdate()
     {
+        if (CutsceneDialogueController.IsCutsceneActive)
+        {
+            rb.linearVelocity = Vector2.zero;
+            animator.SetBool("isMoving", false);
+            return;
+        }
+
         if (!canMove) return;
 
-        if (PauseMenu.isPaused || CutsceneDialogueController.IsCutsceneActive)
+        if (PauseMenu.isPaused)
         {
             rb.linearVelocity = Vector2.zero;
             animator.SetBool("isMoving", false);
@@ -138,6 +147,16 @@ using UnityEngine.Rendering;
         else
         {
             pauseMenu.PauseGame();
+        }
+    }
+
+    void OnAdvanceText()
+    {
+        Debug.Log("OnAdvanceText Pressed");
+        if (CutsceneDialogueController.IsCutsceneActive)
+        {
+            Debug.Log("OnAdvanceText Pressed, Cutscene Active");
+            cutsceneDialogueController.OnAdvancePressed();
         }
     }
 

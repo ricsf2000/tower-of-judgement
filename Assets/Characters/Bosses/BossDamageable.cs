@@ -30,7 +30,7 @@ public class BossDamageable : EnemyDamageable
             dialogue.director = defeatTimeline;
         }
 
-        // Freeze player + global movement if you use your system
+        // Set cutscene as active
         CutsceneDialogueController.SetCutsceneActive(true);
 
         yield return new WaitForSeconds(2.5f); // short settle time
@@ -42,12 +42,6 @@ public class BossDamageable : EnemyDamageable
             Debug.Log("[BossDamageable] Playing defeat timeline.");
             defeatTimeline.Play();
 
-            yield return new WaitUntil(() =>
-                defeatTimeline.time >= defeatTimeline.duration ||
-                defeatTimeline.state != PlayState.Playing
-            );
-
-            Debug.Log("[BossDamageable] Timeline ended.");
         }
         else
         {
@@ -57,10 +51,8 @@ public class BossDamageable : EnemyDamageable
 
 
         // Wait for timeline signal 
-        if (!cutsceneFinished)
-        {
-            yield return new WaitUntil(() => cutsceneFinished);
-        }
+        while (!cutsceneFinished)
+            yield return null;
 
         Debug.Log("[BossDamageable] Cutscene fully finished.");
     }

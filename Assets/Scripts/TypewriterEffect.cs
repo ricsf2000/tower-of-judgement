@@ -157,5 +157,29 @@ public class TypewriterEffect : MonoBehaviour
         CompleteTextRevealed?.Invoke();
     }
 
+    public void ResetState()
+    {
+        // Stop any running typewriter coroutine
+        if (_typewriterCoroutine != null)
+            StopCoroutine(_typewriterCoroutine);
+
+        _typewriterCoroutine = null;
+
+        // Reset flags
+        _readyForNewText = true;
+        CurrentlySkipping = false;
+
+        // Reset counters
+        _currentVisibleCharacterIndex = 0;
+
+        // Reset TMP display
+        if (_textBox != null)
+        {
+            _textBox.maxVisibleCharacters = 0;
+            _textBox.alpha = 1; // ensure text will show when typing starts
+            _textBox.ForceMeshUpdate();
+        }
+    }
+
 
 }

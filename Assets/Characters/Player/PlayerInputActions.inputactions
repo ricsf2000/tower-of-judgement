@@ -367,7 +367,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "9ca5c451-5091-4490-9ed3-5be9eb036d0c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -448,6 +448,15 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "35e66fa8-1948-419f-8cc0-06e8a58e63ca",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AdvanceText",
+                    "type": "Button",
+                    "id": "ac848dc2-3800-436d-9f4c-c232e46daf9e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -892,6 +901,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b11d33d5-6469-439a-9746-9a10e678f009",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AdvanceText",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8125d9fe-e607-4edd-9976-2ba2f710ca39",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "AdvanceText",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -2681,6 +2681,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0dcf16a3f392d4b44a748eb4bcc0f3a2, type: 2}
     - {fileID: 11400000, guid: e15dc18d716befd4bbfe772a74a6a772, type: 2}
     - {fileID: 11400000, guid: 39f98b8131700154b80b36aee49fb81d, type: 2}
+    - {fileID: 11400000, guid: e76318b8863556240bc549552ab8eee5, type: 2}
+    - {fileID: 11400000, guid: 15e170ecdf0a7944d9368ca8723552a0, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -3004,6 +3006,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 419414264}
+          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
+          m_MethodName: FreezeCutscene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 419414264}
+          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
+          m_MethodName: UnfreezeCutscene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &419414264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3077,6 +3107,8 @@ MonoBehaviour:
   keyboardIcons: {fileID: 11400000, guid: 2bc1d13cbca44774fab71b82d2b59699, type: 2}
   allowSkipCutscene: 0
   requireAdvanceInput: 1
+  AIScripts:
+  - {fileID: 1235782943}
 --- !u!4 &419414265
 Transform:
   m_ObjectHideFlags: 0
@@ -7402,8 +7434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimelineTrigger
   timeline: {fileID: 700156731}
-  bossAI: {fileID: 1235782943}
-  boss: {fileID: 1251263660}
 --- !u!61 &700156728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7494,6 +7524,8 @@ PlayableDirector:
     value: {fileID: 60907591}
   - key: {fileID: 6660378118768174905, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
     value: {fileID: 2014855569}
+  - key: {fileID: -7931947512463344863, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
+    value: {fileID: 419414263}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &776008963
@@ -74191,6 +74223,8 @@ PlayableDirector:
     value: {fileID: 2145911534}
   - key: {fileID: -5330089180394114613, guid: 6844b459ca2f0fb4bb2e0f5d8609e02f, type: 2}
     value: {fileID: 1986252129}
+  - key: {fileID: 783437779574680458, guid: 6844b459ca2f0fb4bb2e0f5d8609e02f, type: 2}
+    value: {fileID: 419414263}
   m_ExposedReferences:
     m_References: []
 --- !u!61 &1287802230
