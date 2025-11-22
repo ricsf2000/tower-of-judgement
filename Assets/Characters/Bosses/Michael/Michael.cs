@@ -250,13 +250,13 @@ public class Michael : MonoBehaviour
             yield break;
         }
 
-        int shots = Random.Range(3, 6);
+        int shots = Random.Range(5, 7);
         Debug.Log($"[Michael] Performing {shots} ranged swings.");
 
         for (int i = 0; i < shots; i++)
         {
             LookAt(player.transform.position);
-            animator.SetTrigger("swordAttack");
+            animator.SetTrigger("waveAttack");
 
             // Wait for the animation duration
             yield return new WaitForSeconds(waveAttackDuration);

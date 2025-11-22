@@ -91190,10 +91190,6 @@ PrefabInstance:
       value: Michael
       objectReference: {fileID: 0}
     - target: {fileID: 1800961116147563557, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: bossAI
-      value: 
-      objectReference: {fileID: 1235782943}
-    - target: {fileID: 1800961116147563557, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
       propertyPath: defeatTimeline
       value: 
       objectReference: {fileID: 1287802228}
@@ -91238,12 +91234,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: waveManager
-      value: 
-      objectReference: {fileID: 1771229735}
-    - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: waveManagers.Array.size
+      propertyPath: projectileSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
+      propertyPath: waveAttackDuration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
       propertyPath: 'waveManagers.Array.data[0]'

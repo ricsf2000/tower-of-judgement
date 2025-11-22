@@ -130,9 +130,9 @@ BoxCollider2D:
   m_Offset: {x: 0.0009930134, y: 0.090140484}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.35}
+    pivot: {x: 0.5, y: 0.4}
     oldSize: {x: 0.96, y: 0.96}
-    newSize: {x: 0.96, y: 0.5}
+    newSize: {x: 0.96, y: 0.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -275,8 +275,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   projectilePrefab: {fileID: 3958839713410716231, guid: 3be6682695e0ddc4684490b18630e68b, type: 3}
-  waveAttackDuration: 1
-  projectileSpeed: 8.5
+  waveAttackDuration: 0.5
+  projectileSpeed: 1
   timeBetweenShots: 0.1
   flownAway: 0
   waveManagers:
