@@ -654,6 +654,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210622173}
   m_CullTransparentMesh: 1
+--- !u!1 &231398758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 231398760}
+  - component: {fileID: 231398759}
+  m_Layer: 0
+  m_Name: CutsceneSkipManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &231398759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231398758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752813faa33f27c4788459d36ad528ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneSkip
+  director: {fileID: 1126497871}
+  dialogueController: {fileID: 908455602}
+  skipPrompt: {fileID: 1344507327}
+  skipKey: 1
+--- !u!4 &231398760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231398758}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.72771, y: 4.02492, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &295612373
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +909,8 @@ MonoBehaviour:
   menuClip: {fileID: 8300000, guid: f2b0de07b1c3bfc46841820005b85242, type: 3}
   backstoryClip: {fileID: 8300000, guid: f9e7b522074d64c54872c9a51d3c701b, type: 3}
   roomsClip: {fileID: 8300000, guid: c8d7fd9105110443b9f211f60773662d, type: 3}
+  bossClip: {fileID: 0}
+  No_musicClip: {fileID: 0}
 --- !u!4 &562197086
 Transform:
   m_ObjectHideFlags: 0
@@ -1150,6 +1200,8 @@ MonoBehaviour:
   playerInput: {fileID: 42814746}
   xboxIcons: {fileID: 11400000, guid: fa669c0e4fcdd354dba32225094cb40b, type: 2}
   keyboardIcons: {fileID: 11400000, guid: 2bc1d13cbca44774fab71b82d2b59699, type: 2}
+  allowSkipCutscene: 1
+  requireAdvanceInput: 0
 --- !u!4 &908455603
 Transform:
   m_ObjectHideFlags: 0
@@ -1445,7 +1497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 51.00006, y: -19}
+  m_AnchoredPosition: {x: 51, y: -19}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1344507326
@@ -2137,3 +2189,4 @@ SceneRoots:
   - {fileID: 562197086}
   - {fileID: 977094974}
   - {fileID: 42814747}
+  - {fileID: 231398760}
