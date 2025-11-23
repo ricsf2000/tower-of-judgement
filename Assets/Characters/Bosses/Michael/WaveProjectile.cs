@@ -5,7 +5,7 @@ public class WaveProjectile : MonoBehaviour
 {
     [Header("Projectile Settings")]
     public float speed = 6f;
-    public float lifetime = 5f;
+    public float lifetime = 3f;
     public float damage = 1f;
 
     private Vector2 direction;
