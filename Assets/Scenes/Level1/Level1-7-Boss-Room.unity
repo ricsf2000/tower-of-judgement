@@ -91269,7 +91269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
       propertyPath: projectileSpeed
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
       propertyPath: timeBetweenShots

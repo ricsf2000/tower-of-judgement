@@ -216,7 +216,7 @@ MonoBehaviour:
   attackDecisionDelay: 0.8
   rangedDecisionCooldown: 5
   maxRangedInARow: 3
-  rangedChainCooldown: 4
+  rangedChainCooldown: 8
   michael: {fileID: 8385757812501856695}
   logStates: 1
   waveLimitInPhase2: 1
