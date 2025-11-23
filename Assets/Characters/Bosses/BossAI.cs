@@ -38,6 +38,12 @@ public class BossAI : MonoBehaviour
     [SerializeField] private float meleeRange = 1.5f;
     [SerializeField] private float attackDecisionDelay = 1.5f;
     [SerializeField] private float rangedDecisionCooldown = 5f;
+    // Ranged combo control
+    [SerializeField] private int maxRangedInARow = 3;
+    private int rangedChainCount = 0;
+    [SerializeField] private float rangedChainCooldown = 4f;
+    private float rangedChainCooldownTimer = 0f;
+
 
     [Header("References")]
     [SerializeField] private Michael michael;
@@ -77,6 +83,10 @@ public class BossAI : MonoBehaviour
 
         aiTimer -= Time.deltaTime;
         rangedCooldownTimer -= Time.deltaTime;
+        rangedChainCooldownTimer -= Time.deltaTime;
+
+        if (rangedChainCooldownTimer <= 0f && rangedChainCount > 0)
+            rangedChainCount = 0;
 
         // Run detection
         foreach (var detector in detectors)
@@ -181,8 +191,19 @@ public class BossAI : MonoBehaviour
                 }
                 else if (rangedCooldownTimer <= 0f)
                 {
-                    SetState(EnemyState.RangedAttack);
-                    rangedCooldownTimer = rangedDecisionCooldown;
+                    if (rangedChainCount < maxRangedInARow)
+                    {
+                        SetState(EnemyState.RangedAttack);
+                        rangedCooldownTimer = rangedDecisionCooldown;
+
+                        rangedChainCount++; // track chain
+                    }
+                    else
+                    {
+                        // If exceeded the chain, then force cooldown
+                        rangedChainCooldownTimer = rangedChainCooldown;
+                    }
+
                     return;
                 }
             }
@@ -206,8 +227,19 @@ public class BossAI : MonoBehaviour
                 }
                 else if (rangedCooldownTimer <= 0f)
                 {
-                    SetState(EnemyState.RangedAttack);
-                    rangedCooldownTimer = rangedDecisionCooldown;
+                    if (rangedChainCount < maxRangedInARow)
+                    {
+                        SetState(EnemyState.RangedAttack);
+                        rangedCooldownTimer = rangedDecisionCooldown;
+
+                        rangedChainCount++; // track chain
+                    }
+                    else
+                    {
+                        // If exceeded the chain, then force cooldown
+                        rangedChainCooldownTimer = rangedChainCooldown;
+                    }
+
                     return;
                 }
             }
@@ -231,8 +263,19 @@ public class BossAI : MonoBehaviour
                 }
                 else if (rangedCooldownTimer <= 0f)
                 {
-                    SetState(EnemyState.RangedAttack);
-                    rangedCooldownTimer = rangedDecisionCooldown;
+                    if (rangedChainCount < maxRangedInARow)
+                    {
+                        SetState(EnemyState.RangedAttack);
+                        rangedCooldownTimer = rangedDecisionCooldown;
+
+                        rangedChainCount++; // track chain
+                    }
+                    else
+                    {
+                        // If exceeded the chain, then force cooldown
+                        rangedChainCooldownTimer = rangedChainCooldown;
+                    }
+
                     return;
                 }
             }

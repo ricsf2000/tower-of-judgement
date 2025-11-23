@@ -35,8 +35,8 @@ public class WaveHitbox : MonoBehaviour, IHitbox
             }
             
             player.OnHit(damage);
-            Debug.Log("[WaveHitbox] Hit player, destroying projectile.");
-            parentProjectile.DestroySelf();
+            // Debug.Log("[WaveHitbox] Hit player, destroying projectile.");
+            // parentProjectile.DestroySelf();
         }
     }
 }

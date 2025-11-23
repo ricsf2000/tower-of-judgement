@@ -198,6 +198,12 @@ public class Michael : MonoBehaviour
         Debug.Log($"[Michael] {name}'s attack was canceled!");
     }
 
+    // Called by the attack animations events in Unity
+    public void LungeForward()
+    {
+        rb.AddForce(lockedDirection * 15f, ForceMode2D.Impulse);
+    }
+
 
     // Corner range attack
     public IEnumerator CornerRangedAttack()

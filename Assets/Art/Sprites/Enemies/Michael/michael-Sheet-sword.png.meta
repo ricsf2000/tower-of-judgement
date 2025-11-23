@@ -1,433 +1,250 @@
 fileFormatVersion: 2
-guid: 6d6d751c409ef30458cfd5cca1bcfd3d
+guid: a9123cfb739875145abc4e6d36d9c654
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7107343113325705819
-    second: michael-Sheet_0
+      213: -8456981899252985991
+    second: michael-Sheet-sword_0
   - first:
-      213: -1259753836384641732
-    second: michael-Sheet_1
+      213: -7278338713540948818
+    second: michael-Sheet-sword_1
   - first:
-      213: -4022845224630352162
-    second: michael-Sheet_2
+      213: -1348039485182448103
+    second: michael-Sheet-sword_2
   - first:
-      213: 3223590351838532858
-    second: michael-Sheet_3
+      213: -450183878987422404
+    second: michael-Sheet-sword_3
   - first:
-      213: 8700955312252189732
-    second: michael-Sheet_4
+      213: 4512032512396414018
+    second: michael-Sheet-sword_4
   - first:
-      213: -3144758543677720588
-    second: michael-Sheet_5
+      213: 5013633184902280453
+    second: michael-Sheet-sword_5
   - first:
-      213: 7610179144846603136
-    second: michael-Sheet_6
+      213: 3997812547130225777
+    second: michael-Sheet-sword_6
   - first:
-      213: -932633301338546658
-    second: michael-Sheet_7
+      213: -1395642601644173882
+    second: michael-Sheet-sword_7
   - first:
-      213: 4013848693350608143
-    second: michael-Sheet_8
+      213: -3672520041896827873
+    second: michael-Sheet-sword_8
   - first:
-      213: -2878602088416569680
-    second: michael-Sheet_9
+      213: -2569159385892987586
+    second: michael-Sheet-sword_9
   - first:
-      213: 7975758376907876251
-    second: michael-Sheet_10
+      213: 6440268134039537589
+    second: michael-Sheet-sword_10
   - first:
-      213: -5592696678740610585
-    second: michael-Sheet_11
+      213: -7906612907689082452
+    second: michael-Sheet-sword_11
   - first:
-      213: 3357449349368818535
-    second: michael-Sheet_12
+      213: 3517137672897421069
+    second: michael-Sheet-sword_12
   - first:
-      213: -2082569739773460046
-    second: michael-Sheet_13
+      213: 2576552097588824474
+    second: michael-Sheet-sword_13
   - first:
-      213: -7249287511925847417
-    second: michael-Sheet_14
+      213: 4465387360811509867
+    second: michael-Sheet-sword_14
   - first:
-      213: -8717708571485423233
-    second: michael-Sheet_15
+      213: 282963892342733411
+    second: michael-Sheet-sword_15
   - first:
-      213: -6486735596956722666
-    second: michael-Sheet_16
+      213: -5213848712659410515
+    second: michael-Sheet-sword_16
   - first:
-      213: 5926941120199897383
-    second: michael-Sheet_17
+      213: 2870687516983376547
+    second: michael-Sheet-sword_17
   - first:
-      213: 3803427190686501513
-    second: michael-Sheet_18
+      213: -525444538165210388
+    second: michael-Sheet-sword_18
   - first:
-      213: -4667830721783338836
-    second: michael-Sheet_19
+      213: 4115248262363345064
+    second: michael-Sheet-sword_19
   - first:
-      213: 1657377433395832883
-    second: michael-Sheet_20
+      213: 1534269917880314011
+    second: michael-Sheet-sword_20
   - first:
-      213: -1978329101427955832
-    second: michael-Sheet_21
+      213: 4459231656802938174
+    second: michael-Sheet-sword_21
   - first:
-      213: 16492507244460281
-    second: michael-Sheet_22
+      213: -415510254423881428
+    second: michael-Sheet-sword_22
   - first:
-      213: 4164100100963316664
-    second: michael-Sheet_23
+      213: 1159200023851278898
+    second: michael-Sheet-sword_23
   - first:
-      213: -6605908085271254616
-    second: michael-Sheet_24
+      213: 4549702394144104311
+    second: michael-Sheet-sword_24
   - first:
-      213: -8149446143533459454
-    second: michael-Sheet_25
+      213: -4576939984286079598
+    second: michael-Sheet-sword_25
   - first:
-      213: 3395543472361023804
-    second: michael-Sheet_26
+      213: -1207025889551272254
+    second: michael-Sheet-sword_26
   - first:
-      213: 9110252935761548613
-    second: michael-Sheet_27
+      213: 8497434543977964373
+    second: michael-Sheet-sword_27
   - first:
-      213: 5026384816882735492
-    second: michael-Sheet_28
+      213: -6810461612993147737
+    second: michael-Sheet-sword_28
   - first:
-      213: 3215470321230921783
-    second: michael-Sheet_29
+      213: 5306114788989033471
+    second: michael-Sheet-sword_29
   - first:
-      213: -6464704481913977843
-    second: michael-Sheet_30
+      213: 3622239428544033189
+    second: michael-Sheet-sword_30
   - first:
-      213: -8708944786304420865
-    second: michael-Sheet_31
+      213: 8940670775780844163
+    second: michael-Sheet-sword_31
   - first:
-      213: -4169746952765356746
-    second: michael-Sheet_32
+      213: -1583745424678098902
+    second: michael-Sheet-sword_32
   - first:
-      213: 1532824629091235734
-    second: michael-Sheet_33
+      213: 1361312820676578175
+    second: michael-Sheet-sword_33
   - first:
-      213: 5195400644829600679
-    second: michael-Sheet_34
+      213: 2112950247679018518
+    second: michael-Sheet-sword_34
   - first:
-      213: 8206011024434682351
-    second: michael-Sheet_35
+      213: -722127073572979624
+    second: michael-Sheet-sword_35
   - first:
-      213: 7254234515863000013
-    second: michael-Sheet_36
+      213: -1680158384288150648
+    second: michael-Sheet-sword_36
   - first:
-      213: -7290871104227827319
-    second: michael-Sheet_37
+      213: 8298604507020575541
+    second: michael-Sheet-sword_37
   - first:
-      213: 335695003653612898
-    second: michael-Sheet_38
+      213: -3771497237107676542
+    second: michael-Sheet-sword_38
   - first:
-      213: 1593338654934457165
-    second: michael-Sheet_39
+      213: -4593488556060040840
+    second: michael-Sheet-sword_39
   - first:
-      213: 626031083196093186
-    second: michael-Sheet_40
+      213: -1872267587206432507
+    second: michael-Sheet-sword_40
   - first:
-      213: -5443322838203754156
-    second: michael-Sheet_41
+      213: 1867873910448060373
+    second: michael-Sheet-sword_41
   - first:
-      213: 4662281399650739721
-    second: michael-Sheet_42
+      213: -2696621603141159578
+    second: michael-Sheet-sword_42
   - first:
-      213: 7931139022995198726
-    second: michael-Sheet_43
+      213: 4180861750339156209
+    second: michael-Sheet-sword_43
   - first:
-      213: -8256776632806291482
-    second: michael-Sheet_44
+      213: 4177534530407057060
+    second: michael-Sheet-sword_44
   - first:
-      213: -50754243080053044
-    second: michael-Sheet_45
+      213: -5130649446523173884
+    second: michael-Sheet-sword_45
   - first:
-      213: 6402756040732947356
-    second: michael-Sheet_46
+      213: 913242757142257844
+    second: michael-Sheet-sword_46
   - first:
-      213: -5010147407398242314
-    second: michael-Sheet_47
+      213: -3299490752870456262
+    second: michael-Sheet-sword_47
   - first:
-      213: 8473468950093548515
-    second: michael-Sheet_48
+      213: 6144186434227773854
+    second: michael-Sheet-sword_48
   - first:
-      213: 157044517239861471
-    second: michael-Sheet_49
+      213: -3388832820674758944
+    second: michael-Sheet-sword_49
   - first:
-      213: 212763313928009055
-    second: michael-Sheet_50
+      213: 1346748683657754895
+    second: michael-Sheet-sword_50
   - first:
-      213: -1289578441326030475
-    second: michael-Sheet_51
+      213: 4444751098751571443
+    second: michael-Sheet-sword_51
   - first:
-      213: 7112066338523148260
-    second: michael-Sheet_52
+      213: -3333200221622460729
+    second: michael-Sheet-sword_52
   - first:
-      213: -7392237821838939216
-    second: michael-Sheet_53
+      213: 1123722171820995219
+    second: michael-Sheet-sword_53
   - first:
-      213: -3226957695524128625
-    second: michael-Sheet_54
+      213: 2216280422003232397
+    second: michael-Sheet-sword_54
   - first:
-      213: -7045025299360895644
-    second: michael-Sheet_55
+      213: -3573050378796217476
+    second: michael-Sheet-sword_55
   - first:
-      213: -6714516817472311725
-    second: michael-Sheet_56
+      213: -8425573082257150537
+    second: michael-Sheet-sword_56
   - first:
-      213: -345379651872349737
-    second: michael-Sheet_57
+      213: 1014809994969211881
+    second: michael-Sheet-sword_57
   - first:
-      213: -9163228039264144709
-    second: michael-Sheet_58
+      213: -6501589267515029543
+    second: michael-Sheet-sword_58
   - first:
-      213: -4276787310082667299
-    second: michael-Sheet_59
+      213: 5109011007926340371
+    second: michael-Sheet-sword_59
   - first:
-      213: 502570756914549568
-    second: michael-Sheet_60
+      213: 997564494044409034
+    second: michael-Sheet-sword_60
   - first:
-      213: 8726945551980710420
-    second: michael-Sheet_61
+      213: -4211486319149695354
+    second: michael-Sheet-sword_61
   - first:
-      213: -3814355580839917768
-    second: michael-Sheet_62
+      213: 5058203201663160734
+    second: michael-Sheet-sword_62
   - first:
-      213: 8157880926114276561
-    second: michael-Sheet_63
+      213: -9211092236815578594
+    second: michael-Sheet-sword_63
   - first:
-      213: -1100397509182762658
-    second: michael-Sheet_64
+      213: 8678923187861090591
+    second: michael-Sheet-sword_64
   - first:
-      213: -6771058812895038930
-    second: michael-Sheet_65
+      213: 8702476169408243418
+    second: michael-Sheet-sword_65
   - first:
-      213: -10565251972830862
-    second: michael-Sheet_66
+      213: 3794241985469148620
+    second: michael-Sheet-sword_66
   - first:
-      213: 661058915640000398
-    second: michael-Sheet_67
+      213: 1281661002930156079
+    second: michael-Sheet-sword_67
   - first:
-      213: 1181300698934793614
-    second: michael-Sheet_68
+      213: -1085743863491926246
+    second: michael-Sheet-sword_68
   - first:
-      213: 5871358240521519889
-    second: michael-Sheet_69
+      213: 1620093584788902461
+    second: michael-Sheet-sword_69
   - first:
-      213: -3101530436693711522
-    second: michael-Sheet_70
+      213: -3724718688905982900
+    second: michael-Sheet-sword_70
   - first:
-      213: -8372553885312596101
-    second: michael-Sheet_71
+      213: 8716663856795439104
+    second: michael-Sheet-sword_71
   - first:
-      213: 7861485002017835249
-    second: michael-Sheet_72
+      213: 3963306386593150441
+    second: michael-Sheet-sword_72
   - first:
-      213: -5528053759957117071
-    second: michael-Sheet_73
+      213: 2733919353340525026
+    second: michael-Sheet-sword_73
   - first:
-      213: -4864995170973094087
-    second: michael-Sheet_74
+      213: -2058136226048721668
+    second: michael-Sheet-sword_74
   - first:
-      213: -2811718370128408204
-    second: michael-Sheet_75
+      213: 5243987235121164009
+    second: michael-Sheet-sword_75
   - first:
-      213: -3517694452581047482
-    second: michael-Sheet_76
+      213: -662505014615129343
+    second: michael-Sheet-sword_76
   - first:
-      213: 7986672432946010800
-    second: michael-Sheet_77
+      213: 6529256078141137611
+    second: michael-Sheet-sword_77
   - first:
-      213: -1897487477168972829
-    second: michael-Sheet_78
+      213: 5707266223074676277
+    second: michael-Sheet-sword_78
   - first:
-      213: -1519897952041496319
-    second: michael-Sheet_79
+      213: 271603353193798417
+    second: michael-Sheet-sword_79
   - first:
-      213: 6459127767003027808
-    second: michael-Sheet_80
-  - first:
-      213: 9161833624430029523
-    second: michael-Sheet_81
-  - first:
-      213: 2490474266434540290
-    second: michael-Sheet_82
-  - first:
-      213: 6997284408175961588
-    second: michael-Sheet_83
-  - first:
-      213: -2508431456099286272
-    second: michael-Sheet_84
-  - first:
-      213: -7417361531938242260
-    second: michael-Sheet_85
-  - first:
-      213: -7682560562951018085
-    second: michael-Sheet_86
-  - first:
-      213: 3663395064819662481
-    second: michael-Sheet_87
-  - first:
-      213: -2844786394019921605
-    second: michael-Sheet_88
-  - first:
-      213: 6519905905187562052
-    second: michael-Sheet_89
-  - first:
-      213: 241146128267999584
-    second: michael-Sheet_90
-  - first:
-      213: -1609046979663382540
-    second: michael-Sheet_91
-  - first:
-      213: -4480131424509579354
-    second: michael-Sheet_92
-  - first:
-      213: -3899086586382224089
-    second: michael-Sheet_93
-  - first:
-      213: 1770915427070976507
-    second: michael-Sheet_94
-  - first:
-      213: -3449404379740543535
-    second: michael-Sheet_95
-  - first:
-      213: 250446211722809844
-    second: michael-Sheet_96
-  - first:
-      213: -434455660741032413
-    second: michael-Sheet_97
-  - first:
-      213: -6113179702728985422
-    second: michael-Sheet_98
-  - first:
-      213: 8491325015303113306
-    second: michael-Sheet_99
-  - first:
-      213: -8040839457529855004
-    second: michael-Sheet_100
-  - first:
-      213: 2370347853824609818
-    second: michael-Sheet_101
-  - first:
-      213: 9025355984734578374
-    second: michael-Sheet_102
-  - first:
-      213: 3539823918726596484
-    second: michael-Sheet_103
-  - first:
-      213: 4567936308584168256
-    second: michael-Sheet_104
-  - first:
-      213: 1353628568377994720
-    second: michael-Sheet_105
-  - first:
-      213: 5128004147500517339
-    second: michael-Sheet_106
-  - first:
-      213: -502231470258420648
-    second: michael-Sheet_107
-  - first:
-      213: 795468038822242220
-    second: michael-Sheet_108
-  - first:
-      213: -2072073674138548604
-    second: michael-Sheet_109
-  - first:
-      213: -3002716122064719580
-    second: michael-Sheet_110
-  - first:
-      213: -2446175588982435913
-    second: michael-Sheet_111
-  - first:
-      213: 1805844825279765975
-    second: michael-Sheet_112
-  - first:
-      213: -6606451011004989987
-    second: michael-Sheet_113
-  - first:
-      213: -7359505995356163338
-    second: michael-Sheet_114
-  - first:
-      213: -4743242951201097787
-    second: michael-Sheet_115
-  - first:
-      213: 6145944441670234932
-    second: michael-Sheet_116
-  - first:
-      213: 1394572180687380926
-    second: michael-Sheet_117
-  - first:
-      213: 1795596009398086851
-    second: michael-Sheet_118
-  - first:
-      213: 2339516312343998139
-    second: michael-Sheet_119
-  - first:
-      213: -8803675923317718605
-    second: michael-Sheet_120
-  - first:
-      213: 5795547946423977132
-    second: michael-Sheet_121
-  - first:
-      213: -4626758973959823092
-    second: michael-Sheet_122
-  - first:
-      213: 1208702896492274809
-    second: michael-Sheet_123
-  - first:
-      213: -1816653310203124690
-    second: michael-Sheet_124
-  - first:
-      213: -6484618107767820594
-    second: michael-Sheet_125
-  - first:
-      213: -7601288114167294534
-    second: michael-Sheet_126
-  - first:
-      213: 7957598693480979160
-    second: michael-Sheet_127
-  - first:
-      213: 3078453048689867021
-    second: michael-Sheet_128
-  - first:
-      213: 6832391193307649773
-    second: michael-Sheet_129
-  - first:
-      213: 7526346199372236533
-    second: michael-Sheet_130
-  - first:
-      213: 7916625371484043678
-    second: michael-Sheet_131
-  - first:
-      213: 7906935912807016960
-    second: michael-Sheet_132
-  - first:
-      213: 5958298112947387011
-    second: michael-Sheet_133
-  - first:
-      213: 2022168573511173833
-    second: michael-Sheet_134
-  - first:
-      213: -2933846919731155517
-    second: michael-Sheet_135
-  - first:
-      213: -2053254590573726416
-    second: michael-Sheet_136
-  - first:
-      213: 3331092593198808389
-    second: michael-Sheet_137
-  - first:
-      213: -4365235076626620999
-    second: michael-Sheet_138
-  - first:
-      213: 6480125552161090520
-    second: michael-Sheet_139
-  - first:
-      213: -7661917589095413233
-    second: michael-Sheet_140
-  - first:
-      213: 5644926511652998834
-    second: michael-Sheet_141
+      213: -1586615015173703323
+    second: michael-Sheet-sword_80
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -536,7 +353,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: michael-Sheet_0
+      name: michael-Sheet-sword_0
       rect:
         serializedVersion: 2
         x: 0
@@ -551,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5af89eb7ea52a260800000000000000
-      internalID: 7107343113325705819
+      spriteID: 97f0e1705c3c2aa80800000000000000
+      internalID: -8456981899252985991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_1
+      name: michael-Sheet-sword_1
       rect:
         serializedVersion: 2
         x: 96
@@ -573,14 +390,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3d9bdd6f84748ee0800000000000000
-      internalID: -1259753836384641732
+      spriteID: eac0b6890852efa90800000000000000
+      internalID: -7278338713540948818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_2
+      name: michael-Sheet-sword_2
       rect:
         serializedVersion: 2
         x: 192
@@ -595,14 +412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed60887059bfb28c0800000000000000
-      internalID: -4022845224630352162
+      spriteID: 91eef7efa3dca4de0800000000000000
+      internalID: -1348039485182448103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_3
+      name: michael-Sheet-sword_3
       rect:
         serializedVersion: 2
         x: 288
@@ -617,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af456be785e7cbc20800000000000000
-      internalID: 3223590351838532858
+      spriteID: c35e851b520a0c9f0800000000000000
+      internalID: -450183878987422404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_4
+      name: michael-Sheet-sword_4
       rect:
         serializedVersion: 2
         x: 384
@@ -639,14 +456,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42cf651c1c000c870800000000000000
-      internalID: 8700955312252189732
+      spriteID: 24cc66c0aa5fd9e30800000000000000
+      internalID: 4512032512396414018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_5
+      name: michael-Sheet-sword_5
       rect:
         serializedVersion: 2
         x: 480
@@ -661,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f7f6b324c29b54d0800000000000000
-      internalID: -3144758543677720588
+      spriteID: 505f53c71d0049540800000000000000
+      internalID: 5013633184902280453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_6
+      name: michael-Sheet-sword_6
       rect:
         serializedVersion: 2
         x: 576
@@ -683,14 +500,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 083faad9c99cc9960800000000000000
-      internalID: 7610179144846603136
+      spriteID: 174fb4e84551b7730800000000000000
+      internalID: 3997812547130225777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_7
+      name: michael-Sheet-sword_7
       rect:
         serializedVersion: 2
         x: 672
@@ -705,14 +522,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1e140824fe9e03f0800000000000000
-      internalID: -932633301338546658
+      spriteID: 6c5d89fb27ea1ace0800000000000000
+      internalID: -1395642601644173882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_8
+      name: michael-Sheet-sword_8
       rect:
         serializedVersion: 2
         x: 768
@@ -727,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0d245dce1e04b730800000000000000
-      internalID: 4013848693350608143
+      spriteID: f14ac30da76980dc0800000000000000
+      internalID: -3672520041896827873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_9
+      name: michael-Sheet-sword_9
       rect:
         serializedVersion: 2
         x: 864
@@ -749,14 +566,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b69b3ee6a62d08d0800000000000000
-      internalID: -2878602088416569680
+      spriteID: e3ddc788623885cd0800000000000000
+      internalID: -2569159385892987586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_10
+      name: michael-Sheet-sword_10
       rect:
         serializedVersion: 2
         x: 0
@@ -771,14 +588,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b97a0f58cf59fae60800000000000000
-      internalID: 7975758376907876251
+      spriteID: 5b7c1b3febd606950800000000000000
+      internalID: 6440268134039537589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_11
+      name: michael-Sheet-sword_11
       rect:
         serializedVersion: 2
         x: 96
@@ -793,14 +610,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e1b8278000c262b0800000000000000
-      internalID: -5592696678740610585
+      spriteID: ca18ca49371164290800000000000000
+      internalID: -7906612907689082452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_12
+      name: michael-Sheet-sword_12
       rect:
         serializedVersion: 2
         x: 192
@@ -815,14 +632,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76bae7c056e089e20800000000000000
-      internalID: 3357449349368818535
+      spriteID: d0fd13334126fc030800000000000000
+      internalID: 3517137672897421069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_13
+      name: michael-Sheet-sword_13
       rect:
         serializedVersion: 2
         x: 288
@@ -837,14 +654,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b143d80bd93913e0800000000000000
-      internalID: -2082569739773460046
+      spriteID: a99c11a4b70c1c320800000000000000
+      internalID: 2576552097588824474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_14
+      name: michael-Sheet-sword_14
       rect:
         serializedVersion: 2
         x: 384
@@ -859,14 +676,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78a0cf09a6b556b90800000000000000
-      internalID: -7249287511925847417
+      spriteID: b6860b1652e38fd30800000000000000
+      internalID: 4465387360811509867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_15
+      name: michael-Sheet-sword_15
       rect:
         serializedVersion: 2
         x: 480
@@ -881,14 +698,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f79bb3d1e3a740780800000000000000
-      internalID: -8717708571485423233
+      spriteID: 36ab95f292a4de300800000000000000
+      internalID: 282963892342733411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_16
+      name: michael-Sheet-sword_16
       rect:
         serializedVersion: 2
         x: 576
@@ -903,14 +720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61a538fb75c7af5a0800000000000000
-      internalID: -6486735596956722666
+      spriteID: da1ee415830b4a7b0800000000000000
+      internalID: -5213848712659410515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_17
+      name: michael-Sheet-sword_17
       rect:
         serializedVersion: 2
         x: 672
@@ -925,14 +742,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 721bb2aeb89b04250800000000000000
-      internalID: 5926941120199897383
+      spriteID: 3aa31fe461bb6d720800000000000000
+      internalID: 2870687516983376547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_18
+      name: michael-Sheet-sword_18
       rect:
         serializedVersion: 2
         x: 768
@@ -947,14 +764,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98a4ee5e0ec78c430800000000000000
-      internalID: 3803427190686501513
+      spriteID: ce25e79f9fe35b8f0800000000000000
+      internalID: -525444538165210388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_19
+      name: michael-Sheet-sword_19
       rect:
         serializedVersion: 2
         x: 864
@@ -969,14 +786,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca8e27490b8883fb0800000000000000
-      internalID: -4667830721783338836
+      spriteID: 8a0f5b8bd7c4c1930800000000000000
+      internalID: 4115248262363345064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_20
+      name: michael-Sheet-sword_20
       rect:
         serializedVersion: 2
         x: 0
@@ -991,14 +808,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 338ae489eff200710800000000000000
-      internalID: 1657377433395832883
+      spriteID: b98e2d48c52da4510800000000000000
+      internalID: 1534269917880314011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_21
+      name: michael-Sheet-sword_21
       rect:
         serializedVersion: 2
         x: 96
@@ -1013,14 +830,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 887a194f9209b84e0800000000000000
-      internalID: -1978329101427955832
+      spriteID: e3d6aead09f52ed30800000000000000
+      internalID: 4459231656802938174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_22
+      name: michael-Sheet-sword_22
       rect:
         serializedVersion: 2
         x: 192
@@ -1035,14 +852,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f8f2c319d79a3000800000000000000
-      internalID: 16492507244460281
+      spriteID: c29488400afcb3af0800000000000000
+      internalID: -415510254423881428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_23
+      name: michael-Sheet-sword_23
       rect:
         serializedVersion: 2
         x: 288
@@ -1057,14 +874,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b3361fbafad9c930800000000000000
-      internalID: 4164100100963316664
+      spriteID: 232a74da74e461010800000000000000
+      internalID: 1159200023851278898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_24
+      name: michael-Sheet-sword_24
       rect:
         serializedVersion: 2
         x: 384
@@ -1079,14 +896,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a9a68698991354a0800000000000000
-      internalID: -6605908085271254616
+      spriteID: 77f14bcd83ac32f30800000000000000
+      internalID: 4549702394144104311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_25
+      name: michael-Sheet-sword_25
       rect:
         serializedVersion: 2
         x: 480
@@ -1101,14 +918,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 208d28af8e957ee80800000000000000
-      internalID: -8149446143533459454
+      spriteID: 295a85e75517b70c0800000000000000
+      internalID: -4576939984286079598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_26
+      name: michael-Sheet-sword_26
       rect:
         serializedVersion: 2
         x: 576
@@ -1123,14 +940,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c39a9793cc46f1f20800000000000000
-      internalID: 3395543472361023804
+      spriteID: 2c6b89a3958cf3fe0800000000000000
+      internalID: -1207025889551272254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_27
+      name: michael-Sheet-sword_27
       rect:
         serializedVersion: 2
         x: 672
@@ -1145,14 +962,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 545d602e6ce1e6e70800000000000000
-      internalID: 9110252935761548613
+      spriteID: 553a0f742b3fce570800000000000000
+      internalID: 8497434543977964373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_28
+      name: michael-Sheet-sword_28
       rect:
         serializedVersion: 2
         x: 768
@@ -1167,14 +984,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48956ba2c5e41c540800000000000000
-      internalID: 5026384816882735492
+      spriteID: 7ac0c111f316c71a0800000000000000
+      internalID: -6810461612993147737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_29
+      name: michael-Sheet-sword_29
       rect:
         serializedVersion: 2
         x: 864
@@ -1189,14 +1006,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 730c7ca8835af9c20800000000000000
-      internalID: 3215470321230921783
+      spriteID: ffb532f994b13a940800000000000000
+      internalID: 5306114788989033471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_30
+      name: michael-Sheet-sword_30
       rect:
         serializedVersion: 2
         x: 0
@@ -1211,14 +1028,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0444a17681c846a0800000000000000
-      internalID: -6464704481913977843
+      spriteID: 5a1f7cd9197c44230800000000000000
+      internalID: 3622239428544033189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_31
+      name: michael-Sheet-sword_31
       rect:
         serializedVersion: 2
         x: 96
@@ -1233,14 +1050,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff3b5dbdbdc932780800000000000000
-      internalID: -8708944786304420865
+      spriteID: 382222c63b4a31c70800000000000000
+      internalID: 8940670775780844163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_32
+      name: michael-Sheet-sword_32
       rect:
         serializedVersion: 2
         x: 192
@@ -1255,14 +1072,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 635472d1d351226c0800000000000000
-      internalID: -4169746952765356746
+      spriteID: a2869636de7650ae0800000000000000
+      internalID: -1583745424678098902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_33
+      name: michael-Sheet-sword_33
       rect:
         serializedVersion: 2
         x: 288
@@ -1277,14 +1094,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 697f3fff0efa54510800000000000000
-      internalID: 1532824629091235734
+      spriteID: f7bcc904cca54e210800000000000000
+      internalID: 1361312820676578175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_34
+      name: michael-Sheet-sword_34
       rect:
         serializedVersion: 2
         x: 384
@@ -1299,14 +1116,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ab57ec2c55c91840800000000000000
-      internalID: 5195400644829600679
+      spriteID: 6164bfc2e05b25d10800000000000000
+      internalID: 2112950247679018518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_35
+      name: michael-Sheet-sword_35
       rect:
         serializedVersion: 2
         x: 480
@@ -1321,14 +1138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe95e56ac8b91e170800000000000000
-      internalID: 8206011024434682351
+      spriteID: 85c7df8a04d7af5f0800000000000000
+      internalID: -722127073572979624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_36
+      name: michael-Sheet-sword_36
       rect:
         serializedVersion: 2
         x: 0
@@ -1343,14 +1160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc3546b8bd73ca460800000000000000
-      internalID: 7254234515863000013
+      spriteID: 88b4c12f9d0eea8e0800000000000000
+      internalID: -1680158384288150648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_37
+      name: michael-Sheet-sword_37
       rect:
         serializedVersion: 2
         x: 96
@@ -1365,14 +1182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98127510c5f91da90800000000000000
-      internalID: -7290871104227827319
+      spriteID: 533ca6cc4d09a2370800000000000000
+      internalID: 8298604507020575541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_38
+      name: michael-Sheet-sword_38
       rect:
         serializedVersion: 2
         x: 192
@@ -1387,14 +1204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 265a5a5c3d0a8a400800000000000000
-      internalID: 335695003653612898
+      spriteID: 28a64debe33f8abc0800000000000000
+      internalID: -3771497237107676542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_39
+      name: michael-Sheet-sword_39
       rect:
         serializedVersion: 2
         x: 288
@@ -1409,14 +1226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4b5446901dac1610800000000000000
-      internalID: 1593338654934457165
+      spriteID: 8712830ee76a040c0800000000000000
+      internalID: -4593488556060040840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_40
+      name: michael-Sheet-sword_40
       rect:
         serializedVersion: 2
         x: 384
@@ -1431,14 +1248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 203914c04fb10b800800000000000000
-      internalID: 626031083196093186
+      spriteID: 50935149c8e5406e0800000000000000
+      internalID: -1872267587206432507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_41
+      name: michael-Sheet-sword_41
       rect:
         serializedVersion: 2
         x: 480
@@ -1453,14 +1270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4591817f7be6574b0800000000000000
-      internalID: -5443322838203754156
+      spriteID: 5d7f975dc650ce910800000000000000
+      internalID: 1867873910448060373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_42
+      name: michael-Sheet-sword_42
       rect:
         serializedVersion: 2
         x: 0
@@ -1475,14 +1292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 906e71d2b30c3b040800000000000000
-      internalID: 4662281399650739721
+      spriteID: 665702370fca39ad0800000000000000
+      internalID: -2696621603141159578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_43
+      name: michael-Sheet-sword_43
       rect:
         serializedVersion: 2
         x: 96
@@ -1497,14 +1314,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6031ed1abe0111e60800000000000000
-      internalID: 7931139022995198726
+      spriteID: 1f8bbfb5c97650a30800000000000000
+      internalID: 4180861750339156209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_44
+      name: michael-Sheet-sword_44
       rect:
         serializedVersion: 2
         x: 192
@@ -1519,14 +1336,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e7c5d316690a6d80800000000000000
-      internalID: -8256776632806291482
+      spriteID: 4a647d9958599f930800000000000000
+      internalID: 4177534530407057060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_45
+      name: michael-Sheet-sword_45
       rect:
         serializedVersion: 2
         x: 288
@@ -1541,14 +1358,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cce9e5ae84fab4ff0800000000000000
-      internalID: -50754243080053044
+      spriteID: 4048ee003854cc8b0800000000000000
+      internalID: -5130649446523173884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_46
+      name: michael-Sheet-sword_46
       rect:
         serializedVersion: 2
         x: 384
@@ -1563,14 +1380,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c93bf5f12b82bd850800000000000000
-      internalID: 6402756040732947356
+      spriteID: 4b0a925f27d7cac00800000000000000
+      internalID: 913242757142257844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_47
+      name: michael-Sheet-sword_47
       rect:
         serializedVersion: 2
         x: 480
@@ -1585,14 +1402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f7fea55a71687ab0800000000000000
-      internalID: -5010147407398242314
+      spriteID: a34687744aad532d0800000000000000
+      internalID: -3299490752870456262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_48
+      name: michael-Sheet-sword_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1607,14 +1424,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ebc0a1ad1fc79570800000000000000
-      internalID: 8473468950093548515
+      spriteID: e91abe53209844550800000000000000
+      internalID: 6144186434227773854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_49
+      name: michael-Sheet-sword_49
       rect:
         serializedVersion: 2
         x: 96
@@ -1629,14 +1446,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd03108082fed2200800000000000000
-      internalID: 157044517239861471
+      spriteID: 0e6fe70218278f0d0800000000000000
+      internalID: -3388832820674758944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_50
+      name: michael-Sheet-sword_50
       rect:
         serializedVersion: 2
         x: 192
@@ -1651,14 +1468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f55f9e35b13e3f200800000000000000
-      internalID: 212763313928009055
+      spriteID: f09352bdacc90b210800000000000000
+      internalID: 1346748683657754895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_51
+      name: michael-Sheet-sword_51
       rect:
         serializedVersion: 2
         x: 288
@@ -1673,14 +1490,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57192c67d3f7a1ee0800000000000000
-      internalID: -1289578441326030475
+      spriteID: 3f55d14339deead30800000000000000
+      internalID: 4444751098751571443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_52
+      name: michael-Sheet-sword_52
       rect:
         serializedVersion: 2
         x: 384
@@ -1695,14 +1512,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ef6fae47a223b260800000000000000
-      internalID: 7112066338523148260
+      spriteID: 7ce90f8fe081eb1d0800000000000000
+      internalID: -3333200221622460729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_53
+      name: michael-Sheet-sword_53
       rect:
         serializedVersion: 2
         x: 480
@@ -1717,14 +1534,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bb2516edde796990800000000000000
-      internalID: -7392237821838939216
+      spriteID: 392fe9d8c53489f00800000000000000
+      internalID: 1123722171820995219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_54
+      name: michael-Sheet-sword_54
       rect:
         serializedVersion: 2
         x: 576
@@ -1739,14 +1556,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f883215b21b8733d0800000000000000
-      internalID: -3226957695524128625
+      spriteID: d8ec72c2d4fc1ce10800000000000000
+      internalID: 2216280422003232397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_55
+      name: michael-Sheet-sword_55
       rect:
         serializedVersion: 2
         x: 672
@@ -1761,14 +1578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46d24fdf0da0b3e90800000000000000
-      internalID: -7045025299360895644
+      spriteID: c7bc64f7c99f96ec0800000000000000
+      internalID: -3573050378796217476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_56
+      name: michael-Sheet-sword_56
       rect:
         serializedVersion: 2
         x: 768
@@ -1783,14 +1600,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35e2d20978e31d2a0800000000000000
-      internalID: -6714516817472311725
+      spriteID: 7bd28fa1ce9521b80800000000000000
+      internalID: -8425573082257150537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_57
+      name: michael-Sheet-sword_57
       rect:
         serializedVersion: 2
         x: 0
@@ -1805,14 +1622,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d120895907f43bf0800000000000000
-      internalID: -345379651872349737
+      spriteID: 9e3e7a05054551e00800000000000000
+      internalID: 1014809994969211881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_58
+      name: michael-Sheet-sword_58
       rect:
         serializedVersion: 2
         x: 96
@@ -1827,14 +1644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb2f2cba5aca5d080800000000000000
-      internalID: -9163228039264144709
+      spriteID: 9d746421207b5c5a0800000000000000
+      internalID: -6501589267515029543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_59
+      name: michael-Sheet-sword_59
       rect:
         serializedVersion: 2
         x: 192
@@ -1849,14 +1666,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ddccf92d99cc5a4c0800000000000000
-      internalID: -4276787310082667299
+      spriteID: 31b8209617ad6e640800000000000000
+      internalID: 5109011007926340371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_60
+      name: michael-Sheet-sword_60
       rect:
         serializedVersion: 2
         x: 288
@@ -1871,14 +1688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0431460d07d79f600800000000000000
-      internalID: 502570756914549568
+      spriteID: acc2f0c3f9f08dd00800000000000000
+      internalID: 997564494044409034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_61
+      name: michael-Sheet-sword_61
       rect:
         serializedVersion: 2
         x: 384
@@ -1893,14 +1710,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41a4cfffdb65c1970800000000000000
-      internalID: 8726945551980710420
+      spriteID: 68e3aa2918bcd85c0800000000000000
+      internalID: -4211486319149695354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_62
+      name: michael-Sheet-sword_62
       rect:
         serializedVersion: 2
         x: 480
@@ -1915,14 +1732,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 837020dfecfa01bc0800000000000000
-      internalID: -3814355580839917768
+      spriteID: e9150ec2309523640800000000000000
+      internalID: 5058203201663160734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_63
+      name: michael-Sheet-sword_63
       rect:
         serializedVersion: 2
         x: 576
@@ -1937,14 +1754,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d4e9f0ea7d963170800000000000000
-      internalID: 8157880926114276561
+      spriteID: e1acf3fb960ab2080800000000000000
+      internalID: -9211092236815578594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_64
+      name: michael-Sheet-sword_64
       rect:
         serializedVersion: 2
         x: 672
@@ -1959,14 +1776,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e51df69ab4a9ab0f0800000000000000
-      internalID: -1100397509182762658
+      spriteID: f117c5d08aab17870800000000000000
+      internalID: 8678923187861090591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_65
+      name: michael-Sheet-sword_65
       rect:
         serializedVersion: 2
         x: 768
@@ -1981,14 +1798,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e22fc1062ed5802a0800000000000000
-      internalID: -6771058812895038930
+      spriteID: ad661e7e7f765c870800000000000000
+      internalID: 8702476169408243418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_66
+      name: michael-Sheet-sword_66
       rect:
         serializedVersion: 2
         x: 0
@@ -2003,14 +1820,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 279623595f67adff0800000000000000
-      internalID: -10565251972830862
+      spriteID: ccde2c7abfad7a430800000000000000
+      internalID: 3794241985469148620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_67
+      name: michael-Sheet-sword_67
       rect:
         serializedVersion: 2
         x: 96
@@ -2025,14 +1842,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8fb352d49d8c2900800000000000000
-      internalID: 661058915640000398
+      spriteID: f227f1244ef59c110800000000000000
+      internalID: 1281661002930156079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_68
+      name: michael-Sheet-sword_68
       rect:
         serializedVersion: 2
         x: 192
@@ -2047,14 +1864,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e85dde41ab2d46010800000000000000
-      internalID: 1181300698934793614
+      spriteID: a17e08b65b9aee0f0800000000000000
+      internalID: -1085743863491926246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_69
+      name: michael-Sheet-sword_69
       rect:
         serializedVersion: 2
         x: 288
@@ -2069,14 +1886,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 113095346314b7150800000000000000
-      internalID: 5871358240521519889
+      spriteID: d325b30288abb7610800000000000000
+      internalID: 1620093584788902461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_70
+      name: michael-Sheet-sword_70
       rect:
         serializedVersion: 2
         x: 384
@@ -2091,14 +1908,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e552fcc108625f4d0800000000000000
-      internalID: -3101530436693711522
+      spriteID: c4c008b36142f4cc0800000000000000
+      internalID: -3724718688905982900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_71
+      name: michael-Sheet-sword_71
       rect:
         serializedVersion: 2
         x: 480
@@ -2113,14 +1930,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b77402bd996becb80800000000000000
-      internalID: -8372553885312596101
+      spriteID: 00057ca489fc7f870800000000000000
+      internalID: 8716663856795439104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_72
+      name: michael-Sheet-sword_72
       rect:
         serializedVersion: 2
         x: 576
@@ -2135,14 +1952,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f8855815fa991d60800000000000000
-      internalID: 7861485002017835249
+      spriteID: 9e5fbecf82e700730800000000000000
+      internalID: 3963306386593150441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_73
+      name: michael-Sheet-sword_73
       rect:
         serializedVersion: 2
         x: 672
@@ -2157,14 +1974,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1775e7ae4686843b0800000000000000
-      internalID: -5528053759957117071
+      spriteID: 2e97d6cba25d0f520800000000000000
+      internalID: 2733919353340525026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: michael-Sheet_74
+      name: michael-Sheet-sword_74
       rect:
         serializedVersion: 2
         x: 768
@@ -2179,8 +1996,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93f6828faa01c7cb0800000000000000
-      internalID: -4864995170973094087
+      spriteID: cfcb003c1080073e0800000000000000
+      internalID: -2058136226048721668
       vertices: []
       indices: 
       edges: []
@@ -2189,7 +2006,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0923c1f8752a3b0419ea6348c2f90c24
+    spriteID: 5ed2ae79a8f8eaf4490e05d1e2abde60
     internalID: 0
     vertices: []
     indices: 
@@ -2201,81 +2018,81 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.4000000059604645},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      michael-Sheet_0: 7107343113325705819
-      michael-Sheet_1: -1259753836384641732
-      michael-Sheet_10: 7975758376907876251
-      michael-Sheet_11: -5592696678740610585
-      michael-Sheet_12: 3357449349368818535
-      michael-Sheet_13: -2082569739773460046
-      michael-Sheet_14: -7249287511925847417
-      michael-Sheet_15: -8717708571485423233
-      michael-Sheet_16: -6486735596956722666
-      michael-Sheet_17: 5926941120199897383
-      michael-Sheet_18: 3803427190686501513
-      michael-Sheet_19: -4667830721783338836
-      michael-Sheet_2: -4022845224630352162
-      michael-Sheet_20: 1657377433395832883
-      michael-Sheet_21: -1978329101427955832
-      michael-Sheet_22: 16492507244460281
-      michael-Sheet_23: 4164100100963316664
-      michael-Sheet_24: -6605908085271254616
-      michael-Sheet_25: -8149446143533459454
-      michael-Sheet_26: 3395543472361023804
-      michael-Sheet_27: 9110252935761548613
-      michael-Sheet_28: 5026384816882735492
-      michael-Sheet_29: 3215470321230921783
-      michael-Sheet_3: 3223590351838532858
-      michael-Sheet_30: -6464704481913977843
-      michael-Sheet_31: -8708944786304420865
-      michael-Sheet_32: -4169746952765356746
-      michael-Sheet_33: 1532824629091235734
-      michael-Sheet_34: 5195400644829600679
-      michael-Sheet_35: 8206011024434682351
-      michael-Sheet_36: 7254234515863000013
-      michael-Sheet_37: -7290871104227827319
-      michael-Sheet_38: 335695003653612898
-      michael-Sheet_39: 1593338654934457165
-      michael-Sheet_4: 8700955312252189732
-      michael-Sheet_40: 626031083196093186
-      michael-Sheet_41: -5443322838203754156
-      michael-Sheet_42: 4662281399650739721
-      michael-Sheet_43: 7931139022995198726
-      michael-Sheet_44: -8256776632806291482
-      michael-Sheet_45: -50754243080053044
-      michael-Sheet_46: 6402756040732947356
-      michael-Sheet_47: -5010147407398242314
-      michael-Sheet_48: 8473468950093548515
-      michael-Sheet_49: 157044517239861471
-      michael-Sheet_5: -3144758543677720588
-      michael-Sheet_50: 212763313928009055
-      michael-Sheet_51: -1289578441326030475
-      michael-Sheet_52: 7112066338523148260
-      michael-Sheet_53: -7392237821838939216
-      michael-Sheet_54: -3226957695524128625
-      michael-Sheet_55: -7045025299360895644
-      michael-Sheet_56: -6714516817472311725
-      michael-Sheet_57: -345379651872349737
-      michael-Sheet_58: -9163228039264144709
-      michael-Sheet_59: -4276787310082667299
-      michael-Sheet_6: 7610179144846603136
-      michael-Sheet_60: 502570756914549568
-      michael-Sheet_61: 8726945551980710420
-      michael-Sheet_62: -3814355580839917768
-      michael-Sheet_63: 8157880926114276561
-      michael-Sheet_64: -1100397509182762658
-      michael-Sheet_65: -6771058812895038930
-      michael-Sheet_66: -10565251972830862
-      michael-Sheet_67: 661058915640000398
-      michael-Sheet_68: 1181300698934793614
-      michael-Sheet_69: 5871358240521519889
-      michael-Sheet_7: -932633301338546658
-      michael-Sheet_70: -3101530436693711522
-      michael-Sheet_71: -8372553885312596101
-      michael-Sheet_72: 7861485002017835249
-      michael-Sheet_73: -5528053759957117071
-      michael-Sheet_74: -4864995170973094087
-      michael-Sheet_8: 4013848693350608143
-      michael-Sheet_9: -2878602088416569680
+      michael-Sheet-sword_0: -8456981899252985991
+      michael-Sheet-sword_1: -7278338713540948818
+      michael-Sheet-sword_10: 6440268134039537589
+      michael-Sheet-sword_11: -7906612907689082452
+      michael-Sheet-sword_12: 3517137672897421069
+      michael-Sheet-sword_13: 2576552097588824474
+      michael-Sheet-sword_14: 4465387360811509867
+      michael-Sheet-sword_15: 282963892342733411
+      michael-Sheet-sword_16: -5213848712659410515
+      michael-Sheet-sword_17: 2870687516983376547
+      michael-Sheet-sword_18: -525444538165210388
+      michael-Sheet-sword_19: 4115248262363345064
+      michael-Sheet-sword_2: -1348039485182448103
+      michael-Sheet-sword_20: 1534269917880314011
+      michael-Sheet-sword_21: 4459231656802938174
+      michael-Sheet-sword_22: -415510254423881428
+      michael-Sheet-sword_23: 1159200023851278898
+      michael-Sheet-sword_24: 4549702394144104311
+      michael-Sheet-sword_25: -4576939984286079598
+      michael-Sheet-sword_26: -1207025889551272254
+      michael-Sheet-sword_27: 8497434543977964373
+      michael-Sheet-sword_28: -6810461612993147737
+      michael-Sheet-sword_29: 5306114788989033471
+      michael-Sheet-sword_3: -450183878987422404
+      michael-Sheet-sword_30: 3622239428544033189
+      michael-Sheet-sword_31: 8940670775780844163
+      michael-Sheet-sword_32: -1583745424678098902
+      michael-Sheet-sword_33: 1361312820676578175
+      michael-Sheet-sword_34: 2112950247679018518
+      michael-Sheet-sword_35: -722127073572979624
+      michael-Sheet-sword_36: -1680158384288150648
+      michael-Sheet-sword_37: 8298604507020575541
+      michael-Sheet-sword_38: -3771497237107676542
+      michael-Sheet-sword_39: -4593488556060040840
+      michael-Sheet-sword_4: 4512032512396414018
+      michael-Sheet-sword_40: -1872267587206432507
+      michael-Sheet-sword_41: 1867873910448060373
+      michael-Sheet-sword_42: -2696621603141159578
+      michael-Sheet-sword_43: 4180861750339156209
+      michael-Sheet-sword_44: 4177534530407057060
+      michael-Sheet-sword_45: -5130649446523173884
+      michael-Sheet-sword_46: 913242757142257844
+      michael-Sheet-sword_47: -3299490752870456262
+      michael-Sheet-sword_48: 6144186434227773854
+      michael-Sheet-sword_49: -3388832820674758944
+      michael-Sheet-sword_5: 5013633184902280453
+      michael-Sheet-sword_50: 1346748683657754895
+      michael-Sheet-sword_51: 4444751098751571443
+      michael-Sheet-sword_52: -3333200221622460729
+      michael-Sheet-sword_53: 1123722171820995219
+      michael-Sheet-sword_54: 2216280422003232397
+      michael-Sheet-sword_55: -3573050378796217476
+      michael-Sheet-sword_56: -8425573082257150537
+      michael-Sheet-sword_57: 1014809994969211881
+      michael-Sheet-sword_58: -6501589267515029543
+      michael-Sheet-sword_59: 5109011007926340371
+      michael-Sheet-sword_6: 3997812547130225777
+      michael-Sheet-sword_60: 997564494044409034
+      michael-Sheet-sword_61: -4211486319149695354
+      michael-Sheet-sword_62: 5058203201663160734
+      michael-Sheet-sword_63: -9211092236815578594
+      michael-Sheet-sword_64: 8678923187861090591
+      michael-Sheet-sword_65: 8702476169408243418
+      michael-Sheet-sword_66: 3794241985469148620
+      michael-Sheet-sword_67: 1281661002930156079
+      michael-Sheet-sword_68: -1085743863491926246
+      michael-Sheet-sword_69: 1620093584788902461
+      michael-Sheet-sword_7: -1395642601644173882
+      michael-Sheet-sword_70: -3724718688905982900
+      michael-Sheet-sword_71: 8716663856795439104
+      michael-Sheet-sword_72: 3963306386593150441
+      michael-Sheet-sword_73: 2733919353340525026
+      michael-Sheet-sword_74: -2058136226048721668
+      michael-Sheet-sword_8: -3672520041896827873
+      michael-Sheet-sword_9: -2569159385892987586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
