@@ -76,6 +76,10 @@ public class EnterCodeMenu : MonoBehaviour
             // Use PauseMenu logic to fully unpause audio + time
             pauseMenu.ResumeGame();
 
+            // Reset cutscene stuff
+            CutsceneDialogueController.SetCutsceneActive(false);
+            CutsceneDialogueController.SetCutsceneLock(false);
+
             SceneManager.LoadScene(sceneName);
             return;
         }

@@ -40,39 +40,61 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        if (deathScreen != null && deathScreen.activeInHierarchy)
+        // CUTSCENE MODE — do NOT modify action maps
+        if (CutsceneDialogueController.IsCutsceneActive)
         {
-            Debug.Log("[PauseMenu] Cannot pause — death screen is active.");
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+            isPaused = true;
+
+            masterMixer.SetFloat("MasterSFXPitch", 0f);
+
+            StartCoroutine(FadeMusic(0.05f, 0.25f));
             return;
         }
-        
+
+        // NORMAL PAUSE
         pauseMenu.SetActive(true);
         Time.timeScale = 0.0f;
         isPaused = true;
 
-        // Pause audio
         masterMixer.SetFloat("MasterSFXPitch", 0f);
 
-        // Fade the music
         StartCoroutine(FadeMusic(0.05f, 0.25f));
 
-        playerInput.SwitchCurrentActionMap("UI");
+        if (!CutsceneDialogueController.CutsceneLocksActionMap)
+            playerInput.SwitchCurrentActionMap("UI");
+
         EventSystem.current.SetSelectedGameObject(firstSelectedButton);
     }
 
+
     public void ResumeGame()
     {
+        // CUTSCENE MODE — do NOT modify action maps
+        if (CutsceneDialogueController.IsCutsceneActive)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+            isPaused = false;
+
+            masterMixer.SetFloat("MasterSFXPitch", 1f);
+
+            StartCoroutine(FadeMusic(MusicManager.Instance.defaultVolume, 0.25f));
+            return;
+        }
+
+        // NORMAL RESUME
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        
-        // Resume audio
+
         masterMixer.SetFloat("MasterSFXPitch", 1f);
 
-        // Fade music back in
-        StartCoroutine(FadeMusic(MusicManager.Instance.defaultVolume,0.25f));
+        StartCoroutine(FadeMusic(MusicManager.Instance.defaultVolume, 0.25f));
 
-        playerInput.SwitchCurrentActionMap("Player");
+        if (!CutsceneDialogueController.CutsceneLocksActionMap)
+            playerInput.SwitchCurrentActionMap("Player");
     }
     
     public void GoToMainMenu()

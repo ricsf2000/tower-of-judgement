@@ -48,6 +48,13 @@ public class MenuManager : MonoBehaviour
         if (difficultySelectionPanel != null)
         {
             difficultySelectionPanel.SetActive(true);
+
+            // Disable Start + Exit buttons
+            GameObject startButton = GameObject.Find("StartButton");
+            GameObject exitButton = GameObject.Find("ExitButton");
+
+            if (startButton != null) startButton.SetActive(false);
+            if (exitButton != null) exitButton.SetActive(false);
         }
         else
         {

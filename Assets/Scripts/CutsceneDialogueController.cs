@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using System.Linq;
 using UnityEngine.InputSystem.Controls;
+using System.Collections.Generic;
 
 public class CutsceneDialogueController : MonoBehaviour
 {
@@ -39,8 +40,12 @@ public class CutsceneDialogueController : MonoBehaviour
     public bool allowSkipCutscene = true;   // Enabled for opening cutscenes
     public bool requireAdvanceInput = false; // Dialogue boxes: true. Opening cutscene: false.
     private float advanceCooldown = 0f;
+    
 
+    private PlayerController player;
 
+    [Header("Scripts to Disable During Cutscenes")]
+    public List<MonoBehaviour> AIScripts = new List<MonoBehaviour>();
 
     public static bool IsCutsceneActive { get; private set; } = false;
 
@@ -49,10 +54,20 @@ public class CutsceneDialogueController : MonoBehaviour
         IsCutsceneActive = value;
     }
 
+    public static bool CutsceneLocksActionMap { get; private set; } = false;
+
+    public static void SetCutsceneLock(bool locked)
+    {
+        CutsceneLocksActionMap = locked;
+    }
+
     private void Awake()
     {
         if (!playerInput)
             playerInput = FindAnyObjectByType<PlayerInput>();
+
+        if (!player)
+            player = FindFirstObjectByType<PlayerController>();
 
         if (playerInput)
         {
@@ -154,22 +169,7 @@ public class CutsceneDialogueController : MonoBehaviour
 
     private void Update()
     {
-        if (!playerInput) return;
         if (!IsCutsceneActive) return;
-
-        string currentScheme = playerInput.currentControlScheme;
-        if (currentScheme != lastScheme)
-        {
-            lastScheme = currentScheme;
-            UpdateSkipPrompt(currentScheme);
-        }
-
-        bool advancePressed =
-            requireAdvanceInput &&
-            (
-                (Keyboard.current?.spaceKey.wasPressedThisFrame ?? false) ||
-                (Gamepad.current?.buttonSouth.wasPressedThisFrame ?? false)
-            );
 
         bool skipPressed =
             allowSkipCutscene &&
@@ -191,24 +191,6 @@ public class CutsceneDialogueController : MonoBehaviour
                 ) ?? false)
             );
 
-
-
-        // If lines are typing, reveal entire line
-        if (!lineFullyRevealed && advancePressed && requireAdvanceInput && advanceCooldown <= 0f)
-        {
-            typewriter.ForceComplete();
-            advanceCooldown = 0.2f; // small delay
-            return;
-        }
-
-        // Press again to advance timeline
-        if (lineFullyRevealed && advancePressed && requireAdvanceInput && advanceCooldown <= 0f)
-        {
-            lineFullyRevealed = false;
-            AdvanceTimelineToNextSignal();
-            advanceCooldown = 0.2f; // same delay before next skip allowed
-            return;
-        }
 
         // Hide skip prompt entirely when skipping is turned off
         if (!allowSkipCutscene && skipPromptVisible)
@@ -243,6 +225,26 @@ public class CutsceneDialogueController : MonoBehaviour
         }
 
     }
+
+    public void OnAdvancePressed()
+    {
+        // If lines are typing, reveal entire line
+        if (!lineFullyRevealed)
+        {
+            typewriter.ForceComplete();
+            advanceCooldown = 0.2f;
+            return;
+        }
+
+        // Press again to advance timeline
+        if (requireAdvanceInput)
+        {
+            lineFullyRevealed = false;
+            AdvanceTimelineToNextSignal();
+            advanceCooldown = 0.2f;
+        }
+    }
+
 
     // Advance the timeline when skipping
     private void AdvanceTimelineToNextSignal()
@@ -370,9 +372,52 @@ public class CutsceneDialogueController : MonoBehaviour
 
         if (typewriter != null)
         {
-            typewriter.ForceSkip();     // safely ends coroutine + clears skipping state
-            typewriter.ForceComplete();     // makes TypewriterEffect ready for the next text
+            typewriter.ResetState();
         }
+    }
+
+    // Functions that the timeline will call in signals at the beginning and end of timeline
+
+    public void FreezeCutscene()
+    {
+        Debug.Log("[UCM] FreezeCutscene called.");
+
+        SetCutsceneActive(true);
+        SetCutsceneLock(true);
+
+        // Freeze player
+        if (player != null)
+        {
+            player.Rb.linearVelocity = Vector2.zero;
+            player.Animator.SetBool("isMoving", false);
+        }
+
+        playerInput.SwitchCurrentActionMap("UI");
+
+        // Disable all AI scripts
+        foreach (var ai in AIScripts)
+        {
+            if (ai != null)
+                ai.enabled = false;
+        }
+    }
+
+    public void UnfreezeCutscene()
+    {
+
+        Debug.Log("[UCM] UnfreezeCutscene called.");
+
+        playerInput.SwitchCurrentActionMap("Player");
+
+        // Enable all AI scripts
+        foreach (var ai in AIScripts)
+        {
+            if (ai != null)
+                ai.enabled = true;
+        }
+
+        SetCutsceneActive(false);
+        SetCutsceneLock(false);
     }
 
 

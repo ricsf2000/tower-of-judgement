@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class DifficultySelector : MonoBehaviour
 {
@@ -10,6 +12,13 @@ public class DifficultySelector : MonoBehaviour
     public Button hardButton;
     
     private MenuManager menuManager;
+
+    void OnEnable()
+    {
+        // Delay 1 frame to let Unity's EventSystem catch up
+        StartCoroutine(SelectFirstButtonNextFrame());
+    }
+
     
     void Start()
     {
@@ -40,5 +49,11 @@ public class DifficultySelector : MonoBehaviour
         
         if (menuManager != null)
             menuManager.ConfirmDifficultyAndStart();
+    }
+
+    private IEnumerator SelectFirstButtonNextFrame()
+    {
+        yield return null; 
+        EventSystem.current.SetSelectedGameObject(easyButton.gameObject);
     }
 }
