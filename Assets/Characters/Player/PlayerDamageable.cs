@@ -7,10 +7,17 @@ public class PlayerDamageable : DamageableCharacter
 {
     private Volume _volume;
     private Vignette _vignette;
+    private PlayerSFX sfx;
+
+    public bool IsFullHealth => _health >= maxHealth;
+    
+
 
     protected override void Start()
     {
         base.Start();
+
+        sfx = GetComponent<PlayerSFX>();
 
         // Sync maxHealth from PlayerData (single source of truth)
         if (PlayerData.Instance != null)
@@ -144,30 +151,77 @@ public class PlayerDamageable : DamageableCharacter
 
         Debug.Log("[PlayerDamageable] Player reset after retry.");
     }
+    
     public void RestoreHealth(float amount)
     {
-    if (amount <= 0) return;
-    if (!isAlive) return;
+        if (amount <= 0) return;
+        if (!isAlive) return;
 
-    // Apply heal & clamp
-    _health = Mathf.Clamp(_health + amount, 0, maxHealth);
+        // Apply heal & clamp
+        _health = Mathf.Clamp(_health + amount, 0, maxHealth);
 
-    // UI update
-    GameEvents.Instance?.PlayerHealthChanged(_health, maxHealth);
+        // UI update
+        GameEvents.Instance?.PlayerHealthChanged(_health, maxHealth);
 
-    // Persist
-    if (PlayerData.Instance != null)
-        PlayerData.Instance.currentHealth = _health;
+        // Persist
+        if (PlayerData.Instance != null)
+            PlayerData.Instance.currentHealth = _health;
 
-    // Stop damage vignette
-    StopCoroutine(nameof(DamageVignetteEffect));
-    if (_vignette != null)
+        // Play heal SFX
+        sfx.PlayHealFX();
+
+        // Stop damage vignette
+        StopCoroutine(nameof(DamageVignetteEffect));
+        if (_vignette != null)
+        {
+            _vignette.intensity.value = 0f;
+            _vignette.active = false;
+        }
+
+        // Play green heal vignette
+        StartCoroutine(HealVignetteEffect());
+
+        Debug.Log($"[PlayerDamageable] Restored health. Now {_health}/{maxHealth}");
+    }
+
+    private IEnumerator HealVignetteEffect()
     {
-        _vignette.intensity.value = 0f;
+        if (_vignette == null)
+            yield break;
+
+        float maxIntensity = 0.35f;    // Slightly softer than red
+        float duration = 0.25f;
+
+        _vignette.active = true;
+        _vignette.color.value = Color.green;
+
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            float value = Mathf.Sin(t * Mathf.PI);
+            _vignette.intensity.value = value * maxIntensity;
+            yield return null;
+        }
+
+        _vignette.intensity.value = 0;
         _vignette.active = false;
     }
 
-    Debug.Log($"[PlayerDamageable] Restored health. Now {_health}/{maxHealth}");
+
+    public void RestoreHealthPercent(float percent)
+    {
+        if (!isAlive) return;
+
+        float healRaw = maxHealth * percent;
+        int healAmount = Mathf.RoundToInt(healRaw);
+
+        if (healAmount < 1)
+            healAmount = 1; // Ensure always heals at least 1
+
+        RestoreHealth(healAmount);
     }
+
 
 }

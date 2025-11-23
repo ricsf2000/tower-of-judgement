@@ -9,6 +9,7 @@ public class PlayerSFX : MonoBehaviour
     public AudioClip[] swordSwing;
     public AudioClip dashFX;
     public AudioClip deathFX;
+    public AudioClip healFX;
 
     void Start()
     {
@@ -41,5 +42,11 @@ public class PlayerSFX : MonoBehaviour
     {
         audioSource.volume = 0.50f;
         audioSource.PlayOneShot(deathFX);
+    }
+
+    public void PlayHealFX()
+    {
+        audioSource.volume = 0.50f;
+        audioSource.PlayOneShot(healFX);
     }
 }

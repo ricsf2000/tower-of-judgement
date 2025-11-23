@@ -602,6 +602,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8a5859a635f2d564ca8255f2bbf76324, type: 3}
   dashFX: {fileID: 8300000, guid: 389db0bf05717794899af61492f6a15d, type: 3}
   deathFX: {fileID: 8300000, guid: b31b49e7c84c04f46a4426728c7572c2, type: 3}
+  healFX: {fileID: 8300000, guid: 61734d2be6dab874ea197ebe88383095, type: 3}
 --- !u!50 &1932589114486792951
 Rigidbody2D:
   serializedVersion: 5

@@ -14,6 +14,8 @@ public class PromptUIController : MonoBehaviour
     [SerializeField] private bool showFullPrompt = true;
     [SerializeField] private string actionName = "to Dash";
     [SerializeField] private string currentActionKey = "Dash";
+    private bool useTextOnly = false;
+    private string customText = "";
 
     private PlayerInput playerInput;
     private string lastScheme;
@@ -48,11 +50,13 @@ public class PromptUIController : MonoBehaviour
             playerInput.onControlsChanged -= OnControlsChanged;
     }
 
-    public void SetAction(string newActionKey, string newActionName, bool fullPrompt = true)
+    public void SetAction(string newActionKey, string newActionName, bool fullPrompt, bool textOnly, string custom)
     {
         currentActionKey = newActionKey;
         actionName = newActionName;
-        showFullPrompt = fullPrompt; // allow triggers to choose mode
+        showFullPrompt = fullPrompt;    // allows triggers to choose mode
+        useTextOnly = textOnly;
+        customText = custom;
         UpdatePrompt(playerInput != null ? playerInput.currentControlScheme : "Keyboard&Mouse");
     }
 
@@ -109,6 +113,14 @@ public class PromptUIController : MonoBehaviour
         }
 
         // Display logic toggle
+
+        // Text only overrides everything else
+        if (useTextOnly)
+        {
+            actionText.text = customText;
+            return;
+        }
+
         if (showFullPrompt)
             actionText.text = $"Press {iconTag} {actionName}";
         else

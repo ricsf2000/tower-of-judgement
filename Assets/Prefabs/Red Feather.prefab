@@ -198,10 +198,6 @@ MonoBehaviour:
   shadowTransform: {fileID: 4554931205470843350}
   shadowScaleMin: 0.7
   shadowScaleMax: 1
-  enableGlow: 1
-  glowSpeed: 4
-  minBrightness: 1.5
-  maxBrightness: 1.9
 --- !u!1 &9113930521389540073
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286303b9996cb2c48a8040b2d7e6a716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectables
+  pickupDelay: 0.5
 --- !u!114 &9168898095799246231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,4 +305,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1661124f808b7b47b68b4c96f93c067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthCollectable
-  healthRestoreAmount: 5
+  healthRestoreAmount: 1
+  healPercent: 0.16666667
