@@ -1985,10 +1985,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f36399f93e4bfe478585a263a515635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusicTag
-  sceneGroup: 2
+  sceneGroup: 4
   menuClip: {fileID: 8300000, guid: f2b0de07b1c3bfc46841820005b85242, type: 3}
   backstoryClip: {fileID: 8300000, guid: f9e7b522074d64c54872c9a51d3c701b, type: 3}
   roomsClip: {fileID: 8300000, guid: c8d7fd9105110443b9f211f60773662d, type: 3}
+  bossClip: {fileID: 8300000, guid: da16137c8c724e947b5dd4e9b11620ad, type: 3}
+  No_soundClip: {fileID: 0}
 --- !u!4 &168714225
 Transform:
   m_ObjectHideFlags: 0
@@ -2683,6 +2685,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 39f98b8131700154b80b36aee49fb81d, type: 2}
     - {fileID: 11400000, guid: e76318b8863556240bc549552ab8eee5, type: 2}
     - {fileID: 11400000, guid: 15e170ecdf0a7944d9368ca8723552a0, type: 2}
+    - {fileID: 11400000, guid: 03d4ae16c63b3f74bb69c998e508434f, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -3025,6 +3028,20 @@ MonoBehaviour:
         - m_Target: {fileID: 419414264}
           m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
           m_MethodName: UnfreezeCutscene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 675538005}
+          m_TargetAssemblyTypeName: BossMusicTrigger, Assembly-CSharp
+          m_MethodName: PlayBossMusic
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7142,6 +7159,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119348570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &675538004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 675538006}
+  - component: {fileID: 675538005}
+  m_Layer: 0
+  m_Name: BossMusicPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &675538005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675538004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e121fcd4f03a09a46986dec1290f3c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMusicTrigger
+  bossClip: {fileID: 8300000, guid: da16137c8c724e947b5dd4e9b11620ad, type: 3}
+--- !u!4 &675538006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675538004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35807, y: 4.60582, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687950284
 GameObject:
   m_ObjectHideFlags: 0
@@ -7525,6 +7587,8 @@ PlayableDirector:
   - key: {fileID: 6660378118768174905, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
     value: {fileID: 2014855569}
   - key: {fileID: -7931947512463344863, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
+    value: {fileID: 419414263}
+  - key: {fileID: 6905533060295601893, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
     value: {fileID: 419414263}
   m_ExposedReferences:
     m_References: []
@@ -91227,6 +91291,10 @@ PrefabInstance:
       propertyPath: defeatTimeline
       value: 
       objectReference: {fileID: 1287802228}
+    - target: {fileID: 2650528225559408281, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
+      propertyPath: rangedDecisionCooldown
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3632771739562877482, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.023
@@ -94804,3 +94872,4 @@ SceneRoots:
   - {fileID: 1413825996}
   - {fileID: 1895145305}
   - {fileID: 119348570}
+  - {fileID: 675538006}
