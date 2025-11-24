@@ -16,6 +16,12 @@ public class PromptTrigger : MonoBehaviour
     [Tooltip("If disabled, only the button icon will show (no text).")]
     [SerializeField] private bool showFullPrompt = true;
 
+    [Tooltip("Enable to have a text only prompt")]
+    [SerializeField] private bool useTextOnly = false;
+
+    [Tooltip("Custom text to display when TextOnly is enabled.")]
+    [SerializeField] private string customPromptText = "";
+
     [Header("Follow Target Settings")]
     [SerializeField] private bool followPlayer = true;
 
@@ -24,40 +30,44 @@ public class PromptTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!triggered && showOnce)
+        if (other.CompareTag("Player"))
         {
-            if (other.CompareTag("Player"))
+            // If this prompt is show-once AND has been used, skip
+            if (showOnce && triggered)
+                return;
+
+            if (promptUI == null)
             {
-                if (promptUI == null)
-                {
-                    Debug.LogWarning("[PromptTrigger] No PromptUI assigned!");
-                    return;
-                }
+                Debug.LogWarning("[PromptTrigger] No PromptUI assigned!");
+                return;
+            }
 
-                var controller = promptUI.GetComponent<PromptUIController>();
-                if (controller != null)
-                {
-                    // Set the prompt’s action and display mode
-                    controller.SetAction(actionKey, actionName, showFullPrompt);
+            var controller = promptUI.GetComponent<PromptUIController>();
+            if (controller != null)
+            {
+                controller.SetAction(
+                    actionKey,
+                    actionName,
+                    showFullPrompt,
+                    useTextOnly,
+                    customPromptText
+                );
 
-                    // Assign the player as the follow target if applicable
-                    if (followPlayer)
-                        promptUI.GetComponent<FollowTargetUI>()?.SetTarget(other.transform);
+                if (followPlayer)
+                    promptUI.GetComponent<FollowTargetUI>()?.SetTarget(other.transform);
 
-                    // Enable the prompt
-                    promptUI.SetActive(true);
-                }
+                promptUI.SetActive(true);
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (showOnce)
-            triggered = true;
-
         if (other.CompareTag("Player"))
         {
+            if (showOnce)
+                triggered = true;
+
             if (promptUI != null)
                 promptUI.SetActive(false);
         }
