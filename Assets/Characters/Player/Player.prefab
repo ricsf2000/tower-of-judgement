@@ -1037,6 +1037,10 @@ MonoBehaviour:
   moveLockDuration: 0.5
   ignoreDuringDash: 1
   playerDash: {fileID: 682738578252953489}
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  platformCheckDistance: 0.1
 --- !u!114 &2698546350920186056
 MonoBehaviour:
   m_ObjectHideFlags: 0
