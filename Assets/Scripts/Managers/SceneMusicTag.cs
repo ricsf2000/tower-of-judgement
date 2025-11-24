@@ -29,10 +29,10 @@ public class SceneMusicTag : MonoBehaviour
                 MusicManager.Instance.SetTrack(roomsClip, false);
                 break;
             case SceneGroup.Boss:
-                MusicManager.Instance.SetTrack(bossClip, false);
+                MusicManager.Instance.SetTrack(bossClip, true);
                 break;
             case SceneGroup.No_sound:
-                MusicManager.Instance.SetTrack(No_soundClip, false);
+                MusicManager.Instance.SetTrack(No_soundClip, true);
                 break;
         }
     }
