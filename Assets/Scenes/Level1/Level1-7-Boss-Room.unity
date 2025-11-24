@@ -1990,7 +1990,7 @@ MonoBehaviour:
   backstoryClip: {fileID: 8300000, guid: f9e7b522074d64c54872c9a51d3c701b, type: 3}
   roomsClip: {fileID: 8300000, guid: c8d7fd9105110443b9f211f60773662d, type: 3}
   bossClip: {fileID: 8300000, guid: da16137c8c724e947b5dd4e9b11620ad, type: 3}
-  No_soundClip: {fileID: 0}
+  No_soundClip: {fileID: 8300000, guid: 2397169882d6a234da98a72f749b2457, type: 3}
 --- !u!4 &168714225
 Transform:
   m_ObjectHideFlags: 0
