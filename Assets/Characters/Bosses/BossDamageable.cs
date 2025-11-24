@@ -12,7 +12,6 @@ public class BossDamageable : EnemyDamageable
     private bool cutsceneFinished = false;
 
     [Header("Death Audio")]
-    public AudioSource audioSource;
     public AudioClip deathFX;
 
     protected override IEnumerator DeathSequence()
