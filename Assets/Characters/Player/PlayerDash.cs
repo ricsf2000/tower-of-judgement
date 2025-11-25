@@ -121,6 +121,7 @@ public class PlayerDash : MonoBehaviour
 
         // Dash start
         dashSpeed = finalDashDistance / dashDuration;
+        Debug.Log(dashSpeed);
         rb.linearVelocity = dashDir.normalized * dashSpeed;
 
         int playerLayer = LayerMask.NameToLayer("Player");

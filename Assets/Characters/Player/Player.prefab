@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7092230164155083912}
   m_Layer: 0
   m_Name: SwordHitbox
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1040,7 +1040,6 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 2048
-  platformCheckDistance: 0.1
 --- !u!114 &2698546350920186056
 MonoBehaviour:
   m_ObjectHideFlags: 0
