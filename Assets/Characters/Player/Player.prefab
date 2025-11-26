@@ -568,10 +568,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
   dashSpeed: 12
   dashDuration: 0.2
-  maxDashCount: 2
-  dashCooldown: 0.8
+  maxDashCount: 3
+  dashCooldown: 0.5
   tr: {fileID: 8222107168446777735}
   dashDistance: 3.5
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 8
   dashBridgeTilemap: {fileID: 0}
 --- !u!114 &6332478940356058002
 MonoBehaviour:
