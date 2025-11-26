@@ -8,6 +8,10 @@ public class TempPlatform : MonoBehaviour
     public float respawnDelay = 3f;
     public bool autoRespawn = true;
 
+    [Tooltip("If true, stepping on this platform causes it to collapse.")]
+    public bool collapsesOnStep = true;
+
+
     private SpriteRenderer[] renderers;
     private Collider2D col;
     private Color[] originalColors;
@@ -33,40 +37,29 @@ public class TempPlatform : MonoBehaviour
     // Trigger collapse when any FallableCharacter enters
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collapseTriggered) return;
-
-        PlayerDash dash = other.GetComponent<PlayerDash>();
-        if (dash != null && dash.IsDashing)
-        {
-            // Ignore triggers during dash
-            return;
-        }
-
-        if (other.GetComponent<FallableCharacter>() != null)
-        {
-            collapseTriggered = true;
-
-            if (damageFlash != null)
-                damageFlash.CallDamageFlash(Color.red);
-            
-            StartCoroutine(DisappearRoutine());
-        }
+        TryCollapse(other);
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (collapseTriggered) return;
+        TryCollapse(other);
+    }
 
-        FallableCharacter fallable = other.GetComponent<FallableCharacter>();
-        if (fallable == null) return;
+    private void TryCollapse(Collider2D other)
+    {
+        if (collapseTriggered || !collapsesOnStep)
+            return;
 
+        // Ignore if player is dashing
         PlayerDash dash = other.GetComponent<PlayerDash>();
-
-        // If the character is NOT dashing anymore → trigger collapse
         if (dash != null && dash.IsDashing)
-            return; // still dashing, don't collapse
+            return;
 
-        // If here: dash ended while inside the collider
+        // Must be a fallable character
+        if (other.GetComponent<FallableCharacter>() == null)
+            return;
+
+        // Trigger collapse
         collapseTriggered = true;
 
         if (damageFlash != null)
