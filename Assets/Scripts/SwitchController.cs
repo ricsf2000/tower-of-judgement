@@ -28,6 +28,9 @@ public class SwitchController : MonoBehaviour
             spriteResolver = GetComponent<SpriteResolver>();
 
         audioSource = GetComponent<AudioSource>();
+
+        if (allSwitches.Count == 0)
+            allSwitches.Add(this);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -29,6 +29,10 @@ public class FallableCharacter : MonoBehaviour
     public bool ignoreDuringDash = false;
     public PlayerDash playerDash;
 
+    [Header("Platform Check")]
+    public LayerMask platformLayer;
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -49,7 +53,12 @@ public class FallableCharacter : MonoBehaviour
         if (ignoreDuringDash && playerDash != null && playerDash.IsDashing) return;
 
         Vector3Int pos = holeTilemap.WorldToCell(transform.position);
-        if (holeTilemap.HasTile(pos))
+        bool holeTile = holeTilemap.HasTile(pos);
+
+        // Check if platform GameObject is underneath
+        bool platformBelow = HasPlatformBelow();
+
+        if (holeTile && !platformBelow)
         {
             StartCoroutine(HandleFall());
         }
@@ -105,6 +114,21 @@ public class FallableCharacter : MonoBehaviour
 
         isFalling = false;
     }
+
+    private bool HasPlatformBelow()
+    {
+        Collider2D myCol = GetComponent<Collider2D>();
+        if (myCol == null) return false;
+
+        Vector2 position = transform.position;
+        Vector2 size = myCol.bounds.size * 0.8f;
+
+        Collider2D hit = Physics2D.OverlapBox(position, size, 0f, platformLayer);
+
+        return hit != null;
+    }
+
+
 
     public void OnHit(float disableDuration = 0.5f)
     {

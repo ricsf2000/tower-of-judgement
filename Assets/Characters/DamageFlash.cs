@@ -35,6 +35,12 @@ public class DamageFlash : MonoBehaviour
         _damageFlashCoroutine = StartCoroutine(DamageFlasher());
     }
 
+    public void CallDamageFlash(Color overrideColor)
+    {
+        _flashColor = overrideColor;
+        _damageFlashCoroutine = StartCoroutine(DamageFlasher());
+    }
+
     private IEnumerator DamageFlasher()
     {
         // Set color

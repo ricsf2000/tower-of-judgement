@@ -20,12 +20,27 @@ public class PathCoordinator : MonoBehaviour
     private void Awake()
     {
         aiData = GetComponent<AIData>();
+
+        if (player == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null)
+                player = p.transform;
+            else
+                Debug.LogWarning("[PathCoordinator] No Player found in scene!");
+        }
+
+        if (pathfinder == null)
+            pathfinder = FindFirstObjectByType<AStarManager>();
     }
+
 
     private void Update()
     {
         if (player == null || pathfinder == null)
             return;
+
+        aiData.position = transform.position;
 
         repathTimer -= Time.deltaTime;
         if (repathTimer <= 0f)

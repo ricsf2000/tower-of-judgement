@@ -12,6 +12,7 @@ public class PlayerDash : MonoBehaviour
     public TrailRenderer tr;
     public float dashDistance = 5f;
     private bool rechargeRunning = false;
+    public LayerMask wallMask;
 
     [Header("Dash Bridge Tilemap")]
     public Tilemap dashBridgeTilemap;
@@ -106,7 +107,7 @@ public class PlayerDash : MonoBehaviour
         if (controller != null)
             controller.canMove = false;
 
-        rb.linearVelocity = Vector2.zero;
+        // rb.linearVelocity = Vector2.zero;
 
         // Dash bridge check
         float finalDashDistance = dashDistance;
@@ -120,7 +121,9 @@ public class PlayerDash : MonoBehaviour
         }
 
         // Dash start
+
         dashSpeed = finalDashDistance / dashDuration;
+        Debug.Log(dashSpeed);
         rb.linearVelocity = dashDir.normalized * dashSpeed;
 
         int playerLayer = LayerMask.NameToLayer("Player");
@@ -141,7 +144,7 @@ public class PlayerDash : MonoBehaviour
             controller.canAttack = true;    // Make sure dashes can never lock attacks
         }
 
-        rb.linearVelocity = Vector2.zero;
+        // rb.linearVelocity = Vector2.zero;
         tr.emitting = false;
 
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
