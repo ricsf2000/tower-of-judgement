@@ -536,7 +536,7 @@ MonoBehaviour:
   - {fileID: 5428091404681931713}
   - {fileID: 6367765943819748062}
   freezeDuration: 0.15
-  freezeAnimation: 0
+  freezeAnimation: 1
 --- !u!114 &6580486208914031918
 MonoBehaviour:
   m_ObjectHideFlags: 0
