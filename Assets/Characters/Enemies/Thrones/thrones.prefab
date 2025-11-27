@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 8382754573417105799}
   - component: {fileID: 5156091679730828704}
   - component: {fileID: 2976036630956483914}
+  - component: {fileID: 3424931595297667548}
   m_Layer: 9
   m_Name: thrones
   m_TagString: Enemy
@@ -704,6 +705,8 @@ MonoBehaviour:
   aiUpdateDelay: 0.06
   attackDistance: 1.5
   attackDelay: 1
+  attackChance: 0.5
+  attackDecisionCooldown: 0.3
   enableRetreat: 0
   retreatRatio: 0.6
   wallCheckDistance: 1
@@ -1097,6 +1100,22 @@ MonoBehaviour:
   bounceMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &3424931595297667548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1ddfc98b52312408b71607a9d24ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PathCoordinator
+  player: {fileID: 0}
+  pathfinder: {fileID: 0}
+  waypointReachThreshold: 0.2
+  repathInterval: 1
 --- !u!1 &4871732685514603177
 GameObject:
   m_ObjectHideFlags: 0

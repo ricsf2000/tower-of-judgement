@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3781779469498173578}
   m_Layer: 11
   m_Name: MovingPlatform
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,10 @@ MonoBehaviour:
   damageFlash: {fileID: 3781779469498173578}
   activatedFlashColor: {r: 0, g: 0.8937981, b: 1, a: 1}
   flashStrength: 0.8
-  pingPongWaitTime: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  groundCheckDistance: 0.1
 --- !u!61 &8729092230169130498
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -106,7 +109,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2367743, y: 0.15388846}
+  m_Offset: {x: 0.2376943, y: 0.15332115}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -116,7 +119,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6492966, y: 0.6407075}
+  m_Size: {x: 0.6468131, y: 0.641032}
   m_EdgeRadius: 0
 --- !u!114 &3781779469498173578
 MonoBehaviour:

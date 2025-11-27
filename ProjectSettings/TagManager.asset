@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - SpawnPoint
   - PlayerWeapon
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Enemy
   - Holes
   - PlatformLayer
-  - 
+  - Ground
   - 
   - 
   - 

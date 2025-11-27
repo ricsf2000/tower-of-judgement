@@ -28,6 +28,14 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float attackDelay = 1f;
     private float lastAttackTime = -999f;
 
+    [SerializeField, Range(0f, 1f)] 
+    private float attackChance = 0.5f;
+
+    [SerializeField] 
+    private float attackDecisionCooldown = 0.3f;
+
+    private float nextAttackDecisionTime = 0f;
+
     [Header("Retreat Settings")]
     [SerializeField] private bool enableRetreat = false;
     [Range(0.1f, 0.9f)] [SerializeField] private float retreatRatio = 0.6f;
@@ -148,10 +156,16 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        if (distance < attackDistance)
+        // Chance-based attack trigger
+        if (distance < attackDistance && Time.time >= nextAttackDecisionTime)
         {
-            SetState(EnemyState.Attack);
-            return;
+            nextAttackDecisionTime = Time.time + attackDecisionCooldown;
+
+            if (Random.value < attackChance)
+            {
+                SetState(EnemyState.Attack);
+                return;
+            }
         }
 
         movementInput = movementDirectionSolver.GetDirectionToMove(steeringBehaviours, aiData);
@@ -159,7 +173,8 @@ public class EnemyAI : MonoBehaviour
 
     private void HandleAttack(float distance)
     {
-        movementInput = movementDirectionSolver.GetDirectionToMove(steeringBehaviours, aiData);
+        // movementInput = movementDirectionSolver.GetDirectionToMove(steeringBehaviours, aiData);
+        movementInput = Vector2.zero;
 
         if (Time.time - lastAttackTime >= attackDelay)
         {
@@ -178,6 +193,7 @@ public class EnemyAI : MonoBehaviour
     {
         Vector2 dirToTarget = (aiData.currentTarget.position - transform.position).normalized;
         Vector2 retreatDir = -dirToTarget;
+        Vector2 strafeDir = Vector2.Perpendicular(dirToTarget);
 
         // Raycast behind the enemy to avoid walls
         RaycastHit2D hit = Physics2D.Raycast(transform.position, retreatDir, wallCheckDistance, wallLayers);
@@ -198,7 +214,8 @@ public class EnemyAI : MonoBehaviour
         {
             // Retreat normally
             Debug.DrawRay(transform.position, retreatDir * wallCheckDistance, Color.green);
-            movementInput = retreatDir;
+            // movementInput = retreatDir;
+            movementInput = (retreatDir * 0.7f + strafeDir * 0.3f).normalized;
         }
 
         // Transition rules

@@ -57,7 +57,18 @@ public class MovingPlatform : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            other.transform.SetParent(null);
+            StartCoroutine(DelayedDetach(other.transform));
+    }
+
+    private IEnumerator DelayedDetach(Transform player)
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        // If another platform took over, they have a new parent
+        if (player.parent != transform)
+            yield break;
+
+        player.SetParent(null);
     }
 
     // Trigger mode (When the player steps on the platform, activate movement)
