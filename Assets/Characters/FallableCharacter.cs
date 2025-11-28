@@ -179,9 +179,14 @@ public class FallableCharacter : MonoBehaviour
             if (TryGetComponent(out DamageableCharacter dmgChar))
             {
                 float fallDamage = 1f;
+                // Disable temporary invincibility BEFORE applying damage
+                dmgChar.Invincible = false;
+
+                // Apply fall damage
                 dmgChar.OnHit(fallDamage);
                 Debug.Log($"[FallableCharacter] Player took {fallDamage} fall damage on respawn. New HP: {dmgChar.Health}");
 
+                // Re-enable invincibility AFTER respawn (to prevent instant re-hit)
                 StartCoroutine(ReenableAfterDelay(dmgChar, 0.5f));
 
                 // Prevent player from moving for a short time

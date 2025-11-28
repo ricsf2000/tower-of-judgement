@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 [System.Serializable]
 public class EnemyWave
@@ -9,7 +11,8 @@ public class EnemyWave
 }
 
 public class EnemyWaveManager : MonoBehaviour
-{
+{      
+    public string persistentID;  
     [Header("Waves")]
     public List<EnemyWave> waves = new List<EnemyWave>(); // list of waves
     public float delayBetweenWaves = 2f;
@@ -24,19 +27,54 @@ public class EnemyWaveManager : MonoBehaviour
 
     private List<EnemyDamageable> activeEnemies = new List<EnemyDamageable>();
     private int currentWave = 0;
+    public int GetCurrentWaveIndex() => currentWave;
     private int spawnedThisWave = 0;
     private List<int> availableSpawnIndices = new List<int>();
 
     // For Michael boss
     public static event System.Action OnAllWavesCleared;
+    public void SkipToWave(int wave)
+{
+    currentWave = Mathf.Clamp(wave, 0, waves.Count);
+}
 
-
-    private void OnEnable()
+  private void OnEnable()
     {
-        Debug.Log($"[WaveManager] OnEnable() — starting encounter");
-        if (Application.isPlaying)
+        if (!Application.isPlaying)
+            return;
+
+        Debug.Log("[WaveManager] OnEnable()");
+
+        // Find saved state for this wave manager
+        var saved = CheckpointGameData.waveStates
+            .FirstOrDefault(s => s.managerID == persistentID);
+
+        // If checkpoint exists and state exists for this room
+        if (CheckpointGameData.hasCheckpoint && saved != null)
+        {
+            currentWave = Mathf.Clamp(saved.currentWave, 0, waves.Count);
+
+            // Room was fully cleared before checkpoint → do nothing
+            if (currentWave >= waves.Count)
+            {
+                foreach (var b in barriers)
+                    if (b != null)
+                        b.DeactivateBarrier();
+
+                Debug.Log("[WaveManager] Room cleared before checkpoint — no spawn.");
+                return;
+            }
+
+            // Otherwise resume from saved wave
             StartCoroutine(BeginEncounter());
+            return;
+        }
+
+        // Fresh room start
+        StartCoroutine(BeginEncounter());
     }
+
+
 
     private IEnumerator BeginEncounter()
     {
@@ -217,6 +255,15 @@ public class EnemyWaveManager : MonoBehaviour
                 }
             }
         }
+    }
+        public bool WasClearedBeforeCheckpoint()
+    {
+        var saved = CheckpointGameData.waveStates
+            .FirstOrDefault(s => s.managerID == persistentID);
+
+        if (saved == null) return false;
+
+        return saved.currentWave >= waves.Count;
     }
 
 }

@@ -52,7 +52,36 @@ public class LevelManager : MonoBehaviour
     }
     public void Retry()
     {
-        StartCoroutine(ReloadAndReset());
+        if (CheckpointGameData.hasCheckpoint)
+        {
+            StartCoroutine(ReloadCheckpoint());
+        }
+        else
+        {
+            StartCoroutine(ReloadAndReset());
+        }
+    }
+
+    private IEnumerator ReloadCheckpoint()
+    {
+        SceneManager.LoadScene(CheckpointGameData.sceneName);
+        yield return null;
+
+        var player = FindFirstObjectByType<PlayerDamageable>();
+        if (player != null)
+        {
+            player.transform.position = CheckpointGameData.playerPosition;
+            player._health = CheckpointGameData.playerHealth;
+
+            if (PlayerData.Instance != null)
+                PlayerData.Instance.currentHealth = player._health;
+
+            GameEvents.Instance?.PlayerHealthChanged(player._health, player.maxHealth);
+        }
+
+        var playerInput = FindFirstObjectByType<PlayerInput>();
+        if (playerInput != null)
+            playerInput.SwitchCurrentActionMap("Player");
     }
 
     private IEnumerator ReloadAndReset()

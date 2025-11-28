@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 public class PlayerDamageable : DamageableCharacter
-{
+{   
     private Volume _volume;
     private Vignette _vignette;
     private PlayerSFX sfx;
@@ -87,8 +87,9 @@ public class PlayerDamageable : DamageableCharacter
     protected override IEnumerator DeathSequence()
     {
         yield return new WaitForSeconds(2.0f);
-        LevelManager.manager.GameOver();
+        LevelManager.manager.GameOver(); 
     }
+
 
     private IEnumerator DamageVignetteEffect()
     {
@@ -115,23 +116,10 @@ public class PlayerDamageable : DamageableCharacter
         _vignette.active = false;
     }
 
-    public void ResetPlayer()
+   public void ResetPlayer()
     {
-        // Restore full health from PlayerData
-        if (PlayerData.Instance != null)
-        {
-            PlayerData.Instance.RestoreFullHealth();
-            maxHealth = PlayerData.Instance.maxHealth;
-            _health = PlayerData.Instance.currentHealth;
-        }
-        else
-        {
-            _health = maxHealth;
-        }
-
         isAlive = true;
 
-        // Restore player movement and physics
         var controller = GetComponent<PlayerController>();
         if (controller != null)
         {
@@ -140,17 +128,15 @@ public class PlayerDamageable : DamageableCharacter
             controller.Animator.SetBool("isAlive", true);
             var fallable = GetComponent<FallableCharacter>();
             if (fallable != null && fallable.respawnPosition != null)
-            {
                 controller.transform.position = fallable.respawnPosition;
-            }
         }
 
-        // Restore targetability and rigidbody state
         Targetable = true;
         rb.simulated = true;
-
         Debug.Log("[PlayerDamageable] Player reset after retry.");
     }
+
+
     
     public void RestoreHealth(float amount)
     {
