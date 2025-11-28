@@ -1630,7 +1630,7 @@ GameObject:
   - component: {fileID: 96046400}
   - component: {fileID: 96046399}
   m_Layer: 0
-  m_Name: Checkpoint1
+  m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
