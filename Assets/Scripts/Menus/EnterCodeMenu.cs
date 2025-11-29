@@ -24,7 +24,10 @@ public class EnterCodeMenu : MonoBehaviour
 
     private Dictionary<string, string> codeToScene = new Dictionary<string, string>()
     {
-        { "boss", "Level1-7-Boss-Room" }
+        { "boss", "Level1-7-Boss-Room" },
+        {"dev1", "Level1-1" }, {"dev2", "Level1-2" },
+         {"dev3", "Level1-3" }, {"dev4", "Level1-4" }, 
+         {"dev5", "Level1-5" }, {"dev6", "Level1-6" },
     };
 
 

@@ -82,7 +82,7 @@ public class Power : MonoBehaviour
     // Called by EnemyAI
     public void LookAt(Vector2 targetPos)
     {
-        if (isDead) return;
+        if (isDead || isAttacking) return;
 
         Vector2 dir = (targetPos - (Vector2)transform.position).normalized;
         if (dir.sqrMagnitude > 0.01f)
@@ -122,6 +122,12 @@ public class Power : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
         activeAttackRoutine = null;
+    }
+
+    // Called by the attack animations events in Unity
+    public void LungeForward()
+    {
+        rb.AddForce(lastMoveDir * 15f, ForceMode2D.Impulse);
     }
 
     public void CancelAttack()

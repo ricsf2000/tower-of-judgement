@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7092230164155083912}
   m_Layer: 0
   m_Name: SwordHitbox
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -568,10 +568,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
   dashSpeed: 12
   dashDuration: 0.2
-  maxDashCount: 2
-  dashCooldown: 0.8
+  maxDashCount: 3
+  dashCooldown: 0.5
   tr: {fileID: 8222107168446777735}
   dashDistance: 3.5
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 8
   dashBridgeTilemap: {fileID: 0}
 --- !u!114 &6332478940356058002
 MonoBehaviour:
@@ -1037,6 +1040,9 @@ MonoBehaviour:
   moveLockDuration: 0.5
   ignoreDuringDash: 1
   playerDash: {fileID: 682738578252953489}
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &2698546350920186056
 MonoBehaviour:
   m_ObjectHideFlags: 0

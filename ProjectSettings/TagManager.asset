@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - SpawnPoint
   - PlayerWeapon
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Bullet
   - Enemy
   - Holes
-  - 
-  - 
+  - PlatformLayer
+  - Ground
   - 
   - 
   - 
@@ -75,6 +76,12 @@ TagManager:
     locked: 0
   - name: Border
     uniqueID: 1169721667
+    locked: 0
+  - name: BossRoom
+    uniqueID: 3659785097
+    locked: 0
+  - name: PillarRoom
+    uniqueID: 757184683
     locked: 0
   m_RenderingLayers:
   - Default

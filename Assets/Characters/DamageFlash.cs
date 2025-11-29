@@ -35,6 +35,67 @@ public class DamageFlash : MonoBehaviour
         _damageFlashCoroutine = StartCoroutine(DamageFlasher());
     }
 
+    public void CallDamageFlash(Color overrideColor)
+    {
+        _flashColor = overrideColor;
+        _damageFlashCoroutine = StartCoroutine(DamageFlasher());
+    }
+
+    public void CallPersistentFlash(Color color, float fadeInTime, float maxIntensity)
+    {
+        if (_damageFlashCoroutine != null)
+            StopCoroutine(_damageFlashCoroutine);
+
+        _damageFlashCoroutine = StartCoroutine(PersistentFlashFadeIn(color, fadeInTime, maxIntensity));
+    }
+
+    public void ClearPersistentFlash(float fadeOutTime = 0.25f)
+    {
+        if (_damageFlashCoroutine != null)
+            StopCoroutine(_damageFlashCoroutine);
+
+        _damageFlashCoroutine = StartCoroutine(PersistentFlashFadeOut(fadeOutTime));
+    }
+
+    private IEnumerator PersistentFlashFadeIn(Color color, float fadeInTime, float maxIntensity)
+    {
+        // Apply color immediately
+        for (int i = 0; i < _materials.Length; i++)
+            _materials[i].SetColor("_FlashColor", color);
+
+        float elapsed = 0f;
+
+        while (elapsed < fadeInTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / fadeInTime);
+            float amount = Mathf.Lerp(0f, maxIntensity, t);
+            SetFlashAmount(amount);
+            yield return null;
+        }
+
+        SetFlashAmount(maxIntensity); // Lock at full brightness
+    }
+
+    private IEnumerator PersistentFlashFadeOut(float fadeOutTime)
+    {
+        float startAmount = _materials[0].GetFloat("_FlashAmount");
+        float elapsed = 0f;
+
+        while (elapsed < fadeOutTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / fadeOutTime);
+            float amount = Mathf.Lerp(startAmount, 0f, t);
+
+            SetFlashAmount(amount);
+
+            yield return null;
+        }
+
+        SetFlashAmount(0);
+    }
+
     private IEnumerator DamageFlasher()
     {
         // Set color
