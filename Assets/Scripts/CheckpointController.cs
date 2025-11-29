@@ -58,17 +58,28 @@ public class CheckpointController : MonoBehaviour
         });
     }
 
-        // Save barriers
+        // Save barriers (non-destructive; barriers persist even if destroyed)
         var barriers = FindObjectsOfType<BarrierController>();
-        CheckpointGameData.barrierStates.Clear();
 
-        foreach (var b in barriers)
+        foreach (var barrier in barriers)
         {
-            CheckpointGameData.barrierStates.Add(new BarrierState()
-            {
-                barrierID = b.GetInstanceID(),
-                isActive = b.gameObject.activeSelf
-            });
+            var barrierID = barrier.GetPersistenceKey();
+            if (string.IsNullOrEmpty(barrierID))
+                continue;
+
+            CheckpointGameData.SetBarrierState(barrierID, barrier.IsActive);
+        }
+
+        // Save switch states (non-destructive; keeps previous progress if switches not yet spawned)
+        var switches = FindObjectsOfType<SwitchController>();
+
+        foreach (var switchController in switches)
+        {
+            var switchID = switchController.GetPersistenceKey();
+            if (string.IsNullOrEmpty(switchID))
+                continue;
+
+            CheckpointGameData.SetSwitchState(switchID, switchController.IsActivated);
         }
 
         Debug.Log("[Checkpoint] Saved game progress.");

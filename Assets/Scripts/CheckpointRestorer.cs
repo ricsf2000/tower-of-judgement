@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Linq;
+using System.Collections.Generic;
 
 public class CheckpointRestorer : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CheckpointRestorer : MonoBehaviour
             return;
 
         RestorePlayer();
+        RestoreSwitches();
         RestoreBarriers();
         RestoreWaves();
 
@@ -41,23 +43,46 @@ public class CheckpointRestorer : MonoBehaviour
         player.transform.position = CheckpointGameData.playerPosition;
     }
 
-    private void RestoreBarriers()
+    private void RestoreSwitches()
     {
-        var allBarriers = FindObjectsOfType<BarrierController>();
+        var switches = FindObjectsOfType<SwitchController>();
 
-        foreach (var state in CheckpointGameData.barrierStates)
+        var lookup = new Dictionary<string, SwitchController>();
+        foreach (var switchController in switches)
         {
-            var b = allBarriers.FirstOrDefault(x => x.GetInstanceID() == state.barrierID);
-            if (b == null) continue;
+            var key = switchController.GetPersistenceKey();
+            if (string.IsNullOrEmpty(key))
+                continue;
 
-            if (state.isActive)
-                b.ActivateBarrier();     // from BarrierController.cs  :contentReference[oaicite:0]{index=0}
-            else
-                b.DeactivateBarrier();
+            lookup[key] = switchController;
+        }
+
+        foreach (var state in CheckpointGameData.switchStates)
+        {
+            if (!lookup.TryGetValue(state.switchID, out var target))
+                continue;
+
+            target.RestoreState(state.isActivated);
         }
     }
 
-    private void RestoreWaves()
+    private void RestoreBarriers()
+    {
+        var allBarriers = FindObjectsOfType<BarrierController>();
+        var lookup = allBarriers.ToDictionary(b => b.GetPersistenceKey(), b => b);
+
+        foreach (var state in CheckpointGameData.barrierStates)
+        {
+            if (!lookup.TryGetValue(state.barrierID, out var barrier) || barrier == null)
+                continue;
+
+            if (state.isActive)
+                barrier.ActivateBarrier();
+            else
+                barrier.DeactivateBarrier();
+        }
+    }
+     private void RestoreWaves()
     {
         var managers = FindObjectsOfType<EnemyWaveManager>();
 
