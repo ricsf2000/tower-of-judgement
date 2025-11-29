@@ -4,25 +4,28 @@ public class CheckpointController : MonoBehaviour
 {   
     public string checkpointID;
     private bool triggered = false;
+    [SerializeField] private bool repeatable = false;
     
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (triggered) return;
+        
         if (!col.CompareTag("Player")) return;
-
-        triggered = true;
-        SaveCheckpoint();
+        if (!repeatable && triggered) return;
+        bool saved = SaveCheckpoint();
+        if (!repeatable && saved)
+            triggered = true;
     }
 
-    private void SaveCheckpoint()
+    private bool SaveCheckpoint()
     {
-        // One-time activation
-        if (CheckpointGameData.usedCheckpoints.Contains(checkpointID))
-            return;
+        if (!repeatable)
+        {
+            if (CheckpointGameData.usedCheckpoints.Contains(checkpointID))
+                return false;
 
-        CheckpointGameData.usedCheckpoints.Add(checkpointID);
-
+            CheckpointGameData.usedCheckpoints.Add(checkpointID);
+        }
         var player = GameObject.FindGameObjectWithTag("Player").transform;
 
         CheckpointGameData.hasCheckpoint = true;
@@ -34,7 +37,7 @@ public class CheckpointController : MonoBehaviour
 
         // Save health
         var dmg = player.GetComponent<PlayerDamageable>();
-        CheckpointGameData.playerHealth = dmg != null ? dmg.Health : 100f;
+        CheckpointGameData.playerHealth = dmg != null ? dmg.maxHealth : 100f;
 
         // Save waves
         var managers = FindObjectsOfType<EnemyWaveManager>();
@@ -69,5 +72,6 @@ public class CheckpointController : MonoBehaviour
         }
 
         Debug.Log("[Checkpoint] Saved game progress.");
+        return true;
     }
 }
