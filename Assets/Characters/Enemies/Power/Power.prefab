@@ -207,10 +207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddbe39e269fcc04cae317193dd5b1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  preferredDistance: 2.2
+  preferredDistance: 1.5
   strafeStrength: 3
   strafeDirection: 1
-  strafeStartRatio: 0.7
+  strafeStartRatio: 0.634
   strafeFalloffSharpness: 1.9
   OnPointerInput:
     m_PersistentCalls:
@@ -501,8 +501,10 @@ MonoBehaviour:
   aiData: {fileID: 1768458532716758373}
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
-  attackDistance: 0.4
+  attackDistance: 0.5
   attackDelay: 1
+  attackChance: 0.5
+  attackDecisionCooldown: 0.3
   enableRetreat: 0
   retreatRatio: 0.6
   wallCheckDistance: 1
@@ -629,6 +631,9 @@ MonoBehaviour:
   moveLockDuration: 0.5
   ignoreDuringDash: 0
   playerDash: {fileID: 0}
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &4256760637588997212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,6 +712,7 @@ GameObject:
   - component: {fileID: 7873735729456904555}
   - component: {fileID: 9116628443683110555}
   - component: {fileID: 4211494438030496484}
+  - component: {fileID: 8714794296475093548}
   m_Layer: 9
   m_Name: SwordHitbox
   m_TagString: Untagged
@@ -893,6 +899,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8714794296475093548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993841272515058063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99681d1f4503d174a9bdcc4032dc6520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &4197257322439533560
 GameObject:
   m_ObjectHideFlags: 0

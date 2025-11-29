@@ -159,8 +159,16 @@ MonoBehaviour:
   barrier: {fileID: 0}
   focusTarget: {fileID: 0}
   spriteResolver: {fileID: 5618012060241510154}
-  hitImpact:
+  hitToActivate:
+  - {fileID: 8300000, guid: 5ed909b8eb2eb434f816a44ad56ed90f, type: 3}
+  - {fileID: 8300000, guid: 12ba6ade303f21b4a83636a365a6919e, type: 3}
+  - {fileID: 8300000, guid: 12ba6ade303f21b4a83636a365a6919e, type: 3}
+  hitToDeactivate:
   - {fileID: 8300000, guid: 2f63cc93edd2737459e1faedca4cc99f, type: 3}
+  isToggleSwitch: 0
+  startsActivated: 0
+  platformsForOnState: []
+  platformsForOffState: []
 --- !u!61 &102341533900808347
 BoxCollider2D:
   m_ObjectHideFlags: 0

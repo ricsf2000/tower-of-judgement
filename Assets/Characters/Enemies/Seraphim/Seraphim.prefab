@@ -603,11 +603,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Seraphim
   damage: 1
   knockbackForce: 5
-  moveSpeed: 1500
+  moveSpeed: 1200
   preferredDistance: 1.5
   stopThreshold: 0.5
   maxVelocity: 3.5
-  enragedSpeedMultiplier: 1.2
+  enragedSpeedMultiplier: 1
   enrageDuration: 1.5
   attackRange: 4
   chargeTime: 0.6
@@ -948,16 +948,19 @@ MonoBehaviour:
   aiData: {fileID: 8643545723161450940}
   detectionDelay: 0.05
   aiUpdateDelay: 0.06
-  attackDistance: 1.5
+  attackDistance: 1.7
   attackDelay: 1
+  attackChance: 0.5
+  attackDecisionCooldown: 0.8
   enableRetreat: 1
-  retreatRatio: 0.6
+  retreatRatio: 0.5029
   wallCheckDistance: 0.3
   wallLayers:
     serializedVersion: 2
     m_Bits: 8
   steeringBehaviours:
   - {fileID: 8163542994641913694}
+  - {fileID: 2880801648508705669}
   - {fileID: 913454814533971070}
   movementDirectionSolver: {fileID: 8870222977239898519}
   OnMovementInput:
@@ -1040,6 +1043,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEventBridge
   power: {fileID: 0}
+--- !u!1 &4717595410393844832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1970914036235213113}
+  - component: {fileID: 2880801648508705669}
+  m_Layer: 9
+  m_Name: StrafeAndAvoidBehaviour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1970914036235213113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717595410393844832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4456157042696629636}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2880801648508705669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717595410393844832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddbe39e269fcc04cae317193dd5b1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  preferredDistance: 5
+  strafeStrength: 2
+  strafeDirection: 1
+  strafeStartRatio: 1
+  strafeFalloffSharpness: 1.9
+  OnPointerInput:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Power, Assembly-CSharp
+        m_MethodName: LookAt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  showGizmos: 1
 --- !u!1 &4798711637068068394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,5 +1571,6 @@ Transform:
   - {fileID: 2295690033678140958}
   - {fileID: 7891154017368084572}
   - {fileID: 800739871645239466}
+  - {fileID: 1970914036235213113}
   m_Father: {fileID: 4559670878040903616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
