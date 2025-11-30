@@ -13,6 +13,7 @@ public static class CheckpointGameData
     public static List<BarrierState> barrierStates = new();
     public static List<WaveState> waveStates = new();
     public static List<SwitchState> switchStates = new();
+    public static List<PersistentEnemyState> persistentEnemyStates = new();
 
     public static void SetSwitchState(string switchID, bool activated)
     {
@@ -61,6 +62,43 @@ public static class CheckpointGameData
             state.isActive = isActive;
         }
     }
+    public static void SetPersistentEnemyState(string scene, string enemyID, bool isDead)
+    {
+        if (string.IsNullOrEmpty(scene) || string.IsNullOrEmpty(enemyID))
+            return;
+
+        var state = persistentEnemyStates.Find(s => s.sceneName == scene && s.enemyID == enemyID);
+
+        if (state == null)
+        {
+            persistentEnemyStates.Add(new PersistentEnemyState
+            {
+                sceneName = scene,
+                enemyID = enemyID,
+                isDead = isDead
+            });
+        }
+        else
+        {
+            state.isDead = isDead;
+        }
+    }
+
+    public static bool TryGetPersistentEnemyState(string scene, string enemyID, out bool isDead)
+    {
+        isDead = false;
+
+        if (string.IsNullOrEmpty(scene) || string.IsNullOrEmpty(enemyID))
+            return false;
+
+        var state = persistentEnemyStates.Find(s => s.sceneName == scene && s.enemyID == enemyID);
+
+        if (state == null)
+            return false;
+
+        isDead = state.isDead;
+        return true;
+    }
 }
 
 [System.Serializable]
@@ -82,4 +120,11 @@ public class SwitchState
 {
     public string switchID;
     public bool isActivated;
+}
+[System.Serializable]
+public class PersistentEnemyState
+{
+    public string sceneName;
+    public string enemyID;
+    public bool isDead;
 }

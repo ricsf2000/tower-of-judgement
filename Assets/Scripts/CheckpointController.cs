@@ -81,8 +81,21 @@ public class CheckpointController : MonoBehaviour
 
             CheckpointGameData.SetSwitchState(switchID, switchController.IsActivated);
         }
+        SavePersistentEnemyStates();
 
         Debug.Log("[Checkpoint] Saved game progress.");
         return true;
+    }
+      private void SavePersistentEnemyStates()
+    {
+        if (PersistentEnemyRuntime.PendingKills == null || PersistentEnemyRuntime.PendingKills.Count == 0)
+            return;
+
+        foreach (var killedEnemy in PersistentEnemyRuntime.PendingKills)
+        {
+            CheckpointGameData.SetPersistentEnemyState(killedEnemy.sceneName, killedEnemy.enemyID, true);
+        }
+
+        PersistentEnemyRuntime.ClearPendingKills();
     }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class CheckpointRestorer : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class CheckpointRestorer : MonoBehaviour
         RestoreSwitches();
         RestoreBarriers();
         RestoreWaves();
+        RestorePersistentEnemies();
 
         Debug.Log("[Checkpoint] Scene restored.");
     }
@@ -92,6 +94,35 @@ public class CheckpointRestorer : MonoBehaviour
             if (wm == null) continue;
 
             wm.SkipToWave(state.currentWave); 
+        }
+    }
+    private void RestorePersistentEnemies()
+    {
+        if (CheckpointGameData.persistentEnemyStates == null || CheckpointGameData.persistentEnemyStates.Count == 0)
+            return;
+
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        var deadLookup = CheckpointGameData.persistentEnemyStates
+            .Where(state => state.sceneName == currentScene && state.isDead)
+            .GroupBy(state => state.enemyID)
+            .ToDictionary(group => group.Key, group => group.Last().isDead);
+
+        if (deadLookup.Count == 0)
+            return;
+
+        var persistentEnemies = FindObjectsOfType<PersistentEnemy>();
+
+        foreach (var enemy in persistentEnemies)
+        {
+            var key = enemy.PersistenceID;
+            if (string.IsNullOrEmpty(key))
+                continue;
+
+            if (deadLookup.TryGetValue(key, out var shouldBeDead) && shouldBeDead)
+            {
+                enemy.ApplySavedState(true);
+            }
         }
     }
 }
