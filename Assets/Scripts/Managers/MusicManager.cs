@@ -60,12 +60,11 @@ public class MusicManager : MonoBehaviour
     // When the player enters a code and enters a new scene, fade the music back in
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Whenever a new scene loads, fade the music back in
-        
-        source.Stop();
-        source.clip = null;
-        source.volume = 0f;
-        StartCoroutine(FadeIn());
+        // Only reset if there's no clip (let SceneMusicTag handle track changes)
+        if (source.clip == null)
+        {
+            StartCoroutine(FadeIn());
+        }
     }
 
     private IEnumerator FadeIn()
