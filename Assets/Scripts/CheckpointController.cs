@@ -71,7 +71,7 @@ public class CheckpointController : MonoBehaviour
         }
 
         // Save switch states (non-destructive; keeps previous progress if switches not yet spawned)
-        var switches = FindObjectsOfType<SwitchController>();
+        var switches = FindObjectsOfType<SwitchController>(includeInactive: true);
 
         foreach (var switchController in switches)
         {
@@ -81,12 +81,14 @@ public class CheckpointController : MonoBehaviour
 
             CheckpointGameData.SetSwitchState(switchID, switchController.IsActivated);
         }
+
         SavePersistentEnemyStates();
 
         Debug.Log("[Checkpoint] Saved game progress.");
         return true;
     }
-      private void SavePersistentEnemyStates()
+
+    private void SavePersistentEnemyStates()
     {
         if (PersistentEnemyRuntime.PendingKills == null || PersistentEnemyRuntime.PendingKills.Count == 0)
             return;

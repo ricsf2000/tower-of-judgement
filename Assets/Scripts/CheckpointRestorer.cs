@@ -47,7 +47,7 @@ public class CheckpointRestorer : MonoBehaviour
 
     private void RestoreSwitches()
     {
-        var switches = FindObjectsOfType<SwitchController>();
+        var switches = FindObjectsOfType<SwitchController>(includeInactive: true);
 
         var lookup = new Dictionary<string, SwitchController>();
         foreach (var switchController in switches)
@@ -64,7 +64,7 @@ public class CheckpointRestorer : MonoBehaviour
             if (!lookup.TryGetValue(state.switchID, out var target))
                 continue;
 
-            target.RestoreState(state.isActivated);
+            target.RestoreState(state.isActivated, shouldPersist: false, instant: true);
         }
     }
 
@@ -96,6 +96,7 @@ public class CheckpointRestorer : MonoBehaviour
             wm.SkipToWave(state.currentWave); 
         }
     }
+
     private void RestorePersistentEnemies()
     {
         if (CheckpointGameData.persistentEnemyStates == null || CheckpointGameData.persistentEnemyStates.Count == 0)

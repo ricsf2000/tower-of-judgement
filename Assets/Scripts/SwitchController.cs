@@ -137,26 +137,46 @@ public class SwitchController : MonoBehaviour
     }
 
     // Control platforms
-    private void ApplyOnState()
+    private void ApplyOnState(bool instant = false)
     {
         // ON platforms respawn
         foreach (var p in platformsForOnState)
-            p?.TriggerRespawn();
+        {
+            if (instant)
+                p?.ForceShowImmediate();
+            else
+                p?.TriggerRespawn();
+        }
 
         // OFF platforms collapse
         foreach (var p in platformsForOffState)
-            p?.TriggerCollapse();
+        {
+            if (instant)
+                p?.ForceHideImmediate();
+            else
+                p?.TriggerCollapse();
+        }
     }
 
-    private void ApplyOffState()
+    private void ApplyOffState(bool instant = false)
     {
         // OFF platforms respawn
         foreach (var p in platformsForOffState)
-            p?.TriggerRespawn();
+        {
+            if (instant)
+                p?.ForceShowImmediate();
+            else
+                p?.TriggerRespawn();
+        }
 
         // ON platforms collapse
         foreach (var p in platformsForOnState)
-            p?.TriggerCollapse();
+        {
+            if (instant)
+                p?.ForceHideImmediate();
+            else
+                p?.TriggerCollapse();
+        }
     }
 
     // Sprite and audio
@@ -171,15 +191,15 @@ public class SwitchController : MonoBehaviour
             spriteResolver.SetCategoryAndLabel("Off", "tileset_393");
     }
 
-    public void RestoreState(bool activated, bool shouldPersist = true)
+    public void RestoreState(bool activated, bool shouldPersist = true, bool instant = false)
     {
         isActivated = activated;
         UpdateSprite();
 
         if (isActivated)
-            ApplyOnState();
+            ApplyOnState(instant);
         else
-            ApplyOffState();
+            ApplyOffState(instant);
 
         if (shouldPersist)
             PersistStateToCheckpoint();
@@ -239,7 +259,7 @@ public class SwitchController : MonoBehaviour
             if (state.switchID != id)
                 continue;
 
-            RestoreState(state.isActivated, false);
+            RestoreState(state.isActivated, false, true);
             break;
         }
 
