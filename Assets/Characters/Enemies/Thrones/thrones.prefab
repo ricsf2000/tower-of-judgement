@@ -223,8 +223,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3835674452049098960}
   - component: {fileID: 4129053402685763881}
-  - component: {fileID: 2567073755389332}
-  - component: {fileID: 4364564856491903134}
   m_Layer: 0
   m_Name: Body
   m_TagString: Enemy
@@ -306,40 +304,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2567073755389332
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2356409278556515381}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8246b72a0229a6143bd6dcdaa32f7c3b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4364564856491903134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2356409278556515381}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b38fe52b54543498a21412f1b5fc81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &2970947688174271417
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +381,7 @@ GameObject:
   - component: {fileID: 5156091679730828704}
   - component: {fileID: 2976036630956483914}
   - component: {fileID: 3424931595297667548}
+  - component: {fileID: 7091716008824133543}
   m_Layer: 9
   m_Name: thrones
   m_TagString: Enemy
@@ -531,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9837b83634d6074bbd018f3aee341b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitReaction
-  animator: {fileID: 2567073755389332}
+  animator: {fileID: 0}
   renderers:
   - {fileID: 4129053402685763881}
   - {fileID: 5428091404681931713}
@@ -822,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9837b83634d6074bbd018f3aee341b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitReaction
-  animator: {fileID: 2567073755389332}
+  animator: {fileID: 0}
   renderers:
   - {fileID: 4129053402685763881}
   - {fileID: 5428091404681931713}
@@ -857,7 +822,7 @@ MonoBehaviour:
   minVelocityThreshold: 2
   velocityCheckDelay: 0.15
   canBreakObjects: 1
-  animator: {fileID: 2567073755389332}
+  animator: {fileID: 0}
   eyeFollow: {fileID: 7212976495432339178}
   tr: {fileID: 8382754573417105799}
   ricochetPreview: {fileID: 2976036630956483914}
@@ -1116,6 +1081,28 @@ MonoBehaviour:
   pathfinder: {fileID: 0}
   waypointReachThreshold: 0.2
   repathInterval: 1
+--- !u!95 &7091716008824133543
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8246b72a0229a6143bd6dcdaa32f7c3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4871732685514603177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,8 +1260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6944576107175129027}
   - component: {fileID: 6367765943819748062}
-  - component: {fileID: 3930910489533448166}
-  - component: {fileID: 4774984159088488047}
   m_Layer: 0
   m_Name: Rings
   m_TagString: Enemy
@@ -1356,40 +1341,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3930910489533448166
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5629257702275441858}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c22dd7349fcd8b34e9882486e0b746de, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4774984159088488047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5629257702275441858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b38fe52b54543498a21412f1b5fc81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &6172851118726456178
 GameObject:
   m_ObjectHideFlags: 0

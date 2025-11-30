@@ -68,13 +68,16 @@ public class Thrones : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        // Get the unified animator (now on root object)
+        animator = GetComponent<Animator>();
+
         // Force-reset alive state on spawn
         if (damageableCharacter != null && animator != null)
         {
             bool alive = damageableCharacter.Health > 0;
             animator.SetBool("isAlive", alive);
 
-            Debug.Log($"[Power] Start() synced isAlive={alive} for {name}");
+            Debug.Log($"[Thrones] Unified controller synced isAlive={alive} for {name}");
         }
 
         myCollider = GetComponent<Collider2D>();
@@ -291,7 +294,7 @@ public class Thrones : MonoBehaviour
         // animator.SetBool("isMoving", false);
         // rb.linearVelocity = Vector2.zero;
 
-        animator.Play("Power Idle Tree", 0, 0f);
+        animator.Play("Thrones_Idle", 0, 0f);
 
         Debug.Log($"[Power] {name}'s attack was canceled!");
     }
