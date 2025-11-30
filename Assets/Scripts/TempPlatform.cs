@@ -82,6 +82,43 @@ public class TempPlatform : MonoBehaviour
         StartCoroutine(RespawnRoutine());
     }
 
+    public void ForceShowImmediate()
+    {
+        StopAllCoroutines();
+
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            if (renderers[i] == null) continue;
+
+            renderers[i].enabled = true;
+            renderers[i].color = originalColors[i];
+        }
+
+        if (col != null)
+            col.enabled = true;
+
+        collapseTriggered = false;
+    }
+
+    public void ForceHideImmediate()
+    {
+        StopAllCoroutines();
+
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            if (renderers[i] == null) continue;
+
+            renderers[i].enabled = false;
+            var baseColor = originalColors[i];
+            renderers[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0f);
+        }
+
+        if (col != null)
+            col.enabled = false;
+
+        collapseTriggered = true;
+    }
+
     private IEnumerator DisappearRoutine()
     {
         // Wait before collapse
