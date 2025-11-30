@@ -1,0 +1,3309 @@
+fileFormatVersion: 2
+guid: 821d8a140b04f4641b140b13f6bb7b9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5152579338801267941
+    second: god_sprite_sheet_0
+  - first:
+      213: -4851225608005817476
+    second: god_sprite_sheet_1
+  - first:
+      213: 9053527439441710949
+    second: god_sprite_sheet_2
+  - first:
+      213: 9169380839560476932
+    second: god_sprite_sheet_3
+  - first:
+      213: 544929047211642542
+    second: god_sprite_sheet_4
+  - first:
+      213: 4796419870512003609
+    second: god_sprite_sheet_5
+  - first:
+      213: 8632674598152919403
+    second: god_sprite_sheet_6
+  - first:
+      213: -5068468268557014346
+    second: god_sprite_sheet_7
+  - first:
+      213: -1907553431414198500
+    second: god_sprite_sheet_8
+  - first:
+      213: -7143186719978015751
+    second: god_sprite_sheet_9
+  - first:
+      213: 850542468132206374
+    second: god_sprite_sheet_10
+  - first:
+      213: 3526997691414713398
+    second: god_sprite_sheet_11
+  - first:
+      213: -8538248280176054635
+    second: god_sprite_sheet_12
+  - first:
+      213: 4809549071410372106
+    second: god_sprite_sheet_13
+  - first:
+      213: 7435233386582678715
+    second: god_sprite_sheet_14
+  - first:
+      213: 7109453758676749121
+    second: god_sprite_sheet_15
+  - first:
+      213: -5768869769649703109
+    second: god_sprite_sheet_16
+  - first:
+      213: 200325237120033497
+    second: god_sprite_sheet_17
+  - first:
+      213: -7995053915990098798
+    second: god_sprite_sheet_18
+  - first:
+      213: 6751970449911535686
+    second: god_sprite_sheet_19
+  - first:
+      213: -1605049837721114611
+    second: god_sprite_sheet_20
+  - first:
+      213: 8430965322848717100
+    second: god_sprite_sheet_21
+  - first:
+      213: -1296081226755028507
+    second: god_sprite_sheet_22
+  - first:
+      213: 8538687115909875225
+    second: god_sprite_sheet_23
+  - first:
+      213: 5199241411475610684
+    second: god_sprite_sheet_24
+  - first:
+      213: -2550026264540830893
+    second: god_sprite_sheet_25
+  - first:
+      213: -3480159248364257360
+    second: god_sprite_sheet_26
+  - first:
+      213: 7276395772939214478
+    second: god_sprite_sheet_27
+  - first:
+      213: -3617928444980095923
+    second: god_sprite_sheet_28
+  - first:
+      213: 4609860234941512484
+    second: god_sprite_sheet_29
+  - first:
+      213: -7780233446252529001
+    second: god_sprite_sheet_30
+  - first:
+      213: 2185911062047352057
+    second: god_sprite_sheet_31
+  - first:
+      213: 7063582259625981931
+    second: god_sprite_sheet_32
+  - first:
+      213: 5661571169134937475
+    second: god_sprite_sheet_33
+  - first:
+      213: -6206971210921574447
+    second: god_sprite_sheet_34
+  - first:
+      213: -4346061383878259205
+    second: god_sprite_sheet_35
+  - first:
+      213: -1932368523172806196
+    second: god_sprite_sheet_36
+  - first:
+      213: -6185317028250776723
+    second: god_sprite_sheet_37
+  - first:
+      213: 174206372773553559
+    second: god_sprite_sheet_38
+  - first:
+      213: -862626252102024851
+    second: god_sprite_sheet_39
+  - first:
+      213: 6338897669303595064
+    second: god_sprite_sheet_40
+  - first:
+      213: -4934269909571677037
+    second: god_sprite_sheet_41
+  - first:
+      213: 49767973834804843
+    second: god_sprite_sheet_42
+  - first:
+      213: -1182482410753180677
+    second: god_sprite_sheet_43
+  - first:
+      213: 7958021158725484996
+    second: god_sprite_sheet_44
+  - first:
+      213: 1271924072114861146
+    second: god_sprite_sheet_45
+  - first:
+      213: 8253912350333861675
+    second: god_sprite_sheet_46
+  - first:
+      213: 1480288148381849225
+    second: god_sprite_sheet_47
+  - first:
+      213: -5360078462346088443
+    second: god_sprite_sheet_48
+  - first:
+      213: 7571004959325383059
+    second: god_sprite_sheet_49
+  - first:
+      213: 2850084166527478506
+    second: god_sprite_sheet_50
+  - first:
+      213: -1021849121894665533
+    second: god_sprite_sheet_51
+  - first:
+      213: -4678474582642384565
+    second: god_sprite_sheet_52
+  - first:
+      213: -7725959978551455416
+    second: god_sprite_sheet_53
+  - first:
+      213: 923184909938574272
+    second: god_sprite_sheet_54
+  - first:
+      213: 2095633206753769116
+    second: god_sprite_sheet_55
+  - first:
+      213: 6676168290850677677
+    second: god_sprite_sheet_56
+  - first:
+      213: -9133517568245684292
+    second: god_sprite_sheet_57
+  - first:
+      213: -1618316253606261219
+    second: god_sprite_sheet_58
+  - first:
+      213: -7349639469223979974
+    second: god_sprite_sheet_59
+  - first:
+      213: 1343966773048907291
+    second: god_sprite_sheet_60
+  - first:
+      213: -7039465511015609595
+    second: god_sprite_sheet_61
+  - first:
+      213: -7829743705741242476
+    second: god_sprite_sheet_62
+  - first:
+      213: 8913292192144553563
+    second: god_sprite_sheet_63
+  - first:
+      213: 7848289319738102023
+    second: god_sprite_sheet_64
+  - first:
+      213: -2647211062187291228
+    second: god_sprite_sheet_65
+  - first:
+      213: 1641485786243865489
+    second: god_sprite_sheet_66
+  - first:
+      213: 8166197137045868387
+    second: god_sprite_sheet_67
+  - first:
+      213: -8026853114860704984
+    second: god_sprite_sheet_68
+  - first:
+      213: -4637015307533217140
+    second: god_sprite_sheet_69
+  - first:
+      213: -2670621910131827682
+    second: god_sprite_sheet_70
+  - first:
+      213: 6999696395078479756
+    second: god_sprite_sheet_71
+  - first:
+      213: 6594552158505156478
+    second: god_sprite_sheet_72
+  - first:
+      213: 367345174777616470
+    second: god_sprite_sheet_73
+  - first:
+      213: 8023172070541676235
+    second: god_sprite_sheet_74
+  - first:
+      213: -1038855475034692745
+    second: god_sprite_sheet_75
+  - first:
+      213: -8186427062699894809
+    second: god_sprite_sheet_76
+  - first:
+      213: 4655504943271679865
+    second: god_sprite_sheet_77
+  - first:
+      213: -3513875775459133442
+    second: god_sprite_sheet_78
+  - first:
+      213: -2790537688784930420
+    second: god_sprite_sheet_79
+  - first:
+      213: 2863790007982441401
+    second: god_sprite_sheet_80
+  - first:
+      213: -8384292480341445636
+    second: god_sprite_sheet_81
+  - first:
+      213: -2873377019090023669
+    second: god_sprite_sheet_82
+  - first:
+      213: 1450830001800970359
+    second: god_sprite_sheet_83
+  - first:
+      213: 2485004739411705324
+    second: god_sprite_sheet_84
+  - first:
+      213: 9141714584243499289
+    second: god_sprite_sheet_85
+  - first:
+      213: 6625385273881709986
+    second: god_sprite_sheet_86
+  - first:
+      213: -3886491244177941463
+    second: god_sprite_sheet_87
+  - first:
+      213: -4475594023449397994
+    second: god_sprite_sheet_88
+  - first:
+      213: 8003214543081908045
+    second: god_sprite_sheet_89
+  - first:
+      213: -129495010862093592
+    second: god_sprite_sheet_90
+  - first:
+      213: -8752012138056070057
+    second: god_sprite_sheet_91
+  - first:
+      213: -8425981125044250443
+    second: god_sprite_sheet_92
+  - first:
+      213: 3435223188486074308
+    second: god_sprite_sheet_93
+  - first:
+      213: 8861693734969752053
+    second: god_sprite_sheet_94
+  - first:
+      213: -7284743050112036830
+    second: god_sprite_sheet_95
+  - first:
+      213: -3618188164118014124
+    second: god_sprite_sheet_96
+  - first:
+      213: 817639434021642430
+    second: god_sprite_sheet_97
+  - first:
+      213: -3015633332283673179
+    second: god_sprite_sheet_98
+  - first:
+      213: 5291838102088410452
+    second: god_sprite_sheet_99
+  - first:
+      213: -3205346278973535459
+    second: god_sprite_sheet_100
+  - first:
+      213: 4755598466467362973
+    second: god_sprite_sheet_101
+  - first:
+      213: -7453606284238225402
+    second: god_sprite_sheet_102
+  - first:
+      213: 560825927183041498
+    second: god_sprite_sheet_103
+  - first:
+      213: -2662535125885358807
+    second: god_sprite_sheet_104
+  - first:
+      213: 4713504149429273708
+    second: god_sprite_sheet_105
+  - first:
+      213: 6934761836851510975
+    second: god_sprite_sheet_106
+  - first:
+      213: 106582720566058980
+    second: god_sprite_sheet_107
+  - first:
+      213: -4893012852137088250
+    second: god_sprite_sheet_108
+  - first:
+      213: -8565433143391373223
+    second: god_sprite_sheet_109
+  - first:
+      213: 3729426289505688665
+    second: god_sprite_sheet_110
+  - first:
+      213: 8018255750557522158
+    second: god_sprite_sheet_111
+  - first:
+      213: -7680444547007702864
+    second: god_sprite_sheet_112
+  - first:
+      213: -7017899758907268895
+    second: god_sprite_sheet_113
+  - first:
+      213: 8273525077708746970
+    second: god_sprite_sheet_114
+  - first:
+      213: -200744855248352293
+    second: god_sprite_sheet_115
+  - first:
+      213: 3488643880268799188
+    second: god_sprite_sheet_116
+  - first:
+      213: -3385139249275587053
+    second: god_sprite_sheet_117
+  - first:
+      213: -6590331678614631878
+    second: god_sprite_sheet_118
+  - first:
+      213: -1740479144341558806
+    second: god_sprite_sheet_119
+  - first:
+      213: 6837748947582465818
+    second: god_sprite_sheet_120
+  - first:
+      213: -9037383097017971985
+    second: god_sprite_sheet_121
+  - first:
+      213: -8091154076628884402
+    second: god_sprite_sheet_122
+  - first:
+      213: -5340727068681753205
+    second: god_sprite_sheet_123
+  - first:
+      213: 1009101452350442964
+    second: god_sprite_sheet_124
+  - first:
+      213: -7574660484781979823
+    second: god_sprite_sheet_125
+  - first:
+      213: -8472206546264012209
+    second: god_sprite_sheet_126
+  - first:
+      213: 8041309206621796830
+    second: god_sprite_sheet_127
+  - first:
+      213: -7125355322044522785
+    second: god_sprite_sheet_128
+  - first:
+      213: -5369370420867244525
+    second: god_sprite_sheet_129
+  - first:
+      213: 6660204415029093717
+    second: god_sprite_sheet_130
+  - first:
+      213: -236295699868806562
+    second: god_sprite_sheet_131
+  - first:
+      213: -895317153957461106
+    second: god_sprite_sheet_132
+  - first:
+      213: 8789171176474946713
+    second: god_sprite_sheet_133
+  - first:
+      213: 2164081604567314684
+    second: god_sprite_sheet_134
+  - first:
+      213: 3804471254994381597
+    second: god_sprite_sheet_135
+  - first:
+      213: -3924183249300849008
+    second: god_sprite_sheet_136
+  - first:
+      213: 8117268897567105725
+    second: god_sprite_sheet_137
+  - first:
+      213: -3799438521809120667
+    second: god_sprite_sheet_138
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: god_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4444eeb93a18740800000000000000
+      internalID: 5152579338801267941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7be88d230cfcacb0800000000000000
+      internalID: -4851225608005817476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fcc201d3794ad70800000000000000
+      internalID: 9053527439441710949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4097648ca4f204f70800000000000000
+      internalID: 9169380839560476932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae87dec41aff8700800000000000000
+      internalID: 544929047211642542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a3e7fa57e409240800000000000000
+      internalID: 4796419870512003609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6951742fcb6dc770800000000000000
+      internalID: 8632674598152919403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bae151b6fe29a9b0800000000000000
+      internalID: -5068468268557014346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1faa72c2420785e0800000000000000
+      internalID: -1907553431414198500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f33c6f368d4edc90800000000000000
+      internalID: -7143186719978015751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627776f4edbbdcb00800000000000000
+      internalID: 850542468132206374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6349568a6b962f030800000000000000
+      internalID: 3526997691414713398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e24004d6c028980800000000000000
+      internalID: -8538248280176054635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e993bf563feb240800000000000000
+      internalID: 4809549071410372106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc926d1f514f2760800000000000000
+      internalID: 7435233386582678715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b4ef8a68ad9a260800000000000000
+      internalID: 7109453758676749121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b373a80628bd0ffa0800000000000000
+      internalID: -5768869769649703109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2e516edb2b7c200800000000000000
+      internalID: 200325237120033497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c7051b2dcdb0190800000000000000
+      internalID: -7995053915990098798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64859e8c951d3bd50800000000000000
+      internalID: 6751970449911535686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08a5df2da7b9b9e0800000000000000
+      internalID: -1605049837721114611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29c80eba4ec00570800000000000000
+      internalID: 8430965322848717100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9c63fbdf4630ee0800000000000000
+      internalID: -1296081226755028507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916430821b28f7670800000000000000
+      internalID: 8538687115909875225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c1188548a672840800000000000000
+      internalID: 5199241411475610684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353a02e7f9c7c9cd0800000000000000
+      internalID: -2550026264540830893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf357f2a9df3bfc0800000000000000
+      internalID: -3480159248364257360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e123b4763faf460800000000000000
+      internalID: 7276395772939214478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d441e267f398acdc0800000000000000
+      internalID: -3617928444980095923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b33e7a57389ff30800000000000000
+      internalID: 4609860234941512484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a318ee6ee070490800000000000000
+      internalID: -7780233446252529001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4edeb878ae55e10800000000000000
+      internalID: 2185911062047352057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7f1c204a2e60260800000000000000
+      internalID: 7063582259625981931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38581e66bf0f19e40800000000000000
+      internalID: 5661571169134937475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df71f1d1986cd9a0800000000000000
+      internalID: -6206971210921574447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfdc4e1a230bfa3c0800000000000000
+      internalID: -4346061383878259205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc18329f019de25e0800000000000000
+      internalID: -1932368523172806196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b00fb1fe6592aa0800000000000000
+      internalID: -6185317028250776723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795e6c6e5c7ea6200800000000000000
+      internalID: 174206372773553559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61488d7ef55704f0800000000000000
+      internalID: -862626252102024851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830746668d948f750800000000000000
+      internalID: 6338897669303595064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394d41ef8a3f58bb0800000000000000
+      internalID: -4934269909571677037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e4d9165bfc0b000800000000000000
+      internalID: 49767973834804843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfbb8e1338af69fe0800000000000000
+      internalID: -1182482410753180677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c100e89412907e60800000000000000
+      internalID: 7958021158725484996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54bca36438c6a110800000000000000
+      internalID: 1271924072114861146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ffbd03d89cb8270800000000000000
+      internalID: 8253912350333861675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98655816a3a0b8410800000000000000
+      internalID: 1480288148381849225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500b3a3990d2d95b0800000000000000
+      internalID: -5360078462346088443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3996f49c5ec911960800000000000000
+      internalID: 7571004959325383059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeae5d5f2788d8720800000000000000
+      internalID: 2850084166527478506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c27c6b33a9a1d1f0800000000000000
+      internalID: -1021849121894665533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4128ea9728b21fb0800000000000000
+      internalID: -4678474582642384565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8415e895550e7c490800000000000000
+      internalID: -7725959978551455416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3c3eac8cfcfcc00800000000000000
+      internalID: 923184909938574272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9632146c4f251d10800000000000000
+      internalID: 2095633206753769116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3a1ec40b386ac50800000000000000
+      internalID: 6676168290850677677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb72de2c92a3f3180800000000000000
+      internalID: -9133517568245684292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ece8901f59a89e0800000000000000
+      internalID: -1618316253606261219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34d6b1c7d5d00a90800000000000000
+      internalID: -7349639469223979974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b161281d8aab6a210800000000000000
+      internalID: 1343966773048907291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b0d471a6bce4e90800000000000000
+      internalID: -7039465511015609595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f41f85599275390800000000000000
+      internalID: -7829743705741242476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56f90c260062bb70800000000000000
+      internalID: 8913292192144553563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7015b75ed89baec60800000000000000
+      internalID: 7848289319738102023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad87d08097334bd0800000000000000
+      internalID: -2647211062187291228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b1be820aab7c610800000000000000
+      internalID: 1641485786243865489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f4e6f9709245170800000000000000
+      internalID: 8166197137045868387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b6d70ce93ea9090800000000000000
+      internalID: -8026853114860704984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c821f60552306afb0800000000000000
+      internalID: -4637015307533217140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c9735b58b00fad0800000000000000
+      internalID: -2670621910131827682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f2c3c09cae32160800000000000000
+      internalID: 6999696395078479756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f3c7caf3e848b50800000000000000
+      internalID: 6594552158505156478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658d29c7d72191500800000000000000
+      internalID: 367345174777616470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcec8745d78085f60800000000000000
+      internalID: 8023172070541676235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7736695137e3591f0800000000000000
+      internalID: -1038855475034692745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e7d024c5f7f36e80800000000000000
+      internalID: -8186427062699894809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97798c9741dab9040800000000000000
+      internalID: 4655504943271679865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef778ea79943c3fc0800000000000000
+      internalID: -3513875775459133442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 384
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8972a7c1c40649d0800000000000000
+      internalID: -2790537688784930420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b34b19d6d93eb720800000000000000
+      internalID: 2863790007982441401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3f448396205ab80800000000000000
+      internalID: -8384292480341445636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b4e5f23d6bf18d0800000000000000
+      internalID: -2873377019090023669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77083d62332622410800000000000000
+      internalID: 1450830001800970359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedfbc5f4a28c7220800000000000000
+      internalID: 2485004739411705324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91177dfbaf4edde70800000000000000
+      internalID: 9141714584243499289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adc2d5cdc812fb50800000000000000
+      internalID: 6625385273881709986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c9b101ec8601ac0800000000000000
+      internalID: -3886491244177941463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615ff69c2fe73e1c0800000000000000
+      internalID: -4475594023449397994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4723ad5931211f60800000000000000
+      internalID: 8003214543081908045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea216549f0f33ef0800000000000000
+      internalID: -129495010862093592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75cc241a45b9a8680800000000000000
+      internalID: -8752012138056070057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8579d3fc6e01b80800000000000000
+      internalID: -8425981125044250443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfa5e11a4d5caf20800000000000000
+      internalID: 3435223188486074308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f93d2d208f0bfa70800000000000000
+      internalID: 8861693734969752053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 256
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220931acac467ea90800000000000000
+      internalID: -7284743050112036830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4571933e80d99cdc0800000000000000
+      internalID: -3618188164118014124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb02633bbb6d85b00800000000000000
+      internalID: 817639434021642430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5776836715626d0800000000000000
+      internalID: -3015633332283673179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4556bdb67b2607940800000000000000
+      internalID: 5291838102088410452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b89abba825483d0800000000000000
+      internalID: -3205346278973535459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98fd28eb974ff140800000000000000
+      internalID: 4755598466467362973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6008c5c43987f8890800000000000000
+      internalID: -7453606284238225402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3039a953478c700800000000000000
+      internalID: 560825927183041498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d6a93e866cc0bd0800000000000000
+      internalID: -2662535125885358807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64cf0afc0bb96140800000000000000
+      internalID: 4713504149429273708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe387f06293d3060800000000000000
+      internalID: 6934761836851510975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4efd88e6b68aa7100800000000000000
+      internalID: 106582720566058980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ba2fa3cb6881cb0800000000000000
+      internalID: -4893012852137088250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958bccc00f7712980800000000000000
+      internalID: -8565433143391373223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c5df1737591c330800000000000000
+      internalID: 3729426289505688665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 128
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8d6326f11964f60800000000000000
+      internalID: 8018255750557522158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b815829064996590800000000000000
+      internalID: -7680444547007702864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_113
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e068090a596b9e90800000000000000
+      internalID: -7017899758907268895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_114
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0bd11293771d270800000000000000
+      internalID: 8273525077708746970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_115
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb4f642e9fc63df0800000000000000
+      internalID: -200744855248352293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_116
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc134f10272a6030800000000000000
+      internalID: 3488643880268799188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_117
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31632bbb9c19501d0800000000000000
+      internalID: -3385139249275587053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_118
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3acb2061407a84a0800000000000000
+      internalID: -6590331678614631878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: god_sprite_sheet_119
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9ab8e807398d7e0800000000000000
+      internalID: -1740479144341558806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 21622f2e7c8b25a4db5f3812a21695a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.20000000298023225},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      god_sprite_sheet_0: 5152579338801267941
+      god_sprite_sheet_1: -4851225608005817476
+      god_sprite_sheet_10: 850542468132206374
+      god_sprite_sheet_100: -3205346278973535459
+      god_sprite_sheet_101: 4755598466467362973
+      god_sprite_sheet_102: -7453606284238225402
+      god_sprite_sheet_103: 560825927183041498
+      god_sprite_sheet_104: -2662535125885358807
+      god_sprite_sheet_105: 4713504149429273708
+      god_sprite_sheet_106: 6934761836851510975
+      god_sprite_sheet_107: 106582720566058980
+      god_sprite_sheet_108: -4893012852137088250
+      god_sprite_sheet_109: -8565433143391373223
+      god_sprite_sheet_11: 3526997691414713398
+      god_sprite_sheet_110: 3729426289505688665
+      god_sprite_sheet_111: 8018255750557522158
+      god_sprite_sheet_112: -7680444547007702864
+      god_sprite_sheet_113: -7017899758907268895
+      god_sprite_sheet_114: 8273525077708746970
+      god_sprite_sheet_115: -200744855248352293
+      god_sprite_sheet_116: 3488643880268799188
+      god_sprite_sheet_117: -3385139249275587053
+      god_sprite_sheet_118: -6590331678614631878
+      god_sprite_sheet_119: -1740479144341558806
+      god_sprite_sheet_12: -8538248280176054635
+      god_sprite_sheet_13: 4809549071410372106
+      god_sprite_sheet_14: 7435233386582678715
+      god_sprite_sheet_15: 7109453758676749121
+      god_sprite_sheet_16: -5768869769649703109
+      god_sprite_sheet_17: 200325237120033497
+      god_sprite_sheet_18: -7995053915990098798
+      god_sprite_sheet_19: 6751970449911535686
+      god_sprite_sheet_2: 9053527439441710949
+      god_sprite_sheet_20: -1605049837721114611
+      god_sprite_sheet_21: 8430965322848717100
+      god_sprite_sheet_22: -1296081226755028507
+      god_sprite_sheet_23: 8538687115909875225
+      god_sprite_sheet_24: 5199241411475610684
+      god_sprite_sheet_25: -2550026264540830893
+      god_sprite_sheet_26: -3480159248364257360
+      god_sprite_sheet_27: 7276395772939214478
+      god_sprite_sheet_28: -3617928444980095923
+      god_sprite_sheet_29: 4609860234941512484
+      god_sprite_sheet_3: 9169380839560476932
+      god_sprite_sheet_30: -7780233446252529001
+      god_sprite_sheet_31: 2185911062047352057
+      god_sprite_sheet_32: 7063582259625981931
+      god_sprite_sheet_33: 5661571169134937475
+      god_sprite_sheet_34: -6206971210921574447
+      god_sprite_sheet_35: -4346061383878259205
+      god_sprite_sheet_36: -1932368523172806196
+      god_sprite_sheet_37: -6185317028250776723
+      god_sprite_sheet_38: 174206372773553559
+      god_sprite_sheet_39: -862626252102024851
+      god_sprite_sheet_4: 544929047211642542
+      god_sprite_sheet_40: 6338897669303595064
+      god_sprite_sheet_41: -4934269909571677037
+      god_sprite_sheet_42: 49767973834804843
+      god_sprite_sheet_43: -1182482410753180677
+      god_sprite_sheet_44: 7958021158725484996
+      god_sprite_sheet_45: 1271924072114861146
+      god_sprite_sheet_46: 8253912350333861675
+      god_sprite_sheet_47: 1480288148381849225
+      god_sprite_sheet_48: -5360078462346088443
+      god_sprite_sheet_49: 7571004959325383059
+      god_sprite_sheet_5: 4796419870512003609
+      god_sprite_sheet_50: 2850084166527478506
+      god_sprite_sheet_51: -1021849121894665533
+      god_sprite_sheet_52: -4678474582642384565
+      god_sprite_sheet_53: -7725959978551455416
+      god_sprite_sheet_54: 923184909938574272
+      god_sprite_sheet_55: 2095633206753769116
+      god_sprite_sheet_56: 6676168290850677677
+      god_sprite_sheet_57: -9133517568245684292
+      god_sprite_sheet_58: -1618316253606261219
+      god_sprite_sheet_59: -7349639469223979974
+      god_sprite_sheet_6: 8632674598152919403
+      god_sprite_sheet_60: 1343966773048907291
+      god_sprite_sheet_61: -7039465511015609595
+      god_sprite_sheet_62: -7829743705741242476
+      god_sprite_sheet_63: 8913292192144553563
+      god_sprite_sheet_64: 7848289319738102023
+      god_sprite_sheet_65: -2647211062187291228
+      god_sprite_sheet_66: 1641485786243865489
+      god_sprite_sheet_67: 8166197137045868387
+      god_sprite_sheet_68: -8026853114860704984
+      god_sprite_sheet_69: -4637015307533217140
+      god_sprite_sheet_7: -5068468268557014346
+      god_sprite_sheet_70: -2670621910131827682
+      god_sprite_sheet_71: 6999696395078479756
+      god_sprite_sheet_72: 6594552158505156478
+      god_sprite_sheet_73: 367345174777616470
+      god_sprite_sheet_74: 8023172070541676235
+      god_sprite_sheet_75: -1038855475034692745
+      god_sprite_sheet_76: -8186427062699894809
+      god_sprite_sheet_77: 4655504943271679865
+      god_sprite_sheet_78: -3513875775459133442
+      god_sprite_sheet_79: -2790537688784930420
+      god_sprite_sheet_8: -1907553431414198500
+      god_sprite_sheet_80: 2863790007982441401
+      god_sprite_sheet_81: -8384292480341445636
+      god_sprite_sheet_82: -2873377019090023669
+      god_sprite_sheet_83: 1450830001800970359
+      god_sprite_sheet_84: 2485004739411705324
+      god_sprite_sheet_85: 9141714584243499289
+      god_sprite_sheet_86: 6625385273881709986
+      god_sprite_sheet_87: -3886491244177941463
+      god_sprite_sheet_88: -4475594023449397994
+      god_sprite_sheet_89: 8003214543081908045
+      god_sprite_sheet_9: -7143186719978015751
+      god_sprite_sheet_90: -129495010862093592
+      god_sprite_sheet_91: -8752012138056070057
+      god_sprite_sheet_92: -8425981125044250443
+      god_sprite_sheet_93: 3435223188486074308
+      god_sprite_sheet_94: 8861693734969752053
+      god_sprite_sheet_95: -7284743050112036830
+      god_sprite_sheet_96: -3618188164118014124
+      god_sprite_sheet_97: 817639434021642430
+      god_sprite_sheet_98: -3015633332283673179
+      god_sprite_sheet_99: 5291838102088410452
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
