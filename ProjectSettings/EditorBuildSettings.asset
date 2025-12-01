@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1/Level1-7-Boss-Room.unity
     guid: 4205f09c1129b084e97e6431a05d5155
   - enabled: 1
-    path: Assets/Scenes/EndingScene.unity
+    path: Assets/Scenes/Level1/EndingScene.unity
     guid: 84ee7d8c247876544a721f0a3cc36258
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
