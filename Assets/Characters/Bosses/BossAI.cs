@@ -97,22 +97,44 @@ public class BossAI : MonoBehaviour
     }
 
     // Phase Control
+    private BossPhase previousPhase = BossPhase.Phase1;
     private void UpdatePhase()
     {
         if (!damageableCharacter) return;
 
         float ratio = Mathf.Clamp01(damageableCharacter.Health / damageableCharacter.maxHealth);
+        BossPhase newPhase;
         if (ratio <= phase3Threshold)
-            currentPhase = BossPhase.Phase3;
+            newPhase = BossPhase.Phase3;
         else if (ratio <= phase2Threshold)
-            currentPhase = BossPhase.Phase2;
+            newPhase = BossPhase.Phase2;
         else
-            currentPhase = BossPhase.Phase1;
+            newPhase = BossPhase.Phase1;
+
+        // If phase changed to Phase 2 or Phase 3, immediately trigger wave spawning
+        if (newPhase != previousPhase && (newPhase == BossPhase.Phase2 || newPhase == BossPhase.Phase3))
+        {
+            if (newPhase == BossPhase.Phase2 && wavesSpawned < waveLimitInPhase2)
+            {
+                SetState(EnemyState.SpawnWave);
+            }
+            else if (newPhase == BossPhase.Phase3 && wavesSpawned < waveLimitInPhase3)
+            {
+                SetState(EnemyState.SpawnWave);
+            }
+        }
+
+        previousPhase = newPhase;
+        currentPhase = newPhase;
     }
 
     // Core AI
     private void UpdateAI()
     {
+        // Don't run AI if Michael is flown away
+        if (michael != null && michael.flownAway)
+            return;
+
         if (aiData.currentTarget == null)
         {
             if (aiData.GetTargetsCount() > 0)

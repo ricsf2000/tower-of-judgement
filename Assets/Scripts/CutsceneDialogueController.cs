@@ -420,5 +420,22 @@ public class CutsceneDialogueController : MonoBehaviour
         SetCutsceneLock(false);
     }
 
+    // Helper method for timeline signals - finds BossDamageable and calls NotifyCutsceneFinished
+    // This can be called from a Signal Receiver on CutsceneManager
+    public void NotifyBossCutsceneFinished()
+    {
+        Debug.Log("[CutsceneDialogueController] NotifyBossCutsceneFinished() called - searching for BossDamageable...");
+        BossDamageable bossDamageable = FindFirstObjectByType<BossDamageable>();
+        if (bossDamageable != null)
+        {
+            Debug.Log("[CutsceneDialogueController] Found BossDamageable, calling NotifyCutsceneFinished()");
+            bossDamageable.NotifyCutsceneFinished();
+        }
+        else
+        {
+            Debug.LogError("[CutsceneDialogueController] BossDamageable not found! Boss may have been destroyed too early.");
+        }
+    }
+
 
 }
