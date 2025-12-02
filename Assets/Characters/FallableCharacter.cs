@@ -56,6 +56,7 @@ public class FallableCharacter : MonoBehaviour
         bool holeTile = holeTilemap.HasTile(pos);
 
         // Check if platform GameObject is underneath
+        if (!holeTile) return;  // immediately return, no OverlapBox
         bool platformBelow = HasPlatformBelow();
 
         if (holeTile && !platformBelow)

@@ -232,7 +232,7 @@ public class Michael : MonoBehaviour
         Debug.Log($"[Michael] Moving to corner: {targetCorner.name}");
 
         // Fly up
-        damageableCharacter.invincibleOverride = true;
+        // damageableCharacter.invincibleOverride = true;
         animator.SetBool("flownAway", true);
         rb.linearVelocity = Vector2.zero;
 
@@ -338,7 +338,7 @@ public class Michael : MonoBehaviour
     private IEnumerator FlyAwayRoutine()
     {
         // Enable IFrames and stop movement
-        damageableCharacter.invincibleOverride = true;
+        // damageableCharacter.invincibleOverride = true;
 
          // Disable all colliders
         foreach (var col in allColliders)
@@ -411,7 +411,7 @@ public class Michael : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         canMove = true;
-        damageableCharacter.invincibleOverride = false;
+        // damageableCharacter.invincibleOverride = false;
     }
 
     // ============================================ DEFEATED =========================================================================================================

@@ -64,6 +64,7 @@ MonoBehaviour:
   disappearDelay: 0.4
   respawnDelay: 3
   autoRespawn: 1
+  collapsesOnStep: 1
 --- !u!61 &8729092230169130498
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655421896998046418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f9b43034908adf49ad068a5dc9c6725, type: 3}
   m_Name: 

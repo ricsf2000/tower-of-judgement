@@ -207,7 +207,12 @@ public class Thrones : MonoBehaviour
         rb.angularDamping = 0f;
 
         direction = lockedDirection;
-        rb.linearVelocity = direction * chargeSpeed;
+
+        // Reset previous velocity to prevent physics buildup
+        rb.linearVelocity = Vector2.zero;
+
+        // Add initial launch force
+        rb.AddForce(direction * chargeSpeed, ForceMode2D.Impulse);
 
         Physics2D.IgnoreLayerCollision(gameObject.layer, enemyLayer, true);
 
@@ -345,7 +350,12 @@ public class Thrones : MonoBehaviour
         if (collision.collider.GetComponent<HittableObject>() != null)
         {
             Physics2D.IgnoreCollision(myCollider, collision.collider, true);
-            rb.linearVelocity = direction.normalized * chargeSpeed;
+            
+            // Reset velocity so AddForce is consistent
+            rb.linearVelocity = Vector2.zero;
+
+            // Reapply charge impulse
+            rb.AddForce(direction.normalized * chargeSpeed, ForceMode2D.Impulse);
             return;
         }
 
@@ -389,7 +399,11 @@ public class Thrones : MonoBehaviour
     private void bounce(Vector2 dir)
     {
         direction = dir;
-        rb.linearVelocity = direction * chargeSpeed;
+        // Reset velocity to prevent diagonal speed buildup
+        rb.linearVelocity = Vector2.zero;
+
+        // Reapply the dash force
+        rb.AddForce(direction * chargeSpeed, ForceMode2D.Impulse);
     }
     
     private void IgnorePlayerCollisions(bool ignore)

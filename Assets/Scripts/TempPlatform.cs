@@ -11,10 +11,11 @@ public class TempPlatform : MonoBehaviour
     [Tooltip("If true, stepping on this platform causes it to collapse.")]
     public bool collapsesOnStep = true;
 
-
     private SpriteRenderer[] renderers;
     private Collider2D col;
-    private Color[] originalColors;
+
+    private Color tempColor;
+    private Color[] originalColors; // Now the ONLY stored color array
 
     private bool collapseTriggered = false;
 
@@ -34,7 +35,6 @@ public class TempPlatform : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("PlatformLayer");
     }
 
-    // Trigger collapse when any FallableCharacter enters
     private void OnTriggerEnter2D(Collider2D other)
     {
         TryCollapse(other);
@@ -50,12 +50,12 @@ public class TempPlatform : MonoBehaviour
         if (collapseTriggered || !collapsesOnStep)
             return;
 
-        // Ignore if player is dashing
+        // Ignore dashing
         PlayerDash dash = other.GetComponent<PlayerDash>();
         if (dash != null && dash.IsDashing)
             return;
 
-        // Must be a fallable character
+        // Must be fallable
         if (other.GetComponent<FallableCharacter>() == null)
             return;
 
@@ -89,7 +89,6 @@ public class TempPlatform : MonoBehaviour
         for (int i = 0; i < renderers.Length; i++)
         {
             if (renderers[i] == null) continue;
-
             renderers[i].enabled = true;
             renderers[i].color = originalColors[i];
         }
@@ -107,10 +106,11 @@ public class TempPlatform : MonoBehaviour
         for (int i = 0; i < renderers.Length; i++)
         {
             if (renderers[i] == null) continue;
-
             renderers[i].enabled = false;
-            var baseColor = originalColors[i];
-            renderers[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0f);
+
+            Color c = originalColors[i];
+            c.a = 0f;
+            renderers[i].color = c;
         }
 
         if (col != null)
@@ -121,33 +121,26 @@ public class TempPlatform : MonoBehaviour
 
     private IEnumerator DisappearRoutine()
     {
-        // Wait before collapse
         yield return new WaitForSeconds(disappearDelay);
 
-        // Fade out
         float fadeTime = 0.2f;
         float elapsed = 0f;
-
-        // Cache starting colors
-        Color[] startColors = new Color[renderers.Length];
-        for (int i = 0; i < renderers.Length; i++)
-            startColors[i] = renderers[i].color;
 
         while (elapsed < fadeTime)
         {
             elapsed += Time.deltaTime;
             float a = Mathf.Lerp(1f, 0f, elapsed / fadeTime);
 
-            // Apply alpha to ALL sprites at once
             for (int i = 0; i < renderers.Length; i++)
             {
                 SpriteRenderer sr = renderers[i];
-                sr.color = new Color(startColors[i].r, startColors[i].g, startColors[i].b, a);
+                tempColor = originalColors[i];  // Use original colors
+                tempColor.a = a;
+                sr.color = tempColor;
             }
 
             yield return null;
         }
-
 
         if (col != null)
             col.enabled = false;
@@ -162,18 +155,17 @@ public class TempPlatform : MonoBehaviour
 
         for (int i = 0; i < renderers.Length; i++)
         {
-            if (renderers[i] == null) continue;
-
-            renderers[i].enabled = true;
-            renderers[i].color = originalColors[i];
+            SpriteRenderer sr = renderers[i];
+            sr.enabled = true;
+            sr.color = originalColors[i];
         }
 
         if (col != null)
             col.enabled = true;
 
         if (damageFlash != null)
-        damageFlash.CallDamageFlash(Color.white);
+            damageFlash.CallDamageFlash(Color.white);
 
-        collapseTriggered = false; // allow triggering again
+        collapseTriggered = false;
     }
 }

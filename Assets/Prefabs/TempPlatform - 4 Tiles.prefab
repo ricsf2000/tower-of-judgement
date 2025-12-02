@@ -244,6 +244,7 @@ MonoBehaviour:
   disappearDelay: 0.4
   respawnDelay: 3
   autoRespawn: 1
+  collapsesOnStep: 1
 --- !u!61 &6629535985086065085
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -387,7 +387,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 540211421
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 5666041778152302455, guid: 471c649f8b3f3af4fadda8e367dd0c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f8ad8261e8b9f4d8ac14568f13467f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
-  dashSpeed: 12
+  dashSpeed: 17.5
   dashDuration: 0.2
   maxDashCount: 3
   dashCooldown: 0.5
@@ -978,7 +978,7 @@ SortingGroup:
   m_GameObject: {fileID: 3585627279053337000}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!70 &8964575435719062601

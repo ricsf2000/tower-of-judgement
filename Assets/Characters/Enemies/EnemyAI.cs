@@ -85,10 +85,16 @@ public class EnemyAI : MonoBehaviour
         }
 
         // Send movement input every frame
-        OnMovementInput?.Invoke(movementInput);
+        // OnMovementInput?.Invoke(movementInput);
 
-        if (Time.frameCount % 30 == 0) // once per half second
-            Debug.Log($"[EnemyAI] {name} current state: {currentState}");
+        // if (Time.frameCount % 30 == 0) // once per half second
+        //     Debug.Log($"[EnemyAI] {name} current state: {currentState}");
+    }
+
+    private void FixedUpdate()
+    {
+        // Send movement input every frame
+        OnMovementInput?.Invoke(movementInput);
     }
 
     private void PerformDetection()

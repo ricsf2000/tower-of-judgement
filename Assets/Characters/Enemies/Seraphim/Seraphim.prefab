@@ -549,7 +549,7 @@ SortingGroup:
   m_GameObject: {fileID: 4082208666007192400}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!70 &6012646269378953417
@@ -853,7 +853,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 540211421
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -952,7 +952,7 @@ MonoBehaviour:
   attackDelay: 1
   attackChance: 0.5
   attackDecisionCooldown: 0.8
-  enableRetreat: 1
+  enableRetreat: 0
   retreatRatio: 0.5029
   wallCheckDistance: 0.3
   wallLayers:

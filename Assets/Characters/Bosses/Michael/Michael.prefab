@@ -303,8 +303,8 @@ MonoBehaviour:
   disableSimulation: 1
   canTurnInvincible: 1
   invincibilityTime: 0.8
-  _health: 50
-  maxHealth: 50
+  _health: 100
+  maxHealth: 100
   audioSource: {fileID: 1822464704190869122}
   impactSounds:
   - {fileID: 8300000, guid: 5c7fb8f66f809ec4798d13c087f042af, type: 3}
@@ -318,7 +318,6 @@ MonoBehaviour:
   defeatTimeline: {fileID: 0}
   bossAI: {fileID: 2650528225559408281}
   boss: {fileID: 8385757812501856695}
-  audioSource: {fileID: 1822464704190869122}
   deathFX: {fileID: 8300000, guid: 1198c0ba69f53cb498c08cdbd15349a7, type: 3}
 --- !u!114 &366275161272418493
 MonoBehaviour:
