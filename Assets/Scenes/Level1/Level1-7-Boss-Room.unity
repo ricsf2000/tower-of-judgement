@@ -2787,7 +2787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320977123962040341, guid: d7ae9de212a48b644b5740fd76d03185, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00012207031
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7320977123962040341, guid: d7ae9de212a48b644b5740fd76d03185, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2954,27 +2954,10 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: ffb342f665ff25e448a91f1e17c11af6, type: 2}
-    - {fileID: 11400000, guid: 86ffe83e2c3f7674d98eb58a28a4f5f9, type: 2}
-    - {fileID: 11400000, guid: eaac4b770308f6143b5df420d92c59be, type: 2}
-    - {fileID: 11400000, guid: 4c13c86033a4dc148bcb7b5aeeb5c564, type: 2}
-    - {fileID: 11400000, guid: b41bd5ca013405e41af178f03fcefda6, type: 2}
-    - {fileID: 11400000, guid: 48e3efd76cd57de42bcf438dc7be822e, type: 2}
-    - {fileID: 11400000, guid: aa4e28f06b5801e4dabd04f8ebb5360e, type: 2}
-    - {fileID: 11400000, guid: d5b40266abb5d2745b4215f88b9cd3a3, type: 2}
-    - {fileID: 11400000, guid: 881b9f104c14d3240944922bb5146cd8, type: 2}
-    - {fileID: 11400000, guid: 6806f83970c6a2d4391744a2937c2405, type: 2}
-    - {fileID: 11400000, guid: bc56c0235973f9641956a5df5114ce51, type: 2}
-    - {fileID: 11400000, guid: 5272e4e194a63564bb8c411c6417d068, type: 2}
     - {fileID: 11400000, guid: c0bc94ac49d5bf84e9712438068d98e8, type: 2}
-    - {fileID: 11400000, guid: b3c8aca97ebdc1a47829f8c7dbbb741b, type: 2}
-    - {fileID: 11400000, guid: b5e1316462952be4c855a92ac4cc0980, type: 2}
-    - {fileID: 11400000, guid: 2db653637b2aa794c8f20bc419ce8753, type: 2}
-    - {fileID: 11400000, guid: 4e9e3264a5b151e40a9458c661fc4851, type: 2}
-    - {fileID: 11400000, guid: da898e0dd5079f747887c4d84134ded7, type: 2}
-    - {fileID: 11400000, guid: 246450413f26b3f4f92696c5f7dd1d8b, type: 2}
-    - {fileID: 11400000, guid: f76cdbad4c9cdb943b6f1b7b4d0da440, type: 2}
     - {fileID: 11400000, guid: 0dcf16a3f392d4b44a748eb4bcc0f3a2, type: 2}
     - {fileID: 11400000, guid: e15dc18d716befd4bbfe772a74a6a772, type: 2}
+    - {fileID: 0}
     - {fileID: 11400000, guid: 39f98b8131700154b80b36aee49fb81d, type: 2}
     - {fileID: 11400000, guid: e76318b8863556240bc549552ab8eee5, type: 2}
     - {fileID: 11400000, guid: 15e170ecdf0a7944d9368ca8723552a0, type: 2}
@@ -2985,278 +2968,12 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 419414264}
           m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
+          m_MethodName: StartDialogueSequence
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 4
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 5
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 6
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 7
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 8
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 9
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 10
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: EndCutscene
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 11
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 12
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 13
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 14
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 15
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 16
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 17
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 419414264}
-          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
-          m_MethodName: PlayDialogueLine
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 18
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -3289,6 +3006,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls: []
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1251263672}
@@ -3347,6 +3066,20 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 419414264}
+          m_TargetAssemblyTypeName: CutsceneDialogueController, Assembly-CSharp
+          m_MethodName: StartDialogueSequence
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
         - m_Target: {fileID: 1349106232}
           m_TargetAssemblyTypeName: BossDoorSequence, Assembly-CSharp
           m_MethodName: FocusDoorAndOpen
@@ -3375,56 +3108,43 @@ MonoBehaviour:
   dialogueText: {fileID: 2145911536}
   skipPromptText: {fileID: 1986252131}
   director: {fileID: 700156731}
-  lines:
-  - "You\u2019ve come far, brother. Even now, your defiance burns through ruin."
-  - "Someone has to stand for what\u2019s left. You call this mercy, I see ash and
-    silence.\r"
-  - 'The world outside was long lost before this tower rose. Humanity begged for
-    salvation, and God
-
-    answered.
-
-'
-  - A clean beginning, free from pain, from war, from you
-  - "You mean a world that never chooses, never sins, never lives.\r"
-  - 'Freedom brought them nothing but suffering.
-
-    Order will give them peace,
-    even if it must come through fire.'
-  - "Then your peace is just another name for extinction.\r"
-  - 'And your rebellion is just pride wearing pity.
-
-    Do you still remember the
-    sound when I cast you down?
-
-'
-  - The heavens wept, but they did not waver.
-  - "Let\u2019s see if they still won\u2019t.\r"
-  - 'So be it, fallen star. Let this judgment fall once more.
-
-'
-  - "So\u2026 the Morning Star still burns.\r\nEven after Heaven\u2019s fire sought
-    to extinguish you.\n"
-  - "The fire only taught me how to endure.\r"
-  - "Endure\u2026 yes. That is humanity\u2019s curse and its glory.\n"
-  - 'They suffer, and yet they rise again.
-
-    We called it defiance. Perhaps it
-    was faith in disguise.
-
-'
-  - 'For ages I believed mercy was obedience. Perhaps I was blind. Perhaps obedience
-    was easier than
-
-    doubt.'
-  - "I see\u2026 that I may have mistaken order for grace.\r\nBut even now\u2026
-    I cannot forsake His command."
-  - "Even should Heaven fall\u2026 I will rise to defend it again.\n"
-  - 'Once, I cast you down.
-
-    Now, I only pray that you rise for the right reason
-
-'
+  characters:
+  - {fileID: 60907591}
+  - {fileID: 2014855569}
+  - {fileID: 1518420009}
+  dialogueSequences:
+  - sequenceName: Pre-fight Dialogue
+    lines:
+    - This rebellion ends here, morning star. You've done enough damage.
+    - You'd really stand there and watch them all die? That's not the Michael I remember.
+    - The world outside was long lost before this tower rose. Humanity begged for
+      salvation, and God answered.
+    - A clean beginning, with humans that are free from sin.
+    - You mean a world that never chooses, never lives.
+    - Freedom brought them nothing but suffering.
+    - Freedom is worth any suffering. Without it, they're just puppets.
+    - '...'
+    - I see you are as obstinate as ever, brother. Seems we will have to settle this
+      the old way.
+    - Last time I showed mercy and cast you down. There will be no mercy now.
+    activeCharacterIndex: 01000000000000000100000001000000000000000100000000000000010000000100000001000000
+  - sequenceName: Post-fight Dialogue
+    lines:
+    - 'Look how far you''ve come, brother. '
+    - This didn't need to end like this, Michael. We could have found another way.
+    - No... we each chose our path long ago. You chose to question. I chose to serve.
+    - And where did our choices lead us?
+    - To this moment. To who we truly are. I have no regrets, morning star.
+    - Even now? Even knowing what comes next?
+    - 'Especially now. You fight for them because you have faith in them. '
+    - I fought because... I had faith in Him. We were both true to ourselves.
+    - Then we were both fools.
+    - The best kind of fools, brother. The kind who believe in something greater than
+      ourselves.
+    - Goodbye, Michael. May you find the peace I never could.
+    activeCharacterIndex: 0200000000000000020000000000000002000000000000000200000002000000000000000200000000000000
+  lines: []
+  activeCharacterIndex: 
   delayBetweenLines: 2
   nextSceneName: 
   playerInput: {fileID: 1413215047}
@@ -8035,7 +7755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4025191028645229188, guid: 9a4ecdc455501b94a9d4559852568153, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00012207031
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4025191028645229188, guid: 9a4ecdc455501b94a9d4559852568153, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8195,10 +7915,6 @@ PlayableDirector:
     value: {fileID: 1986252129}
   - key: {fileID: -1755261167019786540, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
     value: {fileID: 162596670}
-  - key: {fileID: 138316181007502030, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
-    value: {fileID: 60907591}
-  - key: {fileID: 6660378118768174905, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
-    value: {fileID: 2014855569}
   - key: {fileID: -7931947512463344863, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
     value: {fileID: 419414263}
   - key: {fileID: 6905533060295601893, guid: 69963ab64a8fbc9459339e8e5d872149, type: 2}
@@ -74854,10 +74570,6 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 2021041059641787868, guid: 6844b459ca2f0fb4bb2e0f5d8609e02f, type: 2}
     value: {fileID: 162596670}
-  - key: {fileID: 7998814245073426576, guid: 6844b459ca2f0fb4bb2e0f5d8609e02f, type: 2}
-    value: {fileID: 60907591}
-  - key: {fileID: -9212518297159308726, guid: 6844b459ca2f0fb4bb2e0f5d8609e02f, type: 2}
-    value: {fileID: 1518420009}
   - key: {fileID: -9176000851450886496, guid: 6844b459ca2f0fb4bb2e0f5d8609e02f, type: 2}
     value: {fileID: 419414263}
   - key: {fileID: 5898952568221649427, guid: 6844b459ca2f0fb4bb2e0f5d8609e02f, type: 2}
@@ -92257,43 +91969,43 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[0]'
+      propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1221255933}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[1]'
+      propertyPath: spawnPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1782845446}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[2]'
+      propertyPath: spawnPoints.Array.data[2]
       value: 
       objectReference: {fileID: 373862665}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[3]'
+      propertyPath: spawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1270700164}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[4]'
+      propertyPath: spawnPoints.Array.data[4]
       value: 
       objectReference: {fileID: 951272419}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[5]'
+      propertyPath: spawnPoints.Array.data[5]
       value: 
       objectReference: {fileID: 523008904}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[6]'
+      propertyPath: spawnPoints.Array.data[6]
       value: 
       objectReference: {fileID: 913143973}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[7]'
+      propertyPath: spawnPoints.Array.data[7]
       value: 
       objectReference: {fileID: 1500856583}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[8]'
+      propertyPath: spawnPoints.Array.data[8]
       value: 
       objectReference: {fileID: 668994324}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[9]'
+      propertyPath: spawnPoints.Array.data[9]
       value: 
       objectReference: {fileID: 776008964}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
@@ -92301,43 +92013,43 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[0]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[0]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[1]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[1]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[2]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[2]
       value: 
       objectReference: {fileID: 4082208666007192400, guid: 41f9c698112ffac4fb1a656660e9bb40, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[3]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[3]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[4]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[4]
       value: 
       objectReference: {fileID: 4082208666007192400, guid: 41f9c698112ffac4fb1a656660e9bb40, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[5]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[5]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[6]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[6]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[7]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[7]
       value: 
       objectReference: {fileID: 4082208666007192400, guid: 41f9c698112ffac4fb1a656660e9bb40, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[8]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[8]
       value: 
       objectReference: {fileID: 4082208666007192400, guid: 41f9c698112ffac4fb1a656660e9bb40, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[9]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[9]
       value: 
       objectReference: {fileID: 4082208666007192400, guid: 41f9c698112ffac4fb1a656660e9bb40, type: 3}
     m_RemovedComponents: []
@@ -92443,6 +92155,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1800961116147563557, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
       propertyPath: _health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800961116147563557, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800961116147563557, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
+      propertyPath: _health
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1800961116147563557, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
@@ -92510,27 +92230,27 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: 'waveManagers.Array.data[0]'
+      propertyPath: waveManagers.Array.data[0]
       value: 
       objectReference: {fileID: 1771229735}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: 'waveManagers.Array.data[1]'
+      propertyPath: waveManagers.Array.data[1]
       value: 
       objectReference: {fileID: 391260981}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: 'cornerPositions.Array.data[0]'
+      propertyPath: cornerPositions.Array.data[0]
       value: 
       objectReference: {fileID: 1693713044}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: 'cornerPositions.Array.data[1]'
+      propertyPath: cornerPositions.Array.data[1]
       value: 
       objectReference: {fileID: 1032500878}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: 'cornerPositions.Array.data[2]'
+      propertyPath: cornerPositions.Array.data[2]
       value: 
       objectReference: {fileID: 340178180}
     - target: {fileID: 8385757812501856695, guid: cd060ad9f9a604a409ec37bf20869200, type: 3}
-      propertyPath: 'cornerPositions.Array.data[3]'
+      propertyPath: cornerPositions.Array.data[3]
       value: 
       objectReference: {fileID: 1072649687}
     m_RemovedComponents: []
@@ -95110,43 +94830,43 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[0]'
+      propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1221255933}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[1]'
+      propertyPath: spawnPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1782845446}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[2]'
+      propertyPath: spawnPoints.Array.data[2]
       value: 
       objectReference: {fileID: 373862665}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[3]'
+      propertyPath: spawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1270700164}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[4]'
+      propertyPath: spawnPoints.Array.data[4]
       value: 
       objectReference: {fileID: 951272419}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[5]'
+      propertyPath: spawnPoints.Array.data[5]
       value: 
       objectReference: {fileID: 523008904}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[6]'
+      propertyPath: spawnPoints.Array.data[6]
       value: 
       objectReference: {fileID: 913143973}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[7]'
+      propertyPath: spawnPoints.Array.data[7]
       value: 
       objectReference: {fileID: 1500856583}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[8]'
+      propertyPath: spawnPoints.Array.data[8]
       value: 
       objectReference: {fileID: 668994324}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'spawnPoints.Array.data[9]'
+      propertyPath: spawnPoints.Array.data[9]
       value: 
       objectReference: {fileID: 776008964}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
@@ -95154,43 +94874,43 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[0]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[0]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[1]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[1]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[2]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[2]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[3]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[3]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[4]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[4]
       value: 
       objectReference: {fileID: 3542254578791173264, guid: 6cee410c9920a034399d6fde8febeec7, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[5]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[5]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[6]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[6]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[7]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[7]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[8]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[8]
       value: 
       objectReference: {fileID: 3542254578791173264, guid: 6cee410c9920a034399d6fde8febeec7, type: 3}
     - target: {fileID: 8134105602127748506, guid: 079fe3e6bda87a8479d3a6d4f831f8e4, type: 3}
-      propertyPath: 'waves.Array.data[0].enemies.Array.data[9]'
+      propertyPath: waves.Array.data[0].enemies.Array.data[9]
       value: 
       objectReference: {fileID: 1791772867190913764, guid: 29f0c229f5be6a54d9a6e78af50b2c3c, type: 3}
     m_RemovedComponents: []
