@@ -23,6 +23,7 @@ using UnityEngine.Rendering;
     public Animator Animator => animator;
     private PauseMenu pauseMenu;
     private EnterCodeMenu enterCodeMenu;
+    private SettingsMenu settingsMenu;
     private CutsceneDialogueController cutsceneDialogueController;
 
 
@@ -45,6 +46,7 @@ using UnityEngine.Rendering;
         animator = GetComponentInChildren<Animator>();
         pauseMenu = FindAnyObjectByType<PauseMenu>();
         enterCodeMenu = FindAnyObjectByType<EnterCodeMenu>();
+        settingsMenu = FindAnyObjectByType<SettingsMenu>();
         cutsceneDialogueController = FindFirstObjectByType<CutsceneDialogueController>();
     }
 
@@ -136,6 +138,13 @@ using UnityEngine.Rendering;
         if (enterCodeMenu != null && enterCodeMenu.IsOpen)
         {
             enterCodeMenu.CloseCodeMenu();
+            return;
+        }
+
+        // If the Settings menu is open, close it first
+        if (settingsMenu != null && settingsMenu.IsOpen)
+        {
+            settingsMenu.CloseSettingsMenu();
             return;
         }
 
