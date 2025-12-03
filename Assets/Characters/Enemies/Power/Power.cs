@@ -48,6 +48,9 @@ public class Power : MonoBehaviour
 
     private void Update()
     {
+        if (!damageableCharacter.hasSpawned)
+            return; // Skip AI until the spawn delay ends
+
         // Check for death condition
         if (!isDead && damageableCharacter != null && !damageableCharacter.IsAlive)
         {
@@ -58,7 +61,7 @@ public class Power : MonoBehaviour
     // Called by EnemyAI
     public void Move(Vector2 moveInput)
     {
-        if (isDead || isAttacking) return;
+        if (isDead || isAttacking || !damageableCharacter.hasSpawned) return;
 
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
 

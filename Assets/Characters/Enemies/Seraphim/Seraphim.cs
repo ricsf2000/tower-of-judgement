@@ -52,11 +52,6 @@ public class Seraphim : MonoBehaviour
 
     public AudioClip deathFX;
 
-    [Header("Spawn Delay Settings")]
-    public float minSpawnDelay = 0.5f;
-    public float maxSpawnDelay = 2.0f;
-    private bool hasSpawned = false;
-
     [Header("Aim Line Settings")]
     public LineRenderer aimLine;
     public Color warningColor = new Color(1f, 0.2f, 0.2f, 0.4f);
@@ -74,10 +69,6 @@ public class Seraphim : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         audioSource = GetComponent<AudioSource>();
-
-        // If not wave-spawned, enable AI immediately
-        if (damageableCharacter == null || !damageableCharacter.SpawnedByWave)
-            hasSpawned = true;
 
         if (aimLine != null)
         {
@@ -102,7 +93,7 @@ public class Seraphim : MonoBehaviour
     {
         if (isDead) return;
 
-        if (!damageableCharacter.Targetable || !hasSpawned)
+        if (!damageableCharacter.Targetable || !damageableCharacter.hasSpawned)
             return;
 
         // Enrage check
@@ -281,15 +272,6 @@ public class Seraphim : MonoBehaviour
         {
             Debug.LogWarning($"[{name}] Missing or disabled AudioSource or deathFX");
         }
-    }
-
-    public IEnumerator SpawnDelay()
-    {
-        float delay = Random.Range(minSpawnDelay, maxSpawnDelay);
-        yield return new WaitForSeconds(delay);
-        hasSpawned = true;
-
-        Debug.Log($"[{name}] Finished spawn delay ({delay:F2}s) — AI active.");
     }
     
     private void UpdateAimLine(Vector2 direction)

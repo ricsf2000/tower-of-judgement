@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 2976036630956483914}
   - component: {fileID: 3424931595297667548}
   - component: {fileID: 7091716008824133543}
+  - component: {fileID: 7017283353448109714}
   m_Layer: 9
   m_Name: thrones
   m_TagString: Enemy
@@ -444,7 +445,7 @@ SortingGroup:
   m_GameObject: {fileID: 3542254578791173264}
   m_Enabled: 1
   m_SortingLayerID: 540211421
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!70 &9013896761757058223
@@ -1103,6 +1104,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7017283353448109714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542254578791173264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b38fe52b54543498a21412f1b5fc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorRelay
 --- !u!1 &4871732685514603177
 GameObject:
   m_ObjectHideFlags: 0
