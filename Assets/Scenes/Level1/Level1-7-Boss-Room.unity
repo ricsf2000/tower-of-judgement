@@ -3130,7 +3130,7 @@ MonoBehaviour:
     activeCharacterIndex: 01000000000000000100000001000000000000000100000000000000010000000100000001000000
   - sequenceName: Post-fight Dialogue
     lines:
-    - 'Look how far you''ve come, brother. '
+    - Impossible... defeated by the fallen one. When did you become so powerful brother?
     - This didn't need to end like this, Michael. We could have found another way.
     - No... we each chose our path long ago. You chose to question. I chose to serve.
     - And where did our choices lead us?
