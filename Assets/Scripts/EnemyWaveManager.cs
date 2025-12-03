@@ -178,9 +178,8 @@ public class EnemyWaveManager : MonoBehaviour
                     relay.PlaySpawnAnimation();
 
                 // Random delay before AI activates
-                var seraphim = e.GetComponent<Seraphim>();
-                if (seraphim != null)
-                    StartCoroutine(seraphim.SpawnDelay());
+                if (enemyDmg != null)
+                    StartCoroutine(enemyDmg.SpawnDelay());
             }
             else
             {

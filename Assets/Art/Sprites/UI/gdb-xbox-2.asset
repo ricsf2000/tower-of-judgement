@@ -354,7 +354,7 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 54
     m_Scale: 1
-    m_Name: gdb-xbox-2_49
+    m_Name: xbox_LS
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 55
@@ -3404,15 +3404,15 @@ MonoBehaviour:
     m_Metrics:
       m_Width: 18
       m_Height: 18
-      m_HorizontalBearingX: -9
-      m_HorizontalBearingY: 9
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 12
       m_HorizontalAdvance: 18
     m_GlyphRect:
       m_X: 215
       m_Y: 551
       m_Width: 18
       m_Height: 18
-    m_Scale: 1
+    m_Scale: 1.5
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
     sprite: {fileID: 2679647429728843966, guid: 89ed257517e44c04aa5f4b05fdf831df, type: 3}

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press <sprite name=\"KBM_Space\"> to Dash
+  m_text: Use <sprite name=\"KBM_Space\"> to Dash
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
   m_sharedMaterial: {fileID: 6532932040620531989, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -188,7 +188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   actionText: {fileID: 4654427196208127554}
   xboxIcons: {fileID: 11400000, guid: fa669c0e4fcdd354dba32225094cb40b, type: 2}
+  playstationIcons: {fileID: 11400000, guid: b961a77c94fe36a41856dd8504667934, type: 2}
   keyboardIcons: {fileID: 11400000, guid: 2bc1d13cbca44774fab71b82d2b59699, type: 2}
+  WASD: {fileID: 11400000, guid: c1eb9182df3f96b4586ccf8b8ab88d43, type: 2}
   mouseIcons: {fileID: 11400000, guid: ab15eb4b23ba86446b15f543c49932a7, type: 2}
   showFullPrompt: 1
   actionName: to Dash

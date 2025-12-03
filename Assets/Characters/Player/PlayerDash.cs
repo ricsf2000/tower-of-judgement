@@ -107,24 +107,10 @@ public class PlayerDash : MonoBehaviour
         if (controller != null)
             controller.canMove = false;
 
-        // rb.linearVelocity = Vector2.zero;
-
-        // Dash bridge check
-        float finalDashDistance = dashDistance;
-        Vector2 targetPos;
-        if (TryGetDashBridge(transform.position, dashDir, out targetPos))
-        {
-            float bridgeDist = Vector2.Distance(rb.position, targetPos);
-            finalDashDistance = bridgeDist + 1f;  
-
-            Debug.Log($"[DashBridge] Found bridge tile at {targetPos}, dist={bridgeDist:F2}, newDuration={dashDuration:F2}");
-        }
 
         // Dash start
-
-        dashSpeed = finalDashDistance / dashDuration;
-        Debug.Log(dashSpeed);
-        rb.linearVelocity = dashDir.normalized * dashSpeed;
+        rb.linearVelocity = Vector2.zero; // reset so AddForce is clean
+        rb.AddForce(dashDir.normalized * dashSpeed, ForceMode2D.Impulse);
 
         int playerLayer = LayerMask.NameToLayer("Player");
         int enemyLayer = LayerMask.NameToLayer("Enemy");

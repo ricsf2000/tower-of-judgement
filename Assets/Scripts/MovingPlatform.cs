@@ -32,7 +32,7 @@ public class MovingPlatform : MonoBehaviour
             damageFlash = GetComponent<DamageFlash>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (pingPong)
         {

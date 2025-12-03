@@ -1,13 +1,16 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class PromptUIController : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private TMP_Text actionText;
     [SerializeField] private TMP_SpriteAsset xboxIcons;
+    [SerializeField] private TMP_SpriteAsset playstationIcons;
     [SerializeField] private TMP_SpriteAsset keyboardIcons;
+    [SerializeField] private TMP_SpriteAsset WASD;
     [SerializeField] private TMP_SpriteAsset mouseIcons;
 
     [Header("Prompt Settings")]
@@ -31,7 +34,7 @@ public class PromptUIController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!playerInput) return;
 
@@ -73,24 +76,44 @@ public class PromptUIController : MonoBehaviour
         switch (controlScheme)
         {
             case "Gamepad":
-                actionText.spriteAsset = xboxIcons;
-                switch (currentActionKey)
                 {
-                    case "Dash":
-                        iconTag = "<sprite name=\"xbox_A\">";
-                        break;
-                    case "Attack":
-                        iconTag = "<sprite name=\"xbox_X\">";
-                        break;
-                    default:
-                        iconTag = "<sprite name=\"xbox_A\">";
-                        break;
+                    var type = ControllerTypeDetector.Detect();
+
+                    switch (type)
+                    {
+                        case ControllerTypeDetector.ControllerType.Xbox:
+                            actionText.spriteAsset = xboxIcons;
+                            if (currentActionKey == "Dash") iconTag = "<sprite name=\"xbox_A\">";
+                            else if (currentActionKey == "Attack") iconTag = "<sprite name=\"xbox_X\">";
+                            else if (currentActionKey == "Move") iconTag = "<sprite name=\"xbox_LS\">";
+                            else iconTag = "<sprite name=\"xbox_A\">";
+                            break;
+
+                        case ControllerTypeDetector.ControllerType.PlayStation:
+                            actionText.spriteAsset = playstationIcons;
+                            if (currentActionKey == "Dash") iconTag = "<sprite name=\"ps_Cross\">";
+                            else if (currentActionKey == "Attack") iconTag = "<sprite name=\"ps_Square\">";
+                            else if (currentActionKey == "Move") iconTag = "<sprite name=\"ps_LS\">";
+                            else iconTag = "<sprite name=\"ps_Cross\">";
+                            break;
+
+                        default:
+                            // fallback
+                            actionText.spriteAsset = xboxIcons;
+                            iconTag = "<sprite name=\"xbox_A\">";
+                            break;
+                    }
+
+                    break;
                 }
-                break;
 
             case "Keyboard&Mouse":
                 switch (currentActionKey)
                 {
+                    case "Move":
+                        actionText.spriteAsset = WASD;
+                        iconTag = "<sprite name=\"KBM_WASD\">";
+                        break;
                     case "Dash":
                         actionText.spriteAsset = keyboardIcons;
                         iconTag = "<sprite name=\"KBM_Space\">";
@@ -122,7 +145,7 @@ public class PromptUIController : MonoBehaviour
         }
 
         if (showFullPrompt)
-            actionText.text = $"Press {iconTag} {actionName}";
+            actionText.text = $"Use {iconTag} {actionName}";
         else
             actionText.text = iconTag; // only show the button
 

@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public EnterCodeMenu enterCodeMenu;
+    public SettingsMenu settingsMenu;
 
     public static bool isPaused;
     public GameObject firstSelectedButton;
@@ -108,6 +109,11 @@ public class PauseMenu : MonoBehaviour
     public void OpenEnterCodeMenu()
     {
         enterCodeMenu.OpenCodeMenu();
+    }
+
+    public void OpenSettingsMenu()
+    {
+        settingsMenu.OpenSettingsMenu();
     }
 
 

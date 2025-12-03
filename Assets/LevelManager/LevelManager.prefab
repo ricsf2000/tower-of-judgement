@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2606521636945628508}
   - component: {fileID: 5332044914332225558}
   - component: {fileID: 8342793596349055421}
+  - component: {fileID: 8373596163171919463}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -76,6 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenu: {fileID: 0}
   enterCodeMenu: {fileID: 8342793596349055421}
+  settingsMenu: {fileID: 0}
   firstSelectedButton: {fileID: 0}
   deathScreen: {fileID: 0}
   masterMixer: {fileID: 24100000, guid: a13c586fbb9531a48a8d338d98cf237b, type: 2}
@@ -92,7 +94,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnterCodeMenu
   enterCodeMenu: {fileID: 0}
+  pauseMenuObject: {fileID: 0}
   pauseMenu: {fileID: 0}
   codeInputField: {fileID: 0}
   firstSelectedButton: {fileID: 0}
   errorText: {fileID: 0}
+--- !u!114 &8373596163171919463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236485701672228981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762de9ff08560604aa1edf106fd822aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  audioMixer: {fileID: 24100000, guid: a13c586fbb9531a48a8d338d98cf237b, type: 2}
+  resolutionDropdown: {fileID: 0}
+  settingsMenu: {fileID: 386099520833455763, guid: 4668b8be9684df747941b23562f17818, type: 3}
+  pauseMenuObject: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  firstSelectedButton: {fileID: 0}
+  startButton: {fileID: 0}
+  settingsButton: {fileID: 0}
+  exitButton: {fileID: 0}

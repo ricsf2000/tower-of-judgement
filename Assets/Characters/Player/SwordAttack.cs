@@ -49,6 +49,13 @@ public class SwordAttack : MonoBehaviour, IHitbox
         if (damageableObject == null)
             return;
 
+        // Return if target is currently invincible
+        if (collider.TryGetComponent(out DamageableCharacter dmgChar))
+        {
+            if (dmgChar.Invincible)
+                return;
+        }
+
         // Calculate knockback direction
         Vector2 direction = ((Vector2)collider.transform.position - (Vector2)parentTransform.position).normalized;
         Vector2 knockback = direction * knockbackForce;
