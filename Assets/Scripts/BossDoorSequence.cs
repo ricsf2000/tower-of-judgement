@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BossDoorSequence : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class BossDoorSequence : MonoBehaviour
     private bool sequenceStarted;
     private bool musicCleanupStarted;
     private Coroutine doorSpeedResetRoutine;
+    private PlayerController playerController;
+    private PlayerInput playerInput;
 
     private void Awake()
     {
@@ -68,6 +71,8 @@ public class BossDoorSequence : MonoBehaviour
                 player = playerObj.transform;
         }
 
+        FreezePlayer();
+        
         if (cameraFocusAnchor != null)
         {
             if (player != null)
@@ -76,7 +81,9 @@ public class BossDoorSequence : MonoBehaviour
             CameraFocusController.Instance.FocusOnTarget(cameraFocusAnchor);
 
             if (doorFocusTarget != null)
+            {
                 yield return MoveCameraAnchor(cameraFocusAnchor, doorFocusTarget.position);
+            }
         }
         else if (doorFocusTarget != null)
         {
@@ -106,6 +113,8 @@ public class BossDoorSequence : MonoBehaviour
 
         if (autoReturnToPlayer)
             yield return ReturnCameraToPlayer();
+        
+        UnfreezePlayer();
 
         sequenceStarted = false;
 
@@ -256,6 +265,50 @@ public class BossDoorSequence : MonoBehaviour
         }
 
         anchor.position = destination;
+    }
+    
+    private void FreezePlayer()
+    {
+        if (playerController == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                playerController = playerObj.GetComponent<PlayerController>();
+        }
+        
+        if (playerInput == null)
+            playerInput = FindFirstObjectByType<PlayerInput>();
+        
+        if (playerController != null)
+        {
+            playerController.canMove = false;
+            if (playerController.Rb != null)
+            {
+                playerController.Rb.linearVelocity = Vector2.zero;
+            }
+            if (playerController.Animator != null)
+            {
+                playerController.Animator.SetBool("isMoving", false);
+            }
+        }
+        
+        if (playerInput != null)
+        {
+            playerInput.SwitchCurrentActionMap("UI");
+        }
+    }
+    
+    private void UnfreezePlayer()
+    {
+        if (playerController != null)
+        {
+            playerController.canMove = true;
+        }
+        
+        if (playerInput != null)
+        {
+            playerInput.SwitchCurrentActionMap("Player");
+        }
     }
 }
 
