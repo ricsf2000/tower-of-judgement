@@ -7602,7 +7602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e121fcd4f03a09a46986dec1290f3c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossMusicTrigger
-  bossClip: {fileID: 8300000, guid: da16137c8c724e947b5dd4e9b11620ad, type: 3}
+  bossClip: {fileID: 8300000, guid: 0ffa89649d2142841a89830d6fd5224d, type: 3}
 --- !u!4 &675538006
 Transform:
   m_ObjectHideFlags: 0
