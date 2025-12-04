@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1/FinalChoiceCutscene.unity
     guid: 2a46ed623395a2f4d99332b2bae4b931
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ee15d7f73ffd0954a8b975210e929bb6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

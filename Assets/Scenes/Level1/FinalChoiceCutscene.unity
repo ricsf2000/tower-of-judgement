@@ -536,7 +536,7 @@ MonoBehaviour:
   - 
   activeCharacterIndex: 
   delayBetweenLines: 2
-  nextSceneName: Menu
+  nextSceneName: Credits
   playerInput: {fileID: 1539338090}
   xboxIcons: {fileID: 11400000, guid: fa669c0e4fcdd354dba32225094cb40b, type: 2}
   keyboardIcons: {fileID: 11400000, guid: 2bc1d13cbca44774fab71b82d2b59699, type: 2}
