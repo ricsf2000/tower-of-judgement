@@ -11,6 +11,8 @@ public class MusicManager : MonoBehaviour
     public float defaultVolume = 0.3f; // lower by default
 
     private AudioSource source;
+    private AudioSource introSource;
+    private AudioClip currentLoopClip;
 
     void Awake()
     {
@@ -45,6 +47,59 @@ public class MusicManager : MonoBehaviour
         source.clip = clip;
         source.volume = defaultVolume;
         source.Play();
+        currentLoopClip = clip;
+    }
+    
+    public bool IsPlayingLoopClip(AudioClip loopClip)
+    {
+        return source != null && source.clip == loopClip && source.isPlaying;
+    }
+    
+    public void ContinuePlaying()
+    {
+        if (source != null && source.clip != null && !source.isPlaying)
+        {
+            source.Play();
+        }
+    }
+    
+    public void PlayIntroThenLoop(AudioClip introClip, AudioClip loopClip)
+    {
+        if (introClip == null || loopClip == null) return;
+        
+        StartCoroutine(PlayIntroThenLoopCoroutine(introClip, loopClip));
+    }
+    
+    private IEnumerator PlayIntroThenLoopCoroutine(AudioClip introClip, AudioClip loopClip)
+    {
+        if (introSource == null)
+        {
+            introSource = gameObject.AddComponent<AudioSource>();
+            introSource.playOnAwake = false;
+            introSource.loop = false;
+            introSource.spatialBlend = 0f;
+        }
+        
+        source.Stop();
+        
+        introSource.clip = introClip;
+        introSource.volume = defaultVolume;
+        double introStartTime = AudioSettings.dspTime;
+        introSource.PlayScheduled(introStartTime);
+        
+        float introLength = introClip.length;
+        source.loop = true;
+        source.clip = loopClip;
+        source.volume = defaultVolume;
+        source.PlayScheduled(introStartTime + introLength);
+        currentLoopClip = loopClip;
+        
+        yield return new WaitForSeconds(introLength + 0.1f);
+        
+        if (introSource != null)
+        {
+            introSource.Stop();
+        }
     }
 
     void OnEnable()

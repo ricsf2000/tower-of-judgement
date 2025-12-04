@@ -2252,9 +2252,11 @@ MonoBehaviour:
   sceneGroup: 4
   menuClip: {fileID: 8300000, guid: f2b0de07b1c3bfc46841820005b85242, type: 3}
   backstoryClip: {fileID: 8300000, guid: f9e7b522074d64c54872c9a51d3c701b, type: 3}
-  roomsClip: {fileID: 8300000, guid: c8d7fd9105110443b9f211f60773662d, type: 3}
+  roomsClip: {fileID: 0}
   bossClip: {fileID: 8300000, guid: da16137c8c724e947b5dd4e9b11620ad, type: 3}
   No_soundClip: {fileID: 8300000, guid: 2397169882d6a234da98a72f749b2457, type: 3}
+  roomFirstPartClip: {fileID: 0}
+  roomLoopClip: {fileID: 0}
 --- !u!4 &168714225
 Transform:
   m_ObjectHideFlags: 0
@@ -3100,7 +3102,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 675538005}
           m_TargetAssemblyTypeName: BossMusicTrigger, Assembly-CSharp
-          m_MethodName: PlayBossMusic
+          m_MethodName: PlayBossIntro
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7602,7 +7604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e121fcd4f03a09a46986dec1290f3c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossMusicTrigger
-  bossClip: {fileID: 8300000, guid: da16137c8c724e947b5dd4e9b11620ad, type: 3}
+  introClip: {fileID: 8300000, guid: 62c33c9ecbb0b5a4d82a59f5e0c18e49, type: 3}
+  mainLoopClip: {fileID: 8300000, guid: a5be1d79cfeee814b93651f19d124c35, type: 3}
 --- !u!4 &675538006
 Transform:
   m_ObjectHideFlags: 0
@@ -95463,7 +95466,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.007, y: 7.194, z: 0}
-  m_LocalScale: {x: 0.83632123, y: 0.92241096, z: 1}
+  m_LocalScale: {x: 0.8641708, y: 0.92241096, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

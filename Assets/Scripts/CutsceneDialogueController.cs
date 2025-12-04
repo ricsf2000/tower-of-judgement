@@ -200,12 +200,17 @@ public class CutsceneDialogueController : MonoBehaviour
             Debug.LogError($"Invalid dialogue sequence index: {sequenceIndex}");
             return;
         }
-        
+
         var sequence = dialogueSequences[sequenceIndex];
         lines = sequence.lines;
         activeCharacterIndex = sequence.activeCharacterIndex;
-        
+
         Debug.Log($"[{gameObject.name}] Starting dialogue sequence: {sequence.sequenceName}");
+
+        // Reset typewriter state before starting new dialogue sequence
+        if (typewriter != null)
+            typewriter.ResetState();
+
         ResetDialogueIndex();
     }
     
