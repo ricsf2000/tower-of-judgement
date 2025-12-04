@@ -28,6 +28,18 @@ public class CutsceneDialogueController : MonoBehaviour
     [Header("Characters")]
     [Tooltip("Array of character GameObjects. Index 0, 1, 2, etc.")]
     public GameObject[] characters;
+
+    [Header("God Character Special Styling")]
+    [Tooltip("Index of the God character in the characters array (-1 to disable)")]
+    public int godCharacterIndex = -1;
+    [Tooltip("The UI object (RectTransform) to modify when God speaks")]
+    public RectTransform objectToMove;
+    [Tooltip("TextMeshPro component inside the object to change color")]
+    public TMPro.TMP_Text objectText;
+
+    private Vector2 originalObjectPosition;
+    private Vector2 originalObjectSize;
+    private Color originalObjectTextColor;
     
     [Header("Dialogue Sequences")]
     public DialogueSequence[] dialogueSequences;
@@ -60,6 +72,18 @@ public class CutsceneDialogueController : MonoBehaviour
     public bool allowSkipCutscene = true;   // Enabled for opening cutscenes
     public bool requireAdvanceInput = false; // Dialogue boxes: true. Opening cutscene: false.
     private float advanceCooldown = 0f;
+
+    [Header("Choice System")]
+    public bool showChoiceAfterDialogue = false; // Enable to show choice at end of dialogue
+    public string choiceSequenceIfReturn; // Sequence name to play if "Return to Heaven" chosen
+    public string choiceSequenceIfStay; // Sequence name to play if "Stay with Humanity" chosen
+    private bool isShowingChoice = false;
+    private int selectedChoiceIndex = 0; // 0 = Return, 1 = Stay
+    private bool choiceAlreadyMade = false; // Prevent choice from showing again
+
+    // Global access to the player's choice
+    public enum LuciferChoice { None, ReturnToHeaven, StayWithHumanity }
+    public static LuciferChoice PlayerChoice { get; private set; } = LuciferChoice.None;
     
 
     private PlayerController player;
@@ -102,6 +126,18 @@ public class CutsceneDialogueController : MonoBehaviour
 
         if (skipPromptText != null)
             skipPromptText.gameObject.SetActive(false);
+
+        // Store the original object properties
+        if (objectToMove != null)
+        {
+            originalObjectPosition = objectToMove.anchoredPosition;
+            originalObjectSize = objectToMove.sizeDelta;
+        }
+
+        if (objectText != null)
+        {
+            originalObjectTextColor = objectText.color;
+        }
     }
 
     private void OnEnable()
@@ -178,17 +214,26 @@ public class CutsceneDialogueController : MonoBehaviour
         }
         else
         {
-            // Player pressed button after the last line - now end dialogue
-            dialogueStarted = false; // Disable input handling
-            
-            // Hide all characters when dialogue ends
-            HideAllCharacters();
-            
-            // Resume timeline when dialogue ends
-            if (director != null)
+            // Reached end of dialogue
+            if (showChoiceAfterDialogue && !isShowingChoice && !choiceAlreadyMade)
             {
-                Debug.Log($"[{gameObject.name}] Dialogue finished, resuming timeline");
-                director.Resume();
+                // Show choice instead of ending
+                ShowChoice();
+            }
+            else
+            {
+                // Player pressed button after the last line - now end dialogue
+                dialogueStarted = false; // Disable input handling
+
+                // Hide all characters when dialogue ends
+                HideAllCharacters();
+
+                // Resume timeline when dialogue ends
+                if (director != null)
+                {
+                    Debug.Log($"[{gameObject.name}] Dialogue finished, resuming timeline");
+                    director.Resume();
+                }
             }
         }
     }
@@ -261,10 +306,10 @@ public class CutsceneDialogueController : MonoBehaviour
     private void ShowSpeaker(int lineIndex)
     {
         if (characters == null || characters.Length == 0) return;
-        
+
         // Hide all characters first
         HideAllCharacters();
-        
+
         // Show the active character for this line
         if (lineIndex < activeCharacterIndex.Length)
         {
@@ -272,8 +317,107 @@ public class CutsceneDialogueController : MonoBehaviour
             if (charIndex >= 0 && charIndex < characters.Length && characters[charIndex] != null)
             {
                 characters[charIndex].SetActive(true);
+
+                // Apply God character special styling
+                if (godCharacterIndex >= 0 && charIndex == godCharacterIndex)
+                {
+                    ApplyGodStyling();
+                }
+                else
+                {
+                    ResetGodStyling();
+                }
             }
             // If charIndex is -1, all characters stay hidden
+            else
+            {
+                ResetGodStyling();
+            }
+        }
+    }
+
+    private void ApplyGodStyling()
+    {
+        if (objectToMove != null)
+        {
+            objectToMove.anchoredPosition = new Vector2(-42.5f, originalObjectPosition.y);
+
+            objectToMove.sizeDelta = new Vector2(880.8f, originalObjectSize.y);
+        }
+
+        if (objectText != null)
+        {
+            objectText.color = new Color(1f, 0.91f, 0.286f, 1f); // FFE849 in normalized RGB
+        }
+    }
+
+    private void ResetGodStyling()
+    {
+        if (objectToMove != null)
+        {
+            objectToMove.anchoredPosition = originalObjectPosition;
+            objectToMove.sizeDelta = originalObjectSize;
+        }
+
+        if (objectText != null)
+        {
+            objectText.color = originalObjectTextColor;
+        }
+    }
+
+    private void ShowChoice()
+    {
+        isShowingChoice = true;
+        selectedChoiceIndex = 0;
+
+        // Disable typewriter effect for choices
+        if (typewriter != null)
+            typewriter.enabled = false;
+
+        // Display choices using existing dialogue text
+        if (dialogueText != null)
+        {
+            dialogueText.text = "> Return to Heaven\n  Stay with Humanity";
+            dialogueText.maxVisibleCharacters = dialogueText.text.Length;
+            dialogueText.alpha = 1;
+        }
+
+        Debug.Log("[CutsceneDialogueController] Showing choice");
+    }
+
+    private void UpdateChoiceDisplay()
+    {
+        if (dialogueText != null)
+        {
+            dialogueText.text = selectedChoiceIndex == 0
+                ? "> Return to Heaven\n  Stay with Humanity"
+                : "  Return to Heaven\n> Stay with Humanity";
+        }
+    }
+
+    private void SelectChoice()
+    {
+        isShowingChoice = false;
+        choiceAlreadyMade = true; // Mark that choice has been made
+
+        // Re-enable typewriter effect
+        if (typewriter != null)
+            typewriter.enabled = true;
+
+        // Play the appropriate sequence based on choice
+        if (selectedChoiceIndex == 0)
+        {
+            PlayerChoice = LuciferChoice.ReturnToHeaven;
+            Debug.Log("[CutsceneDialogueController] Player chose: Return to Heaven");
+            if (!string.IsNullOrEmpty(choiceSequenceIfReturn))
+                StartDialogueSequence(choiceSequenceIfReturn);
+        }
+        else
+        {
+            PlayerChoice = LuciferChoice.StayWithHumanity;
+            Debug.Log("[CutsceneDialogueController] Player chose: Stay with Humanity");
+            if (!string.IsNullOrEmpty(choiceSequenceIfStay))
+                StartDialogueSequence(choiceSequenceIfStay);
         }
     }
 
@@ -299,6 +443,28 @@ public class CutsceneDialogueController : MonoBehaviour
     private void Update()
     {
         if (!IsCutsceneActive) return;
+
+        // Handle choice navigation
+        if (isShowingChoice)
+        {
+            bool upPressed = (Keyboard.current?.wKey.wasPressedThisFrame ?? false) ||
+                             (Keyboard.current?.upArrowKey.wasPressedThisFrame ?? false) ||
+                             (Gamepad.current?.dpad.up.wasPressedThisFrame ?? false) ||
+                             (Gamepad.current?.leftStick.up.wasPressedThisFrame ?? false);
+
+            bool downPressed = (Keyboard.current?.sKey.wasPressedThisFrame ?? false) ||
+                               (Keyboard.current?.downArrowKey.wasPressedThisFrame ?? false) ||
+                               (Gamepad.current?.dpad.down.wasPressedThisFrame ?? false) ||
+                               (Gamepad.current?.leftStick.down.wasPressedThisFrame ?? false);
+
+            if (upPressed || downPressed)
+            {
+                selectedChoiceIndex = (selectedChoiceIndex == 0) ? 1 : 0;
+                UpdateChoiceDisplay();
+            }
+
+            return; // Don't process skip input while showing choice
+        }
 
         bool skipPressed =
             allowSkipCutscene &&
@@ -358,10 +524,17 @@ public class CutsceneDialogueController : MonoBehaviour
     public void OnAdvancePressed()
     {
         Debug.Log($"[{gameObject.name}] OnAdvancePressed called, dialogueStarted = {dialogueStarted}");
-        
+
+        // If showing choice, select the current choice
+        if (isShowingChoice)
+        {
+            SelectChoice();
+            return;
+        }
+
         // Only respond if dialogue has started
         if (!dialogueStarted) return;
-        
+
         // If lines are typing, reveal entire line
         if (!lineFullyRevealed)
         {
