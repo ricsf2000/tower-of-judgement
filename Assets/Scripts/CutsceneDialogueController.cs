@@ -23,7 +23,10 @@ public class CutsceneDialogueController : MonoBehaviour
         [TextArea(2, 4)] public string[] lines;
         [Tooltip("Index of character from characters array (-1 = hide all)")]
         public int[] activeCharacterIndex;
+        [Tooltip("If true, the cutscene will END and the scene will transition after this dialogue sequence finishes.")]
+        public bool endsSceneAfterDialogue = false;
     }
+    private bool currentSequenceEndsScene = false;
     
     [Header("Characters")]
     [Tooltip("Array of character GameObjects. Index 0, 1, 2, etc.")]
@@ -228,11 +231,17 @@ public class CutsceneDialogueController : MonoBehaviour
                 // Hide all characters when dialogue ends
                 HideAllCharacters();
 
-                // Resume timeline when dialogue ends
-                if (director != null)
+                if (currentSequenceEndsScene)
                 {
-                    Debug.Log($"[{gameObject.name}] Dialogue finished, resuming timeline");
-                    director.Resume();
+                    EndCutscene();    // loads the next scene
+                }
+                else
+                {
+                    // Resume timeline when dialogue ends
+                    if (director != null)
+                    {
+                        director.Resume(); // normal cutscene continues
+                    }
                 }
             }
         }
@@ -249,6 +258,7 @@ public class CutsceneDialogueController : MonoBehaviour
         var sequence = dialogueSequences[sequenceIndex];
         lines = sequence.lines;
         activeCharacterIndex = sequence.activeCharacterIndex;
+        currentSequenceEndsScene = sequence.endsSceneAfterDialogue;  
 
         Debug.Log($"[{gameObject.name}] Starting dialogue sequence: {sequence.sequenceName}");
 

@@ -358,6 +358,8 @@ PlayableDirector:
     value: {fileID: 718145997857694105}
   - key: {fileID: 1030410642317930541, guid: 12eede9544c550e409af658942018a5c, type: 2}
     value: {fileID: 8535958186906822363}
+  - key: {fileID: 2138472237265571186, guid: 12eede9544c550e409af658942018a5c, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1461118092228899065
@@ -1215,3 +1217,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5c214528ac6224fab228c3f4a2f202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  difficultyPanelName: DifficultySelectionPanel
