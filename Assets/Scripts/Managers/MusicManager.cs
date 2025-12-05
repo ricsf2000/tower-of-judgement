@@ -80,8 +80,10 @@ public class MusicManager : MonoBehaviour
             introSource.playOnAwake = false;
             introSource.loop = false;
             introSource.spatialBlend = 0f;
+            introSource.outputAudioMixerGroup = source.outputAudioMixerGroup;
         }
         
+        source.clip = null;
         source.Stop();
         
         introSource.clip = introClip;
@@ -96,11 +98,15 @@ public class MusicManager : MonoBehaviour
         source.PlayScheduled(introStartTime + introLength);
         currentLoopClip = loopClip;
         
-        yield return new WaitForSeconds(introLength + 0.1f);
+         // Wait for DSP to hit loop start
+        while (AudioSettings.dspTime < (introStartTime + introLength))
+            yield return null;
         
         if (introSource != null)
         {
             introSource.Stop();
+            Destroy(introSource);
+            introSource = null;
         }
     }
 
