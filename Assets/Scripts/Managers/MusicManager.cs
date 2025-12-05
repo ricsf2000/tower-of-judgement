@@ -14,6 +14,8 @@ public class MusicManager : MonoBehaviour
     private AudioSource introSource;
     private AudioClip currentLoopClip;
 
+    public AudioClip GetCurrentClip() => source.clip;
+
     void Awake()
     {
         // Ensure only one MusicManager exists

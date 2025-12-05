@@ -53,14 +53,17 @@ public class SceneMusicTag : MonoBehaviour
             return;
         }
 
-        // If retrying / respawning, then skip intro
-        if (CheckpointGameData.hasCheckpoint &&
-            MusicManager.Instance.IsPlayingLoopClip(roomLoopClip))
-        {
-            return; // music is already in loop mode
-        }
+        AudioClip current = MusicManager.Instance.GetCurrentClip();
 
-        // Otherwise play intro then loop
+        // If the same loop is already playing, then return
+        if (current == roomLoopClip && MusicManager.Instance.IsPlayingLoopClip(roomLoopClip))
+            return;
+
+        // When retrying (reloading the same scene), do nothing
+        if (CheckpointGameData.hasCheckpoint)
+            return;
+
+        // New scene (from opening cutscene to lvl 1-1), play the intro then the loop
         MusicManager.Instance.PlayIntroThenLoop(roomIntroClip, roomLoopClip);
     }
 }
