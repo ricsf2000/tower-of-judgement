@@ -12,10 +12,6 @@ public class SceneMusicTag : MonoBehaviour
     public AudioClip roomsClip;
     public AudioClip bossClip;
     public AudioClip No_soundClip;
-    
-    [Header("Room Music Sequence")]
-    public AudioClip roomFirstPartClip;
-    public AudioClip roomLoopClip;
 
     void Start()
     {
@@ -24,47 +20,27 @@ public class SceneMusicTag : MonoBehaviour
         switch (sceneGroup)
         {
             case SceneGroup.Menu:
-                MusicManager.Instance.SetTrack(menuClip, false);
+                CheckpointGameData.ClearAll();
+                MusicManager.Instance.StopMusic();
+                MusicManager.Instance.SetTrack(menuClip, true);
                 break;
             case SceneGroup.Backstory:
                 MusicManager.Instance.SetTrack(backstoryClip, false);
                 break;
             case SceneGroup.Rooms:
-                if (roomFirstPartClip != null && roomLoopClip != null)
+                if (roomsClip != null)
                 {
-                    bool isRespawn = CheckpointGameData.hasCheckpoint;
-                    bool alreadyPlayingLoop = MusicManager.Instance.IsPlayingLoopClip(roomLoopClip);
-                    bool isEditorLoad = !Application.isPlaying;
-                    
-                    if (isRespawn && alreadyPlayingLoop)
-                    {
-                        MusicManager.Instance.ContinuePlaying();
-                    }
-                    else if (isEditorLoad || (!isRespawn && !alreadyPlayingLoop))
-                    {
-                        MusicManager.Instance.PlayIntroThenLoop(roomFirstPartClip, roomLoopClip);
-                    }
-                    else if (roomLoopClip != null)
-                    {
-                        MusicManager.Instance.SetTrack(roomLoopClip, false);
-                    }
-                    else
-                    {
-                        MusicManager.Instance.SetTrack(roomsClip, false);
-                    }
-                }
-                else
-                {
-                    if (roomLoopClip != null)
-                        MusicManager.Instance.SetTrack(roomLoopClip, false);
-                    else
-                        MusicManager.Instance.SetTrack(roomsClip, false);
+                    if (CheckpointGameData.hasCheckpoint && MusicManager.Instance.IsPlayingLoopClip(roomsClip))
+                        return;
+                    MusicManager.Instance.SetTrack(roomsClip, false);
                 }
                 break;
             case SceneGroup.Boss:
-                MusicManager.Instance.SetTrack(bossClip, true);
+                MusicManager.Instance.StopMusic();
+                MusicManager.Instance.SetTrack(No_soundClip, true);
                 break;
             case SceneGroup.No_sound:
+                MusicManager.Instance.StopMusic();
                 MusicManager.Instance.SetTrack(No_soundClip, true);
                 break;
         }
