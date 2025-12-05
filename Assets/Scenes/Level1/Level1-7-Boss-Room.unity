@@ -2252,11 +2252,9 @@ MonoBehaviour:
   sceneGroup: 4
   menuClip: {fileID: 8300000, guid: f2b0de07b1c3bfc46841820005b85242, type: 3}
   backstoryClip: {fileID: 8300000, guid: f9e7b522074d64c54872c9a51d3c701b, type: 3}
-  roomsClip: {fileID: 0}
+  roomsClip: {fileID: 8300000, guid: c3a2c33e28f499449bd5a5c51b834093, type: 3}
   bossClip: {fileID: 8300000, guid: da16137c8c724e947b5dd4e9b11620ad, type: 3}
   No_soundClip: {fileID: 8300000, guid: 2397169882d6a234da98a72f749b2457, type: 3}
-  roomFirstPartClip: {fileID: 0}
-  roomLoopClip: {fileID: 0}
 --- !u!4 &168714225
 Transform:
   m_ObjectHideFlags: 0
