@@ -15,6 +15,19 @@ public static class CheckpointGameData
     public static List<SwitchState> switchStates = new();
     public static List<PersistentEnemyState> persistentEnemyStates = new();
 
+    public static void ClearAll()
+    {
+        hasCheckpoint = false;
+        sceneName = string.Empty;
+        playerPosition = Vector3.zero;
+        playerHealth = 0f;
+        usedCheckpoints.Clear();
+        barrierStates.Clear();
+        waveStates.Clear();
+        switchStates.Clear();
+        persistentEnemyStates.Clear();
+    }
+
     public static void SetSwitchState(string switchID, bool activated)
     {
         if (!hasCheckpoint)

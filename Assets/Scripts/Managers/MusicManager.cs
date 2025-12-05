@@ -48,6 +48,8 @@ public class MusicManager : MonoBehaviour
         source.volume = defaultVolume;
         source.Play();
         currentLoopClip = clip;
+        
+        Debug.Log($"[MusicManager] SetTrack: {clip.name}, Length: {clip.length} seconds ({clip.length / 60f:F2} minutes), LoadState: {clip.loadState}");
     }
     
     public bool IsPlayingLoopClip(AudioClip loopClip)
@@ -99,6 +101,25 @@ public class MusicManager : MonoBehaviour
         if (introSource != null)
         {
             introSource.Stop();
+        }
+    }
+
+    public void StopMusic(bool clearClip = true)
+    {
+        if (source != null)
+        {
+            source.Stop();
+            source.volume = defaultVolume;
+            if (clearClip)
+                source.clip = null;
+            currentLoopClip = null;
+        }
+
+        if (introSource != null)
+        {
+            introSource.Stop();
+            if (clearClip)
+                introSource.clip = null;
         }
     }
 
