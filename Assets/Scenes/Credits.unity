@@ -410,10 +410,34 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=\"red\">Team Lead:</color>\nRicardo Morales Vargas\n\n<color=\"red\">Game
-    Designer:</color>\nShaheer Ismail\n\n<color=\"red\">Artists:</color>\nThien Tran
-    \r\nZach Grant\n\n<color=\"red\">Engineers:</color>\nJustin Plamo\nViet Nguyen\nArturo
-    Murga\n\n<color=\"red\">Sound Designer:</color>\nSultan Sadiq"
+  m_text: '<color="red">Team Lead & Lead Artist:</color>
+
+    Ricardo Morales Vargas
+
+
+    <color="red">Lead
+    Engineer:</color>
+
+    Justin Plamo
+
+
+    <color="red">Team Members:</color>
+
+    Thien
+    Tran
+
+    Viet Nguyen
+
+    Zach Grant
+
+    Sultan Sadiq
+
+    Arturo Murga
+
+    Shaheer
+    Ismail
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
   m_sharedMaterial: {fileID: 6532932040620531989, guid: 1e92c7d4e8bce814b8d68d380c35a606, type: 2}
@@ -549,8 +573,6 @@ MonoBehaviour:
   roomsClip: {fileID: 8300000, guid: c8d7fd9105110443b9f211f60773662d, type: 3}
   bossClip: {fileID: 0}
   No_soundClip: {fileID: 0}
-  roomFirstPartClip: {fileID: 0}
-  roomLoopClip: {fileID: 0}
 --- !u!4 &134193325
 Transform:
   m_ObjectHideFlags: 0
@@ -600,7 +622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.000061, y: 514}
+  m_AnchoredPosition: {x: -8, y: 514}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &166427114
@@ -1327,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1122843239
 Animator:
   serializedVersion: 7
